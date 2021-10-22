@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, Image, TextInput } from 'react-native';
+import { View, Text, Image, TextInput, ScrollView } from 'react-native';
 import { styles } from "./searchNGOstyles";
 
 const Search = () => {
@@ -7,6 +7,7 @@ const Search = () => {
     const [searchTerm, setSearchTerm] = useState('')
 
     return (
+        <ScrollView >
         <View style={styles.container}>
             <Text style={styles.title}>FIND HELP NEAR YOU</Text>
 
@@ -21,6 +22,7 @@ const Search = () => {
             defaultValue={searchTerm}/>
   
         </View>
+        </ScrollView>
     );
 };
 

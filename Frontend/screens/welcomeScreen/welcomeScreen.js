@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, TouchableHighlight, Image, Pressable} from 'react-native';
+import { View, Text, Button, TouchableHighlight, Image, Pressable, ScrollView} from 'react-native';
 import { styles } from "./welcomeScreenStyles";
 
 import Emoji from 'react-native-emoji';
@@ -19,6 +19,7 @@ const HomeScreen = ({navigation}) => {
   }
 
     return (
+      <ScrollView >
       <View style={styles.container}>
             <Text>WELCOME TO KONA CONNECT</Text>
 
@@ -56,7 +57,7 @@ const HomeScreen = ({navigation}) => {
             <Emoji name="owl" style={{fontSize: 50}} />
 
       </View>
-   
+      </ScrollView>
     );
   };
 
