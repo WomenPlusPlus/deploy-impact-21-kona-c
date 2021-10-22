@@ -26,10 +26,13 @@ const HomeScreen = ({navigation}) => {
           // blurRadius={3}
         />
       </TouchableHighlight>
-        
-      <Button title='FIND HELP NOW'
-        onPress={()=>navigation.navigate('PromptMessage')} />
-        <Text>Dots, we help you finding help</Text>
+        <View style={styles.button}>
+      <Button title=' FIND HELP NOW'
+        onPress={()=>navigation.navigate('PromptMessage')} 
+        color= 'white'
+        />
+        </View>
+        <Text style={styles.textInfo}>Dots, we help you finding help</Text>
       </View>
    
     );

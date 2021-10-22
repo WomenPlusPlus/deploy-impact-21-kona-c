@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Counter from './screens/counter/counter';
 import PromptMessage from './screens/myFirstApp/myFirstApp';
-
 import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
 
 

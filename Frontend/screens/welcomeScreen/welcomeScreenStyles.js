@@ -18,7 +18,19 @@ export const styles = StyleSheet.create({
       marginBottom: 20,
       backgroundColor: "grey",
       
-    },     
+    },  
+    button:{
+      padding: 15, 
+      alignItems: "center", 
+      borderRadius: 5,
+      backgroundColor: "blue",
+      
+    },
+    textInfo:{
+      fontSize: 10,
+      fontWeight: "normal",
+      marginTop: 60,
+    }   
 
      
 

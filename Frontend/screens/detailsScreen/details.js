@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Button } from 'react-native';
 
-
+//this is currently not used anymore in the App. js 
 
 const DetailsScreen = ({navigation}) => {
     return (
