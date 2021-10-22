@@ -11,7 +11,7 @@ import {
   Alert,
 } from "react-native";
 
-const PromptMessage = ({ navigation }) => {
+const PromptMessage = () => {
   const handlePress = () =>
     console.log("i just clicked on the text and it prints this!");
   // let x = 1;
