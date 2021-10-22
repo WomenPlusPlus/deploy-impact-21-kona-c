@@ -20,13 +20,18 @@ export const styles = StyleSheet.create({
       
     },  
     button:{
-      flexDirection: 'row',
+      // flexDirection: 'row',
       padding: 15, 
       marginTop:20,
       alignItems: "center", 
       borderRadius: 25,
       backgroundColor: "blue",
+      elevation: 3,
       
+    },
+    textButton:{
+    color: 'white',
+    fontWeight:'bold'
     },
     textInfo:{
       fontSize: 10,

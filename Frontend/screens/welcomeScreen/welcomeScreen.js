@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, TouchableHighlight, Image } from 'react-native';
+import { View, Text, Button, TouchableHighlight, Image, Pressable} from 'react-native';
 import { styles } from "./welcomeScreenStyles";
 
 import Emoji from 'react-native-emoji';
@@ -30,16 +30,22 @@ const HomeScreen = ({navigation}) => {
             </TouchableHighlight>
                 
                 <View style={styles.button}>
-
-
+                <Text style={styles.textButton}>Press here to</Text>
                   <Button title='FIND HELP NOW'
                           onPress={handlePress} 
                           color= 'white'
                           />
+            </View>
+            <View style={styles.button}>
+              <Pressable
+                onPress={handlePress}>
 
-                </View>
+                  <Text style={styles.textButton}>
+                  Press here to FIND HELP NOW</Text>  
 
+              </Pressable>
 
+              </View>
 
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
             <Emoji name="owl" style={{fontSize: 50}} />
