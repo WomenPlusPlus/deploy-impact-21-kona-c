@@ -1,12 +1,21 @@
 import React from "react";
-import { View, Text,} from 'react-native';
+import { View, Text,Image } from 'react-native';
 import { styles } from "./searchNGOstyles";
 
 const Search = () => {
 
     return (
         <View style={styles.container}>
-        <Text>test test NGO</Text>
+            <View>
+            <Text style={styles.title}>FIND HELP NEAR YOU</Text>
+            
+            <Image 
+            style={styles.image}
+            source={{ 
+                uri: 'https://picsum.photos/200/300'}}/>
+
+            
+            </View>
         </View>
     );
 };
