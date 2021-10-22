@@ -13,6 +13,11 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate('PromptMessage')
   }
 
+  const handlePressNGO = () =>{
+    console.log('Button pressedNGO');
+    navigation.navigate('Search')
+  }
+
     return (
       <View style={styles.container}>
             <Text>WELCOME TO KONA CONNECT</Text>
@@ -38,10 +43,10 @@ const HomeScreen = ({navigation}) => {
             </View>
             <View style={styles.button}>
               <Pressable
-                onPress={handlePress}>
+                onPress={handlePressNGO}>
 
                   <Text style={styles.textButton}>
-                  Press here to FIND HELP NOW</Text>  
+                  go to organisation search</Text>  
 
               </Pressable>
 

@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Counter from './screens/counter/counter';
 import PromptMessage from './screens/myFirstApp/myFirstApp';
 import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
-
+import Search from './screens/searchNGOscreen/searchNGO';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +35,7 @@ function App() {
         // }, 
         }}/>
         <Stack.Screen name='Counter' component={Counter} />
+        <Stack.Screen name='Search' component={Search} />
         <Stack.Screen name='PromptMessage' component={PromptMessage} 
         options={{ title: 'My very first prompt message' }}/>
       </Stack.Navigator>
