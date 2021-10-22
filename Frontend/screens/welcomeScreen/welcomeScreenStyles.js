@@ -12,17 +12,19 @@ export const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: "bold",
     //   backgroundColor: "linear-gradient(red, yellow, blue)",
-      textShadowColor: "black",
+      // textShadowColor: "black",
       textShadowRadius: 10,
       marginTop: 20,
       marginBottom: 20,
-      backgroundColor: "grey",
+      // backgroundColor: "grey",
       
     },  
     button:{
+      flexDirection: 'row',
       padding: 15, 
+      marginTop:20,
       alignItems: "center", 
-      borderRadius: 5,
+      borderRadius: 25,
       backgroundColor: "blue",
       
     },
@@ -30,6 +32,11 @@ export const styles = StyleSheet.create({
       fontSize: 10,
       fontWeight: "normal",
       marginTop: 60,
+      fontStyle: 'italic'
+    },
+    icon:{
+      width: 2,
+    height: 2,
     }   
 
      

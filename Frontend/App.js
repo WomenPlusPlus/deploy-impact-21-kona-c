@@ -8,7 +8,6 @@ import PromptMessage from './screens/myFirstApp/myFirstApp';
 import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
 
 
-
 const Stack = createNativeStackNavigator();
 
 function App() {
