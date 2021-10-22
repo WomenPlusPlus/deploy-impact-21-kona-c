@@ -4,34 +4,13 @@ import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Counter from './screens/counter';
+import Counter from './screens/counter/counter';
 import PromptMessage from './screens/myFirstApp';
 import LogoTitle from './components/header';
+import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
 
 
 
-function HomeScreen({navigation}) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button title='go to Details'
-      onPress={()=>navigation.navigate('Details')} />
-
-      <Button title='go to Counter'
-      onPress={()=>navigation.navigate('Counter')} />
-
-      <Button title='go to My Prompt Message'
-      onPress={()=>navigation.navigate('PromptMessage')} />
-      <View style={{backgroundColor:'blue',}}>
-      <Button
-        title="Update the title"
-        onPress={() => navigation.setOptions({ title: 'Updated!' })}
-      />
-      </View>
-    </View>
- 
-  );
-}
 
 function DetailsScreen({navigation}) {
   return (
