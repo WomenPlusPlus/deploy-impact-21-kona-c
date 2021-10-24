@@ -4,9 +4,13 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: { 
         flex: 1, 
+        backgroundColor: 'white',
+ 
+    },
+    scrollView:{
         alignItems: 'center', 
         justifyContent: 'flex-start',
-        backgroundColor: 'white', 
+        
     },
     title:{
         fontWeight: 'bold',
@@ -22,12 +26,24 @@ export const styles = StyleSheet.create({
     search:{
         padding: 15, 
         marginTop:20,
+        marginBottom: 40,
         alignItems: "center", 
         borderRadius: 25,
         borderColor: 'whitesmoke',
         borderStyle: 'solid',
         borderWidth: 2,
         width: '70%',
+    },
+    resultsBox:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
 
-    }    
+    },
+    box:{
+        borderColor: 'whitesmoke',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        height: 100,
+        width: '50%',
+    },    
     });
