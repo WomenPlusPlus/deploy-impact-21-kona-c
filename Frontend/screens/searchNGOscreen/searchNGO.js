@@ -6,6 +6,9 @@ import { styles } from "./searchNGOstyles";
 const Search = () => {
 
     const [searchTerm, setSearchTerm] = useState('')
+    console.log(searchTerm)
+
+    
 
     return (
         <View style={styles.container}>
@@ -21,7 +24,9 @@ const Search = () => {
             <TextInput 
             placeholder= 'Search...'
             style={styles.search}
-            defaultValue={searchTerm}/>
+            defaultValue={searchTerm}
+            onChangeText={searchTerm => setSearchTerm(searchTerm)}
+            />
             <Text>Autosuggestion? Please type above the words you search or choose from the below</Text>
 
             <View style={styles.resultsBox}>
