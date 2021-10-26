@@ -6,7 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "convert-csv": "csvtojson assets/organizations-data.csv > assets/organizations-data.json"
+    "convert-csv": "csvtojson assets/organisations.csv > assets/organisations.json"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
