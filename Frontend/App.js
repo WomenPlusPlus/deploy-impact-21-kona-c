@@ -4,9 +4,10 @@ import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Counter from './screens/counter';
-import PromptMessage from './screens/myFirstApp';
+import Counter from './screens/counter/counter';
+
 import LogoTitle from './components/header';
+import PromptMessage from './screens/myFirstApp/myFirstApp';
 
 
 
