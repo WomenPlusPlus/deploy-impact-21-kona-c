@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, TouchableHighlight, Image, Pressable} from 'react-native';
+import { View, Text, Button, TouchableHighlight, Image, Pressable, ScrollView} from 'react-native';
 import { styles } from "./welcomeScreenStyles";
 
 import Emoji from 'react-native-emoji';
@@ -18,7 +18,16 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate('Search')
   }
 
+  //below is a temporary screen where we can link 
+  //all the screens that are in development and we 
+  //would like to get their visibility
+
+  const handlePressDev = () => {
+    navigation.navigate('Development')
+  }
+
     return (
+      <ScrollView >
       <View style={styles.container}>
             <Text>WELCOME TO KONA CONNECT</Text>
 
@@ -53,10 +62,11 @@ const HomeScreen = ({navigation}) => {
               </View>
 
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
-            <Emoji name="owl" style={{fontSize: 50}} />
+            <Emoji name="owl" style={{fontSize: 50}} 
+            onPress={handlePressDev}/>
 
       </View>
-   
+      </ScrollView>
     );
   };
 
