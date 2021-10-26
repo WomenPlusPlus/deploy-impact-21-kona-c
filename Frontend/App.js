@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Counter from './screens/counter/counter';
+import Development from './screens/development/developmentScreen';
 import PromptMessage from './screens/myFirstApp/myFirstApp';
 import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
 import Search from './screens/searchNGOscreen/searchNGO';
@@ -34,7 +34,7 @@ function App() {
         //   fontWeight: 'bold',
         // }, 
         }}/>
-        <Stack.Screen name='Counter' component={Counter} />
+        <Stack.Screen name='Development' component={Development} />
         <Stack.Screen name='Search' component={Search} />
         <Stack.Screen name='PromptMessage' component={PromptMessage} 
         options={{ title: 'My very first prompt message' }}/>
