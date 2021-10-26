@@ -7,6 +7,7 @@ import Development from './screens/development/developmentScreen';
 import PromptMessage from './screens/myFirstApp/myFirstApp';
 import  HomeScreen  from './screens/welcomeScreen/welcomeScreen';
 import Search from './screens/searchNGOscreen/searchNGO';
+import OrganisationsListScreen from './screens/organisationsListScreen/organisationsListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,7 @@ function App() {
         <Stack.Screen name='Search' component={Search} />
         <Stack.Screen name='PromptMessage' component={PromptMessage} 
         options={{ title: 'My very first prompt message' }}/>
+        <Stack.Screen name='OrganisationsListScreen' component={OrganisationsListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
