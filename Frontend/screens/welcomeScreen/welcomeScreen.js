@@ -18,6 +18,7 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate('Search')
   }
 
+
     return (
       <ScrollView >
       <View style={styles.container}>
