@@ -5,10 +5,10 @@ export const styles = StyleSheet.create({
     container: { 
         flex: 1, 
         alignItems: 'center', 
-        justifyContent: 'center' },
+        justifyContent: 'center', },
         
     textTitle: {
-      fontFamily: "Cochin",
+      fontFamily: "Arial",
       fontSize: 30,
       fontWeight: "bold",
     //   backgroundColor: "linear-gradient(red, yellow, blue)",
@@ -24,8 +24,8 @@ export const styles = StyleSheet.create({
       padding: 15, 
       marginTop:20,
       alignItems: "center", 
-      borderRadius: 25,
-      backgroundColor: "blue",
+
+      backgroundColor: "#E4C9E5",
       elevation: 3,
       
     },
@@ -42,8 +42,41 @@ export const styles = StyleSheet.create({
     icon:{
       width: 2,
     height: 2,
-    }   
+    },
+    roundS:{
+      width: 100,
+      height:  100,
+      borderRadius: 50,
+      padding: 15, 
+      backgroundColor: "#E4C9E5",
+      elevation: 3,
+    },
+    roundM:{
+      width: 150,
+      height:  150,
+      borderRadius: 75,
+      padding: 25, 
+      marginTop:20,
+      alignSelf: 'flex-end', 
+
+      backgroundColor: "#A169B1",
+      elevation: 3,
+    },
+    roundXL:{
+      width: 250,
+      height:  250,
+      borderRadius: 125,
+      padding: 15, 
+      marginTop:2,
+      backgroundColor: "#921CB1",
+      elevation: 3,
+      // alignSelf:'flex-end',
+    },
+    bubblesContainer:{
+      alignItems: 'stretch',
+    }      
 
      
 
 });
+

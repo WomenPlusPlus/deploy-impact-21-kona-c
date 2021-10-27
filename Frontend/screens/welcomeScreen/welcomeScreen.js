@@ -33,25 +33,27 @@ const HomeScreen = ({navigation}) => {
             <Text>WELCOME TO KONA CONNECT</Text>
 
             <Text style={styles.textTitle}>Find the help you need</Text>
-
+<View style={styles.bubblesContainer}>
             <TouchableHighlight onPress={() => console.log("image tapped")}>
-            <Image
+              <View style={styles.roundXL}>
+            {/* <Image
                   source={{
                     width: 300,
                     height: 300,
+                   
                     uri: "https://picsum.photos/200/300",
-                  }}/>
-                  
+                  }}/> */}
+              </View>    
             </TouchableHighlight>
                 
-                <View style={styles.button}>
+                <View style={styles.roundM}>
                 <Text style={styles.textButton}>Press here to</Text>
                   <Button title='FIND HELP NOW'
                           onPress={handlePress} 
                           color= 'white'
                           />
             </View>
-            <View style={styles.button}>
+            <View style={styles.roundS}>
               <Pressable
                 onPress={handlePressNGO}>
 
@@ -59,6 +61,7 @@ const HomeScreen = ({navigation}) => {
                   go to organisation search</Text>  
 
               </Pressable>
+              </View>
 
               </View>
 
@@ -72,5 +75,7 @@ const HomeScreen = ({navigation}) => {
       </ScrollView>
     );
   };
+
+  
 
   export default HomeScreen;
