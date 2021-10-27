@@ -10,6 +10,7 @@ const HomeScreen = ({navigation}) => {
 
   const handlePress = () =>{
     console.log('Button pressed');
+    console.warn('Pressed Pressed')
     navigation.navigate('PromptMessage')
   }
 
@@ -64,6 +65,8 @@ const HomeScreen = ({navigation}) => {
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
             <Emoji name="owl" style={{fontSize: 50}} 
             onPress={handlePressDev}/>
+
+
 
       </View>
       </ScrollView>
