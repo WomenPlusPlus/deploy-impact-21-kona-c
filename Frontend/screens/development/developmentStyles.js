@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
       // opacity: 10,
     },
     text: {
-      fontFamily: "Cochin",
+      fontFamily: "Arial",
       fontSize: 20,
       fontWeight: "bold",
       color: "red",

@@ -17,7 +17,7 @@ function App() {
       <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#f4511e',
+          backgroundColor: '#8A449D',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -26,7 +26,7 @@ function App() {
       }}>
         {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
         <Stack.Screen name="Home" component={HomeScreen} 
-        options={{ title: 'My home on top',
+        options={{ title: 'Dots.',
         // headerStyle: {
         //   backgroundColor: '#f4511e',
         // },
