@@ -16,38 +16,30 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#f4511e",
-          },
-          headerTintColor: "#fff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
-      >
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#8A449D',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
         {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            title: "My home on top",
-            // headerStyle: {
-            //   backgroundColor: '#f4511e',
-            // },
-            // headerTintColor: '#fff',
-            // headerTitleStyle: {
-            //   fontWeight: 'bold',
-            // },
-          }}
-        />
-        <Stack.Screen name="Development" component={Development} />
-        <Stack.Screen name="Search" component={Search} />
-        <Stack.Screen
-          name="PromptMessage"
-          component={PromptMessage}
-          options={{ title: "My very first prompt message" }}
-        />
+        <Stack.Screen name="Home" component={HomeScreen} 
+        options={{ title: 'Dots.',
+        // headerStyle: {
+        //   backgroundColor: '#f4511e',
+        // },
+        // headerTintColor: '#fff',
+        // headerTitleStyle: {
+        //   fontWeight: 'bold',
+        // }, 
+        }}/>
+        <Stack.Screen name='Development' component={Development} />
+        <Stack.Screen name='Search' component={Search} />
+        <Stack.Screen name='PromptMessage' component={PromptMessage} 
+        options={{ title: 'My very first prompt message' }}/>
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}
