@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: "white",
     margin: 15,
-    borderRadius: 20,
+    borderRadius: 5,
     overflow: "hidden",
   },
   textBoxName: {
@@ -35,6 +35,12 @@ export const styles = StyleSheet.create({
     color: "black",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  textBoxWebsite: {
+    color: "black",
+    fontSize: 16,
+    marginRight: 10,
+    textDecorationLine: 'underline',
   },
 
   flexContainer: {
