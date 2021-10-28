@@ -30,25 +30,16 @@ const HomeScreen = ({navigation}) => {
     return (
       <ScrollView >
       <View style={styles.container}>
-            <Text>WELCOME TO KONA CONNECT</Text>
-
-            <Text style={styles.textTitle}>Find the help you need</Text>
 <View style={styles.bubblesContainer}>
             <TouchableHighlight onPress={() => console.log("image tapped")}>
               <View style={styles.roundXL}>
-            {/* <Image
-                  source={{
-                    width: 300,
-                    height: 300,
-                   
-                    uri: "https://picsum.photos/200/300",
-                  }}/> */}
+              <Text style={styles.textTitle}>If you are in a vulnerable situation...</Text>
               </View>    
             </TouchableHighlight>
                 
                 <View style={styles.roundM}>
-                <Text style={styles.textButton}>Press here to</Text>
-                  <Button title='FIND HELP NOW'
+                <Text style={styles.textButton}>If someone else needs help...</Text>
+                  <Button title='...'
                           onPress={handlePress} 
                           color= 'white'
                           />
@@ -58,12 +49,20 @@ const HomeScreen = ({navigation}) => {
                 onPress={handlePressNGO}>
 
                   <Text style={styles.textButton}>
-                  go to organisation search</Text>  
+                  If you are at risk...</Text>  
 
               </Pressable>
               </View>
 
               </View>
+
+              <View style={styles.button}>
+                
+              <Button title='START'
+                          onPress={handlePress} 
+                          color= '#921CB1'
+                          /> 
+                          </View>
 
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
             <Emoji name="owl" style={{fontSize: 50}} 

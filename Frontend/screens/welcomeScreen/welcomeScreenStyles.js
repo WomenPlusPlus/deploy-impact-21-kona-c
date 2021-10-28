@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native';
 
+let sizeS = 130
+let sizeM = 170
+let sizeXL = 250
 
 export const styles = StyleSheet.create({
+
     container: { 
         flex: 1, 
         alignItems: 'center', 
@@ -9,71 +13,77 @@ export const styles = StyleSheet.create({
         
     textTitle: {
       fontFamily: "Arial",
-      fontSize: 30,
+      fontSize: 25,
       fontWeight: "bold",
-    //   backgroundColor: "linear-gradient(red, yellow, blue)",
-      // textShadowColor: "black",
       textShadowRadius: 10,
-      marginTop: 20,
+      marginTop: 40,
       marginBottom: 20,
-      // backgroundColor: "grey",
-      
+      alignSelf: 'center',
+      color: 'white',
     },  
     button:{
-      // flexDirection: 'row',
-      padding: 15, 
-      marginTop:20,
-      alignItems: "center", 
 
+      padding: 15, 
+      marginTop:120,
+      alignItems: "center", 
       backgroundColor: "#E4C9E5",
       elevation: 3,
       
     },
     textButton:{
     color: 'white',
-    fontWeight:'bold'
+    fontWeight:'bold',
+marginTop: 20,
+marginLeft: 20,
+    
     },
     textInfo:{
       fontSize: 10,
       fontWeight: "normal",
       marginTop: 60,
-      fontStyle: 'italic'
+      fontStyle: 'italic',
+
     },
     icon:{
       width: 2,
     height: 2,
     },
     roundS:{
-      width: 100,
-      height:  100,
-      borderRadius: 50,
+      width: sizeS,
+      height:  sizeS,
+      borderRadius: sizeS/2,
       padding: 15, 
       backgroundColor: "#E4C9E5",
       elevation: 3,
+      marginTop: -190,
+      flex:1,
     },
     roundM:{
-      width: 150,
-      height:  150,
-      borderRadius: 75,
-      padding: 25, 
+      width: sizeM,
+      height:  sizeM,
+      borderRadius: sizeM/2,
+      padding: 35, 
       marginTop:20,
       alignSelf: 'flex-end', 
-
+      flex:1,
       backgroundColor: "#A169B1",
       elevation: 3,
     },
     roundXL:{
-      width: 250,
-      height:  250,
-      borderRadius: 125,
+      width: sizeXL,
+      height:  sizeXL,
+      borderRadius: sizeXL/2,
       padding: 15, 
-      marginTop:2,
+      marginTop:10,
       backgroundColor: "#921CB1",
       elevation: 3,
+      marginLeft: 80,
+      flex: 0.2,
       // alignSelf:'flex-end',
     },
     bubblesContainer:{
       alignItems: 'stretch',
+      flex:1,
     }      
 
      
