@@ -1,4 +1,5 @@
-import React from "react";
+import { Link } from "@react-navigation/native";
+import React,{ useState, useEffect } from "react";
 import { Text, View, ScrollView, Button, Linking } from "react-native";
 import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
@@ -6,8 +7,8 @@ import { styles } from "./organisationsListStyles";
 const OrganisationsListScreen = ({ navigation }) => {
   return (
     <ScrollView>
-      {Object.keys(data).map((organisationId) => (
-        <View
+      {Object.keys(data).map((organisationId) =>
+         (<View
           key={"listview" + organisationId}
           style={[styles.container, styles.boxShadow]}
         >
@@ -33,8 +34,8 @@ const OrganisationsListScreen = ({ navigation }) => {
           {data[organisationId]["Phone Number"] === "" ? null : (
             <Text key={"phone" + organisationId} style={styles.flexContainer}>
               <Text style={styles.textBoxTitle}>Phone: </Text>
-              <Text style={styles.textBox}>
-                {data[organisationId]["Phone Number"]}
+              <Text style={styles.textBox} >
+              {data[organisationId]["Phone Number"]}
               </Text>
             </Text>
           )}
