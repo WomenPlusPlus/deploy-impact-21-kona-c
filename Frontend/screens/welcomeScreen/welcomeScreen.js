@@ -11,7 +11,7 @@ const HomeScreen = ({navigation}) => {
   const handlePress = () =>{
     console.log('Button pressed');
     console.warn('Pressed Pressed')
-    navigation.navigate('PromptMessage')
+    navigation.navigate('InfoScreen')
   }
 
   const handlePressNGO = () =>{
