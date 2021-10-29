@@ -19,13 +19,6 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate('Search')
   }
 
-  //below is a temporary screen where we can link 
-  //all the screens that are in development and we 
-  //would like to get their visibility
-
-  const handlePressDev = () => {
-    navigation.navigate('Development')
-  }
 
     return (
       <ScrollView >
@@ -57,8 +50,7 @@ const HomeScreen = ({navigation}) => {
               </View>
 
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
-            <Emoji name="owl" style={{fontSize: 50}} 
-            onPress={handlePressDev}/>
+
 
 
 
