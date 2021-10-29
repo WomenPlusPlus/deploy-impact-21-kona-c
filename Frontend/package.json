@@ -24,6 +24,7 @@
     "react-native-datatable-component": "^2.0.0",
     "react-native-emoji": "^1.8.0",
     "react-native-navbar": "^2.1.0",
+    "react-native-normalize": "^1.0.1",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "~0.13.12",

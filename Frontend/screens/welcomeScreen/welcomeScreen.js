@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Button, ScrollView, Pressable} from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./welcomeScreenStyles";
 
 
@@ -20,6 +21,7 @@ const HomeScreen = ({navigation}) => {
 
 
     return (
+      <SafeAreaView>
       <ScrollView >
       <View style={styles.container}>
 
@@ -46,6 +48,7 @@ const HomeScreen = ({navigation}) => {
 
       </View>
       </ScrollView>
+      </SafeAreaView>
     );
   };
 

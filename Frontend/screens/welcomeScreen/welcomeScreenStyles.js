@@ -1,18 +1,27 @@
 import { StyleSheet, Dimensions, PixelRatio } from 'react-native';
 
+
 const { width, height } = Dimensions.get('window');
 console.warn(width)
 console.warn(height)
 
 
-let bubbleXL = 0.70
-let bubbleM = 0.55
-let bubbleS = 0.4
 
-let sizeS = bubbleS*width
-let sizeM = bubbleM*width
-let sizeXL = bubbleXL*width
+let partialHeight = 0.25*height
 
+let bubbleXLwidth = 0.75*width
+let bubbleXL = (bubbleXLwidth + partialHeight)/2
+
+let bubbleMwidth = 0.45*width
+let bubbleM = (bubbleMwidth + partialHeight)/2
+
+let bubbleSwidth = 0.25*width
+let bubbleS= (bubbleSwidth + partialHeight)/2
+
+
+let sizeS = bubbleS
+let sizeM = bubbleM
+let sizeXL = bubbleXL
 
 
 export const styles = StyleSheet.create({
@@ -66,7 +75,7 @@ export const styles = StyleSheet.create({
       borderRadius: sizeS/2,
       // padding: 15, 
       backgroundColor: "#E4C9E5",
-      marginTop: -((0.7*bubbleM)*height),
+      marginTop: -(0.7*partialHeight),
       marginLeft: (0.02*width),
       marginRight: ((1-bubbleS-0.02)*width),
       justifyContent: 'center',
@@ -89,8 +98,8 @@ export const styles = StyleSheet.create({
       // padding: 15, 
       backgroundColor: "#921CB1",
       elevation: 3,
-      marginTop: (0.07*height),
-      marginLeft: ((1-bubbleXL-0.05)*width),
+      // marginTop: (0.07*height),
+      marginLeft: (width-bubbleXLwidth),
       marginRight: (0.05*width),
       marginBottom: (0.015*height),
       justifyContent: 'center'
