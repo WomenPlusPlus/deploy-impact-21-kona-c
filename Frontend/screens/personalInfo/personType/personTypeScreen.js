@@ -10,21 +10,22 @@ import {
   Button,
   Alert,
 } from "react-native";
-import { styles } from "./personalInformationStyles";
+import { styles } from "./personTypeStyles";
 
-const InfoScreen = () => {
+
+const InfoScreenAge = () => {
   const handlePress = () =>
     console.log("i just clicked on the text and it prints this!");
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>How old are you?!</Text>
-<View style={styles.roundS}><Text>0 - 12</Text></View>
-<View style={styles.roundM}><Text>0 - 12</Text></View>
-<View style={styles.roundL}><Text>0 - 12</Text></View>
-<View style={styles.roundXL}><Text>0 - 12</Text></View>
-<View style={styles.roundXXL}><Text>0 - 12</Text></View>
 
+        <Text>Who are you?</Text>
+        <Text>In order to predefine search for you we need you to answer some questions</Text>
+
+        <View style={styles.roundXL}><Text>refugee</Text></View>
+        <View style={styles.roundXXL}><Text>just searching for help</Text></View>
+      
 
       <StatusBar style="auto" />
       
@@ -41,6 +42,6 @@ const InfoScreen = () => {
   );
 };
 
-export default InfoScreen;
+export default InfoScreenAge;
 
 

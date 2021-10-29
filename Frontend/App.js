@@ -4,7 +4,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Development from "./screens/development/developmentScreen";
-import InfoScreen from "./screens/personalInformation/personalInformationScreen";
+import InfoScreenAge from "./screens/personalInfo/ageScreen";
 import HomeScreen from "./screens/welcomeScreen/welcomeScreen";
 import Search from "./screens/searchNGOscreen/searchNGO";
 import OrganisationsListScreen from "./screens/organisationsListScreen/organisationsListScreen";
@@ -38,7 +38,7 @@ function App() {
         }}/>
         <Stack.Screen name='Development' component={Development} />
         <Stack.Screen name='Search' component={Search} />
-        <Stack.Screen name='InfoScreen' component={InfoScreen} 
+        <Stack.Screen name='InfoScreenAge' component={InfoScreenAge} 
         options={{ title: 'Dots Bubbles and why not logo' }}/>
         <Stack.Screen
           name="OrganisationsListScreen"
