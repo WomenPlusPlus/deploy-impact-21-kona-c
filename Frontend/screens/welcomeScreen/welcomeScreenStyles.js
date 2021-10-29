@@ -1,4 +1,5 @@
-import { StyleSheet, Dimensions, PixelRatio } from 'react-native';
+import { StyleSheet, Dimensions, PixelRatio} from 'react-native';
+import normalize from 'react-native-normalize';
 
 
 const { width, height } = Dimensions.get('window');
@@ -10,13 +11,13 @@ console.warn(height)
 let partialHeight = 0.25*height
 
 let bubbleXLwidth = 0.75*width
-let bubbleXL = (bubbleXLwidth + partialHeight)/2
+let bubbleXL = Math.round((bubbleXLwidth + partialHeight)/2)
 
 let bubbleMwidth = 0.45*width
-let bubbleM = (bubbleMwidth + partialHeight)/2
+let bubbleM = Math.round((bubbleMwidth + partialHeight)/2)
 
 let bubbleSwidth = 0.25*width
-let bubbleS= (bubbleSwidth + partialHeight)/2
+let bubbleS= Math.round((bubbleSwidth + partialHeight)/2)
 
 
 let sizeS = bubbleS
@@ -33,7 +34,7 @@ export const styles = StyleSheet.create({
         
     textTitle: {
       fontFamily: "Arial",
-      fontSize: 25,
+      fontSize: normalize(14),
       fontWeight: "bold",
       textShadowRadius: 10,
       marginTop: 40,
@@ -54,12 +55,13 @@ export const styles = StyleSheet.create({
     textButton:{
     color: 'white',
     fontWeight:'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: normalize(20),
 
     
     },
     textInfo:{
-      fontSize: 10,
+      fontSize: 100 / PixelRatio.getFontScale(),
       fontWeight: "normal",
       marginTop: 60,
       fontStyle: 'italic',
