@@ -1,15 +1,26 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions, PixelRatio } from 'react-native';
 
-let sizeS = 130
-let sizeM = 170
-let sizeXL = 250
+const { width, height } = Dimensions.get('window');
+console.warn(width)
+console.warn(height)
+
+
+let bubbleXL = 0.70
+let bubbleM = 0.55
+let bubbleS = 0.4
+
+let sizeS = bubbleS*width
+let sizeM = bubbleM*width
+let sizeXL = bubbleXL*width
+
+
 
 export const styles = StyleSheet.create({
 
     container: { 
-        flex: 1, 
-        alignItems: 'center', 
-        justifyContent: 'center', },
+        justifyContent: 'center',
+        // alignItems: 'stretch',
+      },
         
     textTitle: {
       fontFamily: "Arial",
@@ -53,40 +64,38 @@ export const styles = StyleSheet.create({
       width: sizeS,
       height:  sizeS,
       borderRadius: sizeS/2,
-      padding: 15, 
+      // padding: 15, 
       backgroundColor: "#E4C9E5",
-      elevation: 3,
-      marginTop: -190,
-      flex:1,
+      marginTop: -((0.7*bubbleM)*height),
+      marginLeft: (0.02*width),
+      marginRight: ((1-bubbleS-0.02)*width),
       justifyContent: 'center',
+
     },
     roundM:{
       width: sizeM,
       height:  sizeM,
       borderRadius: sizeM/2,
-      alignSelf: 'flex-end', 
-      flex:1,
       backgroundColor: "#A169B1",
-      elevation: 3,
-      justifyContent: 'center'
+      alignSelf: 'flex-end', 
+      justifyContent: 'center',
+      marginLeft: ((1-bubbleM-0.02)*width),
+      marginRight: (0.02*width),
     },
     roundXL:{
       width: sizeXL,
       height:  sizeXL,
       borderRadius: sizeXL/2,
-      padding: 15, 
-      marginTop:10,
+      // padding: 15, 
       backgroundColor: "#921CB1",
       elevation: 3,
-      marginLeft: 80,
-      flex: 0.2,
+      marginTop: (0.07*height),
+      marginLeft: ((1-bubbleXL-0.05)*width),
+      marginRight: (0.05*width),
+      marginBottom: (0.015*height),
       justifyContent: 'center'
 
-    },
-    bubblesContainer:{
-      alignItems: 'stretch',
-      flex:1,
-    }      
+    },     
 
      
 

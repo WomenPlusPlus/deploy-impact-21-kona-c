@@ -1,17 +1,16 @@
 import React from "react";
-import { View, Text, TouchableHighlight, Image, Button, ScrollView, Pressable} from 'react-native';
+import { View, Text, Button, ScrollView, Pressable} from 'react-native';
 import { styles } from "./welcomeScreenStyles";
 
-import Emoji from 'react-native-emoji';
 
 
 
 const HomeScreen = ({navigation}) => {
 
-  const handlePress = () =>{
+  const handlePress1 = () =>{
     console.log('Button pressed');
     console.warn('Pressed Pressed')
-    navigation.navigate('InfoScreenAge')
+    navigation.navigate('InfoAge')
   }
 
   const handlePressNGO = () =>{
@@ -23,7 +22,7 @@ const HomeScreen = ({navigation}) => {
     return (
       <ScrollView >
       <View style={styles.container}>
-<View style={styles.bubblesContainer}>
+
 
               <View style={styles.roundXL}>
               <Button color='white' title='If you are in a vulnerable situation...' onPress={() => console.warn("big bubble tapped")} />
@@ -31,7 +30,7 @@ const HomeScreen = ({navigation}) => {
               </View>    
                
                 <View style={styles.roundM}>
-                <Pressable onPress={handlePress}>  
+                <Pressable onPress={handlePress1}>  
                 <Text style={styles.textButton}>If someone else needs help...</Text>
                 </Pressable>
             </View>
@@ -45,13 +44,10 @@ const HomeScreen = ({navigation}) => {
               </Pressable>
               </View>
 
-              </View>
-
       </View>
       </ScrollView>
     );
   };
 
   
-
   export default HomeScreen;
