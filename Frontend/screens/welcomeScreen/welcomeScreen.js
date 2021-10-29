@@ -56,14 +56,6 @@ const HomeScreen = ({navigation}) => {
 
               </View>
 
-              <View style={styles.button}>
-                
-              <Button title='START'
-                          onPress={handlePress} 
-                          color= '#921CB1'
-                          /> 
-                          </View>
-
             <Text style={styles.textInfo}>Dots, we help you finding help</Text>
             <Emoji name="owl" style={{fontSize: 50}} 
             onPress={handlePressDev}/>
