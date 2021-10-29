@@ -3,10 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "deepskyblue",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
   },
   containerButtons: {
     flexDirection: "row",

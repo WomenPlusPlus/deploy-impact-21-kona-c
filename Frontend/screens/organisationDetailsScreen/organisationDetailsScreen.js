@@ -3,7 +3,7 @@ import { Text, ScrollView, Linking } from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet } from "react-native";
 
-const OrganisationDetailsScreen = ({ route, navigation }) => {
+const OrganisationDetailsScreen = ({ route, navigation}) => {
   const organisationId = parseInt(Object.values(route.params));
   console.log(organisationId);
 
