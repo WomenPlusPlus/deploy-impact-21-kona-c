@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
       marginBottom: 20,
       alignSelf: 'center',
       color: 'white',
+      
     },  
     button:{
 
@@ -33,8 +34,8 @@ export const styles = StyleSheet.create({
     textButton:{
     color: 'white',
     fontWeight:'bold',
-marginTop: 20,
-marginLeft: 20,
+    textAlign: 'center'
+
     
     },
     textInfo:{
@@ -57,17 +58,17 @@ marginLeft: 20,
       elevation: 3,
       marginTop: -190,
       flex:1,
+      justifyContent: 'center',
     },
     roundM:{
       width: sizeM,
       height:  sizeM,
       borderRadius: sizeM/2,
-      padding: 35, 
-      marginTop:20,
       alignSelf: 'flex-end', 
       flex:1,
       backgroundColor: "#A169B1",
       elevation: 3,
+      justifyContent: 'center'
     },
     roundXL:{
       width: sizeXL,
@@ -79,7 +80,8 @@ marginLeft: 20,
       elevation: 3,
       marginLeft: 80,
       flex: 0.2,
-      // alignSelf:'flex-end',
+      justifyContent: 'center'
+
     },
     bubblesContainer:{
       alignItems: 'stretch',

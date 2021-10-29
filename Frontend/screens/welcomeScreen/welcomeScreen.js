@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, TouchableHighlight, Image, Pressable, ScrollView} from 'react-native';
+import { View, Text, TouchableHighlight, Image, Button, ScrollView, Pressable} from 'react-native';
 import { styles } from "./welcomeScreenStyles";
 
 import Emoji from 'react-native-emoji';
@@ -24,35 +24,28 @@ const HomeScreen = ({navigation}) => {
       <ScrollView >
       <View style={styles.container}>
 <View style={styles.bubblesContainer}>
-            <TouchableHighlight onPress={() => console.log("image tapped")}>
+
               <View style={styles.roundXL}>
-              <Text style={styles.textTitle}>If you are in a vulnerable situation...</Text>
+              <Button color='white' title='If you are in a vulnerable situation...' onPress={() => console.warn("big bubble tapped")} />
+              <Text style={styles.textTitle}></Text>
               </View>    
-            </TouchableHighlight>
-                
+               
                 <View style={styles.roundM}>
+                <Pressable onPress={handlePress}>  
                 <Text style={styles.textButton}>If someone else needs help...</Text>
-                  <Button title='...'
-                          onPress={handlePress} 
-                          color= 'white'
-                          />
+                </Pressable>
             </View>
+
             <View style={styles.roundS}>
               <Pressable
-                onPress={handlePressNGO}>
-
+                onPress={handlePressNGO}
+                >
                   <Text style={styles.textButton}>
                   If you are at risk...</Text>  
-
               </Pressable>
               </View>
 
               </View>
-
-            <Text style={styles.textInfo}>Dots, we help you finding help</Text>
-
-
-
 
       </View>
       </ScrollView>
