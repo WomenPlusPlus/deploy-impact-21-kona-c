@@ -16,11 +16,11 @@ import { styles } from "./stylesPInfo";
 
 
 const PersonType = ({navigation}) => {
-// const[type, setType] = useState([
-//   {title: 'refugee'},
-//   {title: 'immigrant'},
-//   {title: 'just looking for help'},
-// ])
+const[type, setType] = useState([
+  {option: 'refugee'},
+  {option: 'immigrant'},
+  {option: 'just looking for help'},
+])
 
   const handlePress = () =>{
     navigation.navigate('ResultInfoScreen',)
@@ -48,10 +48,10 @@ const PersonType = ({navigation}) => {
                   )}
                 /> */}
       <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><Text style={styles.textBubble}>refugee</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>{type[0].option}</Text></View>
         </TouchableOpacity>
-        <View style={styles.bubble}><Text style={styles.textBubble}>homeless</Text></View>
-        <View style={styles.bubble}><Text style={styles.textBubble}>just searching for help</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>{type[1].option}</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>{type[2].option}</Text></View>
       
     </View>
   );

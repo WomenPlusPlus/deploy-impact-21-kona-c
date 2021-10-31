@@ -13,12 +13,12 @@ import normalize from 'react-native-normalize';
 
 const InfoGender = ({navigation}) => {
 
-  // const [gender, SetGender] = useState([
-  //   {option: 'Female',},
-  //   {option: 'Male'},
-  //   {option: 'Other'},
-  //   {option: 'I prefer not to say'},
-  // ])
+  const [gender, SetGender] = useState([
+    {option: 'Female',},
+    {option: 'Male'},
+    {option: 'Other'},
+    {option: 'I prefer not to say'},
+  ])
 
   const handlePress = () =>{
     console.log("gender!")
@@ -41,19 +41,25 @@ const InfoGender = ({navigation}) => {
                                   <TouchableOpacity onPress={handlePress}>
                             
                                   <View style={styles.bubble}>      
-                                  <Text> {item.option}</Text>
+                                  <Text>
+                                    
+                                     {item.option}
+                                     
+                                     </Text>
                                   </View>
                                 
                                   </TouchableOpacity>
                                   )}
                                 /> */}
+
+
         <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Female</Text></View>
+        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[0].option}</Text></View>
         </TouchableOpacity>
         
-        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Male</Text></View>
+        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[1].option}</Text></View>
         
-        <View style={styles.bubble}><Text style={styles.textBubble}>Prefer not to say</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>{gender[2].option}</Text></View>
         </View>
     </SafeAreaView>
     

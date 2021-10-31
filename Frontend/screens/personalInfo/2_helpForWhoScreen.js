@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { styles } from "./stylesPInfo";
 import normalize from 'react-native-normalize';
-
+import {institutionResult} from './1_institutionTypeScreen';
 
 const HelpForWho = ({navigation}) => {
 
@@ -31,7 +31,7 @@ const HelpForWho = ({navigation}) => {
 
         <View style={styles.bubble}><Text style={styles.textBubble}>Others</Text></View>
         
-
+<Text>Result from previous screen: {institutionResult}</Text>
         </View>
     </SafeAreaView>
     
