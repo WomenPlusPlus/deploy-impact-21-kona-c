@@ -9,10 +9,11 @@ import Search from "./screens/searchNGOscreen/searchNGO";
 import OrganisationsListScreen from "./screens/organisationsListScreen/organisationsListScreen";
 import OrganisationDetailsScreen from "./screens/organisationDetailsScreen/organisationDetailsScreen";
 import InfoAge from "./screens/personalInfo/4_ageScreen";
-import InfoPersonType from "./screens/personalInfo/5_personTypeScreen";
+import PersonType from "./screens/personalInfo/5_personTypeScreen";
 import ResultInfoScreen from "./screens/personalInfo/resultPersonalInfoScreen";
 import InfoGender from './screens/personalInfo/3_genderScreen';
 import InstitutionType from './screens/personalInfo/1_institutionTypeScreen';
+import HelpForWho from "./screens/personalInfo/2_helpForWhoScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,13 +39,13 @@ function App() {
         <Stack.Screen name='Search' component={Search} />
 
         <Stack.Group>
+        <Stack.Screen name='InstitutionType' component={InstitutionType} />
+        <Stack.Screen name='HelpForWho' component={HelpForWho} />
+        <Stack.Screen name='InfoGender' component={InfoGender} />
         <Stack.Screen name='InfoAge' component={InfoAge} 
         options={{ title: 'Dots Bubbles and why not logo' }} />
-        <Stack.Screen name='InfoPersonType' component={InfoPersonType} />
+        <Stack.Screen name='PersonType' component={PersonType} />
         <Stack.Screen name='ResultInfoScreen' component={ResultInfoScreen} />
-        <Stack.Screen name='InfoGender' component={InfoGender} />
-        <Stack.Screen name='InstitutionType' component={InstitutionType} />
-        
         </Stack.Group>
 
         <Stack.Screen

@@ -10,34 +10,34 @@ import { styles } from "./stylesPInfo";
 import normalize from 'react-native-normalize';
 
 
-const InstitutionType = ({navigation}) => {
-
-
+const HelpForWho = ({navigation}) => {
 
   const handlePress = () =>{
-
-    navigation.navigate('InfoAge', )
+    navigation.navigate('InfoGender', )
   }
 
 
   return (
     <SafeAreaView style={styles.container}>
 
-        <Text style={styles.textTitleQuestion}>Are you looking for help for...</Text>
+        <Text style={styles.textTitleQuestion}>Whom are you seeking help for...</Text>
 
         
-        <View style={styles.bubbleBox}>      
+        <View style={styles.bubbleBox}> 
 
-        <View style={styles.bubble}><Text style={styles.textBubble}>Person</Text></View>
-        <View style={styles.bubble}><Text style={styles.textBubble}>Institution</Text></View>
+        <TouchableOpacity onPress={handlePress}>
+        <View style={styles.bubble}><Text style={styles.textBubble}>Myself</Text></View>
+        </TouchableOpacity>
+
+        <View style={styles.bubble}><Text style={styles.textBubble}>Others</Text></View>
         
-        <View style={styles.bubble}><Text style={styles.textBubble}>Company</Text></View>
+
         </View>
     </SafeAreaView>
     
   );
 };
 
-export default InstitutionType;
+export default HelpForWho;
 
 

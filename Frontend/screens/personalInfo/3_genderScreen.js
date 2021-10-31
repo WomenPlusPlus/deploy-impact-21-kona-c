@@ -47,7 +47,10 @@ const InfoGender = ({navigation}) => {
                                   </TouchableOpacity>
                                   )}
                                 /> */}
+        <TouchableOpacity onPress={handlePress}>
         <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Female</Text></View>
+        </TouchableOpacity>
+        
         <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Male</Text></View>
         
         <View style={styles.bubble}><Text style={styles.textBubble}>Prefer not to say</Text></View>

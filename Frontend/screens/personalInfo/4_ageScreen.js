@@ -14,7 +14,7 @@ const InfoAge = ({navigation}) => {
 
   const handlePress = () =>{
     console.log("i just clicked on the text and it prints this!")
-    navigation.navigate('ResultInfoScreen',)
+    navigation.navigate('PersonType',)
   }
 
   return (

@@ -8,15 +8,9 @@ import { styles } from "./welcomeScreenStyles";
 
 const HomeScreen = ({navigation}) => {
 
-  const handlePress1 = () =>{
-    console.log('Button pressed');
-    console.warn('Pressed Pressed')
-    navigation.navigate('InfoAge')
-  }
 
-  const handlePressNGO = () =>{
-    console.log('Button pressedNGO');
-    navigation.navigate('InfoGender')
+  const handlePress = () =>{
+    navigation.navigate('InstitutionType')
   }
 
 
@@ -28,14 +22,14 @@ const HomeScreen = ({navigation}) => {
               </View>    
                
                 <View style={styles.roundM}>
-                <Pressable onPress={handlePress1}>  
+                <Pressable onPress={handlePress}>  
                 <Text style={styles.textButton}>If someone else needs help...</Text>
                 </Pressable>
             </View>
 
             <View style={styles.roundS}>
               <Pressable
-                onPress={handlePressNGO}
+                onPress={handlePress}
                 >
                   <Text style={styles.textButton}>
                   If you are at risk...</Text>  

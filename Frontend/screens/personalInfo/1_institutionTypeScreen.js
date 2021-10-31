@@ -5,6 +5,7 @@ import {
   FlatList,
   View,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { styles } from "./stylesPInfo";
 import normalize from 'react-native-normalize';
@@ -12,11 +13,8 @@ import normalize from 'react-native-normalize';
 
 const InstitutionType = ({navigation}) => {
 
-
-
   const handlePress = () =>{
-
-    navigation.navigate('InfoAge', )
+    navigation.navigate('HelpForWho')
   }
 
 
@@ -27,8 +25,9 @@ const InstitutionType = ({navigation}) => {
 
         
         <View style={styles.bubbleBox}>      
-
+        <Pressable onPress={handlePress}>
         <View style={styles.bubble}><Text style={styles.textBubble}>Person</Text></View>
+        </Pressable>
         <View style={styles.bubble}><Text style={styles.textBubble}>Institution</Text></View>
         
         <View style={styles.bubble}><Text style={styles.textBubble}>Company</Text></View>
