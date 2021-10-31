@@ -1,44 +1,45 @@
-import { Tab } from "@material-ui/core";
-import { StylesContext } from "@material-ui/styles";
-import { StatusBar } from "expo-status-bar";
 import React, {useState} from "react";
 import {
-  StyleSheet,
   Text,
   SafeAreaView,
   Pressable,
   View,
-  Button,
-  Alert,
 } from "react-native";
 import { styles } from "./ageStyles";
 
 
 const InfoAge = ({navigation}) => {
 
-  const [age, SetAge] = useState()
+  // const [age, SetAge] = useState()
 
-  const handlePress8 = () =>{
+  const handlePress = () =>{
     console.log("i just clicked on the text and it prints this!")
-    navigation.push('InfoPersonType')
+    navigation.navigate('ResultInfoScreen',)
   }
 
   return (
     <SafeAreaView style={styles.container}>
 
-        <Text>How old are you?!</Text>
-        <Text>In order to predefine search for you we need you to answer some questions</Text>
-        <View style={styles.roundS}>
-          <Pressable onPress={handlePress8}>
-            <Text>0 - 12</Text>
-            </Pressable>
-          </View>
+      <Text>How old are you?</Text>
+      <Text>How old is a person you seek help for?</Text>
         
-        <View style={styles.roundM}><Text>0 - 12</Text></View>
-        <View style={styles.roundL}><Text>0 - 12</Text></View>
-        <View style={styles.roundXL}><Text>0 - 12</Text></View>
-        <View style={styles.roundXXL}><Text>0 - 12</Text></View>
-      
+        <View style={styles.box}>
+
+              <View style={styles.bubble}>
+                <Pressable onPress={handlePress}>
+                  <Text>0 - 12</Text>
+                </Pressable>
+              </View>
+        
+              <View style={styles.bubble}>
+              <Pressable onPress={handlePress}><Text>12 - 22</Text>
+              </Pressable>
+              </View>
+
+              <View style={styles.bubble}><Text>0 - 12</Text></View>
+              <View style={styles.bubble}><Text>0 - 12</Text></View>
+              <View style={styles.bubble}><Text>0 - 12</Text></View>
+          </View>
     </SafeAreaView>
   );
 };
