@@ -29,8 +29,8 @@ const PersonType = ({navigation}) => {
   return (
     <View style={styles.container}>
 
-        <Text>Who are you?</Text>
-        <Text>In order to predefine search for you we need you to answer some questions</Text>
+        <Text style={styles.textTitleQuestion}>Who are you?</Text>
+        <Text style={styles.textTitleQuestion}>In order to predefine search for you we need you to answer some questions</Text>
             {/* <View style={styles.roundL}>
               <Pressable onPress={handlePress}>
                 <Text>welcome</Text>
@@ -48,10 +48,10 @@ const PersonType = ({navigation}) => {
                   )}
                 /> */}
       <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><Text>refugee</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>refugee</Text></View>
         </TouchableOpacity>
-        <View style={styles.bubble}><Text>homeless</Text></View>
-        <View style={styles.bubble}><Text>just searching for help</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>homeless</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>just searching for help</Text></View>
       
     </View>
   );
