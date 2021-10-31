@@ -10,6 +10,7 @@ import { styles } from "./genderStyles";
 import { FontAwesome, FontAwesome5  } from '@expo/vector-icons';
 import normalize from 'react-native-normalize';
 
+
 const InfoGender = ({navigation}) => {
 
   // const [gender, SetGender] = useState([
@@ -28,8 +29,8 @@ const InfoGender = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
 
-        <Text>What is your gender?</Text>
-        <Text>What is the person's gender?</Text>
+        <Text style={styles.textTitleQuestion}>What is your gender?</Text>
+        <Text style={styles.textTitleQuestion}>What is the person's gender?</Text>
         
         <View style={styles.bubbleBox}>      
         
@@ -46,10 +47,10 @@ const InfoGender = ({navigation}) => {
                                   </TouchableOpacity>
                                   )}
                                 /> */}
-        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text>Female</Text></View>
-        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text>Male</Text></View>
+        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Female</Text></View>
+        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>Male</Text></View>
         
-        <View style={styles.bubble}><Text>Prefer not to say</Text></View>
+        <View style={styles.bubble}><Text style={styles.textBubble}>Prefer not to say</Text></View>
         </View>
     </SafeAreaView>
     
