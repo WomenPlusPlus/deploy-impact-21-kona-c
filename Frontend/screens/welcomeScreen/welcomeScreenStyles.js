@@ -28,7 +28,10 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white',
         flex: 1,
       },
-        
+      image:{
+width: 100,
+
+      },  
     textTitle: {
       fontFamily: "Arial",
       fontSize: normalize(14),
