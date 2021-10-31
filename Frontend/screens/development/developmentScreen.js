@@ -26,7 +26,7 @@ const Development = ({ navigation }) => {
       <StatusBar style="auto" />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
       <Button title="Go to OrganisationsListScreen" onPress={handlePress} />
-      <Button title="Go to OrganisationDetailsScreen" onPress={handlePress4} />
+
       <Button title="This is a new go to to NEW SCREEN" onPress={handlePressNewPress} />
     </View>
   );
@@ -34,3 +34,7 @@ const Development = ({ navigation }) => {
 
 
 export default Development;
+
+// create a new screen, new const, copy const name, go to app.js
+// in App.js copy the Stack and adjust with the const name 
+// then go to the developmentScreen.js, create button and handler and you're done :) 
