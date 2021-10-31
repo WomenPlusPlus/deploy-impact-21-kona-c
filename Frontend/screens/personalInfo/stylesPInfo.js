@@ -22,6 +22,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
+  box: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    },
   bubble:{
     width: bubbleSize,
     height:  bubbleSize,
@@ -31,6 +36,18 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
+  textTitleQuestion:{
+    color: '#921CB1',
+    fontSize: normalize(28),
+    textAlign: 'center',
+    marginBottom: 20,
+},
+  textBubble:{
+    color: 'white',
+    fontSize: normalize(16),
+    textAlign: 'center',
+    marginLeft: 5,
+  }
 
 });
 

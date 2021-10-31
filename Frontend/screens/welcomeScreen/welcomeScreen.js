@@ -16,19 +16,15 @@ const HomeScreen = ({navigation}) => {
 
   const handlePressNGO = () =>{
     console.log('Button pressedNGO');
-    navigation.navigate('Search')
+    navigation.navigate('InfoGender')
   }
 
 
     return (
-      <SafeAreaView>
-      <ScrollView >
-      <View style={styles.container}>
-
-
+      <SafeAreaView style={styles.container}>
               <View style={styles.roundXL}>
               <Button color='white' title='If you are in a vulnerable situation...' onPress={() => console.warn("big bubble tapped")} />
-              <Text style={styles.textTitle}>test test</Text>
+              <Text style={styles.textTitle}>This is styled text above is button</Text>
               </View>    
                
                 <View style={styles.roundM}>
@@ -45,9 +41,6 @@ const HomeScreen = ({navigation}) => {
                   If you are at risk...</Text>  
               </Pressable>
               </View>
-
-      </View>
-      </ScrollView>
       </SafeAreaView>
     );
   };

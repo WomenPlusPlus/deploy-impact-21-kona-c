@@ -6,7 +6,7 @@ import {
   View,
   TouchableOpacity,
 } from "react-native";
-import { styles } from "./genderStyles";
+import { styles } from "./stylesPInfo";
 import { FontAwesome, FontAwesome5  } from '@expo/vector-icons';
 import normalize from 'react-native-normalize';
 

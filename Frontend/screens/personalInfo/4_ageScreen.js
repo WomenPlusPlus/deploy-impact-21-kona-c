@@ -5,7 +5,7 @@ import {
   Pressable,
   View,
 } from "react-native";
-import { styles } from "./ageStyles";
+import { styles } from "./stylesPInfo";
 
 
 const InfoAge = ({navigation}) => {
@@ -20,25 +20,25 @@ const InfoAge = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
 
-      <Text>How old are you?</Text>
-      <Text>How old is a person you seek help for?</Text>
+      <Text style={styles.textTitleQuestion}>How old are you?</Text>
+      <Text style={styles.textTitleQuestion}>How old is a person you seek help for?</Text>
         
         <View style={styles.box}>
 
               <View style={styles.bubble}>
                 <Pressable onPress={handlePress}>
-                  <Text>0 - 12</Text>
+                  <Text style={styles.textBubble}>0 - 12</Text>
                 </Pressable>
               </View>
         
               <View style={styles.bubble}>
-              <Pressable onPress={handlePress}><Text>12 - 22</Text>
+              <Pressable onPress={handlePress}><Text style={styles.textBubble}>12 - 22</Text>
               </Pressable>
               </View>
 
-              <View style={styles.bubble}><Text>0 - 12</Text></View>
-              <View style={styles.bubble}><Text>0 - 12</Text></View>
-              <View style={styles.bubble}><Text>0 - 12</Text></View>
+              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
+              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
+              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
           </View>
     </SafeAreaView>
   );

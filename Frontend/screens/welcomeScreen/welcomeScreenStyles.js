@@ -1,12 +1,9 @@
 import { StyleSheet, Dimensions, PixelRatio} from 'react-native';
 import normalize from 'react-native-normalize';
 
-
 const { width, height } = Dimensions.get('window');
 console.warn(width)
 console.warn(height)
-
-
 
 let partialHeight = 0.25*height
 
@@ -30,6 +27,8 @@ export const styles = StyleSheet.create({
     container: { 
         justifyContent: 'center',
         // alignItems: 'stretch',
+        backgroundColor: 'silver',
+        flex: 1,
       },
         
     textTitle: {
@@ -37,39 +36,21 @@ export const styles = StyleSheet.create({
       fontSize: normalize(14),
       fontWeight: "bold",
       textShadowRadius: 10,
-      marginTop: 40,
-      marginBottom: 20,
       alignSelf: 'center',
-      color: 'white',
-      
+      color: 'white',   
     },  
-    button:{
 
-      padding: 15, 
-      marginTop:120,
-      alignItems: "center", 
-      backgroundColor: "#E4C9E5",
-      elevation: 3,
-      
-    },
     textButton:{
     color: 'white',
     fontWeight:'bold',
     textAlign: 'center',
     fontSize: normalize(20),
-
-    
     },
     textInfo:{
       fontSize: 100 / PixelRatio.getFontScale(),
       fontWeight: "normal",
       marginTop: 60,
       fontStyle: 'italic',
-
-    },
-    icon:{
-      width: 2,
-    height: 2,
     },
     roundS:{
       width: sizeS,
@@ -100,15 +81,12 @@ export const styles = StyleSheet.create({
       // padding: 15, 
       backgroundColor: "#921CB1",
       elevation: 3,
-      // marginTop: (0.07*height),
+      marginTop: (0.07*height),
       marginLeft: (width-bubbleXLwidth),
       marginRight: (0.05*width),
       marginBottom: (0.015*height),
       justifyContent: 'center'
-
     },     
-
-     
 
 });
 
