@@ -1,26 +1,32 @@
 import { Link } from "@react-navigation/native";
 import React, { useState, useEffect } from "react";
-import { Text, View, ScrollView, Image, Button, Linking } from "react-native";
+import {
+  Text,
+  View,
+  ScrollView,
+  Image,
+  Pressable,
+  Linking,
+} from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet } from "react-native";
 import SelectDropdown from "react-native-select-dropdown";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import NextButton from "../../components/nextButton";
 
 const LocationScreen = ({ navigation }) => {
-  const handlePress = () => {
-    navigation.navigate("InstitutionType");
-  };
-
   let regionsArray = [];
+  let selectedIndex = 3;
+
+  const handlePress = () => {
+    navigation.navigate("InstitutionType", {
+      LocationIndex: selectedIndex,
+    });
+  };
   for (let i = 0; i < data.length; i++) {
-    if (data[i]["Region"].toUpperCase().substring(0, 5) == "DAKAR") {
-      regionsArray.push("DAKAR");
-    } else if (data[i]["Region"] === "") {
-      regionsArray.push("WORLDWIDE");
-    } else {
-      regionsArray.push(data[i]["Region"].toUpperCase());
-    }
+    regionsArray.push(data[i]["Code_region"]);
   }
+
   let uniqueRegionsArray = [...new Set(regionsArray)];
 
   console.log(uniqueRegionsArray);
@@ -41,19 +47,17 @@ const LocationScreen = ({ navigation }) => {
           dropdownIconPosition={"right"}
           data={uniqueRegionsArray}
           onSelect={(selectedItem, index) => {
+            selectedIndex = index;
             console.log(selectedItem, index);
           }}
           buttonTextAfterSelection={(selectedItem, index) => {
-            // text represented after item is selected
-            // if data array is an array of objects then return selectedItem.property to render after item is selected
             return selectedItem;
           }}
           rowTextForSelection={(item, index) => {
-            // text represented for each item in dropdown
-            // if data array is an array of objects then return item.property to represent item in dropdown
             return item;
           }}
           renderCustomizedRowChild={(selectedItem, index) => {
+            console.log(selectedIndex);
             return (
               <View style={styles.buttonDown}>
                 <Text style={styles.textStyle}>{selectedItem}</Text>
@@ -62,6 +66,7 @@ const LocationScreen = ({ navigation }) => {
           }}
         />
       </View>
+      <NextButton handlePress={handlePress}/>
     </ScrollView>
   );
 };
@@ -69,13 +74,16 @@ const LocationScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    justifyContent: "center",
+    flexDirection: "column",
+    justifyContent: "space-around",
     alignItems: "center",
   },
+
   button: {
-    borderRadius: 5,
     backgroundColor: "#A169B1",
     width: "80%",
+    marginTop: 15,
+    marginBottom: "80%",
   },
   buttonDown: {
     backgroundColor: "#A169B1",
@@ -83,7 +91,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderColor: "white",
+    borderWidth: 0.5,
   },
   textStyle: {
     color: "white",

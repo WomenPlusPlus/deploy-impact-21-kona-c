@@ -11,7 +11,9 @@ import { styles } from "./stylesPInfo";
 import normalize from 'react-native-normalize';
 
 
-const InstitutionType = ({navigation}) => {
+const InstitutionType = ({ route, navigation }) => {
+  const selectedRegionIndex = parseInt(Object.values(route.params));
+  console.log(selectedRegionIndex);
 
     const [institution, SetInstitution] = useState([
     {option: 'Person',},
