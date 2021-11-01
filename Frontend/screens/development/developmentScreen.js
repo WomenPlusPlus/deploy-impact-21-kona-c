@@ -12,9 +12,6 @@ const Development = ({ navigation }) => {
     navigation.navigate("HomeScreen");
   };
 
-  const handlePress4 = () => {
-    navigation.navigate("OrganisationDetailsScreen");
-  };
 
   const handlePressNewPress = () => {
     navigation.navigate("NewScreen");

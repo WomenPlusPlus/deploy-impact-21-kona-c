@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "deepskyblue",
+    backgroundColor: "violet",
     alignItems: "center",
     justifyContent: "center",
     justifyContent: "space-around",
@@ -11,24 +11,7 @@ export const styles = StyleSheet.create({
   containerButtons: {
     flexDirection: "row",
   },
-  buttonPlus: {
-    backgroundColor: "pink",
-    borderBottomColor: "green",
-    alignSelf: "flex-start",
-    marginEnd: 10,
-  },
-  buttonMinus: {
-    backgroundColor: "green",
-    borderBottomColor: "green",
-    alignSelf: "flex-end",
-  },
-  result: {
-    alignItems: "center",
-    borderWidth: 5,
-    borderBottomLeftRadius: 20,
-    backgroundColor: "white",
-    // opacity: 10,
-  },
+
   text: {
     fontFamily: "Cochin",
     fontSize: 20,
