@@ -2,8 +2,6 @@ import { StyleSheet, Dimensions, PixelRatio} from 'react-native';
 import normalize from 'react-native-normalize';
 
 const { width, height } = Dimensions.get('window');
-console.warn(width)
-console.warn(height)
 
 let partialHeight = 0.25*height
 
@@ -27,10 +25,13 @@ export const styles = StyleSheet.create({
     container: { 
         justifyContent: 'center',
         // alignItems: 'stretch',
-        backgroundColor: 'silver',
+        backgroundColor: 'white',
         flex: 1,
       },
-        
+      image:{
+width: 100,
+
+      },  
     textTitle: {
       fontFamily: "Arial",
       fontSize: normalize(14),

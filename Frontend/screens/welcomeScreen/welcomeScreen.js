@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, ScrollView, Pressable, PixelRatio } from 'react-native';
+import { View, Text, Button, ScrollView, Pressable, PixelRatio, Image } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./welcomeScreenStyles";
 
@@ -16,6 +16,10 @@ const HomeScreen = ({navigation}) => {
 
     return (
       <SafeAreaView style={styles.container}>
+      {/* <Image 
+      style={styles.image}
+      source={require('../../assets/DOTS_logo_trans.png')}/> */}
+
               <View style={styles.roundXL}>
               <Button color='white' title='If you are in a vulnerable situation...' onPress={() => console.warn("big bubble tapped")} />
               <Text style={styles.textTitle}>This is styled text above is button</Text>

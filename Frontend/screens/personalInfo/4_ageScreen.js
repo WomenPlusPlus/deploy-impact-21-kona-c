@@ -10,7 +10,7 @@ import { styles } from "./stylesPInfo";
 
 const InfoAge = ({navigation}) => {
 
-  // const [age, SetAge] = useState()
+  const [age, SetAge] = useState()
 
   const handlePress = () =>{
     console.log("i just clicked on the text and it prints this!")

@@ -14,6 +14,7 @@ import ResultInfoScreen from "./screens/personalInfo/resultPersonalInfoScreen";
 import InfoGender from './screens/personalInfo/3_genderScreen';
 import InstitutionType from './screens/personalInfo/1_institutionTypeScreen';
 import HelpForWho from "./screens/personalInfo/2_helpForWhoScreen";
+import NewScreen from "./screens/personalInfo/newScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,11 +32,12 @@ function App() {
         },
       }}>
         {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
-        <Stack.Screen name="Home" component={HomeScreen} 
+        <Stack.Screen name='Development' component={Development} />       
+        <Stack.Screen name="HomeScreen" component={HomeScreen} 
         options={{ title: 'Dots.',
 
         }}/>
-        <Stack.Screen name='Development' component={Development} />
+      
         <Stack.Screen name='Search' component={Search} />
 
         <Stack.Group>
@@ -48,14 +50,16 @@ function App() {
         <Stack.Screen name='ResultInfoScreen' component={ResultInfoScreen} />
         </Stack.Group>
 
+        <Stack.Screen name='NewScreen' component={NewScreen} />
+
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="OrganisationDetailsScreen"
           component={OrganisationDetailsScreen}
-        />
+        /> */}
 
       </Stack.Navigator>
     </NavigationContainer>
