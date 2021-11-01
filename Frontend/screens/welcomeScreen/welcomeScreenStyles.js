@@ -1,92 +1,92 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions, PixelRatio} from 'react-native';
+import normalize from 'react-native-normalize';
 
-let sizeS = 130
-let sizeM = 170
-let sizeXL = 250
+const { width, height } = Dimensions.get('window');
+console.warn(width)
+console.warn(height)
+
+let partialHeight = 0.25*height
+
+let bubbleXLwidth = 0.75*width
+let bubbleXL = Math.round((bubbleXLwidth + partialHeight)/2)
+
+let bubbleMwidth = 0.45*width
+let bubbleM = Math.round((bubbleMwidth + partialHeight)/2)
+
+let bubbleSwidth = 0.25*width
+let bubbleS= Math.round((bubbleSwidth + partialHeight)/2)
+
+
+let sizeS = bubbleS
+let sizeM = bubbleM
+let sizeXL = bubbleXL
+
 
 export const styles = StyleSheet.create({
 
     container: { 
-        flex: 1, 
-        alignItems: 'center', 
-        justifyContent: 'center', },
+        justifyContent: 'center',
+        // alignItems: 'stretch',
+        backgroundColor: 'silver',
+        flex: 1,
+      },
         
     textTitle: {
       fontFamily: "Arial",
-      fontSize: 25,
+      fontSize: normalize(14),
       fontWeight: "bold",
       textShadowRadius: 10,
-      marginTop: 40,
-      marginBottom: 20,
       alignSelf: 'center',
-      color: 'white',
+      color: 'white',   
     },  
-    button:{
 
-      padding: 15, 
-      marginTop:120,
-      alignItems: "center", 
-      backgroundColor: "#E4C9E5",
-      elevation: 3,
-      
-    },
     textButton:{
     color: 'white',
     fontWeight:'bold',
-marginTop: 20,
-marginLeft: 20,
-    
+    textAlign: 'center',
+    fontSize: normalize(20),
     },
     textInfo:{
-      fontSize: 10,
+      fontSize: 100 / PixelRatio.getFontScale(),
       fontWeight: "normal",
       marginTop: 60,
       fontStyle: 'italic',
-
-    },
-    icon:{
-      width: 2,
-    height: 2,
     },
     roundS:{
       width: sizeS,
       height:  sizeS,
       borderRadius: sizeS/2,
-      padding: 15, 
+      // padding: 15, 
       backgroundColor: "#E4C9E5",
-      elevation: 3,
-      marginTop: -190,
-      flex:1,
+      marginTop: -(0.7*partialHeight),
+      marginLeft: (0.02*width),
+      marginRight: ((1-bubbleS-0.02)*width),
+      justifyContent: 'center',
+
     },
     roundM:{
       width: sizeM,
       height:  sizeM,
       borderRadius: sizeM/2,
-      padding: 35, 
-      marginTop:20,
-      alignSelf: 'flex-end', 
-      flex:1,
       backgroundColor: "#A169B1",
-      elevation: 3,
+      alignSelf: 'flex-end', 
+      justifyContent: 'center',
+      marginLeft: ((1-bubbleM-0.02)*width),
+      marginRight: (0.02*width),
     },
     roundXL:{
       width: sizeXL,
       height:  sizeXL,
       borderRadius: sizeXL/2,
-      padding: 15, 
-      marginTop:10,
+      // padding: 15, 
       backgroundColor: "#921CB1",
       elevation: 3,
-      marginLeft: 80,
-      flex: 0.2,
-      // alignSelf:'flex-end',
-    },
-    bubblesContainer:{
-      alignItems: 'stretch',
-      flex:1,
-    }      
-
-     
+      marginTop: (0.07*height),
+      marginLeft: (width-bubbleXLwidth),
+      marginRight: (0.05*width),
+      marginBottom: (0.015*height),
+      justifyContent: 'center'
+    },     
 
 });
 
