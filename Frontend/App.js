@@ -15,6 +15,7 @@ import InfoGender from './screens/personalInfo/3_genderScreen';
 import InstitutionType from './screens/personalInfo/1_institutionTypeScreen';
 import HelpForWho from "./screens/personalInfo/2_helpForWhoScreen";
 import NewScreen from "./screens/personalInfo/newScreen";
+import LocationScreen from "./screens/locationScreen/locationScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +56,10 @@ function App() {
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}
+        />
+           <Stack.Screen
+          name="LocationScreen"
+          component={LocationScreen}
         />
         {/* <Stack.Screen
           name="OrganisationDetailsScreen"
