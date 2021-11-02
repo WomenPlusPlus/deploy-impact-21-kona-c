@@ -4,9 +4,6 @@ import {
   Text,
   View,
   ScrollView,
-  Image,
-  Pressable,
-  Linking,
 } from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet } from "react-native";
@@ -16,7 +13,7 @@ import NextButton from "../../components/nextButton";
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
-  let selectedIndex = 3;
+  let selectedIndex = -1;
 
   const handlePress = () => {
     navigation.navigate("InstitutionType", {
@@ -29,7 +26,6 @@ const LocationScreen = ({ navigation }) => {
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
 
-  console.log(uniqueRegionsArray);
 
   return (
     <ScrollView>
@@ -109,7 +105,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     fontSize: 20,
   },
- 
 });
 
 export default LocationScreen;
