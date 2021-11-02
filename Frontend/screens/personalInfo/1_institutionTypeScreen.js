@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import { Text, ScrollView, FlatList, View, Pressable } from "react-native";
+import { Text, ScrollView, View, Pressable } from "react-native";
 import { StyleSheet, Dimensions } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const { width, height } = Dimensions.get("window");
-
 let partialHeight = 0.22 * height;
-
 let bubbleWidth = 0.33 * width;
 let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegionIndex = parseInt(Object.values(route.params));
-  console.log(selectedRegionIndex);
-
   const [institutionType, setInstitutionType] = useState(-1);
 
   const handlePress = (id) => {
@@ -24,7 +20,6 @@ const InstitutionType = ({ route, navigation }) => {
     });
   };
 
-  console.log(institutionType);
   return (
     <ScrollView style={styles.container}>
       <Text style={[styles.titleTextStyle, styles.container]}>
@@ -40,13 +35,13 @@ const InstitutionType = ({ route, navigation }) => {
           </Pressable>
         </View>
         <View style={styles.container2}>
-          <Pressable onPress={() => handlePress(2)}>
+          <Pressable onPress={() => handlePress(1)}>
             <View style={styles.circleButton}>
-              <FontAwesome name="university" style={styles.userImage} />
+              <FontAwesome name="institution" style={styles.userImage} />
               <Text style={styles.textStyle}>Institution</Text>
             </View>
           </Pressable>
-          <Pressable onPress={() => handlePress(1)}>
+          <Pressable onPress={() => handlePress(2)}>
             <View style={styles.circleButton}>
               <FontAwesome name="building" style={styles.userImage} />
               <Text style={styles.textStyle}>Company</Text>
@@ -85,8 +80,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     margin: 35,
   },
-  circlesContainer: {},
-
   circleButton: {
     width: bubbleSize,
     height: bubbleSize,

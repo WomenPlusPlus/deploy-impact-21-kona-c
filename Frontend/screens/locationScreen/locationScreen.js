@@ -1,10 +1,5 @@
-import { Link } from "@react-navigation/native";
-import React, { useState, useEffect } from "react";
-import {
-  Text,
-  View,
-  ScrollView,
-} from "react-native";
+import React from "react";
+import { Text, View, ScrollView } from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet } from "react-native";
 import SelectDropdown from "react-native-select-dropdown";
@@ -26,7 +21,6 @@ const LocationScreen = ({ navigation }) => {
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
 
-
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -44,7 +38,6 @@ const LocationScreen = ({ navigation }) => {
           data={uniqueRegionsArray}
           onSelect={(selectedItem, index) => {
             selectedIndex = index;
-            console.log(selectedItem, index);
           }}
           buttonTextAfterSelection={(selectedItem, index) => {
             return selectedItem;
@@ -53,7 +46,6 @@ const LocationScreen = ({ navigation }) => {
             return item;
           }}
           renderCustomizedRowChild={(selectedItem, index) => {
-            console.log(selectedIndex);
             return (
               <View style={styles.buttonDown}>
                 <Text style={styles.textStyle}>{selectedItem}</Text>
@@ -62,7 +54,7 @@ const LocationScreen = ({ navigation }) => {
           }}
         />
       </View>
-      <NextButton handlePress={handlePress}/>
+      <NextButton handlePress={handlePress} />
     </ScrollView>
   );
 };
@@ -74,7 +66,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
   },
-
   button: {
     backgroundColor: "#A169B1",
     width: "80%",
