@@ -1,49 +1,137 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Text, ScrollView, View, Pressable } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import {
-  Text,
-  SafeAreaView,
-  Pressable,
-  View,
-} from "react-native";
-import { styles } from "./stylesPInfo";
+  FontAwesome5,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
+import normalize from "react-native-normalize";
 
+const { width, height } = Dimensions.get("window");
+let partialHeight = 0.22 * height;
+let bubbleWidth = 0.33 * width;
+let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
-const InfoAge = ({navigation}) => {
+const InfoAge = ({ route, navigation }) => {
+  const selectedRegionIndex = Object.values(route.params)[0];
+  const selectedInstitutionType = Object.values(route.params)[1];
+  const selectedForWho = Object.values(route.params)[2];
+  const selectedGender = Object.values(route.params)[3];
+  const [age, setAge] = useState(-1);
 
-  const [age, SetAge] = useState()
-
-  const handlePress = () =>{
-    console.log("i just clicked on the text and it prints this!")
-    navigation.navigate('PersonType',)
-  }
+  const handlePress = (id) => {
+    setAge(id);
+    navigation.navigate("PersonType", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: selectedInstitutionType,
+      selectedForWho: selectedForWho,
+      selectedGender: selectedGender,
+      selectedAge: age,
+    });
+  };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.container}>
+      <Text style={[styles.titleTextStyle, styles.container]}>
+        How old are you?
+      </Text>
+      <View>
+        <View style={styles.container1}>
+          <Pressable onPress={() => handlePress(0)}>
+            <View style={styles.circleButton}>
+              <FontAwesome5 name="baby" style={styles.userImage} />
+              <Text style={styles.textStyle}>0-12</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(1)}>
+            <View style={styles.circleButton}>
+              <MaterialCommunityIcons
+                name="human-child"
+                style={styles.userImage}
+              />
+              <Text style={styles.textStyle}>12-18</Text>
+            </View>
+          </Pressable>
+        </View>
+        <View style={styles.container2}>
+          <Pressable onPress={() => handlePress(2)}>
+            <View style={styles.circleButtonOnlyText}>
+              <MaterialCommunityIcons
+                name="human-male"
+                style={styles.userImage}
+              />
+              <Text style={styles.textStyle}>18-45</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(3)}>
+            <View style={styles.circleButtonOnlyText}>
+              <MaterialIcons name="elderly" style={styles.userImage} />
 
-      <Text style={styles.textTitleQuestion}>How old are you?</Text>
-      <Text style={styles.textTitleQuestion}>How old is a person you seek help for?</Text>
-        
-        <View style={styles.box}>
-
-              <View style={styles.bubble}>
-                <Pressable onPress={handlePress}>
-                  <Text style={styles.textBubble}>0 - 12</Text>
-                </Pressable>
-              </View>
-        
-              <View style={styles.bubble}>
-              <Pressable onPress={handlePress}><Text style={styles.textBubble}>12 - 22</Text>
-              </Pressable>
-              </View>
-
-              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
-              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
-              <View style={styles.bubble}><Text style={styles.textBubble}>0 - 12</Text></View>
-          </View>
-    </SafeAreaView>
+              <Text style={styles.textStyle}>65+</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "column",
+    textAlign: "center",
+  },
+  container1: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5%",
+    paddingRight: "8%",
+  },
+  container2: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5%",
+    paddingLeft: "8%",
+  },
+  textStyle: {
+    color: "white",
+    fontSize: 23,
+    textAlign: "center",
+  },
+  titleTextStyle: {
+    color: "#921CB1",
+    fontSize: 25,
+    margin: 35,
+  },
+  circleButtonOnlyText: {
+    width: bubbleSize,
+    height: bubbleSize,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#A169B1",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 8,
+    margin: "3%",
+  },
+  circleButton: {
+    width: bubbleSize,
+    height: bubbleSize,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#A169B1",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 8,
+    margin: "3%",
+  },
+  userImage: {
+    fontSize: 60,
+    color: "white",
+  },
+});
+
 export default InfoAge;
-
-
