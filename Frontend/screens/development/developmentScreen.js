@@ -15,7 +15,6 @@ const Development = ({ navigation }) => {
     navigation.navigate("LocationScreen");
   };
 
-
   const handlePressNewPress = () => {
     navigation.navigate("NewScreen");
   };

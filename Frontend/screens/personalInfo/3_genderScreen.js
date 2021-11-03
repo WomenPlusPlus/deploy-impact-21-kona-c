@@ -1,71 +1,125 @@
-import React, {useState} from "react";
-import {
-  Text,
-  SafeAreaView,
-  FlatList,
-  View,
-  TouchableOpacity,
-} from "react-native";
-import { styles } from "./stylesPInfo";
-import { FontAwesome, FontAwesome5  } from '@expo/vector-icons';
-import normalize from 'react-native-normalize';
+import React, { useState } from "react";
+import { Text, ScrollView, View, Pressable } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
+import normalize from "react-native-normalize";
 
+const { width, height } = Dimensions.get("window");
+let partialHeight = 0.22 * height;
+let bubbleWidth = 0.33 * width;
+let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
-const InfoGender = ({navigation}) => {
+const InfoGender = ({ route, navigation }) => {
+  const selectedRegionIndex = Object.values(route.params)[0];
+  const selectedInstitutionType = Object.values(route.params)[1];
+  const selectedForWho = Object.values(route.params)[2];
 
-  const [gender, SetGender] = useState([
-    {option: 'Female',},
-    {option: 'Male'},
-    {option: 'Other'},
-    {option: 'I prefer not to say'},
-  ])
+  const [gender, setGender] = useState(-1);
 
-  const handlePress = () =>{
-    console.log("gender!")
-    navigation.navigate('InfoAge', )
-  }
-
+  const handlePress = (id) => {
+    setGender(id);
+    navigation.navigate("InfoAge", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: selectedInstitutionType,
+      selectedForWho: selectedForWho,
+      selectedGender: gender,
+    });
+  };
 
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Text style={styles.textTitleQuestion}>What is your gender?</Text>
-        <Text style={styles.textTitleQuestion}>What is the person's gender?</Text>
-        
-        <View style={styles.bubbleBox}>      
-        
-                            {/* <FlatList 
-                                data={gender}
-                                keyExtractor={(item) => item.option}
-                                renderItem={({item}) => (
-                                  <TouchableOpacity onPress={handlePress}>
-                            
-                                  <View style={styles.bubble}>      
-                                  <Text>
-                                    
-                                     {item.option}
-                                     
-                                     </Text>
-                                  </View>
-                                
-                                  </TouchableOpacity>
-                                  )}
-                                /> */}
-
-
-        <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[0].option}</Text></View>
-        </TouchableOpacity>
-        
-        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[1].option}</Text></View>
-        
-        <View style={styles.bubble}><Text style={styles.textBubble}>{gender[2].option}</Text></View>
+    <ScrollView style={styles.container}>
+      <Text style={[styles.titleTextStyle, styles.container]}>
+        What is your gender?
+      </Text>
+      <View>
+        <View style={styles.container1}>
+          <Pressable onPress={() => handlePress(0)}>
+            <View style={styles.circleButton}>
+              <FontAwesome5 name="female" style={styles.userImage} />
+              <Text style={styles.textStyle}>Female</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(1)}>
+            <View style={styles.circleButton}>
+              <FontAwesome5 name="male" style={styles.userImage} />
+              <Text style={styles.textStyle}>Male</Text>
+            </View>
+          </Pressable>
         </View>
-    </SafeAreaView>
-    
+        <View style={styles.container2}>
+          <Pressable onPress={() => handlePress(2)}>
+            <View style={styles.circleButtonOnlyText}>
+              <Text style={styles.textStyle}>Others</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(3)}>
+            <View style={styles.circleButtonOnlyText}>
+              <Text style={styles.textStyle}>I prefer not to say</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "column",
+    textAlign: "center",
+  },
+  container1: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5%",
+    paddingRight: "8%",
+
+  },
+  container2: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "5%",
+    paddingLeft: "8%",
+
+  },
+  textStyle: {
+    color: "white",
+    fontSize: 23,
+    textAlign: "center",
+  },
+  titleTextStyle: {
+    color: "#921CB1",
+    fontSize: 25,
+    margin: 35,
+  },
+  circleButtonOnlyText: {
+    width: bubbleSize,
+    height: bubbleSize,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#A169B1",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 8,
+    margin: "3%",
+  },
+  circleButton: {
+    width: bubbleSize,
+    height: bubbleSize,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#A169B1",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 8,
+    margin: "3%",
+  },
+  userImage: {
+    fontSize: 60,
+    color: "white",
+  },
+});
+
 export default InfoGender;
-
-

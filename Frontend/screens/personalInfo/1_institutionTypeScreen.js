@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, ScrollView, View, Pressable } from "react-native";
 import { StyleSheet, Dimensions } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import normalize from "react-native-normalize";
 
 const { width, height } = Dimensions.get("window");
 let partialHeight = 0.22 * height;
@@ -85,11 +86,10 @@ const styles = StyleSheet.create({
     height: bubbleSize,
     borderRadius: bubbleSize / 2,
     backgroundColor: "#A169B1",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    paddingBottom: 28,
-    paddingTop: 18,
+    padding: 8,
     margin: "4%",
   },
   userImage: {

@@ -46,8 +46,7 @@ function App() {
         <Stack.Screen name='InstitutionType' component={InstitutionType} />
         <Stack.Screen name='HelpForWho' component={HelpForWho} />
         <Stack.Screen name='InfoGender' component={InfoGender} />
-        <Stack.Screen name='InfoAge' component={InfoAge} 
-        options={{ title: 'Dots Bubbles and why not logo' }} />
+        <Stack.Screen name='InfoAge' component={InfoAge}/>
         <Stack.Screen name='PersonType' component={PersonType} />
         <Stack.Screen name='ResultInfoScreen' component={ResultInfoScreen} />
         </Stack.Group>
