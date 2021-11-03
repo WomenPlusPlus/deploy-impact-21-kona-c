@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Text, ScrollView, View, Pressable } from "react-native";
-import { StyleSheet, Dimensions } from "react-native";
 import {
   FontAwesome5,
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons";
-import normalize from "react-native-normalize";
-
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
+import { styles } from "./stylesPInfo";
 
 const InfoAge = ({ route, navigation }) => {
   const selectedRegionIndex = Object.values(route.params)[0];
@@ -30,8 +24,8 @@ const InfoAge = ({ route, navigation }) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Text style={[styles.titleTextStyle, styles.container]}>
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>
         How old are you?
       </Text>
       <View>
@@ -74,62 +68,5 @@ const InfoAge = ({ route, navigation }) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "column",
-    textAlign: "center",
-  },
-  container1: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-    paddingRight: "8%",
-  },
-  container2: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-    paddingLeft: "8%",
-  },
-  textStyle: {
-    color: "white",
-    fontSize: 23,
-    textAlign: "center",
-  },
-  titleTextStyle: {
-    color: "#921CB1",
-    fontSize: 25,
-    margin: 35,
-  },
-  circleButtonOnlyText: {
-    width: bubbleSize,
-    height: bubbleSize,
-    borderRadius: bubbleSize / 2,
-    backgroundColor: "#A169B1",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    padding: 8,
-    margin: "3%",
-  },
-  circleButton: {
-    width: bubbleSize,
-    height: bubbleSize,
-    borderRadius: bubbleSize / 2,
-    backgroundColor: "#A169B1",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    padding: 8,
-    margin: "3%",
-  },
-  userImage: {
-    fontSize: 60,
-    color: "white",
-  },
-});
 
 export default InfoAge;

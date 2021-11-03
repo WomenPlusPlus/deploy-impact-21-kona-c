@@ -1,30 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Text, ScrollView, View, Pressable } from "react-native";
-import { StyleSheet, Dimensions } from "react-native";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import normalize from "react-native-normalize";
-
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
+import { FontAwesome } from "@expo/vector-icons";
+import { styles } from "./stylesPInfo";
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegionIndex = parseInt(Object.values(route.params));
-  
+
   const handlePress = (id) => {
     navigation.navigate("HelpForWho", {
       selectedRegionIndex: selectedRegionIndex,
       selectedInstitutionType: id,
     });
   };
-  
+
   return (
-    <ScrollView style={styles.container}>
-      <Text style={[styles.titleTextStyle, styles.container]}>
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>
         Are you looking for help for...
       </Text>
-      <View style={styles.circlesContainer}>
+      <View>
         <View style={styles.container1}>
           <Pressable onPress={() => handlePress(0)}>
             <View style={styles.circleButton}>
@@ -51,49 +45,5 @@ const InstitutionType = ({ route, navigation }) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "column",
-    textAlign: "center",
-  },
-  container1: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    marginTop: "10%",
-  },
-  container2: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  textStyle: {
-    color: "white",
-    fontSize: 23,
-  },
-  titleTextStyle: {
-    color: "#921CB1",
-    fontSize: 25,
-    margin: 35,
-  },
-  circleButton: {
-    width: bubbleSize,
-    height: bubbleSize,
-    borderRadius: bubbleSize / 2,
-    backgroundColor: "#A169B1",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    padding: 8,
-    margin: "4%",
-  },
-  userImage: {
-    fontSize: 60,
-    color: "white",
-  },
-});
 
 export default InstitutionType;
