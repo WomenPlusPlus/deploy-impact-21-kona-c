@@ -36,11 +36,13 @@ export const styles = StyleSheet.create({
     paddingLeft: "23%",
   },
   textStyle: {
+    fontFamily: "Roboto",
     color: "white",
     fontSize: normalize(23),
     textAlign: "center",
   },
   titleTextStyle: {
+    fontFamily: "Roboto",
     color: "#921CB1",
     fontSize: normalize(25),
     margin: 35,

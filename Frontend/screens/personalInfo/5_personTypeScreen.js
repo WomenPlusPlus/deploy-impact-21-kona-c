@@ -9,12 +9,6 @@ const PersonType = ({ route, navigation }) => {
   const selectedGender = Object.values(route.params)[3];
   const selectedAge = Object.values(route.params)[4];
 
-  console.log(selectedRegionIndex);
-  console.log(selectedInstitutionType);
-  console.log(selectedForWho);
-  console.log(selectedGender);
-  console.log(selectedAge);
-
   const handlePress = (id) => {
     navigation.navigate("NewScreen", {
       selectedRegionIndex: selectedRegionIndex,
