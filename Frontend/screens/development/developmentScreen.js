@@ -11,6 +11,9 @@ const Development = ({ navigation }) => {
   const handlePress1 = () => {
     navigation.navigate("HomeScreen");
   };
+  const handlePressLocation = () => {
+    navigation.navigate("LocationScreen");
+  };
 
 
   const handlePressNewPress = () => {
@@ -23,6 +26,7 @@ const Development = ({ navigation }) => {
       <StatusBar style="auto" />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
       <Button title="Go to OrganisationsListScreen" onPress={handlePress} />
+      <Button title="Go to LocationScreen" onPress={handlePressLocation} />
 
       <Button title="This is a new go to to NEW SCREEN" onPress={handlePressNewPress} />
     </View>
