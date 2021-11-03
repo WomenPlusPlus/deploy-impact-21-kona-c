@@ -14,15 +14,12 @@ const InfoGender = ({ route, navigation }) => {
   const selectedInstitutionType = Object.values(route.params)[1];
   const selectedForWho = Object.values(route.params)[2];
 
-  const [gender, setGender] = useState(-1);
-
   const handlePress = (id) => {
-    setGender(id);
     navigation.navigate("InfoAge", {
       selectedRegionIndex: selectedRegionIndex,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
-      selectedGender: gender,
+      selectedGender: id,
     });
   };
 

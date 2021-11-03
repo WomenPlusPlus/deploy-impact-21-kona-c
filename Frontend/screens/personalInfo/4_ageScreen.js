@@ -18,16 +18,14 @@ const InfoAge = ({ route, navigation }) => {
   const selectedInstitutionType = Object.values(route.params)[1];
   const selectedForWho = Object.values(route.params)[2];
   const selectedGender = Object.values(route.params)[3];
-  const [age, setAge] = useState(-1);
 
   const handlePress = (id) => {
-    setAge(id);
     navigation.navigate("PersonType", {
       selectedRegionIndex: selectedRegionIndex,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
-      selectedAge: age,
+      selectedAge: id,
     });
   };
 
@@ -61,13 +59,13 @@ const InfoAge = ({ route, navigation }) => {
                 name="human-male"
                 style={styles.userImage}
               />
-              <Text style={styles.textStyle}>18-45</Text>
+
+              <Text style={styles.textStyle}>18-65</Text>
             </View>
           </Pressable>
           <Pressable onPress={() => handlePress(3)}>
             <View style={styles.circleButtonOnlyText}>
               <MaterialIcons name="elderly" style={styles.userImage} />
-
               <Text style={styles.textStyle}>65+</Text>
             </View>
           </Pressable>

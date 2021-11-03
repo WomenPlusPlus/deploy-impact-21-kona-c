@@ -11,16 +11,14 @@ let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegionIndex = parseInt(Object.values(route.params));
-  const [institutionType, setInstitutionType] = useState(-1);
-
+  
   const handlePress = (id) => {
-    setInstitutionType(id);
     navigation.navigate("HelpForWho", {
       selectedRegionIndex: selectedRegionIndex,
-      selectedInstitutionType: institutionType,
+      selectedInstitutionType: id,
     });
   };
-
+  
   return (
     <ScrollView style={styles.container}>
       <Text style={[styles.titleTextStyle, styles.container]}>

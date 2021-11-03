@@ -13,20 +13,15 @@ let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 const HelpForWho = ({ route, navigation }) => {
   const selectedRegionIndex = Object.values(route.params)[0];
   const selectedInstitutionType = Object.values(route.params)[1];
-  const [forWho, setforWho] = useState(-1);
 
   const handlePress = (id) => {
-    setforWho(id);
     navigation.navigate("InfoGender", {
       selectedRegionIndex: selectedRegionIndex,
       selectedInstitutionType: selectedInstitutionType,
-      selectedForWho: forWho,
+      selectedForWho: id,
     });
   };
 
-  console.log(selectedRegionIndex);
-  console.log(selectedInstitutionType);
-  console.log(forWho);
 
   return (
     <ScrollView style={styles.container}>
