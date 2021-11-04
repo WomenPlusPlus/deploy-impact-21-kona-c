@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#A169B1",
     justifyContent: "center",
     padding: 10,
-    marginLeft: "5%",
+    marginLeft: "3%",
     marginTop: "8%",
     borderWidth: 2,
     borderColor: "white",
