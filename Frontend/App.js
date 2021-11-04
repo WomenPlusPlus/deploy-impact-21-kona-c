@@ -1,5 +1,3 @@
-// In App.js in a new project
-
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -17,7 +15,8 @@ import HelpForWho from "./screens/personalInfo/2_helpForWhoScreen";
 import NewScreen from "./screens/personalInfo/newScreen";
 import LocationScreen from "./screens/locationScreen/locationScreen";
 import NextButton from "./components/nextButton";
-
+import NeedsScreen1 from "./screens/needsScreen1/needsScreen1";
+import MainContainer from "./navigation/mainContainer";
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -41,9 +40,7 @@ function App() {
           component={HomeScreen}
           options={{ title: "Dots." }}
         />
-
         <Stack.Screen name="Search" component={Search} />
-
         <Stack.Group>
           <Stack.Screen name="InstitutionType" component={InstitutionType} />
           <Stack.Screen name="HelpForWho" component={HelpForWho} />
@@ -59,6 +56,12 @@ function App() {
           component={OrganisationsListScreen}
         />
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
+        <Stack.Screen name="NeedsScreen1" component={NeedsScreen1} />
+        <Stack.Screen
+          name="MainContainer"
+          component={MainContainer}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="OrganisationDetailsScreen"
           component={OrganisationDetailsScreen}

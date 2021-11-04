@@ -1,9 +1,6 @@
-import { black } from "ansi-colors";
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
-
 const { width, height } = Dimensions.get("window");
-
 let partialHeight = 0.25 * height;
 let bubbleXLwidth = 0.75 * width;
 let bubbleXL = Math.round((bubbleXLwidth + partialHeight) / 2);
@@ -17,10 +14,9 @@ let sizeXL = bubbleXL;
 
 export const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
-    // alignItems: 'stretch',
     backgroundColor: "white",
-    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
   image: {
     width: 100,
@@ -41,52 +37,57 @@ export const styles = StyleSheet.create({
   textInfo: {
     fontSize: 100 / PixelRatio.getFontScale(),
     fontWeight: "normal",
-    marginTop: 60,
     fontStyle: "italic",
+  },
+  containerRoundMS: {
+    flexDirection: "row",
   },
   roundS: {
     width: sizeS,
     height: sizeS,
     borderRadius: 100,
-    padding: 11,
-    justifyContent: "center",
     backgroundColor: "#A169B1",
-    alignSelf: "flex-start",
-    marginTop: -(1.3 * partialHeight),
-    marginLeft: 0.1 * width,
-    marginRight: (1 - bubbleS - 0.02) * width,
+    padding: 10,
+    justifyContent: "center",
+    marginLeft: "5%",
+    borderWidth: 2,
+    borderColor: "white",
   },
   roundM: {
     width: sizeM,
     height: sizeM,
     borderRadius: 100,
-    padding: 11,
     backgroundColor: "#A169B1",
-    alignSelf: "flex-end",
     justifyContent: "center",
-    marginLeft: (1 - bubbleM - 0.02) * width,
-    marginRight: 0.05 * width,
-    marginTop: "5%",
+    padding: 10,
+    marginLeft: "5%",
+    marginTop: "8%",
+    borderWidth: 2,
+    borderColor: "white",
+  },
+  containerRoundXL: {
+    marginTop: "3%",
   },
   roundXL: {
     width: sizeXL,
     height: sizeXL,
     borderRadius: 200,
-    padding: 13,
-    alignSelf: "flex-end",
-    backgroundColor: "#921CB1",
-    elevation: 3,
-    marginTop: 0.04 * height,
-    marginRight: "8%",
-    marginBottom: 0.015 * height,
+    backgroundColor: "#8A449D",
     justifyContent: "center",
+    padding: 10,
+    marginLeft: "30%",
+    borderWidth: 2,
+    borderColor: "white",
   },
   bottomText: {
-    color: "#8A449D",
+    color: "#921CB1",
     textAlign: "center",
     alignSelf: "center",
-    fontSize: normalize(22),
-    marginTop: "25%",
+    fontSize: normalize(18),
     width: "50%",
+    marginTop: "8%",
+  },
+  image: {
+    height: height,
   },
 });
