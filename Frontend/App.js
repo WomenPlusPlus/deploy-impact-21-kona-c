@@ -17,7 +17,6 @@ import LocationScreen from "./screens/locationScreen/locationScreen";
 import NextButton from "./components/nextButton";
 import NeedsScreen1 from "./screens/needsScreen1/needsScreen1";
 import MainContainer from "./navigation/mainContainer";
-
 const Stack = createNativeStackNavigator();
 
 function App() {

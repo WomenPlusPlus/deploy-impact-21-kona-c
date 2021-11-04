@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
     flexDirection: "column",
     justifyContent: "space-between",
-    backgroundColor: "yellow",
   },
   image: {
     width: 100,
