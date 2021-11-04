@@ -1,43 +1,45 @@
-import React, {useState} from "react";
-import {
-  Text,
-  SafeAreaView,
-  FlatList,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import React from "react";
+import { Text, ScrollView, View, Pressable } from "react-native";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { styles } from "./stylesPInfo";
-import normalize from 'react-native-normalize';
-import {institutionResult} from './1_institutionTypeScreen';
 
-const HelpForWho = ({navigation}) => {
+const HelpForWho = ({ route, navigation }) => {
+  const selectedRegionIndex = Object.values(route.params)[0];
+  const selectedInstitutionType = Object.values(route.params)[1];
 
-  const handlePress = () =>{
-    navigation.navigate('InfoGender', )
-  }
-
+  const handlePress = (id) => {
+    navigation.navigate("InfoGender", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: selectedInstitutionType,
+      selectedForWho: id,
+    });
+  };
 
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Text style={styles.textTitleQuestion}>Whom are you seeking help for...</Text>
-
-        
-        <View style={styles.bubbleBox}> 
-
-        <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><Text style={styles.textBubble}>Myself</Text></View>
-        </TouchableOpacity>
-
-        <View style={styles.bubble}><Text style={styles.textBubble}>Others</Text></View>
-        
-<Text>Result from previous screen: {institutionResult}</Text>
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>
+        Whom are you seeking help for...
+      </Text>
+      <View>
+        <View style={styles.container1for2options}>
+          <Pressable onPress={() => handlePress(0)}>
+            <View style={styles.circleButton}>
+              <FontAwesome name="user" style={styles.userImage} />
+              <Text style={styles.textStyle}>Myself</Text>
+            </View>
+          </Pressable>
         </View>
-    </SafeAreaView>
-    
+        <View style={styles.container2for2options}>
+          <Pressable onPress={() => handlePress(1)}>
+            <View style={styles.circleButton}>
+              <FontAwesome name="users" style={styles.userImage} />
+              <Text style={styles.textStyle}>Others</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
 export default HelpForWho;
-
-

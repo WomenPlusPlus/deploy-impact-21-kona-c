@@ -1,44 +1,28 @@
-import React, {useState} from "react";
-import {
-  Text,
-  SafeAreaView,
-  FlatList,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import React from "react";
+import { Text, ScrollView } from "react-native";
 import { styles } from "./stylesPInfo";
-import { FontAwesome, FontAwesome5  } from '@expo/vector-icons';
-import normalize from 'react-native-normalize';
 
+const NewScreen = ({ route, navigation }) => {
+  const selectedRegionIndex = Object.values(route.params)[0];
+  const selectedInstitutionType = Object.values(route.params)[1];
+  const selectedForWho = Object.values(route.params)[2];
+  const selectedGender = Object.values(route.params)[3];
+  const selectedAge = Object.values(route.params)[4];
+  const selectedPersonType = Object.values(route.params)[5];
 
-const NewScreen = ({navigation}) => {
-
-  const [gender, SetGender] = useState([
-    {option: 'Female',},
-    {option: 'Male'},
-    {option: 'Other'},
-    {option: 'I prefer not to say'},
-  ])
-
-  const handlePress = () =>{
-    console.log("gender!")
-    navigation.navigate('InfoAge', )
-  }
-
+  console.log(selectedRegionIndex);
+  console.log(selectedInstitutionType);
+  console.log(selectedForWho);
+  console.log(selectedGender);
+  console.log(selectedAge);
+  console.log(selectedPersonType);
 
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Text style={styles.textTitleQuestion}>I am a new screen! </Text>
-        <Text style={styles.textTitleQuestion}>Who are you?</Text>
-
-        
- 
-    </SafeAreaView>
-    
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>I am a new screen! </Text>
+      <Text style={styles.titleTextStyle}>Who are you?</Text>
+    </ScrollView>
   );
 };
 
 export default NewScreen;
-
-

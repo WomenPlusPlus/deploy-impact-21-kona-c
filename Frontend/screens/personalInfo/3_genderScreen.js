@@ -1,71 +1,57 @@
-import React, {useState} from "react";
-import {
-  Text,
-  SafeAreaView,
-  FlatList,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import React from "react";
+import { Text, ScrollView, View, Pressable } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { styles } from "./stylesPInfo";
-import { FontAwesome, FontAwesome5  } from '@expo/vector-icons';
-import normalize from 'react-native-normalize';
 
+const InfoGender = ({ route, navigation }) => {
+  const selectedRegionIndex = Object.values(route.params)[0];
+  const selectedInstitutionType = Object.values(route.params)[1];
+  const selectedForWho = Object.values(route.params)[2];
 
-const InfoGender = ({navigation}) => {
-
-  const [gender, SetGender] = useState([
-    {option: 'Female',},
-    {option: 'Male'},
-    {option: 'Other'},
-    {option: 'I prefer not to say'},
-  ])
-
-  const handlePress = () =>{
-    console.log("gender!")
-    navigation.navigate('InfoAge', )
-  }
-
+  const handlePress = (id) => {
+    navigation.navigate("InfoAge", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: selectedInstitutionType,
+      selectedForWho: selectedForWho,
+      selectedGender: id,
+    });
+  };
 
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Text style={styles.textTitleQuestion}>What is your gender?</Text>
-        <Text style={styles.textTitleQuestion}>What is the person's gender?</Text>
-        
-        <View style={styles.bubbleBox}>      
-        
-                            {/* <FlatList 
-                                data={gender}
-                                keyExtractor={(item) => item.option}
-                                renderItem={({item}) => (
-                                  <TouchableOpacity onPress={handlePress}>
-                            
-                                  <View style={styles.bubble}>      
-                                  <Text>
-                                    
-                                     {item.option}
-                                     
-                                     </Text>
-                                  </View>
-                                
-                                  </TouchableOpacity>
-                                  )}
-                                /> */}
-
-
-        <TouchableOpacity onPress={handlePress}>
-        <View style={styles.bubble}><FontAwesome name="female" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[0].option}</Text></View>
-        </TouchableOpacity>
-        
-        <View style={styles.bubble}><FontAwesome5 name="male" size={normalize(44)} color="white" /><Text style={styles.textBubble}>{gender[1].option}</Text></View>
-        
-        <View style={styles.bubble}><Text style={styles.textBubble}>{gender[2].option}</Text></View>
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>
+        What is your gender?
+      </Text>
+      <View>
+        <View style={styles.container1}>
+          <Pressable onPress={() => handlePress(0)}>
+            <View style={styles.circleButton}>
+              <FontAwesome5 name="female" style={styles.userImage} />
+              <Text style={styles.textStyle}>Female</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(1)}>
+            <View style={styles.circleButton}>
+              <FontAwesome5 name="male" style={styles.userImage} />
+              <Text style={styles.textStyle}>Male</Text>
+            </View>
+          </Pressable>
         </View>
-    </SafeAreaView>
-    
+        <View style={styles.container2}>
+          <Pressable onPress={() => handlePress(2)}>
+            <View style={styles.circleButtonOnlyText}>
+              <Text style={styles.textStyle}>Others</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(3)}>
+            <View style={styles.circleButtonOnlyText}>
+              <Text style={styles.textStyle}>I prefer not to say</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
 export default InfoGender;
-
-

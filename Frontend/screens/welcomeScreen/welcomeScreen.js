@@ -1,47 +1,48 @@
 import React from "react";
-import { View, Text, Button, ScrollView, Pressable, PixelRatio, Image } from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  ImageBackground,
+  ScrollView,
+  Pressable,
+  PixelRatio,
+  Image,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./welcomeScreenStyles";
 
-
-
-
-const HomeScreen = ({navigation}) => {
-
-
-  const handlePress = () =>{
-    navigation.navigate('InstitutionType')
-  }
-
-
-    return (
-      <SafeAreaView style={styles.container}>
-      {/* <Image 
-      style={styles.image}
-      source={require('../../assets/DOTS_logo_trans.png')}/> */}
-
-              <View style={styles.roundXL}>
-              <Button color='white' title='If you are in a vulnerable situation...' onPress={() => console.warn("big bubble tapped")} />
-              <Text style={styles.textTitle}>This is styled text above is button</Text>
-              </View>    
-               
-                <View style={styles.roundM}>
-                <Pressable onPress={handlePress}>  
-                <Text style={styles.textButton}>If someone else needs help...</Text>
-                </Pressable>
-            </View>
-
-            <View style={styles.roundS}>
-              <Pressable
-                onPress={handlePress}
-                >
-                  <Text style={styles.textButton}>
-                  If you are at risk...</Text>  
-              </Pressable>
-              </View>
-      </SafeAreaView>
-    );
+const HomeScreen = ({ navigation }) => {
+  const handlePress = () => {
+    navigation.navigate("LocationScreen");
   };
 
-  
-  export default HomeScreen;
+  return (
+    <View>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <View style={styles.containerRoundXL}>
+          <Pressable style={styles.roundXL} onPress={handlePress}>
+            <Text style={styles.textButton}>
+              If you are in a vulnerable situation...
+            </Text>
+          </Pressable>
+        </View>
+        <View style={styles.containerRoundMS}>
+          <Pressable style={styles.roundS} onPress={handlePress}>
+            <Text style={styles.textButton}>If you are at risk...</Text>
+          </Pressable>
+          <Pressable style={styles.roundM} onPress={handlePress}>
+            <Text style={styles.textButton}>If someone else needs help...</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.bottomText}>Dots can find the help you need</Text>
+      </ImageBackground>
+    </View>
+  );
+};
+
+export default HomeScreen;

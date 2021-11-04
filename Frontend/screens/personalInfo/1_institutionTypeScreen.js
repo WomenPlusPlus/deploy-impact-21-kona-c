@@ -1,65 +1,49 @@
-import React, {useState} from "react";
-import {
-  Text,
-  SafeAreaView,
-  FlatList,
-  View,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
+import React from "react";
+import { Text, ScrollView, View, Pressable } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 import { styles } from "./stylesPInfo";
-import normalize from 'react-native-normalize';
 
+const InstitutionType = ({ route, navigation }) => {
+  const selectedRegionIndex = parseInt(Object.values(route.params));
 
-const InstitutionType = ({navigation}) => {
-
-    const [institution, SetInstitution] = useState([
-    {option: 'Person',},
-    {option: 'Institution'},
-    {option: 'Company'},
-
-  ])
-
-  const [institutionResult, SetInstitutionResult] = useState()
-
-
-  const handlePress = () =>{
-    navigation.navigate('HelpForWho', {institution: 'option'})
-    SetInstitutionResult()
-  }
-  
-  const handlePress1 = () =>{
-    navigation.navigate('HelpForWho', {institution: 'option'})
-    SetInstitutionResult()
-  }
-
-  const handlePress2 = () =>{
-    navigation.navigate('HelpForWho', {institution: 'option'})
-    SetInstitutionResult()
-  }
+  const handlePress = (id) => {
+    navigation.navigate("HelpForWho", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: id,
+    });
+  };
 
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Text style={styles.textTitleQuestion}>Are you looking for help for...</Text>
-        <Text>Result from previous screen: {institutionResult}</Text>
-        
-        <View style={styles.bubbleBox}>      
-        <Pressable onPress={handlePress}>
-        <View style={styles.bubble}><Text style={styles.textBubble}>{institution[0].option}</Text></View>
-        </Pressable>
-
-        <Pressable onPress={handlePress1}>
-        <View style={styles.bubble}><Text style={styles.textBubble}>{institution[1].option}</Text></View>
-        </Pressable>
-
-        <View style={styles.bubble}><Text style={styles.textBubble}>{institution[2].option}</Text></View>
+    <ScrollView>
+      <Text style={styles.titleTextStyle}>
+        Are you looking for help for...
+      </Text>
+      <View>
+        <View style={styles.container1}>
+          <Pressable onPress={() => handlePress(0)}>
+            <View style={styles.circleButton}>
+              <FontAwesome name="user" style={styles.userImage} />
+              <Text style={styles.textStyle}>Person</Text>
+            </View>
+          </Pressable>
         </View>
-    </SafeAreaView>
-    
+        <View style={styles.container2}>
+          <Pressable onPress={() => handlePress(1)}>
+            <View style={styles.circleButton}>
+              <FontAwesome name="institution" style={styles.userImage} />
+              <Text style={styles.textStyle}>Institution</Text>
+            </View>
+          </Pressable>
+          <Pressable onPress={() => handlePress(2)}>
+            <View style={styles.circleButton}>
+              <FontAwesome name="building" style={styles.userImage} />
+              <Text style={styles.textStyle}>Company</Text>
+            </View>
+          </Pressable>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
 export default InstitutionType;
-
-
