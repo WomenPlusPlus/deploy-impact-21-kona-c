@@ -18,29 +18,30 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      {/* <Image 
-      style={styles.image}
-      source={require('../../assets/DOTS_logo_trans.png')}/> */}
-       <ImageBackground source={require("../../assets/background.png")} resizeMode="cover" style={styles.image}>
-      <View style={styles.roundXL}>
-        <Pressable onPress={handlePress}>
-          <Text style={styles.textButton}>If you are in a vulnerable situation...</Text>
-        </Pressable>
-      </View>
-      <View style={styles.roundM}>
-        <Pressable onPress={handlePress}>
-          <Text style={styles.textButton}>If someone else needs help...</Text>
-        </Pressable>
-      </View>
-      <View style={styles.roundS}>
-        <Pressable onPress={handlePress}>
-          <Text style={styles.textButton}>If you are at risk...</Text>
-        </Pressable>
-      </View>
-      <Text style={styles.bottomText}>Dots can find the help you need</Text>
+    <View>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <View style={styles.containerRoundXL}>
+          <Pressable style={styles.roundXL} onPress={handlePress}>
+            <Text style={styles.textButton}>
+              If you are in a vulnerable situation...
+            </Text>
+          </Pressable>
+        </View>
+        <View style={styles.containerRoundMS}>
+          <Pressable style={styles.roundS} onPress={handlePress}>
+            <Text style={styles.textButton}>If you are at risk...</Text>
+          </Pressable>
+          <Pressable style={styles.roundM} onPress={handlePress}>
+            <Text style={styles.textButton}>If someone else needs help...</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.bottomText}>Dots can find the help you need</Text>
       </ImageBackground>
-      </ScrollView>
+    </View>
   );
 };
 

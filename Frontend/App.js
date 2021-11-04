@@ -16,6 +16,7 @@ import NewScreen from "./screens/personalInfo/newScreen";
 import LocationScreen from "./screens/locationScreen/locationScreen";
 import NextButton from "./components/nextButton";
 import NeedsScreen1 from "./screens/needsScreen1/needsScreen1";
+import MainContainer from "./navigation/mainContainer";
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +58,11 @@ function App() {
         />
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="NeedsScreen1" component={NeedsScreen1} />
+        <Stack.Screen
+          name="MainContainer"
+          component={MainContainer}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="OrganisationDetailsScreen"
           component={OrganisationDetailsScreen}

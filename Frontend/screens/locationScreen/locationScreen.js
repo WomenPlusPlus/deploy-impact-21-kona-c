@@ -1,10 +1,11 @@
 import React from "react";
 import { Text, View, ScrollView, ImageBackground } from "react-native";
 import data from "../../assets/organisations.json";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import SelectDropdown from "react-native-select-dropdown";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import NextButton from "../../components/nextButton";
+const { width, height } = Dimensions.get("window");
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
@@ -100,8 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   image: {
-    flex: 1,
-    justifyContent: "center",
+    height: height,
   },
 });
 
