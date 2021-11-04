@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Button,
+  ImageBackground,
   ScrollView,
   Pressable,
   PixelRatio,
@@ -17,10 +18,11 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       {/* <Image 
       style={styles.image}
       source={require('../../assets/DOTS_logo_trans.png')}/> */}
+       <ImageBackground source={require("../../assets/background.png")} resizeMode="cover" style={styles.image}>
       <View style={styles.roundXL}>
         <Pressable onPress={handlePress}>
           <Text style={styles.textButton}>If you are in a vulnerable situation...</Text>
@@ -37,7 +39,8 @@ const HomeScreen = ({ navigation }) => {
         </Pressable>
       </View>
       <Text style={styles.bottomText}>Dots can find the help you need</Text>
-    </ScrollView>
+      </ImageBackground>
+      </ScrollView>
   );
 };
 

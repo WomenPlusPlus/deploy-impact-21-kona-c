@@ -1,9 +1,6 @@
-import { black } from "ansi-colors";
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
-
 const { width, height } = Dimensions.get("window");
-
 let partialHeight = 0.25 * height;
 let bubbleXLwidth = 0.75 * width;
 let bubbleXL = Math.round((bubbleXLwidth + partialHeight) / 2);
@@ -17,7 +14,6 @@ let sizeXL = bubbleXL;
 
 export const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
     // alignItems: 'stretch',
     backgroundColor: "white",
     flex: 1,
@@ -82,11 +78,16 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   bottomText: {
-    color: "#8A449D",
+    color: "#921CB1",
     textAlign: "center",
     alignSelf: "center",
     fontSize: normalize(22),
     marginTop: "25%",
+    marginBottom: "10%",
     width: "50%",
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
   },
 });

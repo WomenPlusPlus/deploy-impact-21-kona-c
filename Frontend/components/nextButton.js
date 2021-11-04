@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         alignSelf: "flex-end",
         width: "15%",
+        height: "15%",
         marginRight: 20,
+        paddingBottom: 20
       },
       nextButtonText: {
         color: "#A169B1",

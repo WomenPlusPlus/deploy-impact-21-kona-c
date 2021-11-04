@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React from "react";
 import { Text, View, Button } from "react-native";
 import { styles } from "./developmentStyles";
 
@@ -7,14 +7,12 @@ const Development = ({ navigation }) => {
   const handlePress = () => {
     navigation.navigate("OrganisationsListScreen");
   };
-
   const handlePress1 = () => {
     navigation.navigate("HomeScreen");
   };
-  const handlePressLocation = () => {
-    navigation.navigate("LocationScreen");
+  const handleNeedsScreen1 = () => {
+    navigation.navigate("NeedsScreen1");
   };
-
   const handlePressNewPress = () => {
     navigation.navigate("NewScreen");
   };
@@ -25,16 +23,17 @@ const Development = ({ navigation }) => {
       <StatusBar style="auto" />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
       <Button title="Go to OrganisationsListScreen" onPress={handlePress} />
-      <Button title="Go to LocationScreen" onPress={handlePressLocation} />
-
-      <Button title="This is a new go to to NEW SCREEN" onPress={handlePressNewPress} />
+      <Button title="Go to NeedsScreen1" onPress={handleNeedsScreen1} />
+      <Button
+        title="This is a new go to to NEW SCREEN"
+        onPress={handlePressNewPress}
+      />
     </View>
   );
 };
 
-
 export default Development;
 
 // create a new screen, new const, copy const name, go to app.js
-// in App.js copy the Stack and adjust with the const name 
-// then go to the developmentScreen.js, create button and handler and you're done :) 
+// in App.js copy the Stack and adjust with the const name
+// then go to the developmentScreen.js, create button and handler and you're done :)
