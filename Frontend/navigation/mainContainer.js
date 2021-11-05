@@ -4,12 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
 //Screens
-import searchScreen from "../navigation/screens/searchScreen";
 import sdgScreen from "../navigation/screens/sdgScreen";
 import emergencyScreen from "../navigation/screens/emergencyScreen";
 // Screen name
 const homeName = "Home";
-const searchName = "Search";
+//const searchName = "Search";
 const sdgName = "SDG";
 const emergencyName = "Emergency";
 
@@ -25,9 +24,8 @@ function MainContainer() {
           let rn = route.name;
           if (rn === homeName) {
             iconName = focused ? "home" : "home";
-          } else if (rn === searchName) {
-            iconName = focused ? "search" : "search";
-          } else if (rn === sdgName) {
+          } 
+           else if (rn === sdgName) {
             iconName = focused ? "sdg" : "sdg";
           } else if (rn === emergencyName) {
             iconName = focused ? "alert-circle" : "emergency";
@@ -44,7 +42,6 @@ function MainContainer() {
       }}
     >
       <Tab.Screen name={homeName} component={HomeScreen} />
-      <Tab.Screen name={searchName} component={searchScreen} />
       <Tab.Screen name={sdgName} component={sdgScreen} />
       <Tab.Screen name={emergencyName} component={emergencyScreen} />
     </Tab.Navigator>
@@ -52,3 +49,4 @@ function MainContainer() {
 }
 
 export default MainContainer;
+
