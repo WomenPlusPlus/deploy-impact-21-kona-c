@@ -6467,6 +6467,11 @@ react-native-screens@~3.4.0:
   dependencies:
     warn-once "^0.1.0"
 
+react-native-select-dropdown@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-select-dropdown/-/react-native-select-dropdown-1.3.0.tgz#9c45773a6fd52ee08c266fad422e3728b3a311b1"
+  integrity sha512-smrRro240/id5kIWd1ozBuXfvS45BHiRz4fJiPQ7mZPkKMG5OPYn6DKFUkknzW+iqgLjtrSsv2zw0pkJAS7K2g==
+
 react-native-web@~0.13.12:
   version "0.13.18"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.18.tgz#964f058a16521a3b9a31b091415edfef5b6ef305"
