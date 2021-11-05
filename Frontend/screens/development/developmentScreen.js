@@ -10,8 +10,8 @@ const Development = ({ navigation }) => {
   const handlePress1 = () => {
     navigation.navigate("HomeScreen");
   };
-  const handleNeedsScreen1 = () => {
-    navigation.navigate("NeedsScreen1");
+  const handleNeedsScreenA = () => {
+    navigation.navigate("NeedsScreenA");
   };
   const handleMainContainer = () => {
     navigation.navigate("MainContainer");
@@ -27,7 +27,7 @@ const Development = ({ navigation }) => {
       <Button title="Go to Navigation Bar" onPress={handleMainContainer} />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
       <Button title="Go to OrganisationsListScreen" onPress={handlePress} />
-      <Button title="Go to NeedsScreen1" onPress={handleNeedsScreen1} />
+      <Button title="Go to NeedsScreenA" onPress={handleNeedsScreenA} />
       <Button
         title="This is a new go to to NEW SCREEN"
         onPress={handlePressNewPress}
