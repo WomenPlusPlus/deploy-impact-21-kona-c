@@ -3,6 +3,7 @@ import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
+import { Image } from "react-native";
 //Screens
 import sdgScreen from "../navigation/screens/sdgScreen";
 import emergencyScreen from "../navigation/screens/emergencyScreen";
@@ -26,7 +27,8 @@ function MainContainer() {
             iconName = focused ? "home" : "home";
           } 
            else if (rn === sdgName) {
-            iconName = focused ? "sdg" : "sdg";
+            //iconName = focused ? "sdg" : "sdg";
+            <Image source={require('../assets/sdg.png')} />
           } else if (rn === emergencyName) {
             iconName = focused ? "alert-circle" : "emergency";
           }
