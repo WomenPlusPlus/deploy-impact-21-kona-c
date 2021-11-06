@@ -1,14 +1,7 @@
 import * as React from "react";
-
 import StackNavigation from "./screens/routes/stackNavigator";
 
-
 function App() {
-  return (
-
-    <StackNavigation />
-    
-  );
+  return <StackNavigation />;
 }
-
 export default App;

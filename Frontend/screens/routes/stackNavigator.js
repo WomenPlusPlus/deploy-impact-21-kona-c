@@ -17,6 +17,8 @@ import NewScreen from "../personalInfo/newScreen";
 import LocationScreen from "../locationScreen/locationScreen";
 import NextButton from "../../components/nextButton";
 import NeedsScreenA from "../needsScreens/needsScreenA";
+import NeedsScreenB from "../needsScreens/needsScreenB";
+import NeedsScreenC from "../needsScreens/needsScreenC";
 import MainContainer from "../../navigation/mainContainer";
 
 const Stack = createNativeStackNavigator();
@@ -58,6 +60,8 @@ const StackNavigation = () => (
         />
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
+        <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
+        <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
         <Stack.Screen
           name="MainContainer"
           component={MainContainer}
