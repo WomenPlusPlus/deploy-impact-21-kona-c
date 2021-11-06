@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Button,
-  ImageBackground,
-  ScrollView,
-  Pressable,
-  PixelRatio,
-  Image,
-} from "react-native";
+import { View, Text, ImageBackground, Pressable } from "react-native";
 import { styles } from "./welcomeScreenStyles";
 
 const HomeScreen = ({ navigation }) => {
