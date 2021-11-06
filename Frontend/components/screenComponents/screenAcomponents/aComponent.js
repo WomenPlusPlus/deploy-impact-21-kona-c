@@ -7,14 +7,14 @@ import {
   Entypo,
 } from "@expo/vector-icons";
 import options from "../../../assets/options_map.json";
-import { styles } from "./aComponentsStyles";
+import { styles } from "./aComponentStyles";
 
-const Component1 = ({ route, navigation }) => {
+const ComponentA = ({ route, navigation }) => {
   let optionsArray = [];
 
-  const handlePress = (id) => {
+  const handlePress = (optionScreenA) => {
     navigation.navigate("NeedsScreenB", {
-      selectedOptionLayer1: id,
+      selectedOptionScreenA: optionScreenA,
     });
   };
 
@@ -36,7 +36,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(1)}
+              onPress={() => handlePress(uniqueOptionsArray[0])}
             >
               <View style={styles.severalIconsButton}>
                 <Ionicons
@@ -51,7 +51,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(2)}
+              onPress={() => handlePress(uniqueOptionsArray[1])}
             >
               <Ionicons name="shield-checkmark" style={styles.userImage} />
             </Pressable>
@@ -60,7 +60,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(3)}
+              onPress={() => handlePress(uniqueOptionsArray[2])}
             >
               <FontAwesome5 name="briefcase" style={styles.userImage} />
             </Pressable>
@@ -71,7 +71,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(4)}
+              onPress={() => handlePress(uniqueOptionsArray[3])}
             >
               <FontAwesome5 name="heartbeat" style={styles.userImage} />
             </Pressable>
@@ -80,7 +80,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(5)}
+              onPress={() => handlePress(uniqueOptionsArray[4])}
             >
               <View style={styles.severalIconsButton}>
                 <FontAwesome name="graduation-cap" style={styles.userImage} />
@@ -91,7 +91,7 @@ const Component1 = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress(6)}
+              onPress={() => handlePress(uniqueOptionsArray[5])}
             >
               <Entypo name="tree" style={styles.userImage} />
             </Pressable>
@@ -103,7 +103,7 @@ const Component1 = ({ route, navigation }) => {
         <View style={styles.bubbleContainer}>
           <Pressable
             style={styles.severalIconsButton}
-            onPress={() => handlePress(7)}
+            onPress={() => handlePress(uniqueOptionsArray[6])}
           >
             <View style={styles.circleButton}>
               <FontAwesome name="balance-scale" style={styles.userImage} />
@@ -112,7 +112,10 @@ const Component1 = ({ route, navigation }) => {
           <Text style={styles.textStyle}>{uniqueOptionsArray[6]}</Text>
         </View>
         <View style={styles.bubbleContainer}>
-          <Pressable style={styles.circleButton} onPress={() => handlePress(8)}>
+          <Pressable
+            style={styles.circleButton}
+            onPress={() => handlePress(uniqueOptionsArray[7])}
+          >
             <FontAwesome5 name="building" style={styles.userImage} />
           </Pressable>
           <Text style={styles.textStyle}>{uniqueOptionsArray[7]}</Text>
@@ -122,4 +125,4 @@ const Component1 = ({ route, navigation }) => {
   );
 };
 
-export default Component1;
+export default ComponentA;

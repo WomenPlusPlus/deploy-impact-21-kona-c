@@ -68,4 +68,8 @@ export const styles = StyleSheet.create({
   image: {
     height: height,
   },
+  text: {
+    color: "black",
+    fontSize: 14,
+  },
 });
