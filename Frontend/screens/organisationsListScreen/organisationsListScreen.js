@@ -6,13 +6,6 @@ import { styles } from "./organisationsListStyles";
 
 const OrganisationsListScreen = ({ route, navigation }) => {
   const SDG_Id = route.params["SDG_Id"].split(",");
-  console.log(SDG_Id);
-  console.log(
-    data[0]["SDGs"]
-      .replace(/[^0-9]/g, " ")
-      .split(" ")
-      .filter((n) => n)
-  );
 
   let newData = Object.keys(data).filter((orgId) => {
     for (
