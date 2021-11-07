@@ -15,10 +15,8 @@ const ComponentB = ({ route, navigation }) => {
     });
     if (optionsFilteredB.length === 1) {
       navigation.navigate("OrganisationsListScreen", {
-        selectedOptionScreenA: selectedOptionScreenA,
         selectedOptionScreenB: selectedOptionScreenB,
-        optionsFilteredA: optionsFilteredA,
-        optionsFilteredB: optionsFilteredB,
+        SDG_Id: optionsFilteredB[0]["SDG_Id"]
       });
     } else {
       navigation.navigate("NeedsScreenC", {

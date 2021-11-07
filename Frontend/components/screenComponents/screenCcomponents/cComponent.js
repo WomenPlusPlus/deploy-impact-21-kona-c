@@ -5,15 +5,19 @@ import { styles } from "../screenBcomponents/bComponentStyles";
 const ComponentB = ({ route, navigation }) => {
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
   const selectedOptionScreenB = route.params["selectedOptionScreenB"];
-  const optionsFilteredA = route.params["optionsFilteredA"];
   const optionsFilteredB = route.params["optionsFilteredB"];
 
   const handlePress = (selectedOptionScreenC) => {
-    navigation.navigate("OrganisationsListScreen", {
-      selectedOptionScreenA: selectedOptionScreenA,
-      selectedOptionScreenB: selectedOptionScreenB,
-      selectedOptionScreenC: selectedOptionScreenC,
-    });
+    for (i = 0; i < optionsFilteredB.length; i++) {
+      if (selectedOptionScreenC === optionsFilteredB[i]["Third_layer"]) {
+        navigation.navigate("OrganisationsListScreen", {
+          selectedOptionScreenA: selectedOptionScreenA,
+          selectedOptionScreenB: selectedOptionScreenB,
+          selectedOptionScreenC: selectedOptionScreenC,
+          SDG_Id: optionsFilteredB[i]["SDG_Id"],
+        });
+      }
+    }
   };
 
   return (
