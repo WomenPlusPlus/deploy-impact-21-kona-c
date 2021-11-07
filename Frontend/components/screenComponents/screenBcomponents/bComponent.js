@@ -5,16 +5,29 @@ import { styles } from "./bComponentStyles";
 
 const ComponentB = ({ route, navigation }) => {
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
-  const optionsFiltered = options.filter((option) => {
+  const optionsFilteredA = options.filter((option) => {
     return option["First_layer"] === selectedOptionScreenA;
   });
-  console.log(optionsFiltered);
 
-  const handlePress = (optionScreenB) => {
-    navigation.navigate("NeedsScreenC", {
-      selectedOptionScreenA: optionScreenB,
-      arrayFiltered: optionsFiltered,
+  const handlePress = (selectedOptionScreenB) => {
+    const optionsFilteredB = optionsFilteredA.filter((option) => {
+      return option["Second_layer"] === selectedOptionScreenB;
     });
+    if (optionsFilteredB.length === 1) {
+      navigation.navigate("OrganisationsListScreen", {
+        selectedOptionScreenA: selectedOptionScreenA,
+        selectedOptionScreenB: selectedOptionScreenB,
+        optionsFilteredA: optionsFilteredA,
+        optionsFilteredB: optionsFilteredB,
+      });
+    } else {
+      navigation.navigate("NeedsScreenC", {
+        selectedOptionScreenA: selectedOptionScreenA,
+        selectedOptionScreenB: selectedOptionScreenB,
+        arrayFilteredA: optionsFilteredA,
+        optionsFilteredB: optionsFilteredB,
+      });
+    }
   };
 
   return (
@@ -25,20 +38,20 @@ const ComponentB = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>Need help with...</Text>
-        {[...new Set(optionsFiltered.map((option) => option.Second_layer))].map(
-          (option) => (
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress(option)}
-                >
-                  <Text style={styles.textStyle}>{option}</Text>
-                </Pressable>
-              </View>
+        {[
+          ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
+        ].map((option) => (
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(option)}
+              >
+                <Text style={styles.textStyle}>{option}</Text>
+              </Pressable>
             </View>
-          )
-        )}
+          </View>
+        ))}
       </ImageBackground>
     </View>
   );
