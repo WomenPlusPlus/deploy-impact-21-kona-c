@@ -2,10 +2,8 @@ import React from "react";
 import {
   View,
   Text,
-  Button,
   ScrollView,
   Pressable,
-  PixelRatio,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./stylesPInfo";
