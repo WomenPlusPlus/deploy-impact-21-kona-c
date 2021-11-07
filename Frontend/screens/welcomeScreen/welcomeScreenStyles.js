@@ -15,14 +15,13 @@ let sizeXL = bubbleXL;
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    flexDirection: "column",
     justifyContent: "space-between",
   },
   image: {
     width: 100,
   },
   textTitle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto-Regular",
     fontSize: normalize(23),
     fontWeight: "bold",
     textShadowRadius: 10,

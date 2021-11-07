@@ -11,12 +11,16 @@
     "convert-csv": "npm run convert-csv-organisations && npm run convert-csv-options"
   },
   "dependencies": {
+    "@expo-google-fonts/inter": "^0.2.0",
+    "@expo-google-fonts/roboto": "^0.2.0",
     "@material-ui/core": "^4.12.3",
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "csvtojson": "^2.0.10",
     "expo": "~42.0.1",
+    "expo-app-loading": "1.1.2",
+    "expo-font": "~9.2.1",
     "expo-status-bar": "~1.0.4",
     "install": "^0.13.0",
     "npm": "^8.1.1",
