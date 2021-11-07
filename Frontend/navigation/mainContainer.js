@@ -2,10 +2,11 @@ import * as React from "react";
 //import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
+import { Image } from "react-native";
 //Screens
 import sdgScreen from "../navigation/screens/sdgScreen";
 import emergencyScreen from "../navigation/screens/emergencyScreen";
+import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
 // Screen name
 const homeName = "Home";
 //const searchName = "Search";
@@ -26,7 +27,8 @@ function MainContainer() {
             iconName = focused ? "home" : "home";
           } 
            else if (rn === sdgName) {
-            iconName = focused ? "sdg" : "sdg";
+            //iconName = focused ? "sdg" : "sdg";
+            <Image source={require('../assets/sdg.png')} />
           } else if (rn === emergencyName) {
             iconName = focused ? "alert-circle" : "emergency";
           }
