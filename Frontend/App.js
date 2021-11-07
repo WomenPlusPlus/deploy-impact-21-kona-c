@@ -3,8 +3,6 @@ import StackNavigation from "./screens/routes/stackNavigator";
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 
-
-
 export default function App() {
 
   let [fontsLoaded] = useFonts({
@@ -18,12 +16,8 @@ export default function App() {
       <AppLoading />
     );
   }
+  
   return (
-
     <StackNavigation />
-
-    
   );
 }
-
-
