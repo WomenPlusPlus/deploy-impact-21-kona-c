@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Development from "../development/developmentScreen";
 import HomeScreen from "../welcomeScreen/welcomeScreen";
-import Search from "../searchNGOscreen/searchNGO";
 import OrganisationsListScreen from "../organisationsListScreen/organisationsListScreen";
 import OrganisationDetailsScreen from "../organisationDetailsScreen/organisationDetailsScreen";
 import InfoAge from "../personalInfo/4_ageScreen";
@@ -41,7 +40,6 @@ const StackNavigation = () => (
           component={HomeScreen}
           options={{ title: "Dots." }}
         />
-        <Stack.Screen name="Search" component={Search} />
         <Stack.Group>
           <Stack.Screen name="InstitutionType" component={InstitutionType} />
           <Stack.Screen name="HelpForWho" component={HelpForWho} />
