@@ -8,7 +8,6 @@ import OrganisationsListScreen from "../organisationsListScreen/organisationsLis
 import OrganisationDetailsScreen from "../organisationDetailsScreen/organisationDetailsScreen";
 import InfoAge from "../personalInfo/4_ageScreen";
 import PersonType from "../personalInfo/5_personTypeScreen";
-import ResultInfoScreen from "../personalInfo/resultPersonalInfoScreen";
 import InfoGender from "../personalInfo/3_genderScreen";
 import InstitutionType from "../personalInfo/1_institutionTypeScreen";
 import HelpForWho from "../personalInfo/2_helpForWhoScreen";
@@ -46,7 +45,7 @@ const StackNavigation = () => (
           <Stack.Screen name="InfoGender" component={InfoGender} />
           <Stack.Screen name="InfoAge" component={InfoAge} />
           <Stack.Screen name="PersonType" component={PersonType} />
-          <Stack.Screen name="ResultInfoScreen" component={ResultInfoScreen} />
+
         </Stack.Group>
         <Stack.Screen name="NewScreen" component={NewScreen} />
         <Stack.Screen name="NextButton" component={NextButton} />
