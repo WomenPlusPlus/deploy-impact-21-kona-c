@@ -1,7 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 import Development from "../development/developmentScreen";
 import HomeScreen from "../welcomeScreen/welcomeScreen";
 import OrganisationsListScreen from "../organisationsListScreen/organisationsListScreen";
