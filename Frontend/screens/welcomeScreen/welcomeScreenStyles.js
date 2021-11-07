@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     width: 100,
   },
   textTitle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto-Regular",
     fontSize: normalize(23),
     fontWeight: "bold",
     textShadowRadius: 10,
