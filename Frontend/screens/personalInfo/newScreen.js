@@ -10,8 +10,8 @@ const NewScreen = ({ route, navigation }) => {
   const selectedAge = Object.values(route.params)[4];
   const selectedPersonType = Object.values(route.params)[5];
 
-  console.log(selectedRegionIndex);
-  console.log(selectedInstitutionType);
+  console.warn(selectedRegionIndex);
+  console.warn(selectedInstitutionType);
   console.log(selectedForWho);
   console.log(selectedGender);
   console.log(selectedAge);
@@ -21,6 +21,7 @@ const NewScreen = ({ route, navigation }) => {
     <ScrollView>
       <Text style={styles.titleTextStyle}>I am a new screen! </Text>
       <Text style={styles.titleTextStyle}>Who are you?</Text>
+      <Text style={styles.titleTextStyle}>What was selected during personal identification:{selectedGender}</Text>
     </ScrollView>
   );
 };
