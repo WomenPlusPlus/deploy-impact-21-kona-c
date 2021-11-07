@@ -1,0 +1,78 @@
+First_layer,Second_layer,Third_layer,SDG_name,SDG_Id
+Food & Shelter,Access to resources,,(1) No Poverty,1
+Food & Shelter,Access to immediate food,,(2) No Hunger,2
+Food & Shelter,Improve agricultural productivity,,(2) No Hunger,2
+Food & Shelter,Sustainable production,,(2) No Hunger,2
+Food & Shelter,Alimentation,,"(2) No Hunger
+(12) Responsible Consumption & Production","2,12"
+Social & Protection,Migration,,(10) Inequalities,10
+Social & Protection,"Abuse, violence and discrimination",Social Protection,(1) No Poverty,1
+Social & Protection,"Abuse, violence and discrimination",Discrimination gender based,(5) Gender Equality,5
+Social & Protection,"Abuse, violence and discrimination",Violence against women and girls,(5) Gender Equality,5
+Social & Protection,"Abuse, violence and discrimination",Abuses related to work,(8) Work & Economic Growth,8
+Social & Protection,"Abuse, violence and discrimination",Ending discrimination,(10) Inequalities,10
+Social & Protection,"Abuse, violence and discrimination",Ending violence in all its forms,(16) Justice & Institutions,16
+Social & Protection,Access to services,Access to water and sanitation services,(6) Clean Water and Santitation,6
+Social & Protection,Access to services,Access to spaces and services,(11) Sustainable Communities,11
+Social & Protection,Access to services,Access to clean and affordable energy,(7) Clean Energy,7
+Social & Protection,Access to services,Access to justice,(16) Justice & Institutions,16
+Social & Protection,"Assistance, sustainability and development",Citizenship and building sustainable cities and communities,(11) Sustainable Communities,11
+Social & Protection,"Assistance, sustainability and development",Sustainable practices,(12) Responsible Consumption & Production,12
+Social & Protection,"Assistance, sustainability and development",Eradication of corruption,(16) Justice & Institutions,16
+Social & Protection,"Assistance, sustainability and development",Assistance for sustainable development,(17) Partnerships,17
+Social & Protection,"Assistance, sustainability and development","Technology, capacity building and trading",(17) Partnerships,17
+Social & Protection,Rights,Rights (for gender equality),(5) Gender Equality,5
+Social & Protection,Rights,Rights (for clean water and sanitation),(6) Clean Water and Santitation,6
+Social & Protection,Rights,Rights (for affordable and clean energy),(7) Clean Energy,7
+Social & Protection,Rights,Rights (for reducing inequalities),(10) Inequalities,10
+Social & Protection,Rights,Rights (for sustainable cities and communities),(11) Sustainable Communities,11
+Social & Protection,Rights,Rights (for responsible consumption and production),(12) Responsible Consumption & Production,12
+Social & Protection,Rights,Rights (for justice&peace and strong institutions),(16) Justice & Institutions,16
+Job & Finance,Employment,,"(1) No Poverty
+(8) Work & Economic Growth","1,8"
+Job & Finance,Abuses related to work,,(8) Work & Economic Growth,8
+Job & Finance,Rights,,(8) Work & Economic Growth,8
+Health,"Healthcare for pregnancy, childbirth and childhood",,(3) Health,3
+Health,Epidemics and communicable diseases,,(3) Health,3
+Health,Substance abuse,,(3) Health,3
+Health,Disability and health,,(3) Health,3
+Health,Mental health,,(3) Health,3
+Health,Research and improvement of health system,,(3) Health,3
+Health,Rights,,(3) Health,3
+Education,Access to education services,,(4) Education,4
+Education,Improving a field or service,Improving agricultural productivity,(2) No Hunger,2
+Education,Improving a field or service,Researchers and improvement of health system,(3) Health,3
+Education,Improving a field or service,Improving the education system,(4) Education,4
+Education,Leadership and empowerment of women,,(5) Gender Equality,5
+Education,Sustainable development and technology,Sustainable development education,(4) Education,4
+Education,Sustainable development and technology,Assistance for sustainable development,(17) Partnerships,17
+Education,Sustainable development and technology,"Technology, capacity building and trading",(17) Partnerships,17
+Education,Rights,,(4) Education,4
+Environment,Climate change prevention,,(13) Climate,13
+Environment,Climate change management,,(13) Climate,13
+Environment,Sustainable and responsible use of resources,Responsible use of water,(6) Clean Water and Santitation,6
+Environment,Sustainable and responsible use of resources,Improvement of sustainable and modern energy services,(7) Clean Energy,7
+Environment,Sustainable and responsible use of resources,Sustainable practices,(12) Responsible Consumption & Production,12
+Environment,Sustainable and responsible use of resources,Preservation and reasonable and sustainable use of resources,(15) Life on land,15
+Environment,Sustainable and responsible use of resources,Management of resources,(15) Life on land,15
+Environment,Protection and preservation of resources,"Protection of the oceans, rivers, etc",(14) Life Below Water,14
+Environment,Protection and preservation of resources,Protection of fishery resources,(14) Life Below Water,14
+Environment,Protection and preservation of resources,Preservation and reasonable and sustainable use of resources,(15) Life on land,15
+Environment,Chemical products and waste,,(12) Responsible Consumption & Production,12
+Environment,Rights,,(12) Responsible Consumption & Production,12
+Rights,Rights on inequalities,Rights on gender equality,(5) Gender Equality,5
+Rights,Rights on inequalities,Rights on reducing inequalities,(10) Inequalities,10
+Rights,Rights on health or education,Rights on health,(3) Health,3
+Rights,Rights on health or education,Rights on education,(4) Education,4
+Rights,Rights on work,,(8) Work & Economic Growth,8
+Rights,Rights on services,Rights on water and sanitation,(6) Clean Water and Santitation,6
+Rights,Rights on services,Rights on affordable and clean energy,(7) Clean Energy,7
+Rights,Rights on sustainability and responsible consumption and production,Rights on sustainable cities and communities,(11) Sustainable Communities,11
+Rights,Rights on sustainability and responsible consumption and production,Rights on responsible consumption and production,(12) Responsible Consumption & Production,12
+Rights,Access to justice,Rights on justice&peace and strong institutions,(16) Justice & Institutions,16
+Rights,Access to justice,Access to justice,(16) Justice & Institutions,16
+Innovation & Infrastructure,Creation and modernization of infrastructures and industries,,(9) Industry & Innovation & Infrastructure,9
+Innovation & Infrastructure,Promotion of innovation,,(9) Industry & Innovation & Infrastructure,9
+Innovation & Infrastructure,Access to spaces and services,,(11) Sustainable Communities,11
+Innovation & Infrastructure,Citizenship and building sustainable cities and communities,,(11) Sustainable Communities,11
+Innovation & Infrastructure,Rights,,(11) Sustainable Communities,11

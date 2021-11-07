@@ -1,41 +1,71 @@
 import { Link } from "@react-navigation/native";
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, ScrollView, Button, Linking } from "react-native";
 import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
 
-const OrganisationsListScreen = ({ navigation }) => {
+const OrganisationsListScreen = ({ route, navigation }) => {
+  const SDG_Id = route.params["SDG_Id"].split(",");
+
+  let newData = Object.keys(data).filter((orgId) => {
+    for (
+      let i = 0;
+      i <
+      data[orgId]["SDGs"]
+        .replace(/[^0-9]/g, " ")
+        .split(" ")
+        .filter((n) => n).length;
+      i++
+    ) {
+      if (
+        data[orgId]["SDGs"]
+          .replace(/[^0-9]/g, " ")
+          .split(" ")
+          .filter((n) => n)[i] === SDG_Id[0] ||
+        SDG_Id[1]
+      ) {
+        return true;
+      }
+    }
+    return false;
+  });
+
   return (
     <ScrollView>
-      {Object.keys(data).map((organisationId) =>
-         (<View
-          key={"listview" + organisationId}
+      {newData.map((organisation) => (
+        <View
+          key={"listview" + organisation}
           style={[styles.container, styles.boxShadow]}
         >
-          <Text key={"name" + organisationId} style={styles.textBoxName}>
-            {data[organisationId]["Name of Organisation"]}
+          <Text key={"name" + organisation} style={styles.textBoxName}>
+            {data[organisation]["Name of Organisation"]}
           </Text>
-          {data[organisationId]["Address"] === "" ? null : (
-            <Text key={"address" + organisationId} style={styles.flexContainer}>
+          {data[organisation]["Address"] === "" ? null : (
+            <Text key={"address" + organisation} style={styles.flexContainer}>
               <Text style={styles.textBoxTitle}>Address: </Text>
               <Text style={styles.textBox}>
-                {data[organisationId]["Address"]}
+                {data[organisation]["Address"]}
               </Text>
             </Text>
           )}
-          {data[organisationId]["Web Address"] === "" ? null : (
-            <Text key={"website" + organisationId} style={styles.flexContainer}>
+          {data[organisation]["Web Address"] === "" ? null : (
+            <Text key={"website" + organisation} style={styles.flexContainer}>
               <Text style={styles.textBoxTitle}>Website: </Text>
-              <Text style={styles.textBoxWebsite} onPress={() => Linking.openURL(data[organisationId]["Web Address"])}>
-                {data[organisationId]["Web Address"]}
+              <Text
+                style={styles.textBoxWebsite}
+                onPress={() =>
+                  Linking.openURL(data[organisation]["Web Address"])
+                }
+              >
+                {data[organisation]["Web Address"]}
               </Text>
             </Text>
           )}
-          {data[organisationId]["Phone Number"] === "" ? null : (
-            <Text key={"phone" + organisationId} style={styles.flexContainer}>
+          {data[organisation]["Phone Number"] === "" ? null : (
+            <Text key={"phone" + organisation} style={styles.flexContainer}>
               <Text style={styles.textBoxTitle}>Phone: </Text>
-              <Text style={styles.textBox} >
-              {data[organisationId]["Phone Number"]}
+              <Text style={styles.textBox}>
+                {data[organisation]["Phone Number"]}
               </Text>
             </Text>
           )}
@@ -43,7 +73,7 @@ const OrganisationsListScreen = ({ navigation }) => {
             title="More info"
             onPress={() => {
               navigation.navigate("OrganisationDetailsScreen", {
-                orgId: organisationId,
+                org: organisation,
               });
             }}
           ></Button>
