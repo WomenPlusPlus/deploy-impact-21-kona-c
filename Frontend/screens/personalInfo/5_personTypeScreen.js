@@ -34,7 +34,7 @@ const PersonType = ({ route, navigation }) => {
           </Pressable>
           <Pressable onPress={() => handlePress(1)}>
             <View style={styles.circleButton}>
-              <Text style={styles.textStyle}>I'm a illegal imigrant</Text>
+              <Text style={styles.textStyle}>I'm an illegal imigrant</Text>
             </View>
           </Pressable>
         </View>

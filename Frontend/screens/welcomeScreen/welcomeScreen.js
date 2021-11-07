@@ -2,12 +2,10 @@ import React from "react";
 import {
   View,
   Text,
-  Button,
+
   ImageBackground,
-  ScrollView,
   Pressable,
-  PixelRatio,
-  Image,
+
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./welcomeScreenStyles";
