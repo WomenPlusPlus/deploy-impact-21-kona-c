@@ -15,6 +15,7 @@
     "@react-navigation/native-stack": "^6.2.5",
     "csvtojson": "^2.0.10",
     "expo": "~42.0.1",
+    "expo-font": "~9.2.1",
     "expo-status-bar": "~1.0.4",
     "install": "^0.13.0",
     "npm": "^8.1.1",

@@ -15,7 +15,6 @@ let sizeXL = bubbleXL;
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    flexDirection: "column",
     justifyContent: "space-between",
   },
   image: {
