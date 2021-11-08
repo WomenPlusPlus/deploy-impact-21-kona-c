@@ -1,7 +1,8 @@
 import React from "react";
 import { Text, View, Pressable, ImageBackground } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import { styles } from "./stylesPInfo";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegionIndex = parseInt(Object.values(route.params));
@@ -25,26 +26,28 @@ const InstitutionType = ({ route, navigation }) => {
         </Text>
         <View>
           <View style={styles.container1}>
-            <Pressable onPress={() => handlePress(0)}>
-              <View style={styles.circleButton}>
-                <FontAwesome name="user" style={styles.userImage} />
-                <Text style={styles.textStyle}>Person</Text>
-              </View>
-            </Pressable>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(0)}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="user" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Person/Individual</Text>
+            </View>
           </View>
           <View style={styles.container2}>
-            <Pressable onPress={() => handlePress(1)}>
-              <View style={styles.circleButton}>
-                <FontAwesome name="institution" style={styles.userImage} />
-                <Text style={styles.textStyle}>Institution</Text>
-              </View>
-            </Pressable>
-            <Pressable onPress={() => handlePress(2)}>
-              <View style={styles.circleButton}>
-                <FontAwesome name="building" style={styles.userImage} />
-                <Text style={styles.textStyle}>Company</Text>
-              </View>
-            </Pressable>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(1)}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="building" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Company/Organisation</Text>
+            </View>
           </View>
         </View>
       </ImageBackground>

@@ -5,7 +5,7 @@ import {
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons";
-import { styles } from "./stylesPInfo";
+import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
 
 const InfoAge = ({ route, navigation }) => {
   const selectedRegionIndex = Object.values(route.params)[0];
@@ -30,42 +30,60 @@ const InfoAge = ({ route, navigation }) => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text style={styles.titleTextStyle}>How old are you?</Text>
+        <Text style={styles.titleTextStyle}>Age Range?</Text>
         <View>
           <View style={styles.container1}>
-            <Pressable onPress={() => handlePress(0)}>
-              <View style={styles.circleButton}>
-                <FontAwesome5 name="baby" style={styles.userImage} />
-                <Text style={styles.textStyle}>0-12</Text>
-              </View>
-            </Pressable>
-            <Pressable onPress={() => handlePress(1)}>
-              <View style={styles.circleButton}>
-                <MaterialCommunityIcons
-                  name="human-child"
-                  style={styles.userImage}
-                />
-                <Text style={styles.textStyle}>12-18</Text>
-              </View>
-            </Pressable>
+           <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(0)}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="baby" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>0-12</Text>
+            </View>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(1)}>
+                <View style={styles.severalIconsButton}> 
+                  <MaterialCommunityIcons
+                    name="human-child"
+                    style={styles.userImage}
+                  />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>12-18</Text>
+            </View>
           </View>
           <View style={styles.container2}>
-            <Pressable onPress={() => handlePress(2)}>
-              <View style={styles.circleButtonOnlyText}>
-                <MaterialCommunityIcons
-                  name="human-male"
-                  style={styles.userImage}
-                />
-
-                <Text style={styles.textStyle}>18-65</Text>
-              </View>
-            </Pressable>
-            <Pressable onPress={() => handlePress(3)}>
-              <View style={styles.circleButtonOnlyText}>
-                <MaterialIcons name="elderly" style={styles.userImage} />
-                <Text style={styles.textStyle}>65+</Text>
-              </View>
-            </Pressable>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(2)}>
+                <View style={styles.severalIconsButton}> 
+                  <MaterialCommunityIcons
+                    name="human-male"
+                    style={styles.userImage}
+                  />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>18-65</Text>
+            </View>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(3)}>
+                <View style={styles.severalIconsButton}> 
+                  <MaterialIcons
+                    name="elderly"
+                    style={styles.userImage}
+                  />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>65+</Text>
+            </View>
           </View>
         </View>
       </ImageBackground>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import { styles } from "./stylesPInfo";
+import { styles } from "../../components/screenComponents/screenBcomponents/bComponentStyles";
 
 const PersonType = ({ route, navigation }) => {
   const selectedRegionIndex = Object.values(route.params)[0];
@@ -28,30 +28,37 @@ const PersonType = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          What best describe your current situation?
+          What best describes the current situation?
         </Text>
-        <View>
-          <View style={styles.container1}>
-            <Pressable onPress={() => handlePress(0)}>
-              <View style={styles.circleButton}>
-                <Text style={styles.textStyle}>
-                  I'm a refugee/asylum seeker
-                </Text>
-              </View>
-            </Pressable>
-            <Pressable onPress={() => handlePress(1)}>
-              <View style={styles.circleButton}>
-                <Text style={styles.textStyle}>I'm a illegal imigrant</Text>
-              </View>
-            </Pressable>
-          </View>
-          <View style={styles.container2}>
-            <Pressable onPress={() => handlePress(2)}>
-              <View style={styles.circleButtonOnlyText}>
-                <Text style={styles.textStyle}>I'm none of the above</Text>
-              </View>
-            </Pressable>
-          </View>
+        <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(0)}
+              >
+                <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
+              </Pressable>
+            </View>
+        </View>
+        <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(1)}
+              >
+                <Text style={styles.textStyle}>Iillegal imigrant</Text>
+              </Pressable>
+            </View>
+        </View>
+        <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(2)}
+              >
+                <Text style={styles.textStyle}>None of the above</Text>
+              </Pressable>
+            </View>
         </View>
       </ImageBackground>
     </View>

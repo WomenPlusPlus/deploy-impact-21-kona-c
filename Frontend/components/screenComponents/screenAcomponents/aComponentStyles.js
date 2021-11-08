@@ -31,6 +31,15 @@ export const styles = StyleSheet.create({
     fontSize: normalize(16),
     marginTop: "2%",
   },
+  textBracketStyle: {
+    width: bubbleSize / 1.5,
+    alignSelf: "center",
+    textAlign: "center",
+    fontFamily: "Roboto",
+    color: "#921CB1",
+    fontSize: normalize(14),
+    marginTop: "2%",
+  },
   titleTextStyle: {
     fontFamily: "Roboto",
     color: "#921CB1",
