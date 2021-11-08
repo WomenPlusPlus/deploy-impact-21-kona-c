@@ -11,29 +11,13 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "5%",
-    paddingRight: "7%",
-  },
-  container1for2options: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "5%",
-    paddingRight: "30%",
+    marginTop: "1%",
   },
   container2: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "2%",
-    paddingLeft: "6%",
-  },
-  container2for2options: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "2%",
-    paddingLeft: "23%",
+    marginTop: "1%",
   },
   textStyle: {
     fontFamily: "Roboto-Regular",
@@ -45,7 +29,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
     fontSize: normalize(25),
-    margin: 35,
+    margin: 25,
     textAlign: "center",
   },
   circleButtonOnlyText: {
@@ -71,7 +55,11 @@ export const styles = StyleSheet.create({
     margin: 7,
   },
   userImage: {
-    fontSize: normalize(60),
+    fontSize: normalize(46),
     color: "white",
+    paddingBottom: "1%",
+  },
+  image: {
+    height: height,
   },
 });

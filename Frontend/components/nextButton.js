@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
         width: "15%",
         height: "15%",
         marginRight: 20,
-        paddingBottom: 20
       },
       nextButtonText: {
         color: "#A169B1",

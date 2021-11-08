@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   circleButton: {
-    width: bubbleSize * 2.5,
+    width: bubbleSize * 2.7,
     height: bubbleSize / 2.25,
     borderRadius: bubbleSize / 2,
     backgroundColor: "#A169B1",
@@ -39,8 +39,8 @@ export const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 2,
     margin: bubbleSize / 35,
-    paddingLeft: 5,
-    paddingRight: 5,
+    paddingLeft: 6,
+    paddingRight: 6,
   },
   userImage: {
     fontSize: normalize(46),

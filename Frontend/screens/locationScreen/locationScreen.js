@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, ScrollView, ImageBackground } from "react-native";
+import { Text, View, ImageBackground, Alert } from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet, Dimensions } from "react-native";
 import SelectDropdown from "react-native-select-dropdown";
@@ -12,9 +12,17 @@ const LocationScreen = ({ navigation }) => {
   let selectedIndex = -1;
 
   const handlePress = () => {
-    navigation.navigate("InstitutionType", {
-      LocationIndex: selectedIndex,
-    });
+    if (selectedIndex === -1) {
+      Alert.alert(
+        "Please select a location",
+        "Please select a location before going forward",
+        [{ text: "OK", onPress: () => console.log("OK Pressed") }]
+      );
+    } else {
+      navigation.navigate("InstitutionType", {
+        LocationIndex: selectedIndex,
+      });
+    }
   };
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);
@@ -23,7 +31,7 @@ const LocationScreen = ({ navigation }) => {
   let uniqueRegionsArray = [...new Set(regionsArray)];
 
   return (
-    <ScrollView>
+    <View>
       <ImageBackground
         source={require("../../assets/background.png")}
         resizeMode="cover"
@@ -60,9 +68,9 @@ const LocationScreen = ({ navigation }) => {
             }}
           />
         </View>
-        <NextButton handlePress={handlePress} />
+          <NextButton handlePress={handlePress} />
       </ImageBackground>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -75,7 +83,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#A169B1",
     width: "80%",
-    marginBottom: "90%",
+    marginBottom: "40%",
   },
   buttonDown: {
     backgroundColor: "#A169B1",
