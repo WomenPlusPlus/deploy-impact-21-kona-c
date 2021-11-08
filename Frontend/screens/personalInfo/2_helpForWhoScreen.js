@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import { styles } from "./stylesPInfo";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
 
 const HelpForWho = ({ route, navigation }) => {
   const selectedRegionIndex = Object.values(route.params)[0];
@@ -27,20 +27,29 @@ const HelpForWho = ({ route, navigation }) => {
         </Text>
         <View>
           <View style={styles.container1}>
-            <Pressable onPress={() => handlePress(0)}>
-              <View style={styles.circleButton}>
-                <FontAwesome name="user" style={styles.userImage} />
-                <Text style={styles.textStyle}>Myself</Text>
-              </View>
-            </Pressable>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(0)}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="user" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Myself</Text>
+            </View>
           </View>
           <View style={styles.container2}>
-            <Pressable onPress={() => handlePress(1)}>
-              <View style={styles.circleButton}>
-                <FontAwesome name="users" style={styles.userImage} />
-                <Text style={styles.textStyle}>Others</Text>
-              </View>
-            </Pressable>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress(1)}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="users" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Others</Text>
+              <Text style={styles.textBracketStyle}>(Family, Friends, etc.)</Text>
+            </View>
           </View>
         </View>
       </ImageBackground>

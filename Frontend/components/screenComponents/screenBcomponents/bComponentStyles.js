@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   circleButton: {
-    width: bubbleSize * 2.7,
+    width: bubbleSize * 2.6,
     height: bubbleSize / 2.25,
     borderRadius: bubbleSize / 2,
     backgroundColor: "#A169B1",
