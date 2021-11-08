@@ -4,6 +4,12 @@ import options from "../../../assets/options_map.json";
 import { styles } from "./bComponentStyles";
 
 const ComponentB = ({ route, navigation }) => {
+  const selectedRegionIndex = route.params["selectedRegionIndex"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
   const optionsFilteredA = options.filter((option) => {
     return option["First_layer"] === selectedOptionScreenA;
@@ -15,11 +21,23 @@ const ComponentB = ({ route, navigation }) => {
     });
     if (optionsFilteredB.length === 1) {
       navigation.navigate("OrganisationsListScreen", {
+        selectedRegionIndex: selectedRegionIndex,
+        selectedInstitutionType: selectedInstitutionType,
+        selectedForWho: selectedForWho,
+        selectedGender: selectedGender,
+        selectedAge: selectedAge,
+        selectedPersonType: selectedPersonType,
         selectedOptionScreenB: selectedOptionScreenB,
-        SDG_Id: optionsFilteredB[0]["SDG_Id"]
+        SDG_Id: optionsFilteredB[0]["SDG_Id"],
       });
     } else {
       navigation.navigate("NeedsScreenC", {
+        selectedRegionIndex: selectedRegionIndex,
+        selectedInstitutionType: selectedInstitutionType,
+        selectedForWho: selectedForWho,
+        selectedGender: selectedGender,
+        selectedAge: selectedAge,
+        selectedPersonType: selectedPersonType,
         selectedOptionScreenA: selectedOptionScreenA,
         selectedOptionScreenB: selectedOptionScreenB,
         arrayFilteredA: optionsFilteredA,

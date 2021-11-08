@@ -4,6 +4,16 @@ import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
 
 const OrganisationsListScreen = ({ route, navigation }) => {
+  console.log(route.params)
+  const selectedRegionIndex = route.params["selectedRegionIndex"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
+  const selectedOptionScreenA = route.params["selectedOptionScreenA"];
+  const selectedOptionScreenB = route.params["selectedOptionScreenB"];
+  const optionsFilteredB = route.params["optionsFilteredB"];
   const SDG_Id = route.params["SDG_Id"].split(",");
 
   let newData = Object.keys(data).filter((orgId) => {
@@ -23,9 +33,12 @@ const OrganisationsListScreen = ({ route, navigation }) => {
           .filter((n) => n)[i] === SDG_Id[0] ||
         SDG_Id[1]
       ) {
+        if (data[0]["Gender"].includes("F")) {
+        }
         return true;
       }
     }
+
     return false;
   });
 

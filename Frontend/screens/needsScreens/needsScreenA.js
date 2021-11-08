@@ -5,7 +5,7 @@ import ComponentA from "../../components/screenComponents/screenAcomponents/aCom
 const NeedsScreenA = ({ route, navigation }) => {
   return (
     <View>
-      <ComponentA navigation={navigation} />
+      <ComponentA route={route} navigation={navigation} />
     </View>
   );
 };

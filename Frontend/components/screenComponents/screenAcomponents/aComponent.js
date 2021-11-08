@@ -10,10 +10,23 @@ import options from "../../../assets/options_map.json";
 import { styles } from "./aComponentStyles";
 
 const ComponentA = ({ route, navigation }) => {
+  const selectedRegionIndex = route.params["selectedRegionIndex"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
+
   let optionsArray = [];
 
   const handlePress = (optionScreenA) => {
     navigation.navigate("NeedsScreenB", {
+      selectedRegionIndex: selectedRegionIndex,
+      selectedInstitutionType: selectedInstitutionType,
+      selectedForWho: selectedForWho,
+      selectedGender: selectedGender,
+      selectedAge: selectedAge,
+      selectedPersonType: selectedPersonType,
       selectedOptionScreenA: optionScreenA,
     });
   };
