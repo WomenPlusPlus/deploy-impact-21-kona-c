@@ -1,5 +1,4 @@
-import { Link } from "@react-navigation/native";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Text, View, ScrollView, Button, Linking } from "react-native";
 import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
