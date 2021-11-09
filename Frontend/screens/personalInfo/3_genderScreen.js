@@ -1,19 +1,20 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
+
 
 const InfoGender = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedGender) => {
     navigation.navigate("InfoAge", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
-      selectedGender: id,
+      selectedGender: selectedGender,
     });
   };
 
@@ -30,7 +31,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(0)}>
+                onPress={() => handlePress("Female")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="female" style={styles.userImage} />
                 </View>
@@ -40,7 +41,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(1)}>
+                onPress={() => handlePress("Male")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="male" style={styles.userImage} />
                 </View>
@@ -52,7 +53,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(2)}>
+                onPress={() => handlePress("Other")}>
                 <View style={styles.severalIconsButton}> 
                 </View>
               </Pressable>
@@ -61,7 +62,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(3)}>
+                onPress={() => handlePress("PNTS")}>
                 <View style={styles.severalIconsButton}> 
                 </View>
               </Pressable>

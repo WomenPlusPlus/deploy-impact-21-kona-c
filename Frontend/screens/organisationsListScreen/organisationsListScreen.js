@@ -5,7 +5,7 @@ import { styles } from "./organisationsListStyles";
 
 const OrganisationsListScreen = ({ route, navigation }) => {
   console.log(route.params)
-  const selectedRegionIndex = route.params["selectedRegionIndex"];
+  const selectedRegion = route.params["selectedRegion"];
   const selectedInstitutionType = route.params["selectedInstitutionType"];
   const selectedForWho = route.params["selectedForWho"];
   const selectedGender = route.params["selectedGender"];

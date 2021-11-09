@@ -1,17 +1,17 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const HelpForWho = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedForWho) => {
     navigation.navigate("InfoGender", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
-      selectedForWho: id,
+      selectedForWho: selectedForWho,
     });
   };
 
@@ -30,7 +30,7 @@ const HelpForWho = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(0)}>
+                onPress={() => handlePress("Myself")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="user" style={styles.userImage} />
                 </View>
@@ -42,7 +42,7 @@ const HelpForWho = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress(1)}>
+                onPress={() => handlePress("Others")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="users" style={styles.userImage} />
                 </View>

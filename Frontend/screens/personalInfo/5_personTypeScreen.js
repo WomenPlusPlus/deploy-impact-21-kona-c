@@ -1,22 +1,22 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import { styles } from "../../components/screenComponents/screenBcomponents/bComponentStyles";
+import { styles } from "../needsScreens/bComponentStyles";
 
 const PersonType = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
-  const selectedGender = Object.values(route.params)[3];
-  const selectedAge = Object.values(route.params)[4];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedPersonType) => {
     navigation.navigate("NeedsScreenA", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
       selectedAge: selectedAge,
-      selectedPersonType: id,
+      selectedPersonType: selectedPersonType,
     });
   };
 
@@ -31,34 +31,34 @@ const PersonType = ({ route, navigation }) => {
           What best describes the current situation?
         </Text>
         <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress(0)}
-              >
-                <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
-              </Pressable>
-            </View>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Refugee/asylum seeker")}
+            >
+              <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
+            </Pressable>
+          </View>
         </View>
         <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress(1)}
-              >
-                <Text style={styles.textStyle}>Iillegal imigrant</Text>
-              </Pressable>
-            </View>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Illegal imigrant")}
+            >
+              <Text style={styles.textStyle}>Illegal imigrant</Text>
+            </Pressable>
+          </View>
         </View>
         <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress(2)}
-              >
-                <Text style={styles.textStyle}>None of the above</Text>
-              </Pressable>
-            </View>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("None of the above")}
+            >
+              <Text style={styles.textStyle}>None of the above</Text>
+            </Pressable>
+          </View>
         </View>
       </ImageBackground>
     </View>

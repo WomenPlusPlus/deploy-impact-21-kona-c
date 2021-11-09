@@ -5,21 +5,21 @@ import {
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons";
-import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const InfoAge = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
-  const selectedGender = Object.values(route.params)[3];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedAge) => {
     navigation.navigate("PersonType", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
-      selectedAge: id,
+      selectedAge: selectedAge,
     });
   };
 
@@ -33,21 +33,23 @@ const InfoAge = ({ route, navigation }) => {
         <Text style={styles.titleTextStyle}>Age Range?</Text>
         <View>
           <View style={styles.container1}>
-           <View style={styles.bubbleContainer}>
-              <Pressable 
+            <View style={styles.bubbleContainer}>
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(0)}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("0-12")}
+              >
+                <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="baby" style={styles.userImage} />
                 </View>
               </Pressable>
               <Text style={styles.textStyle}>0-12</Text>
             </View>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(1)}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("12-18")}
+              >
+                <View style={styles.severalIconsButton}>
                   <MaterialCommunityIcons
                     name="human-child"
                     style={styles.userImage}
@@ -59,30 +61,29 @@ const InfoAge = ({ route, navigation }) => {
           </View>
           <View style={styles.container2}>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(2)}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("18-25")}
+              >
+                <View style={styles.severalIconsButton}>
                   <MaterialCommunityIcons
                     name="human-male"
                     style={styles.userImage}
                   />
                 </View>
               </Pressable>
-              <Text style={styles.textStyle}>18-65</Text>
+              <Text style={styles.textStyle}>18-25</Text>
             </View>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(3)}>
-                <View style={styles.severalIconsButton}> 
-                  <MaterialIcons
-                    name="elderly"
-                    style={styles.userImage}
-                  />
+                onPress={() => handlePress("25+")}
+              >
+                <View style={styles.severalIconsButton}>
+                  <MaterialIcons name="elderly" style={styles.userImage} />
                 </View>
               </Pressable>
-              <Text style={styles.textStyle}>65+</Text>
+              <Text style={styles.textStyle}>25+</Text>
             </View>
           </View>
         </View>
