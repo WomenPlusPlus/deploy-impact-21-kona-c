@@ -4,7 +4,6 @@ import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
 
 const OrganisationsListScreen = ({ route, navigation }) => {
-  console.log(route.params)
   const selectedRegion = route.params["selectedRegion"];
   const selectedInstitutionType = route.params["selectedInstitutionType"];
   const selectedForWho = route.params["selectedForWho"];
@@ -33,13 +32,27 @@ const OrganisationsListScreen = ({ route, navigation }) => {
           .filter((n) => n)[i] === SDG_Id[0] ||
         SDG_Id[1]
       ) {
-        if (data[0]["Gender"].includes("F")) {
+        if (selectedRegion !== "Worldwide") {
+          if (data[orgId]["Code_region"] === selectedRegion) {
+            if (data[orgId]["Age Category"].includes(selectedAge)) {
+              if (selectedAge === "E" || selectedAge === "A") {
+                if (data[orgId]["Gender"].includes(selectedGender)) {
+                  return true;
+                }
+              }
+            }
+          }
+        } else {
+          if (data[orgId]["Age Category"].includes(selectedAge)) {
+            if (selectedAge === "E" || selectedAge === "A") {
+              if (data[orgId]["Gender"].includes(selectedGender)) {
+                return true;
+              }
+            }
+          }
         }
-        return true;
       }
     }
-
-    return false;
   });
 
   return (

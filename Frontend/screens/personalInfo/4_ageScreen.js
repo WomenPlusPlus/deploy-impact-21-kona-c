@@ -36,7 +36,7 @@ const InfoAge = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("0-12")}
+                onPress={() => handlePress("C")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="baby" style={styles.userImage} />
@@ -47,7 +47,7 @@ const InfoAge = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("12-18")}
+                onPress={() => handlePress("Y")}
               >
                 <View style={styles.severalIconsButton}>
                   <MaterialCommunityIcons
@@ -63,7 +63,7 @@ const InfoAge = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("18-25")}
+                onPress={() => handlePress("E")}
               >
                 <View style={styles.severalIconsButton}>
                   <MaterialCommunityIcons
@@ -77,7 +77,7 @@ const InfoAge = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("25+")}
+                onPress={() => handlePress("A")}
               >
                 <View style={styles.severalIconsButton}>
                   <MaterialIcons name="elderly" style={styles.userImage} />

@@ -31,7 +31,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress("Female")}>
+                onPress={() => handlePress("F")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="female" style={styles.userImage} />
                 </View>
@@ -41,7 +41,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress("Male")}>
+                onPress={() => handlePress("M")}>
                 <View style={styles.severalIconsButton}> 
                   <FontAwesome5 name="male" style={styles.userImage} />
                 </View>

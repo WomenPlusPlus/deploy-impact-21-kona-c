@@ -29,7 +29,7 @@ const InstitutionType = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Person/Individual")}
+                onPress={() => handlePress("Person")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="user" style={styles.userImage} />
@@ -42,7 +42,7 @@ const InstitutionType = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Company/Organisation")}
+                onPress={() => handlePress("Company")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="building" style={styles.userImage} />
