@@ -10,7 +10,6 @@ import PersonType from "../personalInfo/5_personTypeScreen";
 import InfoGender from "../personalInfo/3_genderScreen";
 import InstitutionType from "../personalInfo/1_institutionTypeScreen";
 import HelpForWho from "../personalInfo/2_helpForWhoScreen";
-import NewScreen from "../personalInfo/newScreen";
 import LocationScreen from "../locationScreen/locationScreen";
 import NextButton from "../../components/nextButton";
 import NeedsScreenA from "../needsScreens/needsScreenA";
@@ -48,7 +47,6 @@ const StackNavigation = () => (
           <Stack.Screen name="PersonType" component={PersonType} />
 
         </Stack.Group>
-        <Stack.Screen name="NewScreen" component={NewScreen} />
         <Stack.Screen name="NextButton" component={NextButton} />
         <Stack.Screen
           name="OrganisationsListScreen"
