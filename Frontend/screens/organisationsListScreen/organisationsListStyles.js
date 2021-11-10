@@ -1,51 +1,78 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions, PixelRatio } from "react-native";
+import normalize from "react-native-normalize";
+
+const { width, height } = Dimensions.get("window");
+let partialHeight = 0.22 * height;
+let bubbleWidth = 0.33 * width;
+let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 export const styles = StyleSheet.create({
-  boxShadow:
-    Platform.OS === "ios"
-      ? {
-          shadowColor: "gray",
-          shadowOffset: { width: 6, height: 6 },
-          shadowOpacity: 0.5,
-          shadowRadius: 15,
-        }
-      : {
-          elevation: 20,
-          shadowColor: "gray",
-        },
+  mainContainer: {
+    height: height,
+  },
   container: {
     flexGrow: 1,
     backgroundColor: "white",
     margin: 15,
     borderRadius: 5,
     overflow: "hidden",
+    padding: "3%",
   },
   textBoxName: {
-    color: "black",
-    fontSize: 20,
+    color: "#A169B1",
+    fontSize: normalize(22),
     padding: 10,
+    textAlign: "center",
     fontWeight: "bold",
   },
   textBox: {
-    color: "black",
-    fontSize: 16,
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
+    fontSize: normalize(20),
     marginRight: 10,
   },
   textBoxTitle: {
-    color: "black",
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
     fontSize: 16,
-    fontWeight: "bold",
   },
   textBoxWebsite: {
-    color: "black",
-    fontSize: 16,
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
+    fontSize: normalize(20),
     marginRight: 10,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
+  },
+  titleTextStyle: {
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
+    fontSize: normalize(25),
+    margin: 25,
+    textAlign: "center",
+  },
+  flexContainer: {
+    marginBottom: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  image: {
+    height: "100%",
   },
 
-  flexContainer: {
+  nextButton: {
+    color: "#A169B1",
     flexDirection: "row",
-    paddingLeft: 10,
-    paddingBottom: 10,
+    justifyContent: "flex-end",
+  },
+  nextButtonText: {
+    color: "#A169B1",
+    fontSize: normalize(38),
+    fontWeight: "bold",
+    justifyContent: "center",
+  },
+  iconText: {
+    color: "#A169B1",
+    fontSize: normalize(22),
   },
 });
