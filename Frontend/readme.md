@@ -9,7 +9,7 @@ Hello World, welcome to the deploy(impact)! Konna C project.
  The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 - - - -
 #### Getting started:
-`expo instal`
+`expo install`
 `expo start`
 
 ### Team Members

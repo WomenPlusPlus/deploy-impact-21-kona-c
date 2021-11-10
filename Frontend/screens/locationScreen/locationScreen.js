@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, ScrollView, ImageBackground } from "react-native";
+import { Text, View, ImageBackground, Alert } from "react-native";
 import data from "../../assets/organisations.json";
 import { StyleSheet, Dimensions } from "react-native";
 import SelectDropdown from "react-native-select-dropdown";
@@ -9,21 +9,28 @@ const { width, height } = Dimensions.get("window");
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
-  let selectedIndex = -1;
+  let selectedRegion = "";
 
   const handlePress = () => {
-    navigation.navigate("InstitutionType", {
-      LocationIndex: selectedIndex,
-    });
+    if (selectedRegion === "") {
+      Alert.alert(
+        "Please select a location",
+        "Please select a location before going forward",
+        [{ text: "OK", onPress: () => console.log("OK Pressed") }]
+      );
+    } else {
+      navigation.navigate("InstitutionType", {
+        selectedRegion: selectedRegion,
+      });
+    }
   };
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);
   }
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
-
   return (
-    <ScrollView>
+    <View>
       <ImageBackground
         source={require("../../assets/background.png")}
         resizeMode="cover"
@@ -43,7 +50,7 @@ const LocationScreen = ({ navigation }) => {
             dropdownIconPosition={"right"}
             data={uniqueRegionsArray}
             onSelect={(selectedItem, index) => {
-              selectedIndex = index;
+              selectedRegion = selectedItem;
             }}
             buttonTextAfterSelection={(selectedItem, index) => {
               return selectedItem;
@@ -60,9 +67,9 @@ const LocationScreen = ({ navigation }) => {
             }}
           />
         </View>
-        <NextButton handlePress={handlePress} />
+          <NextButton handlePress={handlePress} />
       </ImageBackground>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -75,7 +82,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#A169B1",
     width: "80%",
-    marginBottom: "90%",
+    marginBottom: "40%",
   },
   buttonDown: {
     backgroundColor: "#A169B1",

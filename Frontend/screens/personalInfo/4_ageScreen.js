@@ -1,71 +1,94 @@
 import React from "react";
-import { Text, ScrollView, View, Pressable } from "react-native";
+import { Text, ImageBackground, View, Pressable } from "react-native";
 import {
   FontAwesome5,
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons";
-import { styles } from "./stylesPInfo";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const InfoAge = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
-  const selectedGender = Object.values(route.params)[3];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedAge) => {
     navigation.navigate("PersonType", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
-      selectedAge: id,
+      selectedAge: selectedAge,
     });
   };
 
   return (
-    <ScrollView>
-      <Text style={styles.titleTextStyle}>
-        How old are you?
-      </Text>
-      <View>
-        <View style={styles.container1}>
-          <Pressable onPress={() => handlePress(0)}>
-            <View style={styles.circleButton}>
-              <FontAwesome5 name="baby" style={styles.userImage} />
+    <View>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <Text style={styles.titleTextStyle}>Age Range?</Text>
+        <View>
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("C")}
+              >
+                <View style={styles.severalIconsButton}>
+                  <FontAwesome5 name="baby" style={styles.userImage} />
+                </View>
+              </Pressable>
               <Text style={styles.textStyle}>0-12</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => handlePress(1)}>
-            <View style={styles.circleButton}>
-              <MaterialCommunityIcons
-                name="human-child"
-                style={styles.userImage}
-              />
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("Y")}
+              >
+                <View style={styles.severalIconsButton}>
+                  <MaterialCommunityIcons
+                    name="human-child"
+                    style={styles.userImage}
+                  />
+                </View>
+              </Pressable>
               <Text style={styles.textStyle}>12-18</Text>
             </View>
-          </Pressable>
-        </View>
-        <View style={styles.container2}>
-          <Pressable onPress={() => handlePress(2)}>
-            <View style={styles.circleButtonOnlyText}>
-              <MaterialCommunityIcons
-                name="human-male"
-                style={styles.userImage}
-              />
-
-              <Text style={styles.textStyle}>18-65</Text>
+          </View>
+          <View style={styles.container2}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("E")}
+              >
+                <View style={styles.severalIconsButton}>
+                  <MaterialCommunityIcons
+                    name="human-male"
+                    style={styles.userImage}
+                  />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>18-25</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => handlePress(3)}>
-            <View style={styles.circleButtonOnlyText}>
-              <MaterialIcons name="elderly" style={styles.userImage} />
-              <Text style={styles.textStyle}>65+</Text>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("A")}
+              >
+                <View style={styles.severalIconsButton}>
+                  <MaterialIcons name="elderly" style={styles.userImage} />
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>25+</Text>
             </View>
-          </Pressable>
+          </View>
         </View>
-      </View>
-    </ScrollView>
+      </ImageBackground>
+    </View>
   );
 };
 

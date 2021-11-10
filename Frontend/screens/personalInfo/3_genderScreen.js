@@ -1,56 +1,77 @@
 import React from "react";
-import { Text, ScrollView, View, Pressable } from "react-native";
+import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "./stylesPInfo";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
+
 
 const InfoGender = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
 
-  const handlePress = (id) => {
+  const handlePress = (selectedGender) => {
     navigation.navigate("InfoAge", {
-      selectedRegionIndex: selectedRegionIndex,
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
-      selectedGender: id,
+      selectedGender: selectedGender,
     });
   };
 
   return (
-    <ScrollView>
-      <Text style={styles.titleTextStyle}>
-        What is your gender?
-      </Text>
-      <View>
-        <View style={styles.container1}>
-          <Pressable onPress={() => handlePress(0)}>
-            <View style={styles.circleButton}>
-              <FontAwesome5 name="female" style={styles.userImage} />
+    <View>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <Text style={styles.titleTextStyle}>Gender?</Text>
+        <View>
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress("F")}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="female" style={styles.userImage} />
+                </View>
+              </Pressable>
               <Text style={styles.textStyle}>Female</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => handlePress(1)}>
-            <View style={styles.circleButton}>
-              <FontAwesome5 name="male" style={styles.userImage} />
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress("M")}>
+                <View style={styles.severalIconsButton}> 
+                  <FontAwesome5 name="male" style={styles.userImage} />
+                </View>
+              </Pressable>
               <Text style={styles.textStyle}>Male</Text>
             </View>
-          </Pressable>
-        </View>
-        <View style={styles.container2}>
-          <Pressable onPress={() => handlePress(2)}>
-            <View style={styles.circleButtonOnlyText}>
-              <Text style={styles.textStyle}>Others</Text>
+          </View>
+          <View style={styles.container2}>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress("Other")}>
+                <View style={styles.severalIconsButton}> 
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Other</Text>
             </View>
-          </Pressable>
-          <Pressable onPress={() => handlePress(3)}>
-            <View style={styles.circleButtonOnlyText}>
-              <Text style={styles.textStyle}>I prefer not to say</Text>
+            <View style={styles.bubbleContainer}>
+              <Pressable 
+                style={styles.circleButton}
+                onPress={() => handlePress("PNTS")}>
+                <View style={styles.severalIconsButton}> 
+                </View>
+              </Pressable>
+              <Text style={styles.textStyle}>Prefer not to say</Text>
             </View>
-          </Pressable>
+          </View>
         </View>
-      </View>
-    </ScrollView>
+      </ImageBackground>
+    </View>
   );
 };
 

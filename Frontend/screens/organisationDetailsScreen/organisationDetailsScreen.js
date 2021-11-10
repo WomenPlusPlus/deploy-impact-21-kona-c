@@ -5,7 +5,6 @@ import { StyleSheet } from "react-native";
 
 const OrganisationDetailsScreen = ({ route, navigation }) => {
   const organisationId = parseInt(Object.values(route.params));
-  console.log(organisationId);
 
   return (
     <ScrollView style={[styles.container, styles.boxShadow]}>

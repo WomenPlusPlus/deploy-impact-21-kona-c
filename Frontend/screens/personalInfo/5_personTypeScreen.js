@@ -1,52 +1,67 @@
 import React from "react";
-import { Text, ScrollView, View, Pressable } from "react-native";
-import { styles } from "./stylesPInfo";
+import { Text, ImageBackground, View, Pressable } from "react-native";
+import { styles } from "../needsScreens/bComponentStyles";
 
 const PersonType = ({ route, navigation }) => {
-  const selectedRegionIndex = Object.values(route.params)[0];
-  const selectedInstitutionType = Object.values(route.params)[1];
-  const selectedForWho = Object.values(route.params)[2];
-  const selectedGender = Object.values(route.params)[3];
-  const selectedAge = Object.values(route.params)[4];
+  const selectedRegion = route.params["selectedRegion"];
+  const selectedInstitutionType = route.params["selectedInstitutionType"];
+  const selectedForWho = route.params["selectedForWho"];
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
 
-  const handlePress = (id) => {
-    navigation.navigate("NewScreen", {
-      selectedRegionIndex: selectedRegionIndex,
+  const handlePress = (selectedPersonType) => {
+    navigation.navigate("NeedsScreenA", {
+      selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
       selectedAge: selectedAge,
-      selectedPersonType: id,
+      selectedPersonType: selectedPersonType,
     });
   };
 
   return (
-    <ScrollView>
-      <Text style={styles.titleTextStyle}>
-        What best describe your current situation?
-      </Text>
-      <View>
+    <View>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <Text style={styles.titleTextStyle}>
+          What best describes the current situation?
+        </Text>
         <View style={styles.container1}>
-          <Pressable onPress={() => handlePress(0)}>
-            <View style={styles.circleButton}>
-              <Text style={styles.textStyle}>I'm a refugee/asylum seeker</Text>
-            </View>
-          </Pressable>
-          <Pressable onPress={() => handlePress(1)}>
-            <View style={styles.circleButton}>
-              <Text style={styles.textStyle}>I'm an illegal imigrant</Text>
-            </View>
-          </Pressable>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("refugee")}
+            >
+              <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
+            </Pressable>
+          </View>
         </View>
-        <View style={styles.container2}>
-          <Pressable onPress={() => handlePress(2)}>
-            <View style={styles.circleButtonOnlyText}>
-              <Text style={styles.textStyle}>I'm none of the above</Text>
-            </View>
-          </Pressable>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Illegal imigrant")}
+            >
+              <Text style={styles.textStyle}>Illegal imigrant</Text>
+            </Pressable>
+          </View>
         </View>
-      </View>
-    </ScrollView>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("None of the above")}
+            >
+              <Text style={styles.textStyle}>None of the above</Text>
+            </Pressable>
+          </View>
+        </View>
+      </ImageBackground>
+    </View>
   );
 };
 
