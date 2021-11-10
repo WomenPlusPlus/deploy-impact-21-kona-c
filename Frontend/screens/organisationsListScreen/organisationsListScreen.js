@@ -7,6 +7,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
   const selectedGender = route.params["selectedGender"];
   const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
   const SDG_Id = route.params["SDG_Id"].split(",");
 
   let newData = Object.keys(data).filter((orgId) => {
@@ -51,7 +52,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   }
   // Filter by "refugge" on Target Group and put those first on the list
   for (let i = 0; i < newData.length; i++) {
-    if (data[newData[i]]["Target Group"].toLowerCase().includes("refugee")) {
+    if (data[newData[i]]["Target Group"].toLowerCase().includes(selectedPersonType)) {
       let element = newData[i];
       newData.splice(i, 1);
       newData.splice(0, 0, element);
