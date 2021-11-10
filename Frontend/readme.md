@@ -2,8 +2,11 @@ Hello World, welcome to the deploy(impact)! Konna C project.
 
 #### Prerequisites
 
-### Project: 
- A tool to connect people in need to the organisations best equipped to help them. The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
+### Project&Product: 
+ We volunteered for 6 weeks (approx. 10h/week) following the Agile values and principles. 
+
+ A tool to connect people in need to the organisations best equipped to help them.
+ The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 - - - -
 #### Getting started:
 `expo install`

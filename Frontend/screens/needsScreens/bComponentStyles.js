@@ -16,12 +16,12 @@ export const styles = StyleSheet.create({
   textStyle: {
     alignSelf: "center",
     textAlign: "center",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: normalize(20),
   },
   titleTextStyle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto-Regular",
     color: "#921CB1",
     fontSize: normalize(25),
     marginTop: 20,
