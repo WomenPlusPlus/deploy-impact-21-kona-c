@@ -53,7 +53,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress("Other")}>
+                onPress={() => handlePress("M")}>
                 <View style={styles.severalIconsButton}> 
                 </View>
               </Pressable>
@@ -62,7 +62,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable 
                 style={styles.circleButton}
-                onPress={() => handlePress("PNTS")}>
+                onPress={() => handlePress("M")}>
                 <View style={styles.severalIconsButton}> 
                 </View>
               </Pressable>
