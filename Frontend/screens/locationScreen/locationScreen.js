@@ -9,10 +9,10 @@ const { width, height } = Dimensions.get("window");
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
-  let selectedIndex = -1;
+  let selectedRegion = "";
 
   const handlePress = () => {
-    if (selectedIndex === -1) {
+    if (selectedRegion === "") {
       Alert.alert(
         "Please select a location",
         "Please select a location before going forward",
@@ -20,7 +20,7 @@ const LocationScreen = ({ navigation }) => {
       );
     } else {
       navigation.navigate("InstitutionType", {
-        LocationIndex: selectedIndex,
+        selectedRegion: selectedRegion,
       });
     }
   };
@@ -29,7 +29,6 @@ const LocationScreen = ({ navigation }) => {
   }
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
-
   return (
     <View>
       <ImageBackground
@@ -51,7 +50,7 @@ const LocationScreen = ({ navigation }) => {
             dropdownIconPosition={"right"}
             data={uniqueRegionsArray}
             onSelect={(selectedItem, index) => {
-              selectedIndex = index;
+              selectedRegion = selectedItem;
             }}
             buttonTextAfterSelection={(selectedItem, index) => {
               return selectedItem;

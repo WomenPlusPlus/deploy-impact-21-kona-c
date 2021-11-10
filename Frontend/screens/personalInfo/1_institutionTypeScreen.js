@@ -2,15 +2,15 @@ import React from "react";
 import { Text, View, Pressable, ImageBackground } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../components/screenComponents/screenAcomponents/aComponentStyles";
+import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const InstitutionType = ({ route, navigation }) => {
-  const selectedRegionIndex = parseInt(Object.values(route.params));
-
-  const handlePress = (id) => {
+  const selectedRegion = route.params["selectedRegion"];
+  
+  const handlePress = (selectedInstitutionType) => {
     navigation.navigate("HelpForWho", {
-      selectedRegionIndex: selectedRegionIndex,
-      selectedInstitutionType: id,
+      selectedRegion: selectedRegion,
+      selectedInstitutionType: selectedInstitutionType,
     });
   };
 
@@ -27,10 +27,11 @@ const InstitutionType = ({ route, navigation }) => {
         <View>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(0)}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("Person")}
+              >
+                <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="user" style={styles.userImage} />
                 </View>
               </Pressable>
@@ -39,10 +40,11 @@ const InstitutionType = ({ route, navigation }) => {
           </View>
           <View style={styles.container2}>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress(1)}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("Company")}
+              >
+                <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="building" style={styles.userImage} />
                 </View>
               </Pressable>
