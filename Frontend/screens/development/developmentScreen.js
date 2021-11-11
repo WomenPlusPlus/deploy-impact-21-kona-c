@@ -4,20 +4,12 @@ import { Text, View, Button } from "react-native";
 import { styles } from "./developmentStyles";
 
 const Development = ({ navigation }) => {
-  const handlePress = () => {
-    navigation.navigate("OrganisationsListScreen");
-  };
   const handlePress1 = () => {
     navigation.navigate("HomeScreen");
   };
-  const handleNeedsScreenA = () => {
-    navigation.navigate("NeedsScreenA");
-  };
+  
   const handleMainContainer = () => {
     navigation.navigate("MainContainer");
-  };
-  const handlePressNewPress = () => {
-    navigation.navigate("NewScreen");
   };
 
   return (
@@ -26,12 +18,6 @@ const Development = ({ navigation }) => {
       <StatusBar style="auto" />
       <Button title="Go to Navigation Bar" onPress={handleMainContainer} />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
-      <Button title="Go to OrganisationsListScreen" onPress={handlePress} />
-      <Button title="Go to NeedsScreenA" onPress={handleNeedsScreenA} />
-      <Button
-        title="This is a new go to to NEW SCREEN"
-        onPress={handlePressNewPress}
-      />
     </View>
   );
 };
