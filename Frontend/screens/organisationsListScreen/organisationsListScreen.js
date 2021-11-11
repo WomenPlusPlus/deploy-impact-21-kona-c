@@ -111,17 +111,17 @@ const OrganisationsListScreen = ({ route, navigation }) => {
                   : ` ${data[organisation]["Region"]}`}
               </Text>
             </Text>
-
             {data[organisation]["Web Address"] === "" ? null : (
               <Text key={"website" + organisation} style={styles.flexContainer}>
                 <MaterialCommunityIcons style={styles.iconText} name="web" />
+                <Text style={styles.textBox}>{` `}</Text>
                 <Text
                   style={styles.textBoxWebsite}
                   onPress={() =>
                     Linking.openURL(data[organisation]["Web Address"])
                   }
                 >
-                  {` ${data[organisation]["Web Address"]}`}
+                  {data[organisation]["Web Address"]}
                 </Text>
               </Text>
             )}
@@ -131,7 +131,6 @@ const OrganisationsListScreen = ({ route, navigation }) => {
                   .split("/")
                   .map((num) => num.trim())
                   .map((num) => {
-                    console.log(num);
                     return (
                       <Text
                         key={"phone" + organisation}
@@ -147,7 +146,8 @@ const OrganisationsListScreen = ({ route, navigation }) => {
                         }}
                       >
                         <FontAwesome style={styles.iconText} name="phone" />
-                        <Text style={styles.textBoxWebsite}>{` ${num}`}</Text>
+                        <Text style={styles.textBox}>{` `}</Text>
+                        <Text style={styles.textBoxPhone}>{`${num}`}</Text>
                       </Text>
                     );
                   })}

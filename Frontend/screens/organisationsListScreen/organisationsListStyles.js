@@ -42,6 +42,15 @@ export const styles = StyleSheet.create({
     fontSize: normalize(20),
     marginRight: 10,
     textDecorationLine: "underline",
+    fontStyle: "italic",
+  },
+  textBoxPhone: {
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
+    fontSize: normalize(20),
+    marginRight: 10,
+    textDecorationLine: "underline",
+    fontStyle: "italic",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
