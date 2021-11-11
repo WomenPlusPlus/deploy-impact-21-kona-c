@@ -89,8 +89,8 @@ const sdgScreen = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   const renderItem = ({ item }) => {
-    const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
-    const color = item.id === selectedId ? 'white' : 'black';
+    const backgroundColor = item.id === selectedId ? "#A169B1" : "#E4C9E5";
+    const color = item.id === selectedId ? 'white' : '#921CB1';
 
     return (
       <Item
