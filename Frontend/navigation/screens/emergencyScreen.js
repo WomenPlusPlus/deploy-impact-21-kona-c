@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable, FlatList } from "react-native";
-import { FontAwesome5, MaterialCommunityIcons, MaterialIcons,} from "@expo/vector-icons";
+import { Text, ImageBackground, View, Pressable, FlatList, TouchableOpacity } from "react-native";
+import { FontAwesome5, FontAwesome, MaterialCommunityIcons, MaterialIcons, Linking, Platform} from "@expo/vector-icons";
 import { styles } from "./emergencyScreenStyles";
+import { makeCall } from "../../utils/makeCall";
 
 const EmergencyScreen = ({ route, navigation }) => {
   return (
@@ -12,7 +13,7 @@ const EmergencyScreen = ({ route, navigation }) => {
         style={styles.image}
       >
         <View style={styles.container1}>
-          <Text style={styles.titleTextStyle}>Emergency Numbers{"\n"}</Text>
+          <Text style={styles.titleTextStyle}>Emergency Numbers</Text>
         </View>
         <View style={styles.flexContainer}>
           <View style={styles.containerParent}> 
@@ -20,48 +21,49 @@ const EmergencyScreen = ({ route, navigation }) => {
               <View style={styles.container2}>
                 <MaterialIcons
                     name="local-police"
-                    style={styles.userImage}
+                    style={styles.iconText}
                   />
                 <Text style={styles.textBoldStyle}> Police:</Text>
               </View>
             </View>
-            <Text style={styles.textStyle}>22117</Text>
+            <FontAwesome style={styles.iconText} name="phone" />
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("22117")}>22117</Text>
           </View>
-          <Text style={styles.textStyle}>{"\n"}</Text>
           <View style={styles.containerParent}> 
             <View style={styles.containerItem}>
               <View style={styles.container2}>
-                <FontAwesome5 name="fire" style={styles.userImage} />
+                <FontAwesome5 name="fire" style={styles.iconText} />
                 <Text style={styles.textBoldStyle}>  Fire:</Text>
               </View>
             </View>
-            <Text style={styles.textStyle}>22118</Text>
+            <FontAwesome style={styles.iconText} name="phone" />
+              <Text style={styles.textBoxPhone} onPress={()=> makeCall("22118")}>22118</Text>
           </View>
-          <Text style={styles.textStyle}>{"\n"}</Text>
           <View style={styles.containerParent}> 
             <View style={styles.containerItem}>
               <View style={styles.container2}>
-                <FontAwesome5 name="hospital-symbol" style={styles.userImage} />
-                <Text style={styles.textBoldStyle}>  SOS Medicine:</Text>
+                <FontAwesome5 name="hospital-symbol" style={styles.iconText} />
+                <Text style={styles.textBoldStyle}> SOS Medicine:</Text>
               </View>
             </View>
-            <Text style={styles.textStyle}>(221)338891515</Text>
+            <FontAwesome style={styles.iconText} name="phone" />
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("(221)338891515")}>(221)338891515</Text>
           </View>
         </View>
         <View style={styles.container1}>
-          <Text style={styles.titleTextStyle}>{"\n\n\n\n"}Organisations{"\n"}</Text>
+          <Text style={styles.titleTextStyle}>Organisations</Text>
         </View>
-        <View style={styles.flexContainer}>
-          <Text style={styles.textStyle}>{"\t\t"}Association des Jeunes pour le Developpement (AJD/PASTEEF)</Text>
+        <View style={styles.container}>
+          <Text style={styles.textStyle}>Association des Jeunes pour le Developpement (AJD/PASTEEF)</Text>
           <View style={styles.container2}>
-            <FontAwesome5 name="phone-alt" style={styles.userImage} />
-            <Text style={styles.textBoldStyle}> 221338778798</Text> 
+            <FontAwesome style={styles.iconText} name="phone" />
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338778798")}>221338778798</Text> 
           </View>
           <Text style={styles.textStyle}>{"\n"}</Text>
-          <Text style={styles.textStyle}>{"\t\t"}Samu Social Sénégal</Text>
+          <Text style={styles.textStyle}>Samu Social Sénégal</Text>
             <View style={styles.container2}>
-              <FontAwesome5 name="phone-alt" style={styles.userImage} />
-              <Text style={styles.textBoldStyle}> 221338602806</Text> 
+              <FontAwesome style={styles.iconText} name="phone" />
+              <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338602806")}>221338602806</Text> 
             </View>
         </View>
       </ImageBackground>
