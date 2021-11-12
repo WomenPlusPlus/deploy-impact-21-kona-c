@@ -28,7 +28,7 @@ const PersonType = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          What best describes the current situation?
+        What is the current situation of the person seeking help?
         </Text>
         <View style={styles.container1}>
           <View style={styles.bubbleContainer}>
@@ -44,19 +44,9 @@ const PersonType = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress("Illegal imigrant")}
+              onPress={() => handlePress("Another")}
             >
-              <Text style={styles.textStyle}>Illegal imigrant</Text>
-            </Pressable>
-          </View>
-        </View>
-        <View style={styles.container1}>
-          <View style={styles.bubbleContainer}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("None of the above")}
-            >
-              <Text style={styles.textStyle}>None of the above</Text>
+              <Text style={styles.textStyle}>Another</Text>
             </Pressable>
           </View>
         </View>

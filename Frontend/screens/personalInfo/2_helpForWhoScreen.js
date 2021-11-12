@@ -23,7 +23,7 @@ const HelpForWho = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          Whom are you seeking help for...
+          Seeking help for...
         </Text>
         <View>
           <View style={styles.container1}>
@@ -48,7 +48,6 @@ const HelpForWho = ({ route, navigation }) => {
                 </View>
               </Pressable>
               <Text style={styles.textStyle}>Others</Text>
-              <Text style={styles.textBracketStyle}>(Family, Friends, etc.)</Text>
             </View>
           </View>
         </View>
