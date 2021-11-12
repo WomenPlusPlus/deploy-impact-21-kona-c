@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
     margin: 7,
   },
   userImage: {
-    fontSize: normalize(46),
+    fontSize: normalize(50),
     color: "white",
     paddingBottom: "1%",
   },
