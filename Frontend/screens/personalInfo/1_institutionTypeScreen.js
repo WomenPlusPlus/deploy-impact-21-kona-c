@@ -22,7 +22,7 @@ const InstitutionType = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          Whom are you seeking help for...
+          Whom are you seeking help for?
         </Text>
         <View>
           <View style={styles.container1}>

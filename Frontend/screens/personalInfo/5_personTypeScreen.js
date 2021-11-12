@@ -44,19 +44,9 @@ const PersonType = ({ route, navigation }) => {
           <View style={styles.bubbleContainer}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress("Illegal immigrant")}
+              onPress={() => handlePress("Another")}
             >
-              <Text style={styles.textStyle}>Illegal imigrant</Text>
-            </Pressable>
-          </View>
-        </View>
-        <View style={styles.container1}>
-          <View style={styles.bubbleContainer}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("None of the above")}
-            >
-              <Text style={styles.textStyle}>None of the above</Text>
+              <Text style={styles.textStyle}>Another</Text>
             </Pressable>
           </View>
         </View>
