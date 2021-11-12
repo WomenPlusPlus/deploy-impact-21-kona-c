@@ -37,7 +37,7 @@ const LocationScreen = ({ navigation }) => {
         style={styles.image}
       >
         <View style={styles.container}>
-          <Text style={styles.titleTextStyle}>Enter your location</Text>
+          <Text style={styles.titleTextStyle}>Please select a region</Text>
           <SelectDropdown
             buttonTextStyle={styles.textStyle}
             buttonStyle={styles.button}

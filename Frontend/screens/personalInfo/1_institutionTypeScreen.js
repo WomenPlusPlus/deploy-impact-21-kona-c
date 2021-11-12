@@ -22,7 +22,7 @@ const InstitutionType = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          Are you looking for help for...
+          Whom are you seeking help for...
         </Text>
         <View>
           <View style={styles.container1}>
@@ -35,7 +35,7 @@ const InstitutionType = ({ route, navigation }) => {
                   <FontAwesome5 name="user" style={styles.userImage} />
                 </View>
               </Pressable>
-              <Text style={styles.textStyle}>Person/Individual</Text>
+              <Text style={styles.textStyle}>Individual</Text>
             </View>
           </View>
           <View style={styles.container2}>
