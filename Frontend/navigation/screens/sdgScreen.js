@@ -24,7 +24,7 @@ const SdgScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.imageBackground}
     >
-      <ScrollView>
+      <ScrollView style={styles.mainContainer}>
         <Text style={styles.titleTextStyle}>
           Choose one of the 17 goal and see organisations that can help!
         </Text>
@@ -52,6 +52,9 @@ const SdgScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: "10%",
+  },
   textBoxName: {
     color: "#A169B1",
     fontSize: normalize(22),

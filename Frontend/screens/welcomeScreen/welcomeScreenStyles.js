@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
     borderColor: "white",
   },
   containerRoundXL: {
-    marginTop: "3%",
+    marginTop: "14%",
   },
   roundXL: {
     width: sizeXL,
