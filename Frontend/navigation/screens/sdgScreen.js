@@ -9,7 +9,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 import normalize from "react-native-normalize";
-import sdgs from "../../utils/sdgs"
+import sdgs from "../../utils/sdgs";
 
 const SdgScreen = ({ navigation }) => {
   const handlePress = (sdgId) => {

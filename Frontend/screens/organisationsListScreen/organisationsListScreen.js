@@ -6,7 +6,7 @@ import {
   Pressable,
   Linking,
   ImageBackground,
-  Image
+  Image,
 } from "react-native";
 import data from "../../assets/organisations.json";
 import { styles } from "./organisationsListStyles";
@@ -89,14 +89,14 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       style={styles.imageBackground}
     >
       <ScrollView>
+        <Image
+          resizeMode="contain"
+          source={sdgsLarge[SDG_Id[0] - 1].image}
+          style={styles.image}
+        />
         <Text style={styles.titleTextStyle}>
           List of organisations that could provide help
         </Text>
-        <Image
-          resizeMode="contain"
-          source={sdgsLarge[SDG_Id - 1].image}
-          style={styles.image}
-        />
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>

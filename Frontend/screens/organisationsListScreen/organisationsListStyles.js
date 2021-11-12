@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     height: height,
   },
   container: {
-    flexGrow: 1,
     backgroundColor: "white",
     margin: 15,
     borderRadius: 5,
@@ -56,7 +55,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
     fontSize: normalize(25),
-    margin: 25,
+    marginBottom: 15,
     textAlign: "center",
   },
   notFoundTextStyle: {
@@ -66,7 +65,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     textAlignVertical: "center",
     margin: 10,
-    height: height / 1.2,
+    height: height / 1.8,
     fontWeight: "bold",
   },
   flexContainer: {
@@ -75,12 +74,14 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
- imageBackground: {
+  imageBackground: {
     height: "100%",
   },
   image: {
-    width: 100,
-    height: 100,
+    width: "100%",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: -22
   },
   nextButton: {
     color: "#A169B1",

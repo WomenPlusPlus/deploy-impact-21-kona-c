@@ -6,6 +6,7 @@ import {
   Pressable,
   Linking,
   ImageBackground,
+  Image,
 } from "react-native";
 import data from "../../assets/organisations.json";
 import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
@@ -14,6 +15,7 @@ import {
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import sdgsLarge from "../../utils/sdgsLarge";
 
 const SdgOrganisationsList = ({ route, navigation }) => {
   const sdgId = route.params["sdgId"];
@@ -29,10 +31,12 @@ const SdgOrganisationsList = ({ route, navigation }) => {
       i++
     ) {
       if (
-        parseInt(data[orgId]["SDGs"]
-          .replace(/[^0-9]/g, " ")
-          .split(" ")
-          .filter((n) => n)[i]) === sdgId
+        parseInt(
+          data[orgId]["SDGs"]
+            .replace(/[^0-9]/g, " ")
+            .split(" ")
+            .filter((n) => n)[i]
+        ) === sdgId
       ) {
         return true;
       }
@@ -46,9 +50,20 @@ const SdgOrganisationsList = ({ route, navigation }) => {
       style={styles.imageBackground}
     >
       <ScrollView>
-        {newData.length === 0 ? <Text style={styles.notFoundTextStyle}>No organisations available for this goal</Text> : <Text style={styles.titleTextStyle}>
-          List of organisations that could provide help
-        </Text>}
+        <Image
+          resizeMode="contain"
+          source={sdgsLarge[sdgId - 1].image}
+          style={styles.image}
+        />
+        {newData.length === 0 ? (
+          <Text style={styles.notFoundTextStyle}>
+            No organisations available for this goal
+          </Text>
+        ) : (
+          <Text style={styles.titleTextStyle}>
+            List of organisations that could provide help
+          </Text>
+        )}
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
@@ -92,7 +107,6 @@ const SdgOrganisationsList = ({ route, navigation }) => {
                   .map((num) => {
                     return (
                       <Text
-                        key={"phone" + organisation}
                         style={styles.flexContainer}
                         onPress={() => {
                           if (Platform.OS === "android") {
