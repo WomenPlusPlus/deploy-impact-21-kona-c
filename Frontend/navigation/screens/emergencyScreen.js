@@ -27,7 +27,7 @@ const EmergencyScreen = ({ route, navigation }) => {
               </View>
             </View>
             <FontAwesome style={styles.iconText} name="phone" />
-            <Text style={styles.textBoxPhone} onPress={()=> makeCall("22117")}>22117</Text>
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("22117")}> 22117</Text>
           </View>
           <View style={styles.containerParent}> 
             <View style={styles.containerItem}>
@@ -37,7 +37,7 @@ const EmergencyScreen = ({ route, navigation }) => {
               </View>
             </View>
             <FontAwesome style={styles.iconText} name="phone" />
-              <Text style={styles.textBoxPhone} onPress={()=> makeCall("22118")}>22118</Text>
+              <Text style={styles.textBoxPhone} onPress={()=> makeCall("22118")}> 22118</Text>
           </View>
           <View style={styles.containerParent}> 
             <View style={styles.containerItem}>
@@ -47,7 +47,7 @@ const EmergencyScreen = ({ route, navigation }) => {
               </View>
             </View>
             <FontAwesome style={styles.iconText} name="phone" />
-            <Text style={styles.textBoxPhone} onPress={()=> makeCall("(221)338891515")}>(221)338891515</Text>
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("(221)338891515")}> (221) 338891515</Text>
           </View>
         </View>
         <View style={styles.container1}>
@@ -57,13 +57,13 @@ const EmergencyScreen = ({ route, navigation }) => {
           <Text style={styles.textStyle}>Association des Jeunes pour le Developpement (AJD/PASTEEF)</Text>
           <View style={styles.container2}>
             <FontAwesome style={styles.iconText} name="phone" />
-            <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338778798")}>221338778798</Text> 
+            <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338778798")}> (221) 338778798</Text> 
           </View>
           <Text style={styles.textStyle}>{"\n"}</Text>
           <Text style={styles.textStyle}>Samu Social Sénégal</Text>
             <View style={styles.container2}>
               <FontAwesome style={styles.iconText} name="phone" />
-              <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338602806")}>221338602806</Text> 
+              <Text style={styles.textBoxPhone} onPress={()=> makeCall("221338602806")}> (221) 338602806</Text> 
             </View>
         </View>
       </ImageBackground>

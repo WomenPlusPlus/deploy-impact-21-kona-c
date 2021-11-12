@@ -59,16 +59,29 @@ export const styles = StyleSheet.create({
     margin: 25,
     textAlign: "center",
   },
+  notFoundTextStyle: {
+    fontFamily: "Roboto-Regular",
+    color: "#A169B1",
+    fontSize: normalize(25),
+    textAlign: "center",
+    textAlignVertical: "center",
+    margin: 10,
+    height: height / 1.2,
+    fontWeight: "bold",
+  },
   flexContainer: {
     marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  image: {
+ imageBackground: {
     height: "100%",
   },
-
+  image: {
+    width: 100,
+    height: 100,
+  },
   nextButton: {
     color: "#A169B1",
     flexDirection: "row",
