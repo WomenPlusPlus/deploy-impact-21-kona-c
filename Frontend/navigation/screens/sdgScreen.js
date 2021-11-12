@@ -110,9 +110,7 @@ const sdgs = [
   },
 ];
 
-const SdgScreen = () => {
-  let scrollYPos = 0;
-  const [scroller, setScroller] = useState(0)
+const SdgScreen = ({ route, navigation }) => {
   const [sdgId, setSdgId] = useState(0);
   let newData = Object.keys(data).filter((orgId) => {
     for (let i = 0; i < data[orgId]["SDGs"].split(",").length; i++) {
@@ -127,19 +125,18 @@ const SdgScreen = () => {
 
   const handlePress = (sdgId) => {
     setSdgId(sdgId);
-  };
-  const scrollToOrg = () => {
-    scrollYPos = height * 1;
-    scroller.scrollTo({ x: 0, y: scrollYPos + height/3});
-  };
+    navigation.navigate("OrganisationsListScreen", {
+      sdgId: sdgId,
+    });
 
+  };
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
       style={styles.imageBackground}
     >
-      <ScrollView ref={(scroller) => {setScroller(scroller)}}>
+      <ScrollView>
         <Text style={styles.titleTextStyle}>
           Choose one of the 17 goal and see organisations that can help!
         </Text>
@@ -149,7 +146,6 @@ const SdgScreen = () => {
               <TouchableHighlight
                 style={styles.button}
                 onPress={() => {
-                  scrollToOrg();
                   handlePress(sdg.id);
                 }}
               >
@@ -162,16 +158,6 @@ const SdgScreen = () => {
             </View>
           ))}
         </View>
-        {newData.map((organisation) => (
-          <View
-            key={"listview" + organisation}
-            style={styles.containerOrganisation}
-          >
-            <Text name="Org" key={"name" + organisation} style={styles.textBoxName}>
-            {data[organisation]["Name of Organisation"]}
-            </Text>
-          </View>
-        ))}
       </ScrollView>
     </ImageBackground>
   );
