@@ -12,6 +12,7 @@ const homeName = "Home";
 //const searchName = "Search";
 const sdgName = "SDG";
 const emergencyName = "Emergency";
+import { Feather } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,26 +23,32 @@ function MainContainer() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-          let rn = route.name;
+          let rn = 
+route.name
+;
           if (rn === homeName) {
             iconName = focused ? "home" : "home";
-          } 
-           else if (rn === sdgName) {
-            //iconName = focused ? "sdg" : "sdg";
-            <Image source={require('../assets/sdg.png')} />
+            return <Feather name={iconName} size={size} color={color} />;
+          } else if (rn === sdgName) {
+            //;
+            return (
+              <Image
+                source={require("../assets/sdg.png")}
+                style={{ width: 50, height: 50 }}
+              />
+            );
           } else if (rn === emergencyName) {
-            iconName = focused ? "alert-circle" : "alert-circle";
+            iconName = focused ? "phone-call" : "phone-call";
+            return <Feather name={iconName} size={size} color={color} />;
           }
-          // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
         },
       })}
       tabBarOptions={{
         activeTintColor: "#921CB1",
         inactiveTintColor: "#A169B1",
-        labelStyle: { paddingBottom: 10, fontSize: 10 },
-        style: { padding: 10, height: 70 },
-      }}
+        labelStyle: { paddingBottom: 2, fontSize: 15, paddingTop: 3},
+        style: { padding: 10, height: 100},
+      }} 
     >
       <Tab.Screen name={homeName} component={HomeScreen} />
       <Tab.Screen name={sdgName} component={SdgScreen} />
@@ -50,5 +57,4 @@ function MainContainer() {
   );
 }
 
-export default MainContainer;
-
+export default MainContainer; 
