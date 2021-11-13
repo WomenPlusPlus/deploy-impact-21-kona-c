@@ -56,6 +56,7 @@ export const styles = StyleSheet.create({
     color: "#A169B1",
     fontSize: normalize(25),
     marginBottom: 15,
+    marginTop: 10,
     textAlign: "center",
   },
   notFoundTextStyle: {

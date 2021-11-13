@@ -1,152 +1,77 @@
 [
-{"First_layer":"Food & Shelter","Second_layer":"Access to resources","Third_layer":"","SDG_Id":"1"}
-,
-{"First_layer":"Food & Shelter","Second_layer":"Access to immediate food","Third_layer":"","SDG_Id":"2"}
-,
-{"First_layer":"Food & Shelter","Second_layer":"Improve agricultural productivity","Third_layer":"","SDG_Id":"2"}
-,
-{"First_layer":"Food & Shelter","Second_layer":"Sustainable production","Third_layer":"","SDG_Id":"2"}
-,
-{"First_layer":"Food & Shelter","Second_layer":"Alimentation","Third_layer":"","SDG_Id":"2,12"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Migration","Third_layer":"","SDG_Id":"10"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Social Protection","SDG_Id":"1"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Discrimination gender based","SDG_Id":"5"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Violence against women and girls","SDG_Id":"5"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Abuses related to work","SDG_Id":"8"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Ending discrimination","SDG_Id":"10"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Ending violence in all its forms","SDG_Id":"16"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to water and sanitation services","SDG_Id":"6"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to spaces and services","SDG_Id":"11"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to clean and affordable energy","SDG_Id":"7"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to justice","SDG_Id":"16"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Citizenship and building sustainable cities and communities","SDG_Id":"11"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Sustainable practices","SDG_Id":"12"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Eradication of corruption","SDG_Id":"16"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Assistance for sustainable development","SDG_Id":"17"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Technology, capacity building and trading","SDG_Id":"17"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for gender equality)","SDG_Id":"5"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for clean water and sanitation)","SDG_Id":"6"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for affordable and clean energy)","SDG_Id":"7"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for reducing inequalities)","SDG_Id":"10"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for sustainable cities and communities)","SDG_Id":"11"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for responsible consumption and production)","SDG_Id":"12"}
-,
-{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for justice&peace and strong institutions)","SDG_Id":"16"}
-,
-{"First_layer":"Job & Finance","Second_layer":"Employment","Third_layer":"","SDG_Id":"1,8"}
-,
-{"First_layer":"Job & Finance","Second_layer":"Abuses related to work","Third_layer":"","SDG_Id":"8"}
-,
-{"First_layer":"Job & Finance","Second_layer":"Rights","Third_layer":"","SDG_Id":"8"}
-,
-{"First_layer":"Health","Second_layer":"Healthcare for pregnancy, childbirth and childhood","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Epidemics and communicable diseases","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Substance abuse","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Disability and health","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Mental health","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Research and improvement of health system","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Health","Second_layer":"Rights","Third_layer":"","SDG_Id":"3"}
-,
-{"First_layer":"Education","Second_layer":"Access to education services","Third_layer":"","SDG_Id":"4"}
-,
-{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Improving agricultural productivity","SDG_Id":"2"}
-,
-{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Researchers and improvement of health system","SDG_Id":"3"}
-,
-{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Improving the education system","SDG_Id":"4"}
-,
-{"First_layer":"Education","Second_layer":"Leadership and empowerment of women","Third_layer":"","SDG_Id":"5"}
-,
-{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Sustainable development education","SDG_Id":"4"}
-,
-{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Assistance for sustainable development","SDG_Id":"17"}
-,
-{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Technology, capacity building and trading","SDG_Id":"17"}
-,
-{"First_layer":"Education","Second_layer":"Rights","Third_layer":"","SDG_Id":"4"}
-,
-{"First_layer":"Environment","Second_layer":"Climate change prevention","Third_layer":"","SDG_Id":"13"}
-,
-{"First_layer":"Environment","Second_layer":"Climate change management","Third_layer":"","SDG_Id":"13"}
-,
-{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Responsible use of water","SDG_Id":"6"}
-,
-{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Improvement of sustainable and modern energy services","SDG_Id":"7"}
-,
-{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Sustainable practices","SDG_Id":"12"}
-,
-{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Preservation and reasonable and sustainable use of resources","SDG_Id":"15"}
-,
-{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Management of resources","SDG_Id":"15"}
-,
-{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Protection of the oceans, rivers, etc","SDG_Id":"14"}
-,
-{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Protection of fishery resources","SDG_Id":"14"}
-,
-{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Preservation and reasonable and sustainable use of resources","SDG_Id":"15"}
-,
-{"First_layer":"Environment","Second_layer":"Chemical products and waste","Third_layer":"","SDG_Id":"12"}
-,
-{"First_layer":"Environment","Second_layer":"Rights","Third_layer":"","SDG_Id":"12"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on inequalities","Third_layer":"Rights on gender equality","SDG_Id":"5"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on inequalities","Third_layer":"Rights on reducing inequalities","SDG_Id":"10"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on health or education","Third_layer":"Rights on health","SDG_Id":"3"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on health or education","Third_layer":"Rights on education","SDG_Id":"4"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on work","Third_layer":"","SDG_Id":"8"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on services","Third_layer":"Rights on water and sanitation","SDG_Id":"6"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on services","Third_layer":"Rights on affordable and clean energy","SDG_Id":"7"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on sustainability, responsible consumption and production","Third_layer":"Rights on sustainable cities and communities","SDG_Id":"11"}
-,
-{"First_layer":"Rights","Second_layer":"Rights on sustainability, responsible consumption and production","Third_layer":"Rights on responsible consumption and production","SDG_Id":"12"}
-,
-{"First_layer":"Rights","Second_layer":"Access to justice","Third_layer":"Rights on justice&peace and strong institutions","SDG_Id":"16"}
-,
-{"First_layer":"Rights","Second_layer":"Access to justice","Third_layer":"Access to justice","SDG_Id":"16"}
-,
-{"First_layer":"Innovation & Infrastructure","Second_layer":"Creation and modernization of infrastructures and industries","Third_layer":"","SDG_Id":"9"}
-,
-{"First_layer":"Innovation & Infrastructure","Second_layer":"Promotion of innovation","Third_layer":"","SDG_Id":"9"}
-,
-{"First_layer":"Innovation & Infrastructure","Second_layer":"Access to spaces and services","Third_layer":"","SDG_Id":"11"}
-,
-{"First_layer":"Innovation & Infrastructure","Second_layer":"Citizenship and building sustainable cities and communities","Third_layer":"","SDG_Id":"11"}
-,
-{"First_layer":"Innovation & Infrastructure","Second_layer":"Rights","Third_layer":"","SDG_Id":"11"}
-
+{"First_layer":"Food & Shelter","Second_layer":"Access to resources","Third_layer":"","SDG_Id":"1"},
+{"First_layer":"Food & Shelter","Second_layer":"Access to immediate food","Third_layer":"","SDG_Id":"2"},
+{"First_layer":"Food & Shelter","Second_layer":"Improve agricultural productivity","Third_layer":"","SDG_Id":"2"},
+{"First_layer":"Food & Shelter","Second_layer":"Sustainable production","Third_layer":"","SDG_Id":"2"},
+{"First_layer":"Food & Shelter","Second_layer":"Alimentation","Third_layer":"","SDG_Id":"2,12"},
+{"First_layer":"Social & Protection","Second_layer":"Migration","Third_layer":"","SDG_Id":"10"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Social Protection","SDG_Id":"1"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Discrimination gender based","SDG_Id":"5"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Violence against women and girls","SDG_Id":"5"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Abuses related to work","SDG_Id":"8"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Ending discrimination","SDG_Id":"10"},
+{"First_layer":"Social & Protection","Second_layer":"Abuse, violence and discrimination","Third_layer":"Ending violence in all its forms","SDG_Id":"16"},
+{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to water and sanitation services","SDG_Id":"6"},
+{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to spaces and services","SDG_Id":"11"},
+{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to clean and affordable energy","SDG_Id":"7"},
+{"First_layer":"Social & Protection","Second_layer":"Access to services","Third_layer":"Access to justice","SDG_Id":"16"},
+{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Citizenship and building sustainable cities and communities","SDG_Id":"11"},
+{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Sustainable practices","SDG_Id":"12"},
+{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Eradication of corruption","SDG_Id":"16"},
+{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Assistance for sustainable development","SDG_Id":"17"},
+{"First_layer":"Social & Protection","Second_layer":"Assistance, sustainability and development","Third_layer":"Technology, capacity building and trading","SDG_Id":"17"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for gender equality)","SDG_Id":"5"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for clean water and sanitation)","SDG_Id":"6"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for affordable and clean energy)","SDG_Id":"7"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for reducing inequalities)","SDG_Id":"10"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for sustainable cities and communities)","SDG_Id":"11"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for responsible consumption and production)","SDG_Id":"12"},
+{"First_layer":"Social & Protection","Second_layer":"Rights","Third_layer":"Rights (for justice&peace and strong institutions)","SDG_Id":"16"},
+{"First_layer":"Job & Finance","Second_layer":"Employment","Third_layer":"","SDG_Id":"1,8"},
+{"First_layer":"Job & Finance","Second_layer":"Abuses related to work","Third_layer":"","SDG_Id":"8"},
+{"First_layer":"Job & Finance","Second_layer":"Rights","Third_layer":"","SDG_Id":"8"},
+{"First_layer":"Health","Second_layer":"Healthcare for pregnancy, childbirth and childhood","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Epidemics and communicable diseases","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Substance abuse","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Disability and health","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Mental health","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Research and improvement of health system","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Health","Second_layer":"Rights","Third_layer":"","SDG_Id":"3"},
+{"First_layer":"Education","Second_layer":"Access to education services","Third_layer":"","SDG_Id":"4"},
+{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Improving agricultural productivity","SDG_Id":"2"},
+{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Researchers and improvement of health system","SDG_Id":"3"},
+{"First_layer":"Education","Second_layer":"Improving a field or service","Third_layer":"Improving the education system","SDG_Id":"4"},
+{"First_layer":"Education","Second_layer":"Leadership and empowerment of women","Third_layer":"","SDG_Id":"5"},
+{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Sustainable development education","SDG_Id":"4"},
+{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Assistance for sustainable development","SDG_Id":"17"},
+{"First_layer":"Education","Second_layer":"Sustainable development and technology","Third_layer":"Technology, capacity building and trading","SDG_Id":"17"},
+{"First_layer":"Education","Second_layer":"Rights","Third_layer":"","SDG_Id":"4"},
+{"First_layer":"Environment","Second_layer":"Climate change prevention","Third_layer":"","SDG_Id":"13"},
+{"First_layer":"Environment","Second_layer":"Climate change management","Third_layer":"","SDG_Id":"13"},
+{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Responsible use of water","SDG_Id":"6"},
+{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Improvement of sustainable and modern energy services","SDG_Id":"7"},
+{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Sustainable practices","SDG_Id":"12"},
+{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Preservation and reasonable and sustainable use of resources","SDG_Id":"15"},
+{"First_layer":"Environment","Second_layer":"Sustainable and responsible use of resources","Third_layer":"Management of resources","SDG_Id":"15"},
+{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Protection of the oceans, rivers, etc","SDG_Id":"14"},
+{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Protection of fishery resources","SDG_Id":"14"},
+{"First_layer":"Environment","Second_layer":"Protection and preservation of resources","Third_layer":"Preservation and reasonable and sustainable use of resources","SDG_Id":"15"},
+{"First_layer":"Environment","Second_layer":"Chemical products and waste","Third_layer":"","SDG_Id":"12"},
+{"First_layer":"Environment","Second_layer":"Rights","Third_layer":"","SDG_Id":"12"},
+{"First_layer":"Rights","Second_layer":"Rights on inequalities","Third_layer":"Rights on gender equality","SDG_Id":"5"},
+{"First_layer":"Rights","Second_layer":"Rights on inequalities","Third_layer":"Rights on reducing inequalities","SDG_Id":"10"},
+{"First_layer":"Rights","Second_layer":"Rights on health or education","Third_layer":"Rights on health","SDG_Id":"3"},
+{"First_layer":"Rights","Second_layer":"Rights on health or education","Third_layer":"Rights on education","SDG_Id":"4"},
+{"First_layer":"Rights","Second_layer":"Rights on work","Third_layer":"","SDG_Id":"8"},
+{"First_layer":"Rights","Second_layer":"Rights on services","Third_layer":"Rights on water and sanitation","SDG_Id":"6"},
+{"First_layer":"Rights","Second_layer":"Rights on services","Third_layer":"Rights on affordable and clean energy","SDG_Id":"7"},
+{"First_layer":"Rights","Second_layer":"Rights on sustainability and responsible consumption and production","Third_layer":"Rights on sustainable cities and communities","SDG_Id":"11"},
+{"First_layer":"Rights","Second_layer":"Rights on sustainability and responsible consumption and production","Third_layer":"Rights on responsible consumption and production","SDG_Id":"12"},
+{"First_layer":"Rights","Second_layer":"Access to justice","Third_layer":"Rights on justice&peace and strong institutions","SDG_Id":"16"},
+{"First_layer":"Rights","Second_layer":"Access to justice","Third_layer":"Access to justice","SDG_Id":"16"},
+{"First_layer":"Innovation & Infrastructure","Second_layer":"Creation and modernization of infrastructures and industries","Third_layer":"","SDG_Id":"9"},
+{"First_layer":"Innovation & Infrastructure","Second_layer":"Promotion of innovation","Third_layer":"","SDG_Id":"9"},
+{"First_layer":"Innovation & Infrastructure","Second_layer":"Access to spaces and services","Third_layer":"","SDG_Id":"11"},
+{"First_layer":"Innovation & Infrastructure","Second_layer":"Citizenship and building sustainable cities and communities","Third_layer":"","SDG_Id":"11"},
+{"First_layer":"Innovation & Infrastructure","Second_layer":"Rights","Third_layer":"","SDG_Id":"11"}
 ]

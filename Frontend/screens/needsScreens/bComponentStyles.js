@@ -50,4 +50,7 @@ export const styles = StyleSheet.create({
   image: {
     height: height,
   },
+  container: {
+    marginTop: 10,
+  }
 });

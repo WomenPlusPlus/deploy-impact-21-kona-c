@@ -1,0 +1,329 @@
+[
+	{
+		"import React from \"react\";": "import {"
+	},
+	{
+		"import React from \"react\";": "  Text"
+	},
+	{
+		"import React from \"react\";": "  ImageBackground"
+	},
+	{
+		"import React from \"react\";": "  View"
+	},
+	{
+		"import React from \"react\";": "  ScrollView"
+	},
+	{
+		"import React from \"react\";": "  FlatList"
+	},
+	{
+		"import React from \"react\";": "  TouchableOpacity"
+	},
+	{
+		"import React from \"react\";": "} from \"react-native\";"
+	},
+	{
+		"import React from \"react\";": "import {"
+	},
+	{
+		"import React from \"react\";": "  FontAwesome5"
+	},
+	{
+		"import React from \"react\";": "  FontAwesome"
+	},
+	{
+		"import React from \"react\";": "  MaterialCommunityIcons"
+	},
+	{
+		"import React from \"react\";": "  MaterialIcons"
+	},
+	{
+		"import React from \"react\";": "  Linking"
+	},
+	{
+		"import React from \"react\";": "  Platform"
+	},
+	{
+		"import React from \"react\";": "} from \"@expo/vector-icons\";"
+	},
+	{
+		"import React from \"react\";": "import { styles } from \"./emergencyScreenStyles\";"
+	},
+	{
+		"import React from \"react\";": "import { makeCall } from \"../../utils/makeCall\";"
+	},
+	{
+		"import React from \"react\";": ""
+	},
+	{
+		"import React from \"react\";": "const EmergencyScreen = ({ route"
+	},
+	{
+		"import React from \"react\";": "  return ("
+	},
+	{
+		"import React from \"react\";": "    <ImageBackground"
+	},
+	{
+		"import React from \"react\";": "      source={require(\"../../assets/background.png\")}"
+	},
+	{
+		"import React from \"react\";": "      resizeMode=\"cover\""
+	},
+	{
+		"import React from \"react\";": "      style={styles.image}"
+	},
+	{
+		"import React from \"react\";": "    >"
+	},
+	{
+		"import React from \"react\";": "      <ScrollView style={styles.mainContainer}>"
+	},
+	{
+		"import React from \"react\";": "        <View style={styles.container1}>"
+	},
+	{
+		"import React from \"react\";": "          <Text style={styles.titleTextStyle}>Emergency Numbers</Text>"
+	},
+	{
+		"import React from \"react\";": "        </View>"
+	},
+	{
+		"import React from \"react\";": "        <View style={styles.flexContainer}>"
+	},
+	{
+		"import React from \"react\";": "          <View style={styles.containerParent}>"
+	},
+	{
+		"import React from \"react\";": "            <View style={styles.containerItem}>"
+	},
+	{
+		"import React from \"react\";": "              <View style={styles.container2}>"
+	},
+	{
+		"import React from \"react\";": "                <MaterialIcons name=\"local-police\" style={styles.iconText} />"
+	},
+	{
+		"import React from \"react\";": "                <Text style={styles.textBoldStyle}> Police:</Text>"
+	},
+	{
+		"import React from \"react\";": "              </View>"
+	},
+	{
+		"import React from \"react\";": "            </View>"
+	},
+	{
+		"import React from \"react\";": "            <FontAwesome style={styles.iconText} name=\"phone\" />"
+	},
+	{
+		"import React from \"react\";": "            <Text style={styles.textBoxPhone} onPress={() => makeCall(\"22117\")}>"
+	},
+	{
+		"import React from \"react\";": "              {\" \"}"
+	},
+	{
+		"import React from \"react\";": "              22117"
+	},
+	{
+		"import React from \"react\";": "            </Text>"
+	},
+	{
+		"import React from \"react\";": "          </View>"
+	},
+	{
+		"import React from \"react\";": "          <View style={styles.containerParent}>"
+	},
+	{
+		"import React from \"react\";": "            <View style={styles.containerItem}>"
+	},
+	{
+		"import React from \"react\";": "              <View style={styles.container2}>"
+	},
+	{
+		"import React from \"react\";": "                <FontAwesome5 name=\"fire\" style={styles.iconText} />"
+	},
+	{
+		"import React from \"react\";": "                <Text style={styles.textBoldStyle}>  Fire:</Text>"
+	},
+	{
+		"import React from \"react\";": "              </View>"
+	},
+	{
+		"import React from \"react\";": "            </View>"
+	},
+	{
+		"import React from \"react\";": "            <FontAwesome style={styles.iconText} name=\"phone\" />"
+	},
+	{
+		"import React from \"react\";": "            <Text style={styles.textBoxPhone} onPress={() => makeCall(\"22118\")}>"
+	},
+	{
+		"import React from \"react\";": "              {\" \"}"
+	},
+	{
+		"import React from \"react\";": "              22118"
+	},
+	{
+		"import React from \"react\";": "            </Text>"
+	},
+	{
+		"import React from \"react\";": "          </View>"
+	},
+	{
+		"import React from \"react\";": "          <View style={styles.containerParent}>"
+	},
+	{
+		"import React from \"react\";": "            <View style={styles.containerItem}>"
+	},
+	{
+		"import React from \"react\";": "              <View style={styles.container2}>"
+	},
+	{
+		"import React from \"react\";": "                <FontAwesome5 name=\"hospital-symbol\" style={styles.iconText} />"
+	},
+	{
+		"import React from \"react\";": "                <Text style={styles.textBoldStyle}> SOS Medicine:</Text>"
+	},
+	{
+		"import React from \"react\";": "              </View>"
+	},
+	{
+		"import React from \"react\";": "            </View>"
+	},
+	{
+		"import React from \"react\";": "            <FontAwesome style={styles.iconText} name=\"phone\" />"
+	},
+	{
+		"import React from \"react\";": "            <Text"
+	},
+	{
+		"import React from \"react\";": "              style={styles.textBoxPhone}"
+	},
+	{
+		"import React from \"react\";": "              onPress={() => makeCall(\"(221)338891515\")}"
+	},
+	{
+		"import React from \"react\";": "            >"
+	},
+	{
+		"import React from \"react\";": "              {\" \"}"
+	},
+	{
+		"import React from \"react\";": "              (221) 338891515"
+	},
+	{
+		"import React from \"react\";": "            </Text>"
+	},
+	{
+		"import React from \"react\";": "          </View>"
+	},
+	{
+		"import React from \"react\";": "        </View>"
+	},
+	{
+		"import React from \"react\";": "        <View style={styles.container1}>"
+	},
+	{
+		"import React from \"react\";": "          <Text style={styles.titleTextStyle}>Organisations</Text>"
+	},
+	{
+		"import React from \"react\";": "        </View>"
+	},
+	{
+		"import React from \"react\";": "        <View style={styles.container}>"
+	},
+	{
+		"import React from \"react\";": "          <Text style={styles.textStyle}>"
+	},
+	{
+		"import React from \"react\";": "            Association des Jeunes pour le Developpement (AJD/PASTEEF)"
+	},
+	{
+		"import React from \"react\";": "          </Text>"
+	},
+	{
+		"import React from \"react\";": "          <View style={styles.container2}>"
+	},
+	{
+		"import React from \"react\";": "            <FontAwesome style={styles.iconText} name=\"phone\" />"
+	},
+	{
+		"import React from \"react\";": "            <Text"
+	},
+	{
+		"import React from \"react\";": "              style={styles.textBoxPhone}"
+	},
+	{
+		"import React from \"react\";": "              onPress={() => makeCall(\"221338778798\")}"
+	},
+	{
+		"import React from \"react\";": "            >"
+	},
+	{
+		"import React from \"react\";": "              {\" \"}"
+	},
+	{
+		"import React from \"react\";": "              (221) 338778798"
+	},
+	{
+		"import React from \"react\";": "            </Text>"
+	},
+	{
+		"import React from \"react\";": "          </View>"
+	},
+	{
+		"import React from \"react\";": "          <Text style={styles.textStyle}>{\"\\n\"}Samu Social Sénégal</Text>"
+	},
+	{
+		"import React from \"react\";": "          <View style={styles.container2}>"
+	},
+	{
+		"import React from \"react\";": "            <FontAwesome style={styles.iconText} name=\"phone\" />"
+	},
+	{
+		"import React from \"react\";": "            <Text"
+	},
+	{
+		"import React from \"react\";": "              style={styles.textBoxPhone}"
+	},
+	{
+		"import React from \"react\";": "              onPress={() => makeCall(\"221338602806\")}"
+	},
+	{
+		"import React from \"react\";": "            >"
+	},
+	{
+		"import React from \"react\";": "              {\" \"}"
+	},
+	{
+		"import React from \"react\";": "              (221) 338602806"
+	},
+	{
+		"import React from \"react\";": "            </Text>"
+	},
+	{
+		"import React from \"react\";": "          </View>"
+	},
+	{
+		"import React from \"react\";": "        </View>"
+	},
+	{
+		"import React from \"react\";": "      </ScrollView>"
+	},
+	{
+		"import React from \"react\";": "    </ImageBackground>"
+	},
+	{
+		"import React from \"react\";": "  );"
+	},
+	{
+		"import React from \"react\";": "};"
+	},
+	{
+		"import React from \"react\";": "export default EmergencyScreen;"
+	},
+	{
+		"import React from \"react\";": ""
+	}
+]
