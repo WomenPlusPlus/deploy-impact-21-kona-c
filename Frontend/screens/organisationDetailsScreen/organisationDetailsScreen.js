@@ -92,7 +92,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
             .map((num) => {
               return (
                 <Text
-                  key={"phone" + organisationId}
+                  key={"phone" + num}
                   style={styles.flexContainer}
                   onPress={() => {
                     if (Platform.OS === "android") {
