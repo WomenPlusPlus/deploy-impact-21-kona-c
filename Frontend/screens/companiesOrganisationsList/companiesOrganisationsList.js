@@ -9,36 +9,34 @@ import {
   Image,
 } from "react-native";
 import data from "../../assets/organisations.json";
+import companies_options from "../../assets/companies_options_map.json";
 import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
 import {
   FontAwesome,
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import sdgsLarge from "../../utils/sdgsLarge";
 
-const SdgOrganisationsList = ({ route, navigation }) => {
-  const sdgId = route.params["sdgId"];
+const CompaniesOrganisationsList = ({ route, navigation }) => {
+  const selectedOptionD = route.params["selectedOptionD"];
 
   let newData = Object.keys(data).filter((orgId) => {
-    for (
-      let i = 0;
-      i <
-      data[orgId]["SDGs"]
-        .replace(/[^0-9]/g, " ")
-        .split(" ")
-        .filter((n) => n).length;
-      i++
-    ) {
-      if (
-        parseInt(
-          data[orgId]["SDGs"]
-            .replace(/[^0-9]/g, " ")
-            .split(" ")
-            .filter((n) => n)[i]
-        ) === sdgId
-      ) {
-        return true;
+    if (data[orgId]["Can individuals contact them?"] === "FALSE") {
+      for (let i = 0; i < companies_options.length; i++) {
+        if (companies_options[i]["First_layer"] === selectedOptionD) {
+          if (
+            data[orgId]["Target Group"]
+              .toLowerCase()
+              .includes(companies_options[i]["Searching_key1"]) ||
+            data[orgId]["Target Group"]
+              .toLowerCase()
+              .includes(companies_options[i]["Searching_key2"])
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
       }
     }
   });
@@ -49,21 +47,10 @@ const SdgOrganisationsList = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.imageBackground}
     >
+      <Text style={styles.titleTextStyle}>
+        List of organisations that could provide help
+      </Text>
       <ScrollView>
-        <Image
-          resizeMode="contain"
-          source={sdgsLarge[sdgId - 1].image}
-          style={styles.image}
-        />
-        {newData.length === 0 ? (
-          <Text style={styles.notFoundTextStyle}>
-            No organisations available for this goal
-          </Text>
-        ) : (
-          <Text style={styles.titleTextStyle}>
-            List of organisations that could provide help
-          </Text>
-        )}
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
@@ -145,4 +132,4 @@ const SdgOrganisationsList = ({ route, navigation }) => {
   );
 };
 
-export default SdgOrganisationsList;
+export default CompaniesOrganisationsList;

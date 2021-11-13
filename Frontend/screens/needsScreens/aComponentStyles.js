@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
     fontSize: normalize(25),
-    marginTop: 35,
+    marginTop: 15,
     textAlign: "center",
   },
   circleButton: {

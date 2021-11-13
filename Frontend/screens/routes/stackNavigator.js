@@ -16,62 +16,69 @@ import NeedsScreenA from "../needsScreens/needsScreenA";
 import NeedsScreenB from "../needsScreens/needsScreenB";
 import NeedsScreenC from "../needsScreens/needsScreenC";
 import MainContainer from "../../navigation/mainContainer";
-import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList"
+import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList";
+import NeedsScreenD from "../needsScreens/needsScreenD";
+import CompaniesOrganisationsList from "../companiesOrganisationsList/companiesOrganisationsList";
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => (
-<NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: "#8A449D",
-          },
-          headerTintColor: "#fff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
-      >
-        {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
-        <Stack.Screen name="Development" component={Development} />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{ title: "Dots." }}
-        />
-        <Stack.Group>
-          <Stack.Screen name="InstitutionType" component={InstitutionType} />
-          <Stack.Screen name="HelpForWho" component={HelpForWho} />
-          <Stack.Screen name="InfoGender" component={InfoGender} />
-          <Stack.Screen name="InfoAge" component={InfoAge} />
-          <Stack.Screen name="PersonType" component={PersonType} />
+  <NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#8A449D",
+        },
+        headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+      }}
+    >
+      {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
+      <Stack.Screen name="Development" component={Development} />
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ title: "Dots." }}
+      />
+      <Stack.Group>
+        <Stack.Screen name="InstitutionType" component={InstitutionType} />
+        <Stack.Screen name="HelpForWho" component={HelpForWho} />
+        <Stack.Screen name="InfoGender" component={InfoGender} />
+        <Stack.Screen name="InfoAge" component={InfoAge} />
+        <Stack.Screen name="PersonType" component={PersonType} />
+      </Stack.Group>
+      <Stack.Screen name="NextButton" component={NextButton} />
+      <Stack.Screen
+        name="OrganisationsListScreen"
+        component={OrganisationsListScreen}
+      />
+      <Stack.Screen
+        name="SdgOrganisationsList"
+        component={SdgOrganisationsList}
+      />
+      <Stack.Screen
+        name="CompaniesOrganisationsList"
+        component={CompaniesOrganisationsList}
+      />
 
-        </Stack.Group>
-        <Stack.Screen name="NextButton" component={NextButton} />
-        <Stack.Screen
-          name="OrganisationsListScreen"
-          component={OrganisationsListScreen}
-        />
-           <Stack.Screen
-          name="SdgOrganisationsList"
-          component={SdgOrganisationsList}
-        />
-        <Stack.Screen name="LocationScreen" component={LocationScreen} />
-        <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
-        <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
-        <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
-        <Stack.Screen
-          name="MainContainer"
-          component={MainContainer}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="OrganisationDetailsScreen"
-          component={OrganisationDetailsScreen}
-        />
-      </Stack.Navigator>
-      </NavigationContainer>
+      <Stack.Screen name="LocationScreen" component={LocationScreen} />
+      <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
+      <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
+      <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
+      <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
+      <Stack.Screen
+        name="MainContainer"
+        component={MainContainer}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="OrganisationDetailsScreen"
+        component={OrganisationDetailsScreen}
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
 );
 
 export default StackNavigation;

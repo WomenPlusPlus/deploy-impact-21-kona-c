@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable } from "react-native";
+import { Text, ImageBackground, View, Pressable, ScrollView } from "react-native";
 import {
   FontAwesome5,
   FontAwesome,
@@ -43,6 +43,7 @@ const NeedsScreenA = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.image}
     >
+      <ScrollView>
       <Text style={styles.titleTextStyle}>Need help with...</Text>
       <View>
         <View style={styles.container1}>
@@ -134,6 +135,7 @@ const NeedsScreenA = ({ route, navigation }) => {
           <Text style={styles.textStyle}>{uniqueOptionsArray[7]}</Text>
         </View>
       </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

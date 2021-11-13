@@ -7,10 +7,13 @@ let bubbleWidth = 0.33 * width;
 let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 export const styles = StyleSheet.create({
-  bubbleContainer: {},
   container1: {
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
+  },
+  containerD : {
+    flexDirection: "column",
     alignItems: "center",
   },
   textStyle: {
@@ -38,14 +41,13 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     borderColor: "white",
     borderWidth: 2,
-    margin: bubbleSize / 35,
     paddingLeft: 8.5,
     paddingRight: 8,
+    marginTop: 8,
   },
   userImage: {
     fontSize: normalize(46),
     color: "white",
-    paddingBottom: "1%",
   },
   image: {
     height: height,
