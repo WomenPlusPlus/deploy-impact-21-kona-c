@@ -83,12 +83,12 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   }
 
   return (
-    <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.imageBackground}
-    >
-      <ScrollView>
+    <ScrollView>
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.imageBackground}
+      >
         <Image
           resizeMode="contain"
           source={sdgsLarge[SDG_Id[0] - 1].image}
@@ -140,7 +140,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
                   .map((num) => {
                     return (
                       <Text
-                        key={"phone" + organisation}
+                        key={"phone" + num}
                         style={styles.flexContainer}
                         onPress={() => {
                           if (Platform.OS === "android") {
@@ -173,8 +173,8 @@ const OrganisationsListScreen = ({ route, navigation }) => {
             </Pressable>
           </View>
         ))}
-      </ScrollView>
-    </ImageBackground>
+      </ImageBackground>
+    </ScrollView>
   );
 };
 

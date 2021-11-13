@@ -107,6 +107,7 @@ const SdgOrganisationsList = ({ route, navigation }) => {
                   .map((num) => {
                     return (
                       <Text
+                        key={"phone" + num}
                         style={styles.flexContainer}
                         onPress={() => {
                           if (Platform.OS === "android") {

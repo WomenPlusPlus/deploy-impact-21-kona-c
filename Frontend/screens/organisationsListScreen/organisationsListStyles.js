@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
+    color: "#921CB1",
     fontSize: normalize(25),
     marginBottom: 15,
     marginTop: 10,

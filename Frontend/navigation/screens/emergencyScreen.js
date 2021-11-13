@@ -47,7 +47,7 @@ const EmergencyScreen = ({ route, navigation }) => {
             <View style={styles.containerItem}>
               <View style={styles.container2}>
                 <FontAwesome5 name="fire" style={styles.iconText} />
-                <Text style={styles.textBoldStyle}>  Fire:</Text>
+                <Text style={styles.textBoldStyle}> Fire:</Text>
               </View>
             </View>
             <FontAwesome style={styles.iconText} name="phone" />

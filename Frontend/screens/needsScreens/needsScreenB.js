@@ -57,7 +57,7 @@ const NeedsScreenB = ({ route, navigation }) => {
         {[
           ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
         ].map((option) => (
-          <View style={styles.container1}>
+          <View key={option} style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}

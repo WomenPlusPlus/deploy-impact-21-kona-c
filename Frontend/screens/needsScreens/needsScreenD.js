@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable } from "react-native";
+import {
+  Text,
+  ImageBackground,
+  View,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import { styles } from "../needsScreens/bComponentStyles";
 import companies_options from "../../assets/companies_options_map.json";
 
@@ -11,16 +17,17 @@ const NeedsScreenD = ({ route, navigation }) => {
   };
 
   return (
+    <ScrollView style={styles.container}>
+
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
       style={styles.image}
     >
-      <View style={styles.container}>
         {companies_options
           .map((option) => option.First_layer)
           .map((option) => (
-            <View style={styles.container1}>
+            <View key={option} style={styles.containerD}>
               <View style={styles.bubbleContainer}>
                 <Pressable
                   style={styles.circleButton}
@@ -31,8 +38,9 @@ const NeedsScreenD = ({ route, navigation }) => {
               </View>
             </View>
           ))}
-      </View>
     </ImageBackground>
+    </ScrollView>
+
   );
 };
 

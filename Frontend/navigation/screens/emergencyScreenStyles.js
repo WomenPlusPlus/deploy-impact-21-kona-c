@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   container2: {
     flexDirection: "row",
     flexWrap: "wrap",
-    paddingBottom: 16
+    paddingBottom: 16,
   },
   containerParent: {
     flex: 1,
@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   containerItem: {
-    flexBasis: "50%",
+    flexBasis: "49%",
   },
   flexContainer: {
     flexGrow: 0.5,
@@ -35,14 +35,14 @@ export const styles = StyleSheet.create({
     margin: 15,
     borderRadius: 5,
     overflow: "hidden",
-    padding: "2%",
+    padding: "1.5%",
   },
   container: {
     backgroundColor: "white",
     margin: 15,
     borderRadius: 5,
     overflow: "hidden",
-    padding: "2%",
+    padding: "1.5%",
   },
   titleTextStyle: {
     fontFamily: "Roboto",

@@ -16,7 +16,6 @@ import {
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import sdgsLarge from "../../utils/sdgsLarge";
 
 const CompaniesOrganisationsList = ({ route, navigation }) => {
   const selectedOptionD = route.params["selectedOptionD"];
@@ -41,7 +40,6 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
       }
     }
   });
-  console.log(data[newData[0]]["Name of Organisation"]);
 
   return (
     <ImageBackground
@@ -96,7 +94,7 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
                   .map((num) => {
                     return (
                       <Text
-                        key={"phone" + organisation}
+                        key={"phone" + num}
                         style={styles.flexContainer}
                         onPress={() => {
                           if (Platform.OS === "android") {
