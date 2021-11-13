@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, ImageBackground, Alert, Pressable,StyleSheet, Dimensions  } from "react-native";
-import data from "../../assets/organisations.json";
+import data from "../../assets/jsonFiles/organisations.json";
 import normalize from "react-native-normalize";
 const { width, height } = Dimensions.get("window");
 

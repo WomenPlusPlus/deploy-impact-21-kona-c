@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import options from "../../assets/options_map.json";
+import options from "../../assets/jsonFiles/options_map.json";
 import { styles } from "./bComponentStyles";
 
 const NeedsScreenB = ({ route, navigation }) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ScrollView, Linking } from "react-native";
-import data from "../../assets/organisations.json";
+import data from "../../assets/jsonFiles/organisations.json";
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 import {
