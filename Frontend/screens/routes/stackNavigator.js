@@ -1,4 +1,5 @@
 import React from "react";
+import {Text, View, Pressable, Alert} from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Development from "../development/developmentScreen";
@@ -17,22 +18,29 @@ import NeedsScreenB from "../needsScreens/needsScreenB";
 import NeedsScreenC from "../needsScreens/needsScreenC";
 import MainContainer from "../../navigation/mainContainer";
 import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList"
+import { Entypo } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
+const handlePress = () => {
+ Alert.alert(
+'Please select an option, it will help us searching for help for you'
+    );
+ }
 
 const StackNavigation = () => (
-<NavigationContainer>
 
+
+<NavigationContainer>
+      {/* <MainContainer /> */}
       <Stack.Navigator
         screenOptions={{
-          // headerStyle: {
-          //   backgroundColor: "#8A449D",
-          // },
-          // headerTintColor: "#fff",
-          // headerTitleStyle: {
-          //   fontWeight: "bold",
-          // },
-          headerShown: false
+          headerStyle: {
+            backgroundColor: "#8A449D",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
         }}
       >
         {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
@@ -43,10 +51,28 @@ const StackNavigation = () => (
           component={HomeScreen}
           options={{ title: "Dots." }}
         />
-        <Stack.Group>
+        <Stack.Group
+        
+        screenOptions={{
+          // headerShown: false
+          headerRight: () =>{
+            return(
+              <View>
+                <Pressable onPress={() => {
+                        Alert.alert(
+                        'Please select an option, it will help us searching for help for you'
+                            );
+                        }}>
+                <Entypo name="help-with-circle" size={24} color="white" />
+</Pressable>
+              </View>
+            )
+          }
+          
+        }}>
           <Stack.Screen name="InstitutionType" component={InstitutionType} />
-          <Stack.Screen name="HelpForWho" component={HelpForWho} />
-          <Stack.Screen name="InfoGender" component={InfoGender} />
+          <Stack.Screen name="HelpForWho" component={HelpForWho} options={{ title: 'who?' }}/>
+          <Stack.Screen name="InfoGender" component={InfoGender} options={{ title: 'Gender' }}/>
           <Stack.Screen name="InfoAge" component={InfoAge} />
           <Stack.Screen name="PersonType" component={PersonType} />
 
