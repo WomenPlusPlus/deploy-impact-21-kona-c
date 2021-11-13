@@ -39,8 +39,8 @@ export const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 2,
     margin: bubbleSize / 35,
-    paddingLeft: 6,
-    paddingRight: 6,
+    paddingLeft: 8.5,
+    paddingRight: 8,
   },
   userImage: {
     fontSize: normalize(46),

@@ -16,6 +16,7 @@ import NeedsScreenA from "../needsScreens/needsScreenA";
 import NeedsScreenB from "../needsScreens/needsScreenB";
 import NeedsScreenC from "../needsScreens/needsScreenC";
 import MainContainer from "../../navigation/mainContainer";
+import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList"
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +52,10 @@ const StackNavigation = () => (
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}
+        />
+           <Stack.Screen
+          name="SdgOrganisationsList"
+          component={SdgOrganisationsList}
         />
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
