@@ -17,7 +17,7 @@ function MainContainer() {
       barStyle={{ backgroundColor: "white" }}
     >
       <Tab.Screen
-        name="Home"
+        name="HomeScreen"
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",

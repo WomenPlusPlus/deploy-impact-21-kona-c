@@ -22,6 +22,7 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => (
 <NavigationContainer>
+
       <Stack.Navigator
         screenOptions={{
           headerStyle: {
@@ -35,6 +36,7 @@ const StackNavigation = () => (
       >
         {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
         <Stack.Screen name="Development" component={Development} />
+   
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
@@ -71,6 +73,7 @@ const StackNavigation = () => (
           component={OrganisationDetailsScreen}
         />
       </Stack.Navigator>
+   
       </NavigationContainer>
 );
 

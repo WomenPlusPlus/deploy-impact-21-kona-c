@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     padding: "2%",
   },
   titleTextStyle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto-Regular",
     color: "#921CB1",
     fontSize: normalize(25),
     marginTop: 20,
