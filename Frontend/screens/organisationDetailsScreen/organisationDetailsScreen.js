@@ -32,7 +32,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
   focus = focus.filter((focusElement) => {
     return focusElement;
   });
-
+  
   return (
     <ScrollView style={[styles.container, styles.boxShadow]}>
       <Text style={styles.textBoxName}>
@@ -43,7 +43,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
           <MaterialIcons style={styles.iconText} name="center-focus-strong" />
           <Text style={styles.textBoxTitle}> Focus Areas:</Text>
           {focus.map((foc) => {
-            return <Text style={styles.textBox}>{`\n- ${foc}`}</Text>;
+            return <Text key={foc} style={styles.textBox}>{`\n- ${foc}`}</Text>;
           })}
         </Text>
       )}
