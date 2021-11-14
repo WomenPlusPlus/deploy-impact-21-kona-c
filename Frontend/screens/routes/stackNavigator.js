@@ -54,31 +54,27 @@ const StackNavigation = () => (
           options={{ title: "Dots." }}
         />
         <Stack.Group
-        
         screenOptions={{
           // headerShown: false
           headerRight: () =>{
             return(
               <View>
                 <Pressable onPress={() => {
-                        Alert.alert(
-                        'Please select an option, it will help us searching for help for you'
-                            );
+                        Alert.alert('Please select an option. It will help us searching for help for you.');
                         }}>
                 <Entypo name="help-with-circle" size={24} color="white" />
-</Pressable>
+                </Pressable>
               </View>
-            )
-          }
-          
+            )} 
         }}>
+          <Stack.Screen name="LocationScreen" component={LocationScreen} />
           <Stack.Screen name="InstitutionType" component={InstitutionType} />
           <Stack.Screen name="HelpForWho" component={HelpForWho} options={{ title: 'who?' }}/>
           <Stack.Screen name="InfoGender" component={InfoGender} options={{ title: 'Gender' }}/>
           <Stack.Screen name="InfoAge" component={InfoAge} />
           <Stack.Screen name="PersonType" component={PersonType} />
-
         </Stack.Group>
+        
         <Stack.Screen name="NextButton" component={NextButton} />
         <Stack.Screen
           name="OrganisationsListScreen"
@@ -88,7 +84,6 @@ const StackNavigation = () => (
           name="SdgOrganisationsList"
           component={SdgOrganisationsList}
         />
-        <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
         <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
         <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
