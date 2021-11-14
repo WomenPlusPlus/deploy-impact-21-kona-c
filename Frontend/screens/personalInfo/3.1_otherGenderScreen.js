@@ -18,7 +18,7 @@ const OtherGender = ({ route, navigation }) => {
   const selectedInstitutionType = route.params["selectedInstitutionType"];
   const selectedForWho = route.params["selectedForWho"];
 
-  const handlePress = (selectedGender) => {
+  const handlePress = (selectedender) => {
     navigation.navigate("InfoAge", {
       selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,

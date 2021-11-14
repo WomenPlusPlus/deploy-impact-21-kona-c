@@ -1,20 +1,6 @@
 import React from "react";
-import {
-  Text,
-  ImageBackground,
-  View,
-  ScrollView,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
-import {
-  FontAwesome5,
-  FontAwesome,
-  MaterialCommunityIcons,
-  MaterialIcons,
-  Linking,
-  Platform,
-} from "@expo/vector-icons";
+import { Text, ImageBackground, View, ScrollView } from "react-native";
+import { FontAwesome5, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { styles } from "./emergencyScreenStyles";
 import { makeCall } from "../../utils/makeCall";
 

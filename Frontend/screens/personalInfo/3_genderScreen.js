@@ -34,7 +34,7 @@ const InfoGender = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-          What is the gender identity of the person seeking help?
+          What is the gender of the person seeking help?
         </Text>
         <View>
           <View style={styles.container1}>

@@ -2,9 +2,6 @@ import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 
 const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 export const styles = StyleSheet.create({
   mainContainer: {
@@ -82,7 +79,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: -22
+    marginTop: -22,
   },
   nextButton: {
     color: "#A169B1",
