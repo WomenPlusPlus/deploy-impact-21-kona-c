@@ -12,9 +12,38 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  containerD : {
+  containerD: {
     flexDirection: "column",
     alignItems: "center",
+  },
+  containerInput: {
+    flexDirection: "column",
+    justifyContent: "center",
+    marginTop: "1%",
+    alignItems: "center",
+  },
+  circleButtonInput: {
+    width: bubbleSize * 2.6,
+    height: bubbleSize / 2.25,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#E4C9E5",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderColor: "white",
+    borderWidth: 2,
+    paddingLeft: 8.5,
+    paddingRight: 8,
+    marginTop: 8,
+  },
+  
+  textStyleInput: {
+    alignSelf: "center",
+    textAlign: "center",
+    fontFamily: "Roboto-Regular",
+    color: "#8A449D",
+    paddingLeft: 70,
+    fontSize: normalize(20),
   },
   textStyle: {
     alignSelf: "center",

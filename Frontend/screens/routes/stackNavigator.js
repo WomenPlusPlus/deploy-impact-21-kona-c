@@ -22,6 +22,7 @@ import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisations
 import NeedsScreenD from "../needsScreens/needsScreenD";
 import CompaniesOrganisationsList from "../companiesOrganisationsList/companiesOrganisationsList";
 import TabNavigatorBottom from "./tabNavigator";
+import OtherGender from "../personalInfo/3.1_otherGenderScreen"
 
 const Stack = createNativeStackNavigator();
 
@@ -103,6 +104,7 @@ function StackNavigation () {
           name="CompaniesOrganisationsList"
           component={CompaniesOrganisationsList}
         />
+        <Stack.Screen name="InfoGender" component={InfoGender} />
         </Stack.Navigator>
     
   )
