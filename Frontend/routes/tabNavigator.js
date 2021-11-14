@@ -5,9 +5,9 @@ import { Feather } from "@expo/vector-icons";
 import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 //Screens
-import SdgScreen from "../tabsScreens/sdgScreen/sdgScreen";
-import EmergencyScreen from "../../navigation/screens/emergencyScreen";
-import HomeScreen from "../welcomeScreen/welcomeScreen";
+import SdgScreen from "../screens/tabsScreens/sdgScreen/sdgScreen";
+import EmergencyScreen from "../navigation/screens/emergencyScreen";
+import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
 import StackNavigation from "./stackNavigator";
 
 
