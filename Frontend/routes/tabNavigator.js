@@ -52,7 +52,7 @@ function TabNavigatorBottom() {
           },
           tabBarIcon: () => (
             <Image
-              source={require('../assets/sdg.png')}
+              source={require("../assets/sdg.png")}
               style={{ width: 50, height: 50, margin: -12 }}
             />
           ),

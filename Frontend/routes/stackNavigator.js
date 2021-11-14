@@ -16,7 +16,7 @@ import NextButton from "../components/nextButton";
 import NeedsScreenA from "../screens/needsScreens/needsScreenA";
 import NeedsScreenB from "../screens/needsScreens/needsScreenB";
 import NeedsScreenC from "../screens/needsScreens/needsScreenC";
-import MainContainer from "../navigation/mainContainer";
+// import MainContainer from "../navigation/mainContainer";
 import { Entypo } from '@expo/vector-icons';
 import SdgOrganisationsList from "../screens/sdgOrganisationsListScreen/sdgOrganisationsList";
 import NeedsScreenD from "../screens/needsScreens/needsScreenD";
@@ -91,11 +91,11 @@ function StackNavigation () {
           <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
           <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
           <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
-          <Stack.Screen
+          {/* <Stack.Screen
             name="MainContainer"
             component={MainContainer}
             options={{ headerShown: false }}
-          />
+          /> */}
           <Stack.Screen
             name="OrganisationDetailsScreen"
             component={OrganisationDetailsScreen}
