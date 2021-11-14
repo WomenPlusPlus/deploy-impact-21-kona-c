@@ -28,6 +28,7 @@ const NeedsScreenB = ({ route, navigation }) => {
         selectedAge: selectedAge,
         selectedPersonType: selectedPersonType,
         selectedOptionScreenB: selectedOptionScreenB,
+        uniqueRegionsArray: route.params["uniqueRegionsArray"],
         SDG_Id: optionsFilteredB[0]["SDG_Id"],
       });
     } else {
@@ -42,10 +43,10 @@ const NeedsScreenB = ({ route, navigation }) => {
         selectedOptionScreenB: selectedOptionScreenB,
         arrayFilteredA: optionsFilteredA,
         optionsFilteredB: optionsFilteredB,
+        uniqueRegionsArray: route.params["uniqueRegionsArray"],
       });
     }
   };
-
   return (
     <View>
       <ImageBackground

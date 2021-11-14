@@ -32,6 +32,7 @@ const NeedsScreenA = ({ route, navigation }) => {
       selectedGender: selectedGender,
       selectedAge: selectedAge,
       selectedPersonType: selectedPersonType,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedOptionScreenA: optionScreenA,
     });
   };

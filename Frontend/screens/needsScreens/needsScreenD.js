@@ -12,6 +12,7 @@ import companies_options from "../../assets/jsonFiles/companies_options_map.json
 const NeedsScreenD = ({ route, navigation }) => {
   const handlePress = (selectedOptionD) => {
     navigation.navigate("CompaniesOrganisationsList", {
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedOptionD: selectedOptionD,
     });
   };

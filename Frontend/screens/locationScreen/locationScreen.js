@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
@@ -16,11 +16,11 @@ let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
-  let selectedRegion = "";
 
-  const handlePress = () => {
+  const handlePress = (region) => {
     navigation.navigate("InstitutionType", {
-      selectedRegion: selectedRegion,
+      selectedRegion: region,
+      uniqueRegionsArray: uniqueRegionsArray,
     });
   };
 
@@ -29,6 +29,7 @@ const LocationScreen = ({ navigation }) => {
   }
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
+  
   return (
     <View>
       <ImageBackground

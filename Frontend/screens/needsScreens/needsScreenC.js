@@ -12,7 +12,7 @@ const NeedsScreenC = ({ route, navigation }) => {
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
   const selectedOptionScreenB = route.params["selectedOptionScreenB"];
   const optionsFilteredB = route.params["optionsFilteredB"];
-
+  
   const handlePress = (selectedOptionScreenC) => {
     for (let i = 0; i < optionsFilteredB.length; i++) {
       if (selectedOptionScreenC === optionsFilteredB[i]["Third_layer"]) {
@@ -26,6 +26,7 @@ const NeedsScreenC = ({ route, navigation }) => {
           selectedOptionScreenA: selectedOptionScreenA,
           selectedOptionScreenB: selectedOptionScreenB,
           selectedOptionScreenC: selectedOptionScreenC,
+          uniqueRegionsArray: route.params["uniqueRegionsArray"],
           SDG_Id: optionsFilteredB[i]["SDG_Id"],
         });
       }

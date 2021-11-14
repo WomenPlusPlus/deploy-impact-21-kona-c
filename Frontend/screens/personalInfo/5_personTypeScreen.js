@@ -16,6 +16,7 @@ const PersonType = ({ route, navigation }) => {
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
       selectedAge: selectedAge,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedPersonType: selectedPersonType,
     });
   };

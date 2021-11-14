@@ -11,7 +11,9 @@ const HelpForWho = ({ route, navigation }) => {
     navigation.navigate("InfoGender", {
       selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedForWho: selectedForWho,
+      
     });
   };
 
