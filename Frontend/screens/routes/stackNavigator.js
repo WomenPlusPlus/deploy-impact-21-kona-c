@@ -19,6 +19,7 @@ import MainContainer from "../../navigation/mainContainer";
 import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList";
 import NeedsScreenD from "../needsScreens/needsScreenD";
 import CompaniesOrganisationsList from "../companiesOrganisationsList/companiesOrganisationsList";
+import OtherGender from "../personalInfo/3.1_otherGenderScreen"
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,7 @@ const StackNavigation = () => (
         <Stack.Screen name="InstitutionType" component={InstitutionType} />
         <Stack.Screen name="HelpForWho" component={HelpForWho} />
         <Stack.Screen name="InfoGender" component={InfoGender} />
+        <Stack.Screen name="OtherGender" component={OtherGender} />
         <Stack.Screen name="InfoAge" component={InfoAge} />
         <Stack.Screen name="PersonType" component={PersonType} />
       </Stack.Group>

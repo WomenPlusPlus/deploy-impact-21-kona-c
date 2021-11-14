@@ -18,7 +18,6 @@ const NeedsScreenD = ({ route, navigation }) => {
 
   return (
     <ScrollView style={styles.container}>
-
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
