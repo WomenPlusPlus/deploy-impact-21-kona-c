@@ -17,8 +17,10 @@ import NeedsScreenA from "../needsScreens/needsScreenA";
 import NeedsScreenB from "../needsScreens/needsScreenB";
 import NeedsScreenC from "../needsScreens/needsScreenC";
 import MainContainer from "../../navigation/mainContainer";
-import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList"
 import { Entypo } from '@expo/vector-icons';
+import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList";
+import NeedsScreenD from "../needsScreens/needsScreenD";
+import CompaniesOrganisationsList from "../companiesOrganisationsList/companiesOrganisationsList";
 
 const Stack = createNativeStackNavigator();
 const handlePress = () => {
@@ -90,6 +92,7 @@ const StackNavigation = () => (
         <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
         <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
         <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
+        <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
         <Stack.Screen
           name="MainContainer"
           component={MainContainer}
@@ -99,6 +102,10 @@ const StackNavigation = () => (
           name="OrganisationDetailsScreen"
           component={OrganisationDetailsScreen}
         />
+                <Stack.Screen
+        name="CompaniesOrganisationsList"
+        component={CompaniesOrganisationsList}
+      />
       </Stack.Navigator>
    
       </NavigationContainer>

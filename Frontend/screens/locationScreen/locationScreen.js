@@ -1,10 +1,7 @@
 import React from "react";
-import { Text, View, ImageBackground, Alert } from "react-native";
-import data from "../../assets/organisations.json";
-import { StyleSheet, Dimensions } from "react-native";
-import SelectDropdown from "react-native-select-dropdown";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import NextButton from "../../components/nextButton";
+import { Text, View, ImageBackground, Alert, Pressable,StyleSheet, Dimensions  } from "react-native";
+import data from "../../assets/jsonFiles/organisations.json";
+import normalize from "react-native-normalize";
 const { width, height } = Dimensions.get("window");
 
 const LocationScreen = ({ navigation }) => {
@@ -12,17 +9,9 @@ const LocationScreen = ({ navigation }) => {
   let selectedRegion = "";
 
   const handlePress = () => {
-    if (selectedRegion === "") {
-      Alert.alert(
-        "Please select a location",
-        "Please select a location before going forward",
-        [{ text: "OK", onPress: () => console.log("OK Pressed") }]
-      );
-    } else {
-      navigation.navigate("InstitutionType", {
-        selectedRegion: selectedRegion,
-      });
-    }
+    navigation.navigate("InstitutionType", {
+      selectedRegion: selectedRegion,
+    });
   };
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);
@@ -36,79 +25,59 @@ const LocationScreen = ({ navigation }) => {
         resizeMode="cover"
         style={styles.image}
       >
-        <View style={styles.container}>
-          <Text style={styles.titleTextStyle}>Please select a region</Text>
-          <SelectDropdown
-            buttonTextStyle={styles.textStyle}
-            buttonStyle={styles.button}
-            defaultButtonText={"Select region"}
-            renderDropdownIcon={() => {
-              return (
-                <FontAwesome name="chevron-down" style={styles.dropdownicon} />
-              );
-            }}
-            dropdownIconPosition={"right"}
-            data={uniqueRegionsArray}
-            onSelect={(selectedItem, index) => {
-              selectedRegion = selectedItem;
-            }}
-            buttonTextAfterSelection={(selectedItem, index) => {
-              return selectedItem;
-            }}
-            rowTextForSelection={(item, index) => {
-              return item;
-            }}
-            renderCustomizedRowChild={(selectedItem, index) => {
-              return (
-                <View style={styles.buttonDown}>
-                  <Text style={styles.textStyle}>{selectedItem}</Text>
-                </View>
-              );
-            }}
-          />
-        </View>
-          <NextButton handlePress={handlePress} />
+        <Text style={styles.titleTextStyle}>Please select a region</Text>
+        {uniqueRegionsArray.map((region) => (
+        <View key = {region} style={styles.container1}>
+        <View style={styles.bubbleContainer}>
+          <Pressable
+            style={styles.circleButton}
+            onPress={() => handlePress(region)}
+            >
+            <Text style={styles.textStyle}>{region}</Text>
+            </Pressable>
+          </View>
+        </View>))}
       </ImageBackground>
     </View>
   );
 };
-
+let partialHeight = 0.22 * height;
+let bubbleWidth = 0.33 * width;
+let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  button: {
-    backgroundColor: "#A169B1",
-    width: "80%",
-    marginBottom: "40%",
-  },
-  buttonDown: {
-    backgroundColor: "#A169B1",
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    borderColor: "white",
-    borderWidth: 0.5,
-  },
   textStyle: {
     color: "white",
     fontSize: 20,
   },
   titleTextStyle: {
+    fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: 25,
+    fontSize: normalize(25),
     margin: 25,
-  },
-  dropdownicon: {
-    color: "white",
-    marginRight: 15,
-    fontSize: 20,
+    textAlign: "center",
   },
   image: {
     height: height,
+  },
+  bubbleContainer: {},
+  container1: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  circleButton: {
+    width: bubbleSize * 2.6,
+    height: bubbleSize / 2.25,
+    borderRadius: bubbleSize / 2,
+    backgroundColor: "#A169B1",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    borderColor: "white",
+    borderWidth: 2,
+    margin: bubbleSize / 35,
+    paddingLeft: 8.5,
+    paddingRight: 8,
   },
 });
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ScrollView, Linking } from "react-native";
-import data from "../../assets/organisations.json";
+import data from "../../assets/jsonFiles/organisations.json";
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 import {
@@ -32,7 +32,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
   focus = focus.filter((focusElement) => {
     return focusElement;
   });
-
+  
   return (
     <ScrollView style={[styles.container, styles.boxShadow]}>
       <Text style={styles.textBoxName}>
@@ -43,7 +43,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
           <MaterialIcons style={styles.iconText} name="center-focus-strong" />
           <Text style={styles.textBoxTitle}> Focus Areas:</Text>
           {focus.map((foc) => {
-            return <Text style={styles.textBox}>{`\n- ${foc}`}</Text>;
+            return <Text key={foc} style={styles.textBox}>{`\n- ${foc}`}</Text>;
           })}
         </Text>
       )}
@@ -92,7 +92,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
             .map((num) => {
               return (
                 <Text
-                  key={"phone" + organisationId}
+                  key={"phone" + num}
                   style={styles.flexContainer}
                   onPress={() => {
                     if (Platform.OS === "android") {
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   },
   textBoxTitle: {
     fontFamily: "Roboto-Regular",
-     color: "#A169B1",
+    color: "#A169B1",
     fontSize: normalize(22),
     fontWeight: "bold",
   },
@@ -190,22 +190,21 @@ const styles = StyleSheet.create({
 
 export default OrganisationDetailsScreen;
 
-export const callNumber = phone => {
-  console.log('callNumber ----> ', phone);
+export const callNumber = (phone) => {
+  console.log("callNumber ----> ", phone);
   let phoneNumber = phone;
-  if (Platform.OS !== 'android') {
+  if (Platform.OS !== "android") {
     phoneNumber = `telprompt:${phone}`;
-  }
-  else  {
+  } else {
     phoneNumber = `tel:${phone}`;
   }
   Linking.canOpenURL(phoneNumber)
-  .then(supported => {
-    if (!supported) {
-      Alert.alert('Phone number is not available');
-    } else {
-      return Linking.openURL(phoneNumber);
-    }
-  })
-  .catch(err => console.log(err));
+    .then((supported) => {
+      if (!supported) {
+        Alert.alert("Phone number is not available");
+      } else {
+        return Linking.openURL(phoneNumber);
+      }
+    })
+    .catch((err) => console.log(err));
 };

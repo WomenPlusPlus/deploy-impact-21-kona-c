@@ -7,12 +7,18 @@ import { styles } from "../../screens/needsScreens/aComponentStyles";
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
   
-  const handlePress = (selectedInstitutionType) => {
+  const handlePressPerson = (selectedInstitutionType) => {
     navigation.navigate("HelpForWho", {
       selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
     });
   };
+  const handlePressCompany = (selectedInstitutionType) => {
+    navigation.navigate("NeedsScreenD", {
+      selectedRegion: selectedRegion,
+      selectedInstitutionType: selectedInstitutionType,
+    });
+  }
 
   return (
     <View>
@@ -29,7 +35,7 @@ const InstitutionType = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Person")}
+                onPress={() => handlePressPerson("Person")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="user" style={styles.userImage} />
@@ -42,7 +48,7 @@ const InstitutionType = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Company")}
+                onPress={() => handlePressCompany("Company")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="building" style={styles.userImage} />

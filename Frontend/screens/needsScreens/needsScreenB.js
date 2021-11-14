@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import options from "../../assets/options_map.json";
+import options from "../../assets/jsonFiles/options_map.json";
 import { styles } from "./bComponentStyles";
 
 const NeedsScreenB = ({ route, navigation }) => {
@@ -57,7 +57,7 @@ const NeedsScreenB = ({ route, navigation }) => {
         {[
           ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
         ].map((option) => (
-          <View style={styles.container1}>
+          <View key={option} style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}

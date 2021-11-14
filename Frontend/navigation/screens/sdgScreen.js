@@ -30,7 +30,7 @@ const SdgScreen = ({ navigation }) => {
         </Text>
         <View style={styles.container}>
           {sdgs.map((sdg) => (
-            <View style={styles.buttonContainer}>
+            <View key={sdg.id} style={styles.buttonContainer}>
               <TouchableHighlight
                 style={styles.button}
                 onPress={() => {
