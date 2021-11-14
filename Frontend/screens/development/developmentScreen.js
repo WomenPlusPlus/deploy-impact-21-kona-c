@@ -8,15 +8,15 @@ const Development = ({ navigation }) => {
     navigation.navigate("HomeScreen");
   };
   
-  // const handleMainContainer = () => {
-  //   navigation.navigate("MainContainer");
-  // };
+  const handleMainContainer = () => {
+    navigation.navigate("MainContainer");
+  };
 
   return (
     <View style={styles.container}>
       <Text>Click one of the below to go to the screen you want to see</Text>
       <StatusBar style="auto" />
-      {/* <Button title="Go to Navigation Bar" onPress={handleMainContainer} /> */}
+      <Button title="Go to Navigation Bar" onPress={handleMainContainer} />
       <Button title="Go to HomeScreen" onPress={handlePress1} />
     </View>
   );
