@@ -12,7 +12,7 @@ import normalize from "react-native-normalize";
 import sdgs from "../../../utils/sdgs";
 import styles from '../sdgScreen/sdgScreenStyles';
 
-const SdgScreen = ({ navigation }) => {
+const SdgScreenNEW = ({ navigation }) => {
   const handlePress = (sdgId) => {
     navigation.navigate("SdgOrganisationsList", {
       sdgId: sdgId,
@@ -54,4 +54,4 @@ const SdgScreen = ({ navigation }) => {
 
 
 
-export default SdgScreen;
+export default SdgScreenNEW;

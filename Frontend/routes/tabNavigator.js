@@ -5,7 +5,8 @@ import { Feather } from "@expo/vector-icons";
 import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 //Screens
-import SdgScreen from "../screens/tabsScreens/sdgScreen/sdgScreen";
+// import SdgScreen from "../screens/tabsScreens/sdgScreen/sdgScreen";
+import SdgScreen from "../navigation/screens/sdgScreen";
 import EmergencyScreen from "../navigation/screens/emergencyScreen";
 import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
 import StackNavigation from "./stackNavigator";
@@ -51,7 +52,7 @@ function TabNavigatorBottom() {
           },
           tabBarIcon: () => (
             <Image
-              source={require("../../assets/sdg.png")}
+              source={require('../assets/sdg.png')}
               style={{ width: 50, height: 50, margin: -12 }}
             />
           ),
