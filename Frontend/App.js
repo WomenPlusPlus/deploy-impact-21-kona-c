@@ -1,7 +1,7 @@
 import React from "react";
-import StackNavigation from "./screens/routes/stackNavigator";
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
+import TabNavigatorBottom from "./screens/routes/tabNavigator";
 
 export default function App() {
 
@@ -19,7 +19,7 @@ export default function App() {
   
   return (
     
-    <StackNavigation />
+    <TabNavigatorBottom />
    
   );
 }
