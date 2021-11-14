@@ -28,7 +28,7 @@ const PersonType = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-        What is the current situation of the person seeking help?
+          What is the current situation of the person seeking help?
         </Text>
         <View style={styles.container1}>
           <View style={styles.bubbleContainer}>

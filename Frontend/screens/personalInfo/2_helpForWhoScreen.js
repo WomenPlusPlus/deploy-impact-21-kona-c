@@ -22,16 +22,15 @@ const HelpForWho = ({ route, navigation }) => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text style={styles.titleTextStyle}>
-          Seeking help for...
-        </Text>
+        <Text style={styles.titleTextStyle}>Seeking help for...</Text>
         <View>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Myself")}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("Myself")}
+              >
+                <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="user" style={styles.userImage} />
                 </View>
               </Pressable>
@@ -40,10 +39,11 @@ const HelpForWho = ({ route, navigation }) => {
           </View>
           <View style={styles.container2}>
             <View style={styles.bubbleContainer}>
-              <Pressable 
+              <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("Others")}>
-                <View style={styles.severalIconsButton}> 
+                onPress={() => handlePress("Others")}
+              >
+                <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="users" style={styles.userImage} />
                 </View>
               </Pressable>

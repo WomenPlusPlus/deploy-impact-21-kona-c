@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  containerD : {
+  containerD: {
     flexDirection: "column",
     alignItems: "center",
   },

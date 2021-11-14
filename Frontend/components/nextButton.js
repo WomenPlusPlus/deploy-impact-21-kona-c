@@ -14,20 +14,20 @@ const NextButton = (props) => {
 };
 
 const styles = StyleSheet.create({
-    nextButton: {
-        color: "#921CB1",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "flex-end",
-        width: "15%",
-        height: "15%",
-        marginRight: 20,
-      },
-      nextButtonText: {
-        color: "#A169B1",
-        fontSize: 75,
-        fontWeight: "bold",
-      }
-})
+  nextButton: {
+    color: "#921CB1",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "flex-end",
+    width: "15%",
+    height: "15%",
+    marginRight: 20,
+  },
+  nextButtonText: {
+    color: "#A169B1",
+    fontSize: 75,
+    fontWeight: "bold",
+  },
+});
 export default NextButton;

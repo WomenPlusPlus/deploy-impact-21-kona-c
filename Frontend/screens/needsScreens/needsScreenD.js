@@ -18,12 +18,11 @@ const NeedsScreenD = ({ route, navigation }) => {
 
   return (
     <ScrollView style={styles.container}>
-
-    <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.image}
-    >
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        resizeMode="cover"
+        style={styles.image}
+      >
         {companies_options
           .map((option) => option.First_layer)
           .map((option) => (
@@ -38,9 +37,8 @@ const NeedsScreenD = ({ route, navigation }) => {
               </View>
             </View>
           ))}
-    </ImageBackground>
+      </ImageBackground>
     </ScrollView>
-
   );
 };
 

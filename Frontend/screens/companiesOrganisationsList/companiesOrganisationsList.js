@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Text,
   View,
@@ -6,7 +6,6 @@ import {
   Pressable,
   Linking,
   ImageBackground,
-  Image,
 } from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
