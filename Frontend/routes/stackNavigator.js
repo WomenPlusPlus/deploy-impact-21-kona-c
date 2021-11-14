@@ -2,26 +2,27 @@ import React from "react";
 import { Text, View, Pressable, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Development from "../development/developmentScreen";
-import HomeScreen from "../welcomeScreen/welcomeScreen";
-import OrganisationsListScreen from "../organisationsListScreen/organisationsListScreen";
-import OrganisationDetailsScreen from "../organisationDetailsScreen/organisationDetailsScreen";
-import InfoAge from "../personalInfo/4_ageScreen";
-import PersonType from "../personalInfo/5_personTypeScreen";
-import InfoGender from "../personalInfo/3_genderScreen";
-import InstitutionType from "../personalInfo/1_institutionTypeScreen";
-import HelpForWho from "../personalInfo/2_helpForWhoScreen";
-import LocationScreen from "../locationScreen/locationScreen";
-import NextButton from "../../components/nextButton";
-import NeedsScreenA from "../needsScreens/needsScreenA";
-import NeedsScreenB from "../needsScreens/needsScreenB";
-import NeedsScreenC from "../needsScreens/needsScreenC";
-import MainContainer from "../../navigation/mainContainer";
-import { Entypo } from "@expo/vector-icons";
-import SdgOrganisationsList from "../sdgOrganisationsListScreen/sdgOrganisationsList";
-import NeedsScreenD from "../needsScreens/needsScreenD";
-import CompaniesOrganisationsList from "../companiesOrganisationsList/companiesOrganisationsList";
+import Development from "../screens/development/developmentScreen";
+import HomeScreen from "../screens/welcomeScreen/welcomeScreen";
+import OrganisationsListScreen from "../screens/organisationsListScreen/organisationsListScreen";
+import OrganisationDetailsScreen from "../screens/organisationDetailsScreen/organisationDetailsScreen";
+import InfoAge from "../screens/personalInfo/4_ageScreen";
+import PersonType from "../screens/personalInfo/5_personTypeScreen";
+import InfoGender from "../screens/personalInfo/3_genderScreen";
+import InstitutionType from "../screens/personalInfo/1_institutionTypeScreen";
+import HelpForWho from "../screens/personalInfo/2_helpForWhoScreen";
+import LocationScreen from "../screens/locationScreen/locationScreen";
+import NextButton from "../components/nextButton";
+import NeedsScreenA from "../screens/needsScreens/needsScreenA";
+import NeedsScreenB from "../screens/needsScreens/needsScreenB";
+import NeedsScreenC from "../screens/needsScreens/needsScreenC";
+import MainContainer from "../navigation/mainContainer";
+import { Entypo } from '@expo/vector-icons';
+import SdgOrganisationsList from "../screens/sdgOrganisationsListScreen/sdgOrganisationsList";
+import NeedsScreenD from "../screens/needsScreens/needsScreenD";
+import CompaniesOrganisationsList from "../screens/companiesOrganisationsList/companiesOrganisationsList";
 import TabNavigatorBottom from "./tabNavigator";
+import OtherGender from "../screens/personalInfo/3.1_otherGenderScreen"
 
 const Stack = createNativeStackNavigator();
 
@@ -82,6 +83,7 @@ function StackNavigation() {
         <Stack.Screen name="PersonType" component={PersonType} />
       </Stack.Group>
 
+<<<<<<< HEAD:Frontend/screens/routes/stackNavigator.js
       <Stack.Screen name="NextButton" component={NextButton} />
       <Stack.Screen
         name="OrganisationsListScreen"
@@ -111,5 +113,38 @@ function StackNavigation() {
     </Stack.Navigator>
   );
 }
+=======
+          <Stack.Screen name="NextButton" component={NextButton} />
+          <Stack.Screen
+            name="OrganisationsListScreen"
+            component={OrganisationsListScreen}
+          />
+            <Stack.Screen
+            name="SdgOrganisationsList"
+            component={SdgOrganisationsList}
+          />
+          <Stack.Screen name="NeedsScreenA" component={NeedsScreenA} />
+          <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
+          <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
+          <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
+          <Stack.Screen
+            name="MainContainer"
+            component={MainContainer}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="OrganisationDetailsScreen"
+            component={OrganisationDetailsScreen}
+          />
+                  <Stack.Screen
+          name="CompaniesOrganisationsList"
+          component={CompaniesOrganisationsList}
+        />
+        <Stack.Screen name="OtherGender" component={OtherGender} />
+        </Stack.Navigator>
+    
+  )
+        };
+>>>>>>> origin/development:Frontend/routes/stackNavigator.js
 
 export default StackNavigation;

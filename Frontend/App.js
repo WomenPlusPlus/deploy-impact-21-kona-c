@@ -1,7 +1,7 @@
 import React from "react";
-import AppLoading from "expo-app-loading";
-import { useFonts } from "expo-font";
-import TabNavigatorBottom from "./screens/routes/tabNavigator";
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
+import TabNavigatorBottom from "./routes/tabNavigator";
 
 export default function App() {
   let [fontsLoaded] = useFonts({

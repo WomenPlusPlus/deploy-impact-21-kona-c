@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: "1%",
   },
+
   textStyle: {
     fontFamily: "Roboto-Regular",
     color: "white",

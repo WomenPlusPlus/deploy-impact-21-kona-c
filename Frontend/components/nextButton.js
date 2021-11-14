@@ -1,11 +1,14 @@
 import React from "react";
-import { Text, Pressable } from "react-native";
+import { Text, Pressable, Keyboard } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { StyleSheet } from "react-native";
 
 const NextButton = (props) => {
   return (
-    <Pressable style={styles.nextButton} onPress={props.handlePress}>
+    <Pressable
+      style={styles.nextButton}
+      onPress={props.handlePress}
+    >
       <Text>
         <FontAwesome style={styles.nextButtonText} name="angle-right" />
       </Text>
@@ -16,17 +19,14 @@ const NextButton = (props) => {
 const styles = StyleSheet.create({
   nextButton: {
     color: "#921CB1",
-    display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-end",
     alignSelf: "flex-end",
-    width: "15%",
-    height: "15%",
-    marginRight: 20,
+    width: 24,
   },
   nextButtonText: {
     color: "#A169B1",
-    fontSize: 75,
+    fontSize: 55,
     fontWeight: "bold",
   },
 });
