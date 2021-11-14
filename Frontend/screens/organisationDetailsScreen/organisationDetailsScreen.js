@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ScrollView, Linking } from "react-native";
-import data from "../../assets/organisations.json";
+import data from "../../assets/jsonFiles/organisations.json";
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 import {
@@ -32,7 +32,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
   focus = focus.filter((focusElement) => {
     return focusElement;
   });
-
+  
   return (
     <ScrollView style={[styles.container, styles.boxShadow]}>
       <Text style={styles.textBoxName}>
@@ -43,7 +43,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
           <MaterialIcons style={styles.iconText} name="center-focus-strong" />
           <Text style={styles.textBoxTitle}> Focus Areas:</Text>
           {focus.map((foc) => {
-            return <Text style={styles.textBox}>{`\n- ${foc}`}</Text>;
+            return <Text key={foc} style={styles.textBox}>{`\n- ${foc}`}</Text>;
           })}
         </Text>
       )}
@@ -92,7 +92,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
             .map((num) => {
               return (
                 <Text
-                  key={"phone" + organisationId}
+                  key={"phone" + num}
                   style={styles.flexContainer}
                   onPress={() => {
                     if (Platform.OS === "android") {

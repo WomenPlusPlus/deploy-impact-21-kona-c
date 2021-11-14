@@ -6,7 +6,7 @@ import {
   Ionicons,
   Entypo,
 } from "@expo/vector-icons";
-import options from "../../assets/options_map.json";
+import options from "../../assets/jsonFiles/options_map.json";
 import { styles } from "./aComponentStyles";
 
 const NeedsScreenA = ({ route, navigation }) => {

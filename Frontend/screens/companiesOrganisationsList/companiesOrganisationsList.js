@@ -8,8 +8,8 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import data from "../../assets/organisations.json";
-import companies_options from "../../assets/companies_options_map.json";
+import data from "../../assets/jsonFiles/organisations.json";
+import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
 import {
   FontAwesome,

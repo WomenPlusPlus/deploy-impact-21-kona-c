@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { styles } from "../needsScreens/bComponentStyles";
-import companies_options from "../../assets/companies_options_map.json";
+import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 
 const NeedsScreenD = ({ route, navigation }) => {
   const handlePress = (selectedOptionD) => {
