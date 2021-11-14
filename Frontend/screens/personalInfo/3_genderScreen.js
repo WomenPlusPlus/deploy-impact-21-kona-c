@@ -34,11 +34,7 @@ const InfoGender = ({ route, navigation }) => {
         style={styles.image}
       >
         <Text style={styles.titleTextStyle}>
-<<<<<<< HEAD
           What is the gender of the person seeking help?
-=======
-          What is the gender identity of the person seeking help?
->>>>>>> origin/development
         </Text>
         <View>
           <View style={styles.container1}>
@@ -69,11 +65,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-<<<<<<< HEAD
-                onPress={() => handlePress("M")}
-=======
                 onPress={() => handlePress("O")}
->>>>>>> origin/development
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome name="heart" style={styles.userImage} />
