@@ -9,6 +9,7 @@ const InstitutionType = ({ route, navigation }) => {
   const handlePressPerson = (selectedInstitutionType) => {
     navigation.navigate("HelpForWho", {
       selectedRegion: selectedRegion,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedInstitutionType: selectedInstitutionType,
     });
   };

@@ -15,6 +15,7 @@ const InfoAge = ({ route, navigation }) => {
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedAge: selectedAge,
     });
   };

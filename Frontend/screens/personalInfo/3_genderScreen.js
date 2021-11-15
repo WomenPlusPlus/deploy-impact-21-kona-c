@@ -14,6 +14,7 @@ const InfoGender = ({ route, navigation }) => {
         selectedRegion: selectedRegion,
         selectedInstitutionType: selectedInstitutionType,
         selectedForWho: selectedForWho,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });
     } else {
@@ -21,6 +22,7 @@ const InfoGender = ({ route, navigation }) => {
         selectedRegion: selectedRegion,
         selectedInstitutionType: selectedInstitutionType,
         selectedForWho: selectedForWho,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });
     }

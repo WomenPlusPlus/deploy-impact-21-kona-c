@@ -6,10 +6,7 @@ import {
   Pressable,
   TextInput,
   ScrollView,
-  TouchableWithoutFeedback,
-  Keyboard,
 } from "react-native";
-import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { styles } from "../needsScreens/bComponentStyles";
 import NextButton from "../../components/nextButton";
 
@@ -23,6 +20,7 @@ const OtherGender = ({ route, navigation }) => {
       selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedGender: "M",
     });
   };
