@@ -80,7 +80,6 @@ const SdgOrganisationsList = ({ route, navigation }) => {
             <Text style={styles.titleTextStyle}>
               List of organisations that could provide help
             </Text>
-
             <SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
