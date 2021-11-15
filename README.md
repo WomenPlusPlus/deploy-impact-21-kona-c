@@ -3,23 +3,33 @@
 Dots: the alternative legal aid tech
 A tool to connect people in need to the organizations best equipped to help them
 
-### Project&Product:
-
-We volunteered for 6 weeks (approx. 10h/week) following the Agile values and principles.
-
-A tool to connect people in need to the organisations best equipped to help them.
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
----
+## Idea / Our Proposal
 
-## Installation
+- Offline application - no internet connection required for the users to access it. Can be accessed anytime, anywhere.
+- The users are guided through a set of questions that enables the app to find the right organization for them.
 
-### Prerequisite
+## Technical Solution
+
+- React Native Frontend application using Expo Framework
+- No backend
+- Content data stored inside the application in a .json format.
+- Configuration data stored inside the application in .csv format use to define the Needs Questionnaire Hierarchy. The options available on the needs questionnaire and SDG Group mapping is all configurable and displayed dynamically in the application
+- Reduce running cost considering no backend infrastructure and storage required
+
+## Futur Developments
+
+- ***
+
+# Installation
+
+## Prerequisite
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-### Developers / Testers
+## Developers / Testers
 
 For developers/testers that want to be able to run the code locally and develop or test:
 
@@ -27,7 +37,7 @@ For developers/testers that want to be able to run the code locally and develop 
 - [iOS emulator]
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
-### Getting started
+## Getting started
 
 1. Clone [deploy-impact-21-kona-c repo](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c) locally
 2. Go to Frontend folder and run:
@@ -45,15 +55,15 @@ npm start
 
 ---
 
-## Update of the Organisation data
+# Update of the Organisation data
 
 ---
 
-## Configuration of needs questionnaire
+# Configuration of needs questionnaire
 
 ---
 
-## FAQ and Troubleshooting
+# FAQ and Troubleshooting
 
 > 1. Why do I have a folder named ".expo" in my project?
 
@@ -75,11 +85,11 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 ---
 
-### Team Members
+## Team Members
 
 ---
 
-### License: GPL-3.0 License
+## License: GPL-3.0 License
 
 ---
 
