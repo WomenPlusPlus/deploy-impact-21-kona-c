@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
@@ -27,7 +27,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   const selectedAge = route.params["selectedAge"];
   const selectedPersonType = route.params["selectedPersonType"];
   const SDG_Id = route.params["SDG_Id"].split(",");
-  
+
   let newData = Object.keys(data).filter((orgId) => {
     for (
       let i = 0;
@@ -82,7 +82,6 @@ const OrganisationsListScreen = ({ route, navigation }) => {
     }
   }
 
-
   return (
     <ScrollView>
       <ImageBackground
@@ -110,7 +109,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
           dropdownIconPosition={"right"}
           data={uniqueRegionsArray}
           onSelect={(selectedItem, index) => {
-            setSelectedRegion(selectedItem)
+            setSelectedRegion(selectedItem);
           }}
           buttonTextAfterSelection={(selectedItem, index) => {
             return selectedItem;
@@ -121,7 +120,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
           renderCustomizedRowChild={(selectedItem, index) => {
             return (
               <View style={styles.buttonDown}>
-                <Text style={styles.textStyle}>{selectedItem}</Text>
+                <Text style={styles.textStyle}> {selectedItem}</Text>
               </View>
             );
           }}

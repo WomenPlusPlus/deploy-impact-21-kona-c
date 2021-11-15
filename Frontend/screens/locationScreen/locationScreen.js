@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
   image: {
     height: height,
   },
-  bubbleContainer: {},
   container1: {
     flexDirection: "row",
     justifyContent: "center",

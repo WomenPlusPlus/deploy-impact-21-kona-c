@@ -16,6 +16,7 @@ const InstitutionType = ({ route, navigation }) => {
   const handlePressCompany = (selectedInstitutionType) => {
     navigation.navigate("NeedsScreenD", {
       selectedRegion: selectedRegion,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedInstitutionType: selectedInstitutionType,
     });
   };
