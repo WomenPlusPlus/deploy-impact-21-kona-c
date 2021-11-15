@@ -81,50 +81,61 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       newData.splice(0, 0, element);
     }
   }
-
+  console.log(newData);
   return (
-    <ScrollView>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.imageBackground}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.imageBackground}
+    >
+      <ScrollView>
         <Image
           resizeMode="contain"
           source={sdgsLarge[SDG_Id[0] - 1].image}
           style={styles.image}
         />
-        <Text style={styles.titleTextStyle}>
-          List of organisations that could provide help
-        </Text>
-        <SelectDropdown
-          buttonTextStyle={styles.textStyle}
-          buttonStyle={styles.button}
-          defaultButtonText={selectedRegion}
-          renderDropdownIcon={() => {
-            return (
-              <FontAwesome name="chevron-down" style={styles.dropdownicon} />
-            );
-          }}
-          dropdownIconPosition={"right"}
-          data={uniqueRegionsArray}
-          onSelect={(selectedItem, index) => {
-            setSelectedRegion(selectedItem);
-          }}
-          buttonTextAfterSelection={(selectedItem, index) => {
-            return selectedItem;
-          }}
-          rowTextForSelection={(item, index) => {
-            return item;
-          }}
-          renderCustomizedRowChild={(selectedItem, index) => {
-            return (
-              <View style={styles.buttonDown}>
-                <Text style={styles.textStyle}> {selectedItem}</Text>
-              </View>
-            );
-          }}
-        />
+        {newData.length === 0 ? (
+          <Text style={styles.notFoundTextStyle}>
+            No organisations available for this goal
+          </Text>
+        ) : (
+          <View>
+            <Text style={styles.titleTextStyle}>
+              List of organisations that could provide help
+            </Text>
+            <SelectDropdown
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              defaultButtonText={selectedRegion}
+              renderDropdownIcon={() => {
+                return (
+                  <FontAwesome
+                    name="chevron-down"
+                    style={styles.dropdownicon}
+                  />
+                );
+              }}
+              dropdownIconPosition={"right"}
+              data={uniqueRegionsArray}
+              onSelect={(selectedItem, index) => {
+                setSelectedRegion(selectedItem);
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+              renderCustomizedRowChild={(selectedItem, index) => {
+                return (
+                  <View style={styles.buttonDown}>
+                    <Text style={styles.textStyle}> {selectedItem}</Text>
+                  </View>
+                );
+              }}
+            />
+          </View>
+        )}
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
@@ -201,8 +212,8 @@ const OrganisationsListScreen = ({ route, navigation }) => {
             </Pressable>
           </View>
         ))}
-      </ImageBackground>
-    </ScrollView>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
