@@ -18,7 +18,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - Configuration data stored inside the application in .csv format use to define the Needs Questionnaire Hierarchy. The options available on the needs questionnaire and SDG Group mapping is all configurable and displayed dynamically in the application
 - Reduce running cost considering no backend infrastructure and storage required
 
-## Futur Developments
+## Future Developments
 
 - ***
 
