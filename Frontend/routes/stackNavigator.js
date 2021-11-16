@@ -16,7 +16,6 @@ import NextButton from "../components/nextButton";
 import NeedsScreenA from "../screens/needsScreens/needsScreenA";
 import NeedsScreenB from "../screens/needsScreens/needsScreenB";
 import NeedsScreenC from "../screens/needsScreens/needsScreenC";
-// import MainContainer from "../navigation/mainContainer";
 import { Entypo } from '@expo/vector-icons';
 import SdgOrganisationsList from "../screens/sdgOrganisationsListScreen/sdgOrganisationsList";
 import NeedsScreenD from "../screens/needsScreens/needsScreenD";
@@ -46,15 +45,14 @@ function StackNavigation () {
             },
           }}
         >
-          {/* instead of doing the below styling for the header we can put the code above  with the screenOptions and have the header style same for all the screens */}
-          <Stack.Screen name="Development" component={Development} />
+
+          {/* <Stack.Screen name="Development" component={Development} /> */}
     
           <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
             options={{ title: "Dots." }}
           />
-          <Stack.Screen name="QStack" component={TabNavigatorBottom}/>
           <Stack.Group
           screenOptions={{
             // headerShown: false
@@ -69,11 +67,12 @@ function StackNavigation () {
                   </Pressable>
                 </View>
               )} 
-          }}>
+              }}>
             <Stack.Screen name="LocationScreen" component={LocationScreen} />
             <Stack.Screen name="InstitutionType" component={InstitutionType} />
             <Stack.Screen name="HelpForWho" component={HelpForWho} />
             <Stack.Screen name="InfoGender" component={InfoGender} />
+            <Stack.Screen name="OtherGender" component={OtherGender} />
             <Stack.Screen name="InfoAge" component={InfoAge} />
             <Stack.Screen name="PersonType" component={PersonType} />
           </Stack.Group>
@@ -91,11 +90,6 @@ function StackNavigation () {
           <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
           <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
           <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
-          {/* <Stack.Screen
-            name="MainContainer"
-            component={MainContainer}
-            options={{ headerShown: false }}
-          /> */}
           <Stack.Screen
             name="OrganisationDetailsScreen"
             component={OrganisationDetailsScreen}
@@ -104,7 +98,7 @@ function StackNavigation () {
           name="CompaniesOrganisationsList"
           component={CompaniesOrganisationsList}
         />
-        <Stack.Screen name="OtherGender" component={OtherGender} />
+
         </Stack.Navigator>
     
   )

@@ -18,20 +18,15 @@ const Stack = createNativeStackNavigator();
 function TabNavigatorBottom() {
   return (
     <NavigationContainer>
-                <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            options={{ title: "Dots." }}
-          />
  
     <Tab.Navigator
-      initialRouteName="HomeScreen"
+      initialRouteName="HomeScreenTab"
       activeColor="#921CB1"
       inactiveColor="#A169B1"
       barStyle={{ backgroundColor: "white" }}
     >
       <Tab.Screen
-        name="HomeScreen"
+        name="HomeScreenTab"
         component={StackNavigation}
         options={{
           tabBarLabel: "Home",
