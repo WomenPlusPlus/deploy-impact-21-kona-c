@@ -28,7 +28,7 @@ const SdgOrganisationsList = ({ route, navigation }) => {
   }
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
-  console.log(uniqueRegionsArray);
+  
   let newData = Object.keys(data).filter((orgId) => {
     for (
       let i = 0;
