@@ -1,8 +1,28 @@
-import React from "react";
-import { View, Text, ImageBackground, Pressable } from "react-native";
+import React, { useState } from "react";
+import { View, Text, ImageBackground, Pressable, Image } from "react-native";
 import { styles } from "./welcomeScreenStyles";
+import { FontAwesome } from "@expo/vector-icons";
+import SelectDropdown from "react-native-select-dropdown";
 
 const HomeScreen = ({ navigation }) => {
+  const languages = [
+    {
+      language: "EN",
+      flag: require("../../assets/languagesFlags/EN_flag.png"),
+    },
+    {
+      language: "FR",
+      flag: require("../../assets/languagesFlags/FR_flag.png"),
+    },
+    {
+      language: "DE",
+      flag: require("../../assets/languagesFlags/DE_flag.png"),
+    },
+  ];
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    languages[0].language
+  );
+  const [selectedLanguageIndex, setSelectedLanguageIndex] = useState(0);
   const handlePress = () => {
     navigation.navigate("LocationScreen");
   };
@@ -12,8 +32,52 @@ const HomeScreen = ({ navigation }) => {
       <ImageBackground
         source={require("../../assets/background.png")}
         resizeMode="cover"
-        style={styles.image}
+        style={styles.backgroundImage}
       >
+        <View style={styles.dropdownMainContainer}>
+          <Image
+            resizeMode="contain"
+            source={languages[selectedLanguageIndex].flag}
+            style={styles.imageTop}
+          />
+          <SelectDropdown
+            buttonTextStyle={styles.textStyle}
+            buttonStyle={styles.button}
+            dropdownStyle={styles.dropdownStyle}
+            defaultButtonText={selectedLanguage}
+            rowStyle={styles.rowStyle}
+            renderDropdownIcon={() => {
+              return (
+                <FontAwesome name="chevron-down" style={styles.dropdownIcon} />
+              );
+            }}
+            dropdownIconPosition={"right"}
+            data={languages.map((a) => a.language)}
+            onSelect={(selectedItem, index) => {
+              setSelectedLanguageIndex(index);
+              setSelectedLanguage(selectedItem);
+              return <Text style={styles.textStyle}>{selectedItem}</Text>;
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              return selectedItem;
+            }}
+            rowTextForSelection={(item, index) => {
+              return item;
+            }}
+            renderCustomizedRowChild={(selectedItem, index) => {
+              return (
+                <View style={styles.buttonDown}>
+                  <Image
+                    resizeMode="contain"
+                    source={languages[index].flag}
+                    style={styles.image}
+                  />
+                  <Text style={styles.textStyle}>{selectedItem}</Text>
+                </View>
+              );
+            }}
+          />
+        </View>
         <View style={styles.containerRoundXL}>
           <Pressable style={styles.roundXL} onPress={handlePress}>
             <Text style={styles.textButton}>

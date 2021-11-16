@@ -81,7 +81,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       newData.splice(0, 0, element);
     }
   }
-  console.log(newData);
+  
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
