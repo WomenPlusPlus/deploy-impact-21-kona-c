@@ -1,8 +1,6 @@
 import React from "react";
 import { Text, ScrollView, Linking } from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
-import { StyleSheet, Dimensions, PixelRatio } from "react-native";
-import normalize from "react-native-normalize";
 import {
   FontAwesome,
   MaterialIcons,
@@ -10,13 +8,9 @@ import {
   Feather,
   FontAwesome5,
 } from "@expo/vector-icons";
+import { styles } from "./organisationDetailsStyles";
 
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
-
-const OrganisationDetailsScreen = ({ route, navigation }) => {
+const OrganisationDetailsScreen = ({ route }) => {
   const organisationId = parseInt(Object.values(route.params));
   let focus = [];
   focus.push(data[organisationId]["Focus 1"]);
@@ -32,7 +26,7 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
   focus = focus.filter((focusElement) => {
     return focusElement;
   });
-  
+
   return (
     <ScrollView style={[styles.container, styles.boxShadow]}>
       <Text style={styles.textBoxName}>
@@ -112,99 +106,4 @@ const OrganisationDetailsScreen = ({ route, navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  boxShadow:
-    Platform.OS === "ios"
-      ? {
-          shadowColor: "lightgray",
-          shadowOffset: { width: 6, height: 6 },
-          shadowOpacity: 0.5,
-          shadowRadius: 8,
-        }
-      : {
-          elevation: 10,
-          shadowColor: "lightgray",
-        },
-  container: {
-    flexGrow: 1,
-    backgroundColor: "white",
-    margin: 15,
-    borderRadius: 5,
-    overflow: "hidden",
-  },
-  textBoxName: {
-    color: "#A169B1",
-    fontSize: normalize(26),
-    padding: 10,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
-  textBox: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
-  },
-  textBoxTitle: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(22),
-    fontWeight: "bold",
-  },
-  textBoxWebsite: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
-    textDecorationLine: "underline",
-    fontStyle: "italic",
-  },
-  textBoxPhone: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
-    textDecorationLine: "underline",
-    fontStyle: "italic",
-  },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(25),
-    margin: 25,
-    textAlign: "center",
-  },
-  flexContainer: {
-    flexDirection: "row",
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
-    textAlign: "justify",
-  },
-  iconText: {
-    color: "#A169B1",
-    fontSize: normalize(20),
-    fontWeight: "bold",
-  },
-});
-
 export default OrganisationDetailsScreen;
-
-export const callNumber = (phone) => {
-  console.log("callNumber ----> ", phone);
-  let phoneNumber = phone;
-  if (Platform.OS !== "android") {
-    phoneNumber = `telprompt:${phone}`;
-  } else {
-    phoneNumber = `tel:${phone}`;
-  }
-  Linking.canOpenURL(phoneNumber)
-    .then((supported) => {
-      if (!supported) {
-        Alert.alert("Phone number is not available");
-      } else {
-        return Linking.openURL(phoneNumber);
-      }
-    })
-    .catch((err) => console.log(err));
-};

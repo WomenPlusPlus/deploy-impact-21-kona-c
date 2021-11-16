@@ -1,23 +1,35 @@
-import React from "react";
-import { Text, View, ImageBackground, Alert, Pressable,StyleSheet, Dimensions  } from "react-native";
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  ImageBackground,
+  Pressable,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
 import normalize from "react-native-normalize";
 const { width, height } = Dimensions.get("window");
+let partialHeight = 0.22 * height;
+let bubbleWidth = 0.33 * width;
+let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
-  let selectedRegion = "";
 
-  const handlePress = () => {
+  const handlePress = (region) => {
     navigation.navigate("InstitutionType", {
-      selectedRegion: selectedRegion,
+      selectedRegion: region,
+      uniqueRegionsArray: uniqueRegionsArray,
     });
   };
+
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);
   }
 
   let uniqueRegionsArray = [...new Set(regionsArray)];
+  
   return (
     <View>
       <ImageBackground
@@ -27,23 +39,22 @@ const LocationScreen = ({ navigation }) => {
       >
         <Text style={styles.titleTextStyle}>Please select a region</Text>
         {uniqueRegionsArray.map((region) => (
-        <View key = {region} style={styles.container1}>
-        <View style={styles.bubbleContainer}>
-          <Pressable
-            style={styles.circleButton}
-            onPress={() => handlePress(region)}
-            >
-            <Text style={styles.textStyle}>{region}</Text>
-            </Pressable>
+          <View key={region} style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(region)}
+              >
+                <Text style={styles.textStyle}>{region}</Text>
+              </Pressable>
+            </View>
           </View>
-        </View>))}
+        ))}
       </ImageBackground>
     </View>
   );
 };
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
+
 const styles = StyleSheet.create({
   textStyle: {
     color: "white",
@@ -59,7 +70,6 @@ const styles = StyleSheet.create({
   image: {
     height: height,
   },
-  bubbleContainer: {},
   container1: {
     flexDirection: "row",
     justifyContent: "center",

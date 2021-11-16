@@ -1,24 +1,25 @@
 import React from "react";
 import { Text, View, Pressable, ImageBackground } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
-  
+
   const handlePressPerson = (selectedInstitutionType) => {
     navigation.navigate("HelpForWho", {
       selectedRegion: selectedRegion,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedInstitutionType: selectedInstitutionType,
     });
   };
   const handlePressCompany = (selectedInstitutionType) => {
     navigation.navigate("NeedsScreenD", {
       selectedRegion: selectedRegion,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedInstitutionType: selectedInstitutionType,
     });
-  }
+  };
 
   return (
     <View>

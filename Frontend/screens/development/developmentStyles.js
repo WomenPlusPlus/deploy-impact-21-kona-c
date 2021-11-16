@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   containerButtons: {
     flexDirection: "row",
   },
-
   text: {
     fontFamily: "Cochin",
     fontSize: 20,

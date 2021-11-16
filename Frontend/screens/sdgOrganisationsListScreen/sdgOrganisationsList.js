@@ -8,6 +8,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
+import SelectDropdown from "react-native-select-dropdown";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
 import {
@@ -18,8 +19,16 @@ import {
 import sdgsLarge from "../../utils/sdgsLarge";
 
 const SdgOrganisationsList = ({ route, navigation }) => {
+  let regionsArray = [];
   const sdgId = route.params["sdgId"];
+  const [selectedRegion, setSelectedRegion] = useState("Worldwide");
 
+  for (let i = 0; i < data.length; i++) {
+    regionsArray.push(data[i]["Code_region"]);
+  }
+
+  let uniqueRegionsArray = [...new Set(regionsArray)];
+  
   let newData = Object.keys(data).filter((orgId) => {
     for (
       let i = 0;
@@ -38,7 +47,14 @@ const SdgOrganisationsList = ({ route, navigation }) => {
             .filter((n) => n)[i]
         ) === sdgId
       ) {
-        return true;
+        if (
+          selectedRegion === "Worldwide" ||
+          data[orgId]["Code_region"] === selectedRegion
+        ) {
+          return true;
+        } else {
+          return false;
+        }
       }
     }
   });
@@ -60,9 +76,42 @@ const SdgOrganisationsList = ({ route, navigation }) => {
             No organisations available for this goal
           </Text>
         ) : (
-          <Text style={styles.titleTextStyle}>
-            List of organisations that could provide help
-          </Text>
+          <View>
+            <Text style={styles.titleTextStyle}>
+              List of organisations that could provide help
+            </Text>
+            <SelectDropdown
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              defaultButtonText={selectedRegion}
+              renderDropdownIcon={() => {
+                return (
+                  <FontAwesome
+                    name="chevron-down"
+                    style={styles.dropdownicon}
+                  />
+                );
+              }}
+              dropdownIconPosition={"right"}
+              data={uniqueRegionsArray}
+              onSelect={(selectedItem, index) => {
+                setSelectedRegion(selectedItem);
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+              renderCustomizedRowChild={(selectedItem, index) => {
+                return (
+                  <View style={styles.buttonDown}>
+                    <Text style={styles.textStyle}> {selectedItem}</Text>
+                  </View>
+                );
+              }}
+            />
+          </View>
         )}
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>

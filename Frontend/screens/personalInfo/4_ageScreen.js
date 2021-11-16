@@ -1,11 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import {
-  FontAwesome5,
-  MaterialCommunityIcons,
-  MaterialIcons,
-  Ionicons
-} from "@expo/vector-icons";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../screens/needsScreens/aComponentStyles";
 
 const InfoAge = ({ route, navigation }) => {
@@ -20,6 +15,7 @@ const InfoAge = ({ route, navigation }) => {
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       selectedGender: selectedGender,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedAge: selectedAge,
     });
   };
@@ -31,7 +27,9 @@ const InfoAge = ({ route, navigation }) => {
         resizeMode="cover"
         style={styles.image}
       >
-        <Text style={styles.titleTextStyle}>What is the age of the person seeking help?</Text>
+        <Text style={styles.titleTextStyle}>
+          What is the age of the person seeking help?
+        </Text>
         <View>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
@@ -51,7 +49,7 @@ const InfoAge = ({ route, navigation }) => {
                 onPress={() => handlePress("Y")}
               >
                 <View style={styles.severalIconsButton}>
-                <FontAwesome5 name="child" style={styles.userImage} />
+                  <FontAwesome5 name="child" style={styles.userImage} />
                 </View>
               </Pressable>
               <Text style={styles.textStyle}>12-18</Text>
@@ -64,7 +62,7 @@ const InfoAge = ({ route, navigation }) => {
                 onPress={() => handlePress("E")}
               >
                 <View style={styles.severalIconsButton}>
-                <Ionicons name="man" style={styles.userImage} />
+                  <Ionicons name="man" style={styles.userImage} />
                 </View>
               </Pressable>
               <Text style={styles.textStyle}>18-25</Text>

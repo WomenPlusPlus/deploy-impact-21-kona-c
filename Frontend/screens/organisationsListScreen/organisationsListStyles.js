@@ -2,9 +2,6 @@ import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 
 const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 export const styles = StyleSheet.create({
   mainContainer: {
@@ -65,9 +62,7 @@ export const styles = StyleSheet.create({
     fontSize: normalize(25),
     textAlign: "center",
     textAlignVertical: "center",
-    margin: 10,
-    height: height / 1.8,
-    fontWeight: "bold",
+    marginTop: 150,
   },
   flexContainer: {
     marginBottom: 10,
@@ -82,7 +77,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: -22
+    marginTop: -22,
   },
   nextButton: {
     color: "#A169B1",
@@ -98,5 +93,26 @@ export const styles = StyleSheet.create({
   iconText: {
     color: "#A169B1",
     fontSize: normalize(22),
+  },
+  textStyle: {
+    color: "#921CB1",
+    fontSize: 20,
+    textAlign: "center",
+  },
+  button: {
+    backgroundColor: "white",
+    alignSelf: "center",
+    borderRadius: 5,
+    width: "93%",
+  },
+  buttonDown: {
+    color: "#921CB1",
+    fontSize: 20,
+    flexDirection: "row",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  dropdownicon: {
+    color: "#921CB1",
   },
 });

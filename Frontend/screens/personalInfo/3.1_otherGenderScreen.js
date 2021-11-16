@@ -6,10 +6,7 @@ import {
   Pressable,
   TextInput,
   ScrollView,
-  TouchableWithoutFeedback,
-  Keyboard,
 } from "react-native";
-import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { styles } from "../needsScreens/bComponentStyles";
 import NextButton from "../../components/nextButton";
 
@@ -18,11 +15,12 @@ const OtherGender = ({ route, navigation }) => {
   const selectedInstitutionType = route.params["selectedInstitutionType"];
   const selectedForWho = route.params["selectedForWho"];
 
-  const handlePress = (selectedGender) => {
+  const handlePress = (selectedender) => {
     navigation.navigate("InfoAge", {
       selectedRegion: selectedRegion,
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
+      uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedGender: "M",
     });
   };

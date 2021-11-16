@@ -6,8 +6,8 @@ import {
   Pressable,
   Linking,
   ImageBackground,
-  Image,
 } from "react-native";
+import SelectDropdown from "react-native-select-dropdown";
 import data from "../../assets/jsonFiles/organisations.json";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
@@ -19,6 +19,10 @@ import {
 
 const CompaniesOrganisationsList = ({ route, navigation }) => {
   const selectedOptionD = route.params["selectedOptionD"];
+  const [selectedRegion, setSelectedRegion] = useState(
+    route.params["selectedRegion"]
+  );
+  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
 
   let newData = Object.keys(data).filter((orgId) => {
     if (data[orgId]["Can individuals contact them?"] === "FALSE") {
@@ -32,15 +36,21 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
               .toLowerCase()
               .includes(companies_options[i]["Searching_key2"])
           ) {
-            return true;
-          } else {
-            return false;
+            if (
+              selectedRegion === "Worldwide" ||
+              data[orgId]["Code_region"] === selectedRegion
+            ) {
+              return true;
+            } else {
+              return false;
+            }
           }
         }
       }
     }
   });
 
+  console.log(newData);
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
@@ -50,6 +60,34 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
       <Text style={styles.titleTextStyle}>
         List of organisations that could provide help
       </Text>
+      <SelectDropdown
+        buttonTextStyle={styles.textStyle}
+        buttonStyle={styles.button}
+        defaultButtonText={selectedRegion}
+        renderDropdownIcon={() => {
+          return (
+            <FontAwesome name="chevron-down" style={styles.dropdownicon} />
+          );
+        }}
+        dropdownIconPosition={"right"}
+        data={uniqueRegionsArray}
+        onSelect={(selectedItem, index) => {
+          setSelectedRegion(selectedItem);
+        }}
+        buttonTextAfterSelection={(selectedItem, index) => {
+          return selectedItem;
+        }}
+        rowTextForSelection={(item, index) => {
+          return item;
+        }}
+        renderCustomizedRowChild={(selectedItem, index) => {
+          return (
+            <View style={styles.buttonDown}>
+              <Text style={styles.textStyle}> {selectedItem}</Text>
+            </View>
+          );
+        }}
+      />
       <ScrollView>
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>

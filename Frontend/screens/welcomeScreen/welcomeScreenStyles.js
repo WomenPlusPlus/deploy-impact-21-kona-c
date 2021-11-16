@@ -17,9 +17,6 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "space-between",
   },
-  image: {
-    width: 100,
-  },
   textTitle: {
     fontFamily: "Roboto-Regular",
     fontSize: normalize(23),
@@ -64,9 +61,6 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "white",
   },
-  containerRoundXL: {
-    marginTop: "14%",
-  },
   roundXL: {
     width: sizeXL,
     height: sizeXL,
@@ -86,7 +80,56 @@ export const styles = StyleSheet.create({
     width: "50%",
     marginTop: "8%",
   },
-  image: {
+  backgroundImage: {
     height: height,
+  },
+  image: {
+    width: 22,
+    height: 15,
+  },
+  imageTop: {
+    width: 22,
+    height: 15,
+    marginRight: -10,
+  },
+  dropdownMainContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    width: 75,
+    marginLeft: 10,
+  },
+  dropdownStyle: {
+    marginTop: -49,
+    marginLeft: -15,
+    padding: 0,
+  },
+  textStyle: {
+    fontSize: normalize(16),
+    margin: 6,
+  },
+  button: {
+    width: 70,
+    height: 30,
+    backgroundColor: "transparent",
+    margin: 0,
+    textAlign: "left",
+  },
+  rowStyle: {
+    width: 70,
+    height: 30,
+    borderColor: "#921CB1",
+  },
+  dropdownIcon: {
+    color: "#921CB1",
+    fontSize: normalize(16),
+    margin: 0,
+    padding: 0,
+  },
+  buttonDown: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    opacity: 0.9,
   },
 });
