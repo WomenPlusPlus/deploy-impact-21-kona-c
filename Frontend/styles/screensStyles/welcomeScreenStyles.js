@@ -96,12 +96,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
-    width: 75,
+    width: 100,
     marginLeft: 10,
   },
   dropdownStyle: {
     marginTop: -49,
-    marginLeft: -15,
+    marginLeft: -18,
     padding: 0,
   },
   textStyle: {
@@ -109,7 +109,7 @@ export const styles = StyleSheet.create({
     margin: 6,
   },
   button: {
-    width: 70,
+    width: 75,
     height: 30,
     backgroundColor: "transparent",
     margin: 0,

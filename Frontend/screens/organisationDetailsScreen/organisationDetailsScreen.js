@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, ScrollView, Linking } from "react-native";
-import data from "../../assets/jsonFiles/organisations.json";
 import {
   FontAwesome,
   MaterialIcons,
@@ -8,7 +7,8 @@ import {
   Feather,
   FontAwesome5,
 } from "@expo/vector-icons";
-import { styles } from "./organisationDetailsStyles";
+import data from "../../assets/jsonFiles/organisations.json";
+import { styles } from "../../styles/screensStyles/organisationDetailsStyles";
 
 const OrganisationDetailsScreen = ({ route }) => {
   const organisationId = parseInt(Object.values(route.params));

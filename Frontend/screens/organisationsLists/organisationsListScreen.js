@@ -8,28 +8,27 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import SelectDropdown from "react-native-select-dropdown";
-import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "../../screens/organisationsListScreen/organisationsListStyles";
 import {
   FontAwesome,
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import SelectDropdown from "react-native-select-dropdown";
+import data from "../../assets/jsonFiles/organisations.json";
+import { styles } from "../../styles/screensStyles/organisationsListStyles";
 import sdgsLarge from "../../utils/sdgsLarge";
 
-const SdgOrganisationsList = ({ route, navigation }) => {
-  let regionsArray = [];
-  const sdgId = route.params["sdgId"];
-  const [selectedRegion, setSelectedRegion] = useState("Worldwide");
+const OrganisationsListScreen = ({ route, navigation }) => {
+  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
+  const [selectedRegion, setSelectedRegion] = useState(
+    route.params["selectedRegion"]
+  );
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
+  const SDG_Id = route.params["SDG_Id"].split(",");
 
-  for (let i = 0; i < data.length; i++) {
-    regionsArray.push(data[i]["Code_region"]);
-  }
-
-  let uniqueRegionsArray = [...new Set(regionsArray)];
-  
-  let newData = Object.keys(data).filter((orgId) => {
+  const newData = Object.keys(data).filter((orgId) => {
     for (
       let i = 0;
       i <
@@ -40,24 +39,49 @@ const SdgOrganisationsList = ({ route, navigation }) => {
       i++
     ) {
       if (
-        parseInt(
-          data[orgId]["SDGs"]
-            .replace(/[^0-9]/g, " ")
-            .split(" ")
-            .filter((n) => n)[i]
-        ) === sdgId
+        data[orgId]["SDGs"]
+          .replace(/[^0-9]/g, " ")
+          .split(" ")
+          .filter((n) => n)[i] === SDG_Id[0] ||
+        SDG_Id[1]
       ) {
         if (
-          selectedRegion === "Worldwide" ||
-          data[orgId]["Code_region"] === selectedRegion
+          (selectedRegion === "Worldwide" ||
+            data[orgId]["Code_region"] === selectedRegion) &&
+          data[orgId]["Age Category"].includes(selectedAge)
         ) {
-          return true;
+          if (selectedAge === "E" || "A") {
+            return data[orgId]["Gender"].includes(selectedGender);
+          } else {
+            return true;
+          }
         } else {
           return false;
         }
       }
     }
   });
+
+  // Make list random
+  for (let i = newData.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let newDataElement = newData[i];
+    newData[i] = newData[j];
+    newData[j] = newDataElement;
+  }
+
+  // Filter by "refugge" on Target Group and put those first on the list
+  for (let i = 0; i < newData.length; i++) {
+    if (
+      data[newData[i]]["Target Group"]
+        .toLowerCase()
+        .includes(selectedPersonType)
+    ) {
+      let element = newData[i];
+      newData.splice(i, 1);
+      newData.splice(0, 0, element);
+    }
+  }
 
   return (
     <ImageBackground
@@ -68,7 +92,7 @@ const SdgOrganisationsList = ({ route, navigation }) => {
       <ScrollView>
         <Image
           resizeMode="contain"
-          source={sdgsLarge[sdgId - 1].image}
+          source={sdgsLarge[SDG_Id[0] - 1].image}
           style={styles.image}
         />
         {newData.length === 0 ? (
@@ -194,4 +218,4 @@ const SdgOrganisationsList = ({ route, navigation }) => {
   );
 };
 
-export default SdgOrganisationsList;
+export default OrganisationsListScreen;

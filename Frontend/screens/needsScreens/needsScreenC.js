@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import { styles } from "../needsScreens/bComponentStyles";
+import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 
 const NeedsScreenC = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
@@ -12,7 +12,7 @@ const NeedsScreenC = ({ route, navigation }) => {
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
   const selectedOptionScreenB = route.params["selectedOptionScreenB"];
   const optionsFilteredB = route.params["optionsFilteredB"];
-  
+
   const handlePress = (selectedOptionScreenC) => {
     for (let i = 0; i < optionsFilteredB.length; i++) {
       if (selectedOptionScreenC === optionsFilteredB[i]["Third_layer"]) {

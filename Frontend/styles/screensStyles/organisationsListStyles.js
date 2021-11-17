@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions, PixelRatio } from "react-native";
 import normalize from "react-native-normalize";
 
-const { width, height } = Dimensions.get("window");
+const { width, height } = Dimensions.get("screen");
 
 export const styles = StyleSheet.create({
   mainContainer: {

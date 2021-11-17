@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../screens/needsScreens/aComponentStyles";
+import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
 const HelpForWho = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
@@ -13,7 +13,6 @@ const HelpForWho = ({ route, navigation }) => {
       selectedInstitutionType: selectedInstitutionType,
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedForWho: selectedForWho,
-      
     });
   };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Pressable, ImageBackground } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../screens/needsScreens/aComponentStyles";
+import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

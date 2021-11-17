@@ -6,11 +6,11 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import { styles } from "../needsScreens/bComponentStyles";
+import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 
 const NeedsScreenD = ({ route, navigation }) => {
-  console.log(route.params)
+  console.log(route.params);
   const handlePress = (selectedOptionD) => {
     navigation.navigate("CompaniesOrganisationsList", {
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
