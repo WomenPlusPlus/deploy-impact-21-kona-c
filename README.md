@@ -18,7 +18,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - Configuration data stored inside the application in .csv format use to define the Needs Questionnaire Hierarchy. The options available on the needs questionnaire and SDG Group mapping is all configurable and displayed dynamically in the application
 - Reduce running cost considering no backend infrastructure and storage required
 
-## Futur Developments
+## Future Developments
 
 - ***
 
@@ -34,7 +34,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 For developers/testers that want to be able to run the code locally and develop or test:
 
 - [Android simulator](https://developer.android.com/studio) - phone emulator. Installation steps for both Windows and Mac can be found [here](https://developer.android.com/studio/install)
-- [iOS emulator]
+- [iOS simulator](https://developer.apple.com/xcode/) - apple simulator. 
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
 ## Getting started
