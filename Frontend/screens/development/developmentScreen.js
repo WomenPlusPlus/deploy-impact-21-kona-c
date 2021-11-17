@@ -23,6 +23,3 @@ const Development = ({ navigation }) => {
 
 export default Development;
 
-// create a new screen, new const, copy const name, go to app.js
-// in App.js copy the Stack and adjust with the const name
-// then go to the developmentScreen.js, create button and handler and you're done :)
