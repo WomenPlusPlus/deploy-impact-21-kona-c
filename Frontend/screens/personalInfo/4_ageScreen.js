@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
-import { styles } from "../../screens/needsScreens/aComponentStyles";
+import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
 const InfoAge = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

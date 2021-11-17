@@ -6,136 +6,88 @@ import {
   Pressable,
   Linking,
   ImageBackground,
-  Image,
 } from "react-native";
-import SelectDropdown from "react-native-select-dropdown";
-import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "./organisationsListStyles";
 import {
   FontAwesome,
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import sdgsLarge from "../../utils/sdgsLarge";
+import SelectDropdown from "react-native-select-dropdown";
+import data from "../../assets/jsonFiles/organisations.json";
+import { styles } from "../../styles/screensStyles/organisationsListStyles";
+import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 
-const OrganisationsListScreen = ({ route, navigation }) => {
-  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
+const CompaniesOrganisationsList = ({ route, navigation }) => {
+  const selectedOptionD = route.params["selectedOptionD"];
   const [selectedRegion, setSelectedRegion] = useState(
     route.params["selectedRegion"]
   );
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
-  const selectedPersonType = route.params["selectedPersonType"];
-  const SDG_Id = route.params["SDG_Id"].split(",");
+  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
 
-  let newData = Object.keys(data).filter((orgId) => {
-    for (
-      let i = 0;
-      i <
-      data[orgId]["SDGs"]
-        .replace(/[^0-9]/g, " ")
-        .split(" ")
-        .filter((n) => n).length;
-      i++
-    ) {
-      if (
-        data[orgId]["SDGs"]
-          .replace(/[^0-9]/g, " ")
-          .split(" ")
-          .filter((n) => n)[i] === SDG_Id[0] ||
-        SDG_Id[1]
-      ) {
-        if (
-          (selectedRegion === "Worldwide" ||
-            data[orgId]["Code_region"] === selectedRegion) &&
-          data[orgId]["Age Category"].includes(selectedAge)
-        ) {
-          if (selectedAge === "E" || "A") {
-            return data[orgId]["Gender"].includes(selectedGender);
-          } else {
-            return true;
+  const newData = Object.keys(data).filter((orgId) => {
+    if (data[orgId]["Can individuals contact them?"] === "FALSE") {
+      for (let i = 0; i < companies_options.length; i++) {
+        if (companies_options[i]["First_layer"] === selectedOptionD) {
+          if (
+            data[orgId]["Target Group"]
+              .toLowerCase()
+              .includes(companies_options[i]["Searching_key1"]) ||
+            data[orgId]["Target Group"]
+              .toLowerCase()
+              .includes(companies_options[i]["Searching_key2"])
+          ) {
+            if (
+              selectedRegion === "Worldwide" ||
+              data[orgId]["Code_region"] === selectedRegion
+            ) {
+              return true;
+            } else {
+              return false;
+            }
           }
-        } else {
-          return false;
         }
       }
     }
   });
 
-  // Make list random
-  for (let i = newData.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    let newDataElement = newData[i];
-    newData[i] = newData[j];
-    newData[j] = newDataElement;
-  }
-  // Filter by "refugge" on Target Group and put those first on the list
-  for (let i = 0; i < newData.length; i++) {
-    if (
-      data[newData[i]]["Target Group"]
-        .toLowerCase()
-        .includes(selectedPersonType)
-    ) {
-      let element = newData[i];
-      newData.splice(i, 1);
-      newData.splice(0, 0, element);
-    }
-  }
-  
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
       style={styles.imageBackground}
     >
+      <Text style={styles.titleTextStyle}>
+        List of organisations that could provide help
+      </Text>
+      <SelectDropdown
+        buttonTextStyle={styles.textStyle}
+        buttonStyle={styles.button}
+        defaultButtonText={selectedRegion}
+        renderDropdownIcon={() => {
+          return (
+            <FontAwesome name="chevron-down" style={styles.dropdownicon} />
+          );
+        }}
+        dropdownIconPosition={"right"}
+        data={uniqueRegionsArray}
+        onSelect={(selectedItem, index) => {
+          setSelectedRegion(selectedItem);
+        }}
+        buttonTextAfterSelection={(selectedItem, index) => {
+          return selectedItem;
+        }}
+        rowTextForSelection={(item, index) => {
+          return item;
+        }}
+        renderCustomizedRowChild={(selectedItem, index) => {
+          return (
+            <View style={styles.buttonDown}>
+              <Text style={styles.textStyle}> {selectedItem}</Text>
+            </View>
+          );
+        }}
+      />
       <ScrollView>
-        <Image
-          resizeMode="contain"
-          source={sdgsLarge[SDG_Id[0] - 1].image}
-          style={styles.image}
-        />
-        {newData.length === 0 ? (
-          <Text style={styles.notFoundTextStyle}>
-            No organisations available for this goal
-          </Text>
-        ) : (
-          <View>
-            <Text style={styles.titleTextStyle}>
-              List of organisations that could provide help
-            </Text>
-            <SelectDropdown
-              buttonTextStyle={styles.textStyle}
-              buttonStyle={styles.button}
-              defaultButtonText={selectedRegion}
-              renderDropdownIcon={() => {
-                return (
-                  <FontAwesome
-                    name="chevron-down"
-                    style={styles.dropdownicon}
-                  />
-                );
-              }}
-              dropdownIconPosition={"right"}
-              data={uniqueRegionsArray}
-              onSelect={(selectedItem, index) => {
-                setSelectedRegion(selectedItem);
-              }}
-              buttonTextAfterSelection={(selectedItem, index) => {
-                return selectedItem;
-              }}
-              rowTextForSelection={(item, index) => {
-                return item;
-              }}
-              renderCustomizedRowChild={(selectedItem, index) => {
-                return (
-                  <View style={styles.buttonDown}>
-                    <Text style={styles.textStyle}> {selectedItem}</Text>
-                  </View>
-                );
-              }}
-            />
-          </View>
-        )}
         {newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
@@ -217,4 +169,4 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   );
 };
 
-export default OrganisationsListScreen;
+export default CompaniesOrganisationsList;

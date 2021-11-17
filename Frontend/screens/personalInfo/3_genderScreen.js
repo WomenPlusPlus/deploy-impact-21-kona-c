@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
-import { styles } from "../../screens/needsScreens/aComponentStyles";
+import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
 const InfoGender = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
@@ -14,7 +14,7 @@ const InfoGender = ({ route, navigation }) => {
         selectedRegion: selectedRegion,
         selectedInstitutionType: selectedInstitutionType,
         selectedForWho: selectedForWho,
-      uniqueRegionsArray: route.params["uniqueRegionsArray"],
+        uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });
     } else {
@@ -22,7 +22,7 @@ const InfoGender = ({ route, navigation }) => {
         selectedRegion: selectedRegion,
         selectedInstitutionType: selectedInstitutionType,
         selectedForWho: selectedForWho,
-      uniqueRegionsArray: route.params["uniqueRegionsArray"],
+        uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });
     }

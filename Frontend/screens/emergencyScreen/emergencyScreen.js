@@ -1,10 +1,10 @@
 import React from "react";
 import { Text, ImageBackground, View, ScrollView } from "react-native";
 import { FontAwesome5, FontAwesome, MaterialIcons } from "@expo/vector-icons";
-import { styles } from "./emergencyScreenStyles";
+import { styles } from "../../styles/screensStyles/emergencyScreenStyles";
 import { makeCall } from "../../utils/makeCall";
 
-const EmergencyScreen = ({ route, navigation }) => {
+const EmergencyScreen = () => {
   return (
     <ImageBackground
       source={require("../../assets/background.png")}

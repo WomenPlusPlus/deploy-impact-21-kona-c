@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, PixelRatio } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import normalize from "react-native-normalize";
 const { width, height } = Dimensions.get("window");
 

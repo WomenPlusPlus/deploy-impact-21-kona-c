@@ -1,13 +1,12 @@
 import React from "react";
 import { Image } from "react-native";
+import { styles } from "../styles/componentsStyles/headerStyles";
 
 const LogoTitle = () => {
   return (
     <Image
-      style={{ width: 50, height: 50 }}
+      style={styles.logoImage}
       source={{
-        width: 30,
-        height: 30,
         uri: "https://picsum.photos/200/300",
       }}
     />

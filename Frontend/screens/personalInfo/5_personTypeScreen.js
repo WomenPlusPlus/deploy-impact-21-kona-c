@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, ImageBackground, View, Pressable } from "react-native";
-import { styles } from "../needsScreens/bComponentStyles";
+import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

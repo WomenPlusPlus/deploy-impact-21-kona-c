@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, ImageBackground, Pressable, Image } from "react-native";
-import { styles } from "./welcomeScreenStyles";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
+import { styles } from "../../styles/screensStyles/welcomeScreenStyles";
 
 const HomeScreen = ({ navigation }) => {
   const languages = [
@@ -23,6 +23,7 @@ const HomeScreen = ({ navigation }) => {
     languages[0].language
   );
   const [selectedLanguageIndex, setSelectedLanguageIndex] = useState(0);
+
   const handlePress = () => {
     navigation.navigate("LocationScreen");
   };
