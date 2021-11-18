@@ -16,6 +16,7 @@ import SelectDropdown from "react-native-select-dropdown";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/screensStyles/organisationsListStyles";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
+import { makeCall } from "../../utils/makeCall";
 
 const CompaniesOrganisationsList = ({ route, navigation }) => {
   const selectedOptionD = route.params["selectedOptionD"];
@@ -133,15 +134,7 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
                       <Text
                         key={"phone" + num}
                         style={styles.flexContainer}
-                        onPress={() => {
-                          if (Platform.OS === "android") {
-                            Linking.openURL(`tel:${num.replace(/\D/g, "")}`);
-                          } else {
-                            Linking.openURL(
-                              `telprompt:${num.replace(/\D/g, "")}`
-                            );
-                          }
-                        }}
+                        onPress={() => makeCall(num)}
                       >
                         <FontAwesome style={styles.iconText} name="phone" />
                         <Text style={styles.textBox}>{` `}</Text>

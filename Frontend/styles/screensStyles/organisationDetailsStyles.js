@@ -2,18 +2,18 @@ import { StyleSheet } from "react-native";
 import normalize from "react-native-normalize";
 
 export const styles = StyleSheet.create({
-  boxShadow:
-    Platform.OS === "ios"
-      ? {
-          shadowColor: "lightgray",
-          shadowOffset: { width: 6, height: 6 },
-          shadowOpacity: 0.5,
-          shadowRadius: 8,
-        }
-      : {
-          elevation: 10,
-          shadowColor: "lightgray",
-        },
+ // boxShadow:
+ //   Platform.OS === "ios"
+ //     ? {
+ //         shadowColor: "lightgray",
+ //         shadowOffset: { width: 6, height: 6 },
+ //         shadowOpacity: 0.5,
+ //         shadowRadius: 8,
+ //       }
+ //     : {
+ //         elevation: 10,
+ //         shadowColor: "lightgray",
+ //       },
   container: {
     flexGrow: 1,
     backgroundColor: "white",
