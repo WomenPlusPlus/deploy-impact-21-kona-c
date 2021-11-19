@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable } from "react-native";
+import {
+  Text,
+  ImageBackground,
+  View,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import options from "../../assets/jsonFiles/options_map.json";
 import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 
@@ -48,12 +54,12 @@ const NeedsScreenB = ({ route, navigation }) => {
     }
   };
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView>
         <Text style={styles.titleTextStyle}>Need help with...</Text>
         {[
           ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
@@ -69,8 +75,8 @@ const NeedsScreenB = ({ route, navigation }) => {
             </View>
           </View>
         ))}
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

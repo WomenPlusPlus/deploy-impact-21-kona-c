@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, ImageBackground, Pressable, Image } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  Pressable,
+  Image,
+  ScrollView,
+} from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
 import { styles } from "../../styles/screensStyles/welcomeScreenStyles";
@@ -29,12 +36,12 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.backgroundImage}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.backgroundImage}
+    >
+      <ScrollView>
         <View style={styles.dropdownMainContainer}>
           <Image
             resizeMode="contain"
@@ -95,8 +102,8 @@ const HomeScreen = ({ navigation }) => {
           </Pressable>
         </View>
         <Text style={styles.bottomText}>Dots can find the help you need</Text>
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

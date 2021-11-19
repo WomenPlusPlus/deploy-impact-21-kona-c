@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable } from "react-native";
+import {
+  Text,
+  ImageBackground,
+  View,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
@@ -22,12 +28,12 @@ const PersonType = ({ route, navigation }) => {
   };
 
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView>
         <Text style={styles.titleTextStyle}>
           What is the current situation of the person seeking help?
         </Text>
@@ -51,8 +57,8 @@ const PersonType = ({ route, navigation }) => {
             </Pressable>
           </View>
         </View>
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
