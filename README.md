@@ -1,4 +1,4 @@
-## Dots by ConnectingDots
+# Dots by ConnectingDots
 
 Dots: the alternative legal aid tech. A tool to connect people in need to the organisations best equipped to help them.
 
