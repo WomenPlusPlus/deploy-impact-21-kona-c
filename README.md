@@ -19,7 +19,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 ## How it works
 
 1. User needs to provide personal identification information (age, gender, etc...).
-2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different sub-sections into similar areas.
+2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
    <p align="center">
      <img src="./docs/SDG_identification.jpg" alt="Size Limit CLI" width="600">
    </p>
