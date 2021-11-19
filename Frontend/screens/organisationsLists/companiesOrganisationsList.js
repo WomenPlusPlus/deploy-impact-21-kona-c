@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
 const CompaniesOrganisationsList = ({ route, navigation }) => {
   const selectedOptionD = route.params["selectedOptionD"];
-  const [selectedRegion, setSelectedRegion] = useState(
-    route.params["selectedRegion"]
-  );
+  const selectedRegion = route.params["selectedRegion"];
   const uniqueRegionsArray = route.params["uniqueRegionsArray"];
 
   const newData = Object.keys(data).filter((orgId) => {

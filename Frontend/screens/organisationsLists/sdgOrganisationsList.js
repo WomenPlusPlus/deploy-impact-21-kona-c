@@ -5,7 +5,7 @@ import OrganisationsLists from "../../components/organisationsLists";
 const SdgOrganisationsList = ({ route, navigation }) => {
   let regionsArray = [];
   const sdgId = route.params["sdgId"];
-  const [selectedRegion, setSelectedRegion] = useState("Worldwide");
+  const selectedRegion = "Worldwide";
 
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);
