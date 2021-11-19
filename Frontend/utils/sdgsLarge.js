@@ -1,4 +1,4 @@
-export default sdgsLarge = [
+const sdgsLarge = [
   {
     id: 1,
     image: require("../assets/sdgLargeImages/SDG_large_1.jpg"),
@@ -85,3 +85,5 @@ export default sdgsLarge = [
     title: "17. Partnerships for the goals",
   },
 ];
+
+export default sdgsLarge

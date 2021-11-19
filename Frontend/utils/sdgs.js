@@ -1,4 +1,4 @@
-export default sdgs = [
+ const sdgs = [
   {
     id: 1,
     image: require("../assets/sdgImages/E-WEB-Goal-01.png"),
@@ -85,3 +85,5 @@ export default sdgs = [
     title: "17. Partnerships for the goals",
   },
 ];
+
+export default sdgs;
