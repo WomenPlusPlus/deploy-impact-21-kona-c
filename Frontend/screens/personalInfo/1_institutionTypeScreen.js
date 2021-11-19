@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, View, Pressable, ImageBackground } from "react-native";
+import {
+  Text,
+  View,
+  Pressable,
+  ImageBackground,
+  ScrollView,
+} from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
@@ -22,12 +28,12 @@ const InstitutionType = ({ route, navigation }) => {
   };
 
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView>
         <Text style={styles.titleTextStyle}>
           Whom are you seeking help for?
         </Text>
@@ -59,8 +65,8 @@ const InstitutionType = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

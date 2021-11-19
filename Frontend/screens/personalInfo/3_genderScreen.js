@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, ImageBackground, View, Pressable } from "react-native";
+import {
+  Text,
+  ImageBackground,
+  View,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
 
@@ -29,12 +35,12 @@ const InfoGender = ({ route, navigation }) => {
   };
 
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView>
         <Text style={styles.titleTextStyle}>
           What is the gender of the person seeking help?
         </Text>
@@ -88,8 +94,8 @@ const InfoGender = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

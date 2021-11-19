@@ -26,12 +26,12 @@ const OtherGender = ({ route, navigation }) => {
   };
 
   return (
-    <ScrollView keyboardShouldPersistTaps="always">
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView keyboardShouldPersistTaps="always">
         <Text style={styles.titleTextStyle}>
           Please specify a gender identity
         </Text>
@@ -89,8 +89,8 @@ const OtherGender = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ImageBackground>
-    </ScrollView>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

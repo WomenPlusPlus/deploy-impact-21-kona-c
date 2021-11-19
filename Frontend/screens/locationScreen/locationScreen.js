@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, View, ImageBackground, Pressable } from "react-native";
+import {
+  Text,
+  ScrollView,
+  View,
+  ImageBackground,
+  Pressable,
+} from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/screensStyles/locationStyles";
 
@@ -20,12 +26,12 @@ const LocationScreen = ({ navigation }) => {
   let uniqueRegionsArray = [...new Set(regionsArray)];
 
   return (
-    <View>
-      <ImageBackground
-        source={require("../../assets/background.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
+    <ImageBackground
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.image}
+    >
+      <ScrollView>
         <Text style={styles.titleTextStyle}>Please select a region</Text>
         {uniqueRegionsArray.map((region) => (
           <View key={region} style={styles.container1}>
@@ -39,8 +45,8 @@ const LocationScreen = ({ navigation }) => {
             </View>
           </View>
         ))}
-      </ImageBackground>
-    </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
