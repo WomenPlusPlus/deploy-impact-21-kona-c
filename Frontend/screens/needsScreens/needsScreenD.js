@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Text,
-  ImageBackground,
-  View,
-  Pressable,
-  ScrollView,
-} from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
+import NeedsB_to_D from "../../components/needsB_to_D";
 
 const NeedsScreenD = ({ route, navigation }) => {
   const handlePress = (selectedOptionD) => {
@@ -17,31 +10,9 @@ const NeedsScreenD = ({ route, navigation }) => {
       selectedOptionD: selectedOptionD,
     });
   };
+  const arr = companies_options.map((option) => option.First_layer);
 
-  return (
-    <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.image}
-    >
-      <ScrollView>
-        {companies_options
-          .map((option) => option.First_layer)
-          .map((option) => (
-            <View key={option} style={styles.containerD}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress(option)}
-                >
-                  <Text style={styles.textStyle}>{option}</Text>
-                </Pressable>
-              </View>
-            </View>
-          ))}
-      </ScrollView>
-    </ImageBackground>
-  );
+  return <NeedsB_to_D arr={arr} handlePress={handlePress} />;
 };
 
 export default NeedsScreenD;

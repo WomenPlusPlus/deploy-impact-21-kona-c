@@ -7,8 +7,15 @@ let bubbleWidth = 0.33 * width;
 let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
 
 export const styles = StyleSheet.create({
+
+  container: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: "5%"
+  },
   bubbleContainer: {
-    height: "100%",
+    margin: 0
   },
   container1: {
     flexDirection: "row",

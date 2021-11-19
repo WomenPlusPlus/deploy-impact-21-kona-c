@@ -14,16 +14,18 @@ import { makeCall } from "../../utils/makeCall";
 const OrganisationDetailsScreen = ({ route }) => {
   const organisationId = parseInt(Object.values(route.params));
   let focus = [];
-  focus.push(data[organisationId]["Focus 1"]);
-  focus.push(data[organisationId]["Focus 2"]);
-  focus.push(data[organisationId]["Focus 3"]);
-  focus.push(data[organisationId]["Focus 4"]);
-  focus.push(data[organisationId]["Focus 5"]);
-  focus.push(data[organisationId]["Focus 6"]);
-  focus.push(data[organisationId]["Focus 7"]);
-  focus.push(data[organisationId]["Focus 8"]);
-  focus.push(data[organisationId]["Focus 9"]);
-  focus.push(data[organisationId]["Focus 10"]);
+  focus.push(
+    data[organisationId]["Focus 1"],
+    data[organisationId]["Focus 2"],
+    data[organisationId]["Focus 3"],
+    data[organisationId]["Focus 4"],
+    data[organisationId]["Focus 5"],
+    data[organisationId]["Focus 6"],
+    data[organisationId]["Focus 7"],
+    data[organisationId]["Focus 8"],
+    data[organisationId]["Focus 9"],
+    data[organisationId]["Focus 10"]
+  );
   focus = focus.filter((focusElement) => {
     return focusElement;
   });
@@ -39,7 +41,7 @@ const OrganisationDetailsScreen = ({ route }) => {
           {data[organisationId]["Name of Organisation"]}
         </Text>
         {data[organisationId]["Focus 1"] === "" ? null : (
-          <Text key={"focus1" + organisationId} style={styles.flexContainer}>
+          <Text key={"focus" + organisationId} style={styles.flexContainer}>
             <MaterialIcons style={styles.iconText} name="center-focus-strong" />
             <Text style={styles.textBoxTitle}> Focus Areas:</Text>
             {focus.map((foc) => {

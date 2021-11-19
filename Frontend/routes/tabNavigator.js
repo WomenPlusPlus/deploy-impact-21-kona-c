@@ -26,6 +26,8 @@ import CompaniesOrganisationsList from "../screens/organisationsLists/companiesO
 import OrganisationsListScreen from "../screens/organisationsLists/organisationsListScreen";
 import OrganisationDetailsScreen from "../screens/organisationDetailsScreen/organisationDetailsScreen";
 import OrganisationsLists from "../components/organisationsLists";
+import NeedsB_to_D from "../components/needsB_to_D";
+
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -81,7 +83,11 @@ const StackNavigation = () => {
         <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
         <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
         <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
-        <Stack.Screen name="OrganisationsLists" component={OrganisationsLists} />
+        <Stack.Screen
+          name="OrganisationsLists"
+          component={OrganisationsLists}
+        />
+        <Stack.Screen name="NeedsB_to_D" component={NeedsB_to_D} />
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}

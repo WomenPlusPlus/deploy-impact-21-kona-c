@@ -1,21 +1,8 @@
 import React from "react";
-import {
-  Text,
-  ImageBackground,
-  View,
-  Pressable,
-  ScrollView,
-} from "react-native";
 import options from "../../assets/jsonFiles/options_map.json";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import NeedsB_to_D from "../../components/needsB_to_D";
 
 const NeedsScreenB = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
-  const selectedPersonType = route.params["selectedPersonType"];
   const selectedOptionScreenA = route.params["selectedOptionScreenA"];
   const optionsFilteredA = options.filter((option) => {
     return option["First_layer"] === selectedOptionScreenA;
@@ -27,24 +14,24 @@ const NeedsScreenB = ({ route, navigation }) => {
     });
     if (optionsFilteredB.length === 1) {
       navigation.navigate("OrganisationsListScreen", {
-        selectedRegion: selectedRegion,
-        selectedInstitutionType: selectedInstitutionType,
-        selectedForWho: selectedForWho,
-        selectedGender: selectedGender,
-        selectedAge: selectedAge,
-        selectedPersonType: selectedPersonType,
+        selectedRegion: route.params["selectedRegion"],
+        selectedInstitutionType: route.params["selectedInstitutionType"],
+        selectedForWho: route.params["selectedForWho"],
+        selectedGender: route.params["selectedGender"],
+        selectedAge: route.params["selectedAge"],
+        selectedPersonType: route.params["selectedPersonType"],
         selectedOptionScreenB: selectedOptionScreenB,
         uniqueRegionsArray: route.params["uniqueRegionsArray"],
         SDG_Id: optionsFilteredB[0]["SDG_Id"],
       });
     } else {
       navigation.navigate("NeedsScreenC", {
-        selectedRegion: selectedRegion,
-        selectedInstitutionType: selectedInstitutionType,
-        selectedForWho: selectedForWho,
-        selectedGender: selectedGender,
-        selectedAge: selectedAge,
-        selectedPersonType: selectedPersonType,
+        selectedRegion: route.params["selectedRegion"],
+        selectedInstitutionType: route.params["selectedInstitutionType"],
+        selectedForWho: route.params["selectedForWho"],
+        selectedGender: route.params["selectedGender"],
+        selectedAge: route.params["selectedAge"],
+        selectedPersonType: route.params["selectedPersonType"],
         selectedOptionScreenA: selectedOptionScreenA,
         selectedOptionScreenB: selectedOptionScreenB,
         arrayFilteredA: optionsFilteredA,
@@ -53,31 +40,11 @@ const NeedsScreenB = ({ route, navigation }) => {
       });
     }
   };
-  return (
-    <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.image}
-    >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
-        {[
-          ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
-        ].map((option) => (
-          <View key={option} style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress(option)}
-              >
-                <Text style={styles.textStyle}>{option}</Text>
-              </Pressable>
-            </View>
-          </View>
-        ))}
-      </ScrollView>
-    </ImageBackground>
-  );
+  const arr = [
+    ...new Set(optionsFilteredA.map((option) => option.Second_layer)),
+  ];
+
+  return <NeedsB_to_D arr={arr} handlePress={handlePress} />;
 };
 
 export default NeedsScreenB;
