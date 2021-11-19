@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
