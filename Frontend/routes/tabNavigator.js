@@ -25,7 +25,7 @@ import SdgOrganisationsList from "../screens/organisationsLists/sdgOrganisations
 import CompaniesOrganisationsList from "../screens/organisationsLists/companiesOrganisationsList";
 import OrganisationsListScreen from "../screens/organisationsLists/organisationsListScreen";
 import OrganisationDetailsScreen from "../screens/organisationDetailsScreen/organisationDetailsScreen";
-
+import OrganisationsLists from "../components/organisationsLists";
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -81,6 +81,7 @@ const StackNavigation = () => {
         <Stack.Screen name="NeedsScreenB" component={NeedsScreenB} />
         <Stack.Screen name="NeedsScreenC" component={NeedsScreenC} />
         <Stack.Screen name="NeedsScreenD" component={NeedsScreenD} />
+        <Stack.Screen name="OrganisationsLists" component={OrganisationsLists} />
         <Stack.Screen
           name="OrganisationsListScreen"
           component={OrganisationsListScreen}
@@ -142,7 +143,7 @@ function TabNavigatorBottom() {
             tabBarIcon: () => (
               <Image
                 source={require("../assets/sdg.png")}
-                style={{ width: 50, height: 50, margin: -12 }}
+                style={{ width: 25, height: 25, margin: -3 }}
               />
             ),
           }}
