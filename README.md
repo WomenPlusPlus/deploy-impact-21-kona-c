@@ -1,6 +1,7 @@
 # Dots by ConnectingDots
 
-Dots: the alternative legal aid tech. A tool to connect people in need to the organisations best equipped to help them.
+Dots: the alternative legal aid tech. 
+A tool to connect people in need to the organisations best equipped to help them.
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
