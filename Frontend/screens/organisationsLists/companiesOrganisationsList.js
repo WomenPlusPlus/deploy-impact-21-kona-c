@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import companies_options from "../../assets/jsonFiles/companies_options_map.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
 const CompaniesOrganisationsList = ({ route, navigation }) => {
   const selectedOptionD = route.params["selectedOptionD"];
-  const selectedRegion = route.params["selectedRegion"];
+  const [selectedRegion, setSelectedRegion] = useState(
+    route.params["selectedRegion"]
+  );
+
   const uniqueRegionsArray = route.params["uniqueRegionsArray"];
 
   const newData = Object.keys(data).filter((orgId) => {
@@ -40,6 +43,7 @@ const CompaniesOrganisationsList = ({ route, navigation }) => {
       selectedRegion={selectedRegion}
       newData={newData}
       navigation={navigation}
+      setSelectedRegion={setSelectedRegion}
     />
   );
 };

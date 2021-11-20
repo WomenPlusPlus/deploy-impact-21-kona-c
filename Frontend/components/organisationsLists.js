@@ -15,12 +15,11 @@ import {
 } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
-import { styles } from "../styles/screensStyles/organisationsListStyles";
+import { styles } from "../styles/componentsStyles/organisationsListStyles";
 import sdgsLarge from "../utils/sdgsLarge";
 import { makeCall } from "../utils/makeCall";
 
 const OrganisationsLists = (props) => {
-  const [selectedRegion, setSelectedRegion] = useState(props.selectedRegion);
   return (
     <ImageBackground
       source={require("../assets/background.png")}
@@ -41,43 +40,41 @@ const OrganisationsLists = (props) => {
             another goal.
           </Text>
         ) : (
-          <View>
-            <Text style={styles.titleTextStyle}>
-              List of organisations that could provide help
-            </Text>
-            <SelectDropdown
-              buttonTextStyle={styles.textStyle}
-              buttonStyle={styles.button}
-              defaultButtonText={selectedRegion}
-              renderDropdownIcon={() => {
-                return (
-                  <FontAwesome
-                    name="chevron-down"
-                    style={styles.dropdownicon}
-                  />
-                );
-              }}
-              dropdownIconPosition={"right"}
-              data={props.uniqueRegionsArray}
-              onSelect={(selectedItem, index) => {
-                setSelectedRegion(selectedItem);
-              }}
-              buttonTextAfterSelection={(selectedItem, index) => {
-                return selectedItem;
-              }}
-              rowTextForSelection={(item, index) => {
-                return item;
-              }}
-              renderCustomizedRowChild={(selectedItem, index) => {
-                return (
-                  <View style={styles.buttonDown}>
-                    <Text style={styles.textStyle}> {selectedItem}</Text>
-                  </View>
-                );
-              }}
-            />
-          </View>
+          <Text style={styles.titleTextStyle}>
+            List of organisations that could provide help
+          </Text>
         )}
+        <View>
+          <SelectDropdown
+            buttonTextStyle={styles.textStyle}
+            buttonStyle={styles.button}
+            defaultButtonText={props.selectedRegion}
+            renderDropdownIcon={() => {
+              return (
+                <FontAwesome name="chevron-down" style={styles.dropdownicon} />
+              );
+            }}
+            dropdownIconPosition={"right"}
+            data={props.uniqueRegionsArray}
+            onSelect={(selectedItem, index) => {
+              props.setSelectedRegion(selectedItem);
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              return selectedItem;
+            }}
+            rowTextForSelection={(item, index) => {
+              return item;
+            }}
+            renderCustomizedRowChild={(selectedItem, index) => {
+              return (
+                <View style={styles.buttonDown}>
+                  <Text style={styles.textStyle}> {selectedItem}</Text>
+                </View>
+              );
+            }}
+          />
+        </View>
+
         {props.newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
