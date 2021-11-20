@@ -1,36 +1,21 @@
 import React from "react";
-import {
-  Text,
-  ImageBackground,
-  View,
-  Pressable,
-  ScrollView,
-} from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import NeedsB_to_D from "../../components/needsB_to_D";
 
 const NeedsScreenC = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
-  const selectedPersonType = route.params["selectedPersonType"];
-  const selectedOptionScreenA = route.params["selectedOptionScreenA"];
-  const selectedOptionScreenB = route.params["selectedOptionScreenB"];
   const optionsFilteredB = route.params["optionsFilteredB"];
 
   const handlePress = (selectedOptionScreenC) => {
     for (let i = 0; i < optionsFilteredB.length; i++) {
       if (selectedOptionScreenC === optionsFilteredB[i]["Third_layer"]) {
         navigation.navigate("OrganisationsListScreen", {
-          selectedRegion: selectedRegion,
-          selectedInstitutionType: selectedInstitutionType,
-          selectedForWho: selectedForWho,
-          selectedGender: selectedGender,
-          selectedAge: selectedAge,
-          selectedPersonType: selectedPersonType,
-          selectedOptionScreenA: selectedOptionScreenA,
-          selectedOptionScreenB: selectedOptionScreenB,
+          selectedRegion: route.params["selectedRegion"],
+          selectedInstitutionType: route.params["selectedInstitutionType"],
+          selectedForWho: route.params["selectedForWho"],
+          selectedGender: route.params["selectedGender"],
+          selectedAge: route.params["selectedAge"],
+          selectedPersonType: route.params["selectedPersonType"],
+          selectedOptionScreenA: route.params["selectedOptionScreenA"],
+          selectedOptionScreenB: route.params["selectedOptionScreenB"],
           selectedOptionScreenC: selectedOptionScreenC,
           uniqueRegionsArray: route.params["uniqueRegionsArray"],
           SDG_Id: optionsFilteredB[i]["SDG_Id"],
@@ -38,32 +23,9 @@ const NeedsScreenC = ({ route, navigation }) => {
       }
     }
   };
-
-  return (
-    <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.image}
-    >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
-        {optionsFilteredB
-          .map((option) => option.Third_layer)
-          .map((option) => (
-            <View key={option} style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress(option)}
-                >
-                  <Text style={styles.textStyle}>{option}</Text>
-                </Pressable>
-              </View>
-            </View>
-          ))}
-      </ScrollView>
-    </ImageBackground>
-  );
+  const arr = optionsFilteredB.map((option) => option.Third_layer);
+  
+  return <NeedsB_to_D arr={arr} handlePress={handlePress} />;
 };
 
 export default NeedsScreenC;
