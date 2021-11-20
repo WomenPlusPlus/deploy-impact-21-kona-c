@@ -21,7 +21,7 @@ const OtherGender = ({ route, navigation }) => {
       selectedInstitutionType: selectedInstitutionType,
       selectedForWho: selectedForWho,
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
-      selectedGender: "M",
+      selectedGender: "O",
     });
   };
 
@@ -40,7 +40,7 @@ const OtherGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("M")}
+                onPress={() => handlePress("O")}
               >
                 <Text style={styles.textStyle}>Non-binary</Text>
               </Pressable>
@@ -51,7 +51,7 @@ const OtherGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("M")}
+                onPress={() => handlePress("O")}
               >
                 <Text style={styles.textStyle}>Gender-fluid</Text>
               </Pressable>
@@ -61,7 +61,7 @@ const OtherGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("M")}
+                onPress={() => handlePress("O")}
               >
                 <Text style={styles.textStyle}>Agender</Text>
               </Pressable>
@@ -70,7 +70,7 @@ const OtherGender = ({ route, navigation }) => {
           <View style={styles.container1}>
             <Pressable
               style={styles.circleButton}
-              onPress={() => handlePress("M")}
+              onPress={() => handlePress("O")}
             >
               <Text style={styles.textStyle}>Intersex</Text>
             </Pressable>

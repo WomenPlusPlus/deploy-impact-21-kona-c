@@ -73,6 +73,96 @@ const OrganisationsLists = (props) => {
               );
             }}
           />
+          {props.selectedGender !== undefined ? (
+            <SelectDropdown
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              defaultButtonText={
+                props.selectedGender === "F"
+                  ? "Female"
+                  : props.selectedGender === "M"
+                  ? "Male"
+                  : "Other"
+              }
+              renderDropdownIcon={() => {
+                return (
+                  <FontAwesome
+                    name="chevron-down"
+                    style={styles.dropdownicon}
+                  />
+                );
+              }}
+              dropdownIconPosition={"right"}
+              data={["Female", "Male", "Other"]}
+              onSelect={(selectedItem, index) => {
+                props.setSelectedGender(
+                  selectedItem === "Other" ? "O" : selectedItem.charAt(0)
+                );
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+              renderCustomizedRowChild={(selectedItem, index) => {
+                return (
+                  <View style={styles.buttonDown}>
+                    <Text style={styles.textStyle}> {selectedItem}</Text>
+                  </View>
+                );
+              }}
+            />
+          ) : null}
+          {props.selectedAge !== undefined ? (
+            <SelectDropdown
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              defaultButtonText={
+                props.selectedAge === "A"
+                  ? "25+"
+                  : props.selectedAge === "E"
+                  ? "18-25"
+                  : props.selectedAge === "Y"
+                  ? "12-18"
+                  : "0-12"
+              }
+              renderDropdownIcon={() => {
+                return (
+                  <FontAwesome
+                    name="chevron-down"
+                    style={styles.dropdownicon}
+                  />
+                );
+              }}
+              dropdownIconPosition={"right"}
+              data={["0-12", "12-18", "18-25", "25+"]}
+              onSelect={(selectedItem, index) => {
+                props.setSelectedAge(
+                  selectedItem === "25+"
+                    ? "A"
+                    : selectedItem === "18-25"
+                    ? "E"
+                    : selectedItem === "12-18"
+                    ? "Y"
+                    : "C"
+                );
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+              renderCustomizedRowChild={(selectedItem, index) => {
+                return (
+                  <View style={styles.buttonDown}>
+                    <Text style={styles.textStyle}> {selectedItem}</Text>
+                  </View>
+                );
+              }}
+            />
+          ) : null}
         </View>
 
         {props.newData.map((organisation) => (
@@ -116,9 +206,7 @@ const OrganisationsLists = (props) => {
                 <Text style={styles.textBox}>{` `}</Text>
                 <Text
                   style={styles.textBoxWebsite}
-                  onPress={() =>
-                    Linking.openURL(data[organisation]["Email"])
-                  }
+                  onPress={() => Linking.openURL(data[organisation]["Email"])}
                 >
                   {data[organisation]["Email"]}
                 </Text>

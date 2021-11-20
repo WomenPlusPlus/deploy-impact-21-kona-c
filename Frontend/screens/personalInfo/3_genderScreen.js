@@ -84,7 +84,7 @@ const InfoGender = ({ route, navigation }) => {
             <View style={styles.bubbleContainer}>
               <Pressable
                 style={styles.circleButton}
-                onPress={() => handlePress("M")}
+                onPress={() => handlePress("N")}
               >
                 <View style={styles.severalIconsButton}>
                   <FontAwesome5 name="question" style={styles.userImage} />
