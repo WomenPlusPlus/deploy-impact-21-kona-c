@@ -6,10 +6,17 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+    "test": "jest",
     "convert-csv-organisations": "csvtojson assets/csvFiles/organisations.csv > assets/jsonFiles/organisations.json",
     "convert-csv-options": "csvtojson assets/csvFiles/options_map.csv > assets/jsonFiles/options_map.json",
     "convert-csv-companies-options": "csvtojson assets/csvFiles/companies_options_map.csv > assets/jsonFiles/companies_options_map.json",
     "convert-csv": "npm run convert-csv-organisations && npm run convert-csv-options && npm run convert-csv-companies-options"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.0",
@@ -26,6 +33,7 @@
     "expo-font": "~9.2.1",
     "expo-status-bar": "~1.0.4",
     "install": "^0.13.0",
+    "jest-expo": "^43.0.1",
     "npm": "^8.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -42,7 +50,8 @@
     "react-native-web": "~0.13.12",
     "react-navigation-drawer": "^2.7.1",
     "react-navigation-stack": "^2.10.4",
-    "react-router-native": "^5.2.1"
+    "react-router-native": "^5.2.1",
+    "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
-const dataFunc = (
+export const dataFunc = (
   data,
   selectedRegion,
   selectedGender,
