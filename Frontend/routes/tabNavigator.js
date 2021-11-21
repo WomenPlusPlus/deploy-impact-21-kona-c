@@ -36,16 +36,22 @@ const handlePress = (routeName) => {
   switch (routeName) {
     case 'LocationScreen':
       questionnaireMessage = 'a Region';
+      break;
     case 'InfoGender':
       questionnaireMessage = 'a Gender';
+      break;
     case 'InfoAge':
       questionnaireMessage = 'a Age Range';
+      break;
     case 'NeedsScreenA':
       questionnaireMessage = 'an Area of interest';
+      break;
     case 'NeedsScreenB':
       questionnaireMessage = 'a Subtopic';
+      break;
     case 'NeedsScreenC':
       questionnaireMessage = 'a Subtopic';
+      break;
   };
   let alertMessage =  'Please select '+questionnaireMessage+'. This will help show only relevant organisations.';
   switch (routeName) {
