@@ -100,7 +100,7 @@ const OrganisationDetailsScreen = ({ route }) => {
                 <Text
                   style={styles.textBoxWebsite}
                   onPress={() =>
-                    Linking.openURL(data[organisationId]["Email"])
+                    Linking.openURL(`mailto:${data[organisationId]["Email"]}`)
                   }
                 >
                   {data[organisationId]["Email"]}

@@ -206,7 +206,7 @@ const OrganisationsLists = (props) => {
                 <Text style={styles.textBox}>{` `}</Text>
                 <Text
                   style={styles.textBoxWebsite}
-                  onPress={() => Linking.openURL(data[organisation]["Email"])}
+                  onPress={() => Linking.openURL(`mailto:${data[organisation]["Email"]}`)}
                 >
                   {data[organisation]["Email"]}
                 </Text>
