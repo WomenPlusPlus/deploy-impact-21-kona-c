@@ -164,7 +164,6 @@ const OrganisationsLists = (props) => {
             />
           ) : null}
         </View>
-
         {props.newData.map((organisation) => (
           <View key={"listview" + organisation} style={styles.container}>
             <Text key={"name" + organisation} style={styles.textBoxName}>
@@ -206,7 +205,9 @@ const OrganisationsLists = (props) => {
                 <Text style={styles.textBox}>{` `}</Text>
                 <Text
                   style={styles.textBoxWebsite}
-                  onPress={() => Linking.openURL(`mailto:${data[organisation]["Email"]}`)}
+                  onPress={() =>
+                    Linking.openURL(`mailto:${data[organisation]["Email"]}`)
+                  }
                 >
                   {data[organisation]["Email"]}
                 </Text>

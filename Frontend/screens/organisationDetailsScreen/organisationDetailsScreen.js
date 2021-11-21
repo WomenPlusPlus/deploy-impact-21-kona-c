@@ -93,20 +93,20 @@ const OrganisationDetailsScreen = ({ route }) => {
             </Text>
           </Text>
         )}
-          {data[organisationId]["Email"] === "" ? null : (
-              <Text key={"email" + organisationId} style={styles.flexContainer}>
-                <MaterialCommunityIcons style={styles.iconText} name="email" />
-                <Text style={styles.textBox}>{` `}</Text>
-                <Text
-                  style={styles.textBoxWebsite}
-                  onPress={() =>
-                    Linking.openURL(`mailto:${data[organisationId]["Email"]}`)
-                  }
-                >
-                  {data[organisationId]["Email"]}
-                </Text>
-              </Text>
-            )}
+        {data[organisationId]["Email"] === "" ? null : (
+          <Text key={"email" + organisationId} style={styles.flexContainer}>
+            <MaterialCommunityIcons style={styles.iconText} name="email" />
+            <Text style={styles.textBox}>{` `}</Text>
+            <Text
+              style={styles.textBoxWebsite}
+              onPress={() =>
+                Linking.openURL(`mailto:${data[organisationId]["Email"]}`)
+              }
+            >
+              {data[organisationId]["Email"]}
+            </Text>
+          </Text>
+        )}
         {data[organisationId]["Phone Number"] === ""
           ? null
           : data[organisationId]["Phone Number"]
