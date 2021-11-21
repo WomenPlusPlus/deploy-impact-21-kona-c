@@ -110,6 +110,20 @@ const OrganisationsLists = (props) => {
                 </Text>
               </Text>
             )}
+            {data[organisation]["Email"] === "" ? null : (
+              <Text key={"email" + organisation} style={styles.flexContainer}>
+                <MaterialCommunityIcons style={styles.iconText} name="email" />
+                <Text style={styles.textBox}>{` `}</Text>
+                <Text
+                  style={styles.textBoxWebsite}
+                  onPress={() =>
+                    Linking.openURL(data[organisation]["Email"])
+                  }
+                >
+                  {data[organisation]["Email"]}
+                </Text>
+              </Text>
+            )}
             {data[organisation]["Phone Number"] === ""
               ? null
               : data[organisation]["Phone Number"]
