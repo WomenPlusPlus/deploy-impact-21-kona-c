@@ -8,7 +8,7 @@ import {
   FontAwesome5,
 } from "@expo/vector-icons";
 import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "../../styles/screensStyles/organisationDetailsStyles";
+import { styles } from "../../styles/organisationDetailsStyles";
 import { makeCall } from "../../utils/makeCall";
 
 const OrganisationDetailsScreen = ({ route }) => {
@@ -34,9 +34,9 @@ const OrganisationDetailsScreen = ({ route }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.imageBackground}
+      style={styles.backgroundImage}
     >
-      <ScrollView style={[styles.container, styles.boxShadow]}>
+      <ScrollView style={styles.container}>
         <Text style={styles.textBoxName}>
           {data[organisationId]["Name of Organisation"]}
         </Text>

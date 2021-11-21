@@ -1,31 +1,33 @@
-import { StyleSheet, Dimensions, PixelRatio } from "react-native";
-import normalize from "react-native-normalize";
-
-const { width, height } = Dimensions.get("screen");
+import { StyleSheet, Dimensions } from "react-native";
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
-  mainContainer: {
-    height: height,
-  },
   container: {
     backgroundColor: "white",
-    margin: 15,
+    width: 0.93 * width,
     borderRadius: 5,
     overflow: "hidden",
     padding: "3%",
+    alignSelf: "center",
+    marginTop: 0.04 * width,
+    marginBottom: 0.02 * width,
   },
   textBoxName: {
     color: "#A169B1",
-    fontSize: normalize(22),
-    padding: 10,
+    fontSize: 22,
+    padding: 0.03 * width,
     textAlign: "center",
     fontWeight: "bold",
   },
   textBox: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(20),
-    marginRight: 10,
+    fontSize: 20,
   },
   textBoxTitle: {
     fontFamily: "Roboto-Regular",
@@ -35,50 +37,49 @@ export const styles = StyleSheet.create({
   textBoxWebsite: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(20),
-    marginRight: 10,
+    fontSize: 20,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
   textBoxPhone: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(20),
-    marginRight: 10,
+    fontSize: 20,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(25),
-    marginBottom: 15,
-    marginTop: 10,
+    fontSize: 25,
+    marginBottom: 0.03 * width,
+    marginTop: 0.03 * width,
     textAlign: "center",
   },
   notFoundTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(25),
+    fontSize: 25,
     textAlign: "center",
     textAlignVertical: "center",
-    marginTop: 15,
-    marginBottom: 20,
+    marginTop: 0.03 * width,
+    marginBottom: 0.03 * width,
   },
   flexContainer: {
-    marginBottom: 10,
+    marginBottom: 0.02 * width,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
-  imageBackground: {
+  backgroundImage: {
     height: "100%",
+    width: width,
+    alignSelf: "center",
   },
   image: {
     width: "100%",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: -22,
   },
   nextButton: {
     color: "#A169B1",
@@ -87,13 +88,13 @@ export const styles = StyleSheet.create({
   },
   nextButtonText: {
     color: "#A169B1",
-    fontSize: normalize(38),
+    fontSize: 38,
     fontWeight: "bold",
     justifyContent: "center",
   },
   iconText: {
     color: "#A169B1",
-    fontSize: normalize(22),
+    fontSize: 22,
   },
   textStyle: {
     color: "#921CB1",
@@ -104,7 +105,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
     alignSelf: "center",
     borderRadius: 5,
-    width: "93%",
+    width: 0.92 * width,
   },
   buttonDown: {
     color: "#921CB1",

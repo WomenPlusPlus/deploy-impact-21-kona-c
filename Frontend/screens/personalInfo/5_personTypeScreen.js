@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import { styles } from "../../styles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

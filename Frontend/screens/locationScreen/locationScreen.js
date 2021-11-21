@@ -7,7 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "../../styles/screensStyles/locationStyles";
+import { styles } from "../../styles/locationStyles";
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];

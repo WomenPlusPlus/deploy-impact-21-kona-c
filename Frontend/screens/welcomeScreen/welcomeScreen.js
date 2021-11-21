@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
-import { styles } from "../../styles/screensStyles/welcomeScreenStyles";
+import { styles } from "../../styles/welcomeScreenStyles";
 
 const HomeScreen = ({ navigation }) => {
   const languages = [

@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
-import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
+import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InfoGender = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

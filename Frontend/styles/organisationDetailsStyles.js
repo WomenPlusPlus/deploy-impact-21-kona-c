@@ -1,5 +1,10 @@
-import { StyleSheet } from "react-native";
-import normalize from "react-native-normalize";
+import { StyleSheet, Dimensions } from "react-native";
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
   // boxShadow:
@@ -15,67 +20,66 @@ export const styles = StyleSheet.create({
   //         shadowColor: "lightgray",
   //       },
   container: {
-    flexGrow: 1,
     backgroundColor: "white",
-    margin: 15,
+    width: 0.93 * width,
+    alignSelf: "center",
     borderRadius: 5,
     overflow: "hidden",
+    padding: "3%",
+    marginTop: 0.04 * width,
+    marginBottom: 0.04 * width,
   },
   textBoxName: {
     color: "#A169B1",
-    fontSize: normalize(26),
-    padding: 10,
+    fontSize: 24,
+    marginBottom: "10%",
     textAlign: "center",
     fontWeight: "bold",
   },
   textBox: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
+    fontSize: 18,
   },
   textBoxTitle: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(22),
+    fontSize: 20,
     fontWeight: "bold",
   },
   textBoxWebsite: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
+    fontSize: 18,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
   textBoxPhone: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(18),
-    marginRight: 10,
+    fontSize: 18,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: normalize(25),
-    margin: 25,
-    textAlign: "center",
-  },
   flexContainer: {
     flexDirection: "row",
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
+    marginBottom: 0.04 * width,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     textAlign: "justify",
+    borderBottomWidth: 1,
+    borderBottomColor: "lightgray",
+    paddingBottom: 0.02 * width
   },
   iconText: {
     color: "#A169B1",
-    fontSize: normalize(20),
+    fontSize: 20,
     fontWeight: "bold",
   },
-  imageBackground: {
+  backgroundImage: {
     height: "100%",
+    width: width,
+    alignSelf: "center",
   },
 });

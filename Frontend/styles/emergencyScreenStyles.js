@@ -1,6 +1,10 @@
 import { StyleSheet, Dimensions } from "react-native";
-import normalize from "react-native-normalize";
-const { width, height } = Dimensions.get("window");
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
   mainContainer: {
@@ -43,7 +47,7 @@ export const styles = StyleSheet.create({
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(25),
+    fontSize: 25,
     marginTop: 20,
     marginBottom: 10,
     textAlign: "center",
@@ -52,28 +56,30 @@ export const styles = StyleSheet.create({
   textStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(22),
+    fontSize: 22,
   },
   textBoldStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(20),
+    fontSize: 20,
     fontWeight: "bold",
   },
   textBoxPhone: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(20),
+    fontSize: 20,
     marginRight: 10,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
   iconText: {
     color: "#921CB1",
-    fontSize: normalize(23),
+    fontSize: 23,
     paddingTop: "1%",
   },
-  image: {
-    height: height,
+  backgroundImage: {
+    height: "100%",
+    width: width,
+    alignSelf: "center",
   },
 });

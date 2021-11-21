@@ -6,7 +6,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-end",
     alignSelf: "flex-end",
-    width: 24,
+    width: "6%",
+    height: "50%",
+    marginBottom: "5%",
+    marginRight: "2%"
   },
   nextButtonText: {
     color: "#A169B1",

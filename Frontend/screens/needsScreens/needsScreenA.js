@@ -13,7 +13,7 @@ import {
   Entypo,
 } from "@expo/vector-icons";
 import options from "../../assets/jsonFiles/options_map.json";
-import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
+import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const NeedsScreenA = ({ route, navigation }) => {
   let optionsArray = [];

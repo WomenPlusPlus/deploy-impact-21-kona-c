@@ -1,19 +1,23 @@
-import { StyleSheet } from "react-native";
-import normalize from "react-native-normalize";
+import { StyleSheet, Dimensions } from "react-native";
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
-  mainContainer: {
-    marginTop: "10%",
-  },
   textBoxName: {
     color: "#A169B1",
-    fontSize: normalize(22),
+    fontSize: 22,
     padding: 8,
     textAlign: "center",
     fontWeight: "bold",
   },
-  imageBackground: {
+  backgroundImage: {
     height: "100%",
+    width: width,
+    alignSelf: "center",
   },
   image: {
     width: 100,
@@ -27,7 +31,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#8A449D",
-    fontSize: normalize(22),
+    fontSize: 22,
   },
   buttonContainer: {
     margin: 8,
@@ -49,7 +53,7 @@ export const styles = StyleSheet.create({
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#A169B1",
-    fontSize: normalize(25),
+    fontSize: 25,
     margin: 25,
     textAlign: "center",
   },

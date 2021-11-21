@@ -69,7 +69,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#E4C9E5",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "flex-end",
     borderColor: "white",
     borderWidth: 2,
     margin: 0.01 * width,

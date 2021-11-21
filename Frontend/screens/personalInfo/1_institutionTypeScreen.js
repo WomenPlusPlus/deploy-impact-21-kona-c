@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
+import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InstitutionType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];

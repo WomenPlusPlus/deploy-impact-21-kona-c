@@ -7,7 +7,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
 const OtherGender = ({ route, navigation }) => {

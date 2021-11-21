@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, ScrollView } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import { styles } from "../../styles/screensStyles/hotlineScreenStyles";
+import { styles } from "../../styles/hotlineScreenStyles";
 import { makeCall } from "../../utils/makeCall";
 
 const HotlineScreen = () => {
@@ -9,7 +9,7 @@ const HotlineScreen = () => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView style={styles.mainContainer}>
         <View style={styles.container1}>

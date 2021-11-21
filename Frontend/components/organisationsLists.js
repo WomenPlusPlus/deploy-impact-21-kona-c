@@ -15,7 +15,7 @@ import {
 } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
-import { styles } from "../styles/componentsStyles/organisationsListStyles";
+import { styles } from "../styles/organisationsListStyles";
 import sdgsLarge from "../utils/sdgsLarge";
 import { makeCall } from "../utils/makeCall";
 
@@ -24,7 +24,7 @@ const OrganisationsLists = (props) => {
     <ImageBackground
       source={require("../assets/background.png")}
       resizeMode="cover"
-      style={styles.imageBackground}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         {props.SDG_Id ? (

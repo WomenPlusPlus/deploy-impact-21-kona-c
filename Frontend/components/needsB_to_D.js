@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import { styles } from "../styles/screensStyles/longerButtonsScreenStyles";
+import { styles } from "../styles/longerButtonsScreenStyles";
 
 const NeedsB_to_D = (props) => {
   return (

@@ -8,7 +8,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 import sdgs from "../../utils/sdgs";
-import { styles } from "../../styles/screensStyles/sdgScreenStyles";
+import { styles } from "../../styles/sdgScreenStyles";
 
 const SdgScreen = ({ navigation }) => {
   const handlePress = (sdgId) => {
@@ -21,9 +21,9 @@ const SdgScreen = ({ navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.imageBackground}
+      style={styles.backgroundImage}
     >
-      <ScrollView style={styles.mainContainer}>
+      <ScrollView>
         <Text style={styles.titleTextStyle}>
           Choose one of the 17 goal and see organisations that can help!
         </Text>
