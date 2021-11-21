@@ -13,9 +13,9 @@ const NeedsB_to_D = (props) => {
     <ImageBackground
       source={require("../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
-      <ScrollView>
+      <ScrollView style={styles.mainContainer}>
         <Text style={styles.titleTextStyle}>Need help with...</Text>
         {props.arr.map((option) => (
           <View key={option} style={styles.container1}>

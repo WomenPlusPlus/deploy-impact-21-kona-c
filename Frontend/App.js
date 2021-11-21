@@ -4,7 +4,7 @@ import { useFonts } from "expo-font";
 
 import TabNavigatorBottom from "./routes/tabNavigator";
 
-export default function App() {
+const App = () => {
   let [fontsLoaded] = useFonts({
     "Roboto-Regular": require("./assets/fonts/Roboto-Regular.ttf"),
     "Roboto-Italic": require("./assets/fonts/Roboto-Italic.ttf"),
@@ -16,4 +16,5 @@ export default function App() {
   }
 
   return <TabNavigatorBottom />;
-}
+};
+export default App;

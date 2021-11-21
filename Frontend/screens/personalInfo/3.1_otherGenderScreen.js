@@ -29,7 +29,7 @@ const OtherGender = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView keyboardShouldPersistTaps="always">
         <Text style={styles.titleTextStyle}>

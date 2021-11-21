@@ -1,74 +1,70 @@
 import { StyleSheet, Dimensions } from "react-native";
-import normalize from "react-native-normalize";
-
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
+let height = Dimensions.get("window").height;
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
-
   container: {
-    flexDirection: "row",
     flexWrap: "wrap",
+    flexDirection: "row",
     justifyContent: "center",
-    marginTop: "5%"
+    marginTop: 0.01 * height
   },
   bubbleContainer: {
-    margin: 0
+    margin: 0,
+    width: 0.3 * width,
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: "2.5%",
   },
   container1: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "6%",
+    marginTop: "3%",
   },
   container2: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "6%",
+    marginTop: "3%",
   },
   textStyle: {
-    width: bubbleSize / 1.3,
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(16),
-    marginTop: "2%",
-  },
-  textBracketStyle: {
-    width: bubbleSize / 1.5,
-    alignSelf: "center",
-    textAlign: "center",
-    fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: normalize(14),
-    marginTop: "2%",
+    fontSize: 16,
+    marginTop: "1%",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(25),
+    fontSize: 25,
     marginTop: 15,
     textAlign: "center",
   },
   circleButton: {
-    width: bubbleSize / 1.3,
-    height: bubbleSize / 1.3,
-    borderRadius: bubbleSize / 2,
+    width: 0.28 * width,
+    height: 0.28 * width,
+    borderRadius: 200,
     backgroundColor: "#A169B1",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     borderColor: "white",
     borderWidth: 2,
-    marginLeft: bubbleSize / 38,
-    marginRight: bubbleSize / 38,
+    marginLeft: 0.01 * width,
+    marginRight: 0.01 * width,
   },
   userImage: {
-    fontSize: normalize(46),
+    fontSize: 46,
     color: "white",
     paddingBottom: "1%",
   },
@@ -78,11 +74,13 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   severalIconsText: {
-    fontSize: normalize(38),
+    fontSize: 38,
     color: "white",
   },
-  image: {
-    height: height,
+  backgroundImage: {
+    height: "100%",
+    width: width,
+    alignSelf: "center",
   },
   text: {
     color: "black",

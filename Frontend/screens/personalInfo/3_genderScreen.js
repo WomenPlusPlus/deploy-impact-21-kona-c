@@ -38,13 +38,13 @@ const InfoGender = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         <Text style={styles.titleTextStyle}>
           What is the gender of the person seeking help?
         </Text>
-        <View>
+        <View >
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <Pressable

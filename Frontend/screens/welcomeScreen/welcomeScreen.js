@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }) => {
             }}
           />
         </View>
-        <View style={styles.containerRoundXL}>
+        <View>
           <Pressable style={styles.roundXL} onPress={handlePress}>
             <Text style={styles.textButton}>
               If you are in a vulnerable situation...

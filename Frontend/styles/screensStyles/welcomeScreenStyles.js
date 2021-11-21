@@ -1,16 +1,11 @@
-import { StyleSheet, Dimensions, PixelRatio } from "react-native";
-import normalize from "react-native-normalize";
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.25 * height;
-let bubbleXLwidth = 0.75 * width;
-let bubbleXL = Math.round((bubbleXLwidth + partialHeight) / 2);
-let bubbleMwidth = 0.45 * width;
-let bubbleM = Math.round((bubbleMwidth + partialHeight) / 2);
-let bubbleSwidth = 0.3 * width;
-let bubbleS = Math.round((bubbleSwidth + partialHeight) / 2);
-let sizeS = bubbleS;
-let sizeM = bubbleM;
-let sizeXL = bubbleXL;
+import { StyleSheet, Dimensions } from "react-native";
+let height = Dimensions.get("window").height;
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,7 +14,7 @@ export const styles = StyleSheet.create({
   },
   textTitle: {
     fontFamily: "Roboto-Regular",
-    fontSize: normalize(23),
+    fontSize: 23,
     fontWeight: "bold",
     textShadowRadius: 10,
     alignSelf: "center",
@@ -28,10 +23,10 @@ export const styles = StyleSheet.create({
   textButton: {
     color: "white",
     textAlign: "center",
-    fontSize: normalize(22),
+    fontSize: 22,
   },
   textInfo: {
-    fontSize: 100 / PixelRatio.getFontScale(),
+    fontSize: 22,
     fontWeight: "normal",
     fontStyle: "italic",
   },
@@ -39,9 +34,9 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
   },
   roundS: {
-    width: sizeS,
-    height: sizeS,
-    borderRadius: 100,
+    width: 0.35 * width,
+    height: 0.35 * width,
+    borderRadius: 200,
     backgroundColor: "#A169B1",
     padding: 10,
     justifyContent: "center",
@@ -50,9 +45,9 @@ export const styles = StyleSheet.create({
     borderColor: "white",
   },
   roundM: {
-    width: sizeM,
-    height: sizeM,
-    borderRadius: 100,
+    width: 0.44 * width,
+    height: 0.44 * width,
+    borderRadius: 200,
     backgroundColor: "#A169B1",
     justifyContent: "center",
     padding: 10,
@@ -62,8 +57,8 @@ export const styles = StyleSheet.create({
     borderColor: "white",
   },
   roundXL: {
-    width: sizeXL,
-    height: sizeXL,
+    width: 0.58 * width,
+    height: 0.58 * width,
     borderRadius: 200,
     backgroundColor: "#8A449D",
     justifyContent: "center",
@@ -76,12 +71,14 @@ export const styles = StyleSheet.create({
     color: "#921CB1",
     textAlign: "center",
     alignSelf: "center",
-    fontSize: normalize(18),
-    width: "50%",
-    marginTop: "8%",
+    fontSize: 18,
+    width: 0.5 * width,
+    marginTop: 0.03 * width,
   },
   backgroundImage: {
-    height: height,
+    height: "100%",
+    width: width,
+    alignSelf: "center",
   },
   image: {
     width: 22,
@@ -105,7 +102,7 @@ export const styles = StyleSheet.create({
     padding: 0,
   },
   textStyle: {
-    fontSize: normalize(16),
+    fontSize: 16,
     margin: 6,
   },
   button: {
@@ -122,7 +119,7 @@ export const styles = StyleSheet.create({
   },
   dropdownIcon: {
     color: "#921CB1",
-    fontSize: normalize(16),
+    fontSize: 16,
     margin: 0,
     padding: 0,
   },

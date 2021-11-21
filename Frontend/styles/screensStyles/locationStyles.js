@@ -1,9 +1,11 @@
 import { StyleSheet, Dimensions } from "react-native";
-import normalize from "react-native-normalize";
-const { width, height } = Dimensions.get("window");
-let partialHeight = 0.22 * height;
-let bubbleWidth = 0.33 * width;
-let bubbleSize = Math.round((bubbleWidth + partialHeight) / 2);
+let height = Dimensions.get("window").height;
+let width = null;
+if (Dimensions.get("window").width > 500) {
+  width = 500;
+} else {
+  width = Dimensions.get("window").width;
+}
 
 export const styles = StyleSheet.create({
   textStyle: {
@@ -13,12 +15,14 @@ export const styles = StyleSheet.create({
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "#921CB1",
-    fontSize: normalize(25),
+    fontSize: 25,
     margin: 25,
     textAlign: "center",
   },
-  image: {
-    height: height,
+  backgroundImage: {
+    height: "100%",
+    width: width,
+    alignSelf: "center",
   },
   container1: {
     flexDirection: "row",
@@ -26,16 +30,16 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   circleButton: {
-    width: bubbleSize * 2.6,
-    height: bubbleSize / 2.25,
-    borderRadius: bubbleSize / 2,
+    width: 0.96 * width,
+    height: 0.17 * width,
+    borderRadius: 200,
     backgroundColor: "#A169B1",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     borderColor: "white",
     borderWidth: 2,
-    margin: bubbleSize / 35,
+    margin: 0.02 * width,
     paddingLeft: 8.5,
     paddingRight: 8,
   },
