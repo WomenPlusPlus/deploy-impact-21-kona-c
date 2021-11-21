@@ -31,9 +31,36 @@ import NeedsB_to_D from "../components/needsB_to_D";
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
-const handlePress = () => {
-  Alert.alert(
-    "Please select an option, it will help us searching for help for you"
+const handlePress = (routeName) => {
+  let questionnaireMessage = 'an option';
+  switch (routeName) {
+    case 'LocationScreen':
+      questionnaireMessage = 'a Region';
+    case 'InfoGender':
+      questionnaireMessage = 'a Gender';
+    case 'InfoAge':
+      questionnaireMessage = 'a Age Range';
+    case 'NeedsScreenA':
+      questionnaireMessage = 'an Area of interest';
+    case 'NeedsScreenB':
+      questionnaireMessage = 'a Subtopic';
+    case 'NeedsScreenC':
+      questionnaireMessage = 'a Subtopic';
+  };
+  let alertMessage =  'Please select '+questionnaireMessage+'. This will help show only relevant organisations.';
+  switch (routeName) {
+    case 'OrganisationsListScreen':
+      alertMessage = "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region, Age and Gender options to search again.";
+      break;
+    case 'OrganisationDetailsScreen':
+      alertMessage = "Here you can find all the details for the organisation selected.";
+      break;
+    case 'CompaniesOrganisationsList':
+      alertMessage = "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region option to search again.";
+      break;
+    };
+  Alert.alert('Info',
+    alertMessage
   );
 };
 
@@ -56,20 +83,20 @@ const StackNavigation = () => {
         options={{ title: "Dots." }}
       />
       <Stack.Group
-        screenOptions={{
-          // headerShown: false
+        screenOptions={({ route, navigation }) => ({
+          title: route.name,
           title: "Select an option",
           headerTitleAlign: "center",
           headerRight: () => {
             return (
               <View>
-                <Pressable onPress={() => handlePress()}>
+                <Pressable onPress={() => handlePress(route.name)}>
                   <Entypo name="help-with-circle" size={24} color="white" />
                 </Pressable>
               </View>
             );
           },
-        }}
+        })}
       >
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="InstitutionType" component={InstitutionType} />
