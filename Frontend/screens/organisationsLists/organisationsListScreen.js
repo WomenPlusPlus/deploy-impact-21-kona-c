@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
-const OrganisationsListScreen = ({ route, navigation }) => {
-  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
-  const selectedPersonType = route.params["selectedPersonType"];
-  const SDG_Id = route.params["SDG_Id"].split(",");
-
-  const newData = Object.keys(data).filter((orgId) => {
+export const dataFunc = (
+  data,
+  selectedRegion,
+  selectedGender,
+  selectedAge,
+  SDG_Id
+) => {
+  return Object.keys(data).filter((orgId) => {
     for (
       let i = 0;
       i <
@@ -43,6 +42,25 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       }
     }
   });
+};
+
+const OrganisationsListScreen = ({ route, navigation }) => {
+  const uniqueRegionsArray = route.params["uniqueRegionsArray"];
+  const [selectedRegion, setSelectedRegion] = useState(
+    route.params["selectedRegion"]
+  );
+  const selectedGender = route.params["selectedGender"];
+  const selectedAge = route.params["selectedAge"];
+  const selectedPersonType = route.params["selectedPersonType"];
+  const SDG_Id = route.params["SDG_Id"].split(",");
+
+  const newData = dataFunc(
+    data,
+    selectedRegion,
+    selectedGender,
+    selectedAge,
+    SDG_Id
+  );
 
   // Make list random
   for (let i = newData.length - 1; i > 0; i--) {
@@ -72,6 +90,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       SDG_Id={SDG_Id}
       newData={newData}
       navigation={navigation}
+      setSelectedRegion={setSelectedRegion}
     />
   );
 };

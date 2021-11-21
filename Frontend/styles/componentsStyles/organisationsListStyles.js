@@ -62,7 +62,8 @@ export const styles = StyleSheet.create({
     fontSize: normalize(25),
     textAlign: "center",
     textAlignVertical: "center",
-    marginTop: 150,
+    marginTop: 15,
+    marginBottom: 20,
   },
   flexContainer: {
     marginBottom: 10,
