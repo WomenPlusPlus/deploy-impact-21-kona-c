@@ -27,12 +27,15 @@ export const dataFunc = (
         SDG_Id[1]
       ) {
         if (
-          (selectedRegion === "Worldwide" ||
-            data[orgId]["Code_region"] === selectedRegion) &&
-          data[orgId]["Age Category"].includes(selectedAge)
+          selectedRegion === "Worldwide" ||
+          selectedRegion === data[orgId]["Code_region"]
         ) {
-          if (selectedAge === "E" || "A") {
-            return data[orgId]["Gender"].includes(selectedGender);
+          if (selectedAge === "E" || selectedAge === "A") {
+            if (selectedGender === "O" || selectedGender === "N") {
+              return data[orgId]["Gender"].includes("M");
+            } else {
+              return data[orgId]["Gender"].includes(selectedGender);
+            }
           } else {
             return true;
           }
@@ -49,8 +52,10 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   const [selectedRegion, setSelectedRegion] = useState(
     route.params["selectedRegion"]
   );
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
+  const [selectedGender, setSelectedGender] = useState(
+    route.params["selectedGender"]
+  );
+  const [selectedAge, setSelectedAge] = useState(route.params["selectedAge"]);
   const selectedPersonType = route.params["selectedPersonType"];
   const SDG_Id = route.params["SDG_Id"].split(",");
 
@@ -90,7 +95,11 @@ const OrganisationsListScreen = ({ route, navigation }) => {
       SDG_Id={SDG_Id}
       newData={newData}
       navigation={navigation}
+      selectedGender={selectedGender}
+      selectedAge={selectedAge}
       setSelectedRegion={setSelectedRegion}
+      setSelectedGender={setSelectedGender}
+      setSelectedAge={setSelectedAge}
     />
   );
 };
