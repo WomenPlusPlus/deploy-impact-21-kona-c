@@ -7,7 +7,7 @@ import {
   View,
   TouchableHighlight,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import sdgs from "../../utils/sdgs";
 import { styles } from "../../styles/sdgScreenStyles";
 
@@ -24,13 +24,7 @@ const SdgScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.8}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView>
           <Text style={styles.titleTextStyle}>
             Choose one of the 17 goal and see organisations that can help!
@@ -54,7 +48,7 @@ const SdgScreen = ({ navigation }) => {
             ))}
           </View>
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import { styles } from "../styles/longerButtonsScreenStyles";
 
 const NeedsB_to_D = (props) => {
@@ -16,13 +16,7 @@ const NeedsB_to_D = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView style={styles.mainContainer}>
           <Text style={styles.titleTextStyle}>Need help with...</Text>
           {props.arr.map((option) => (
@@ -36,7 +30,7 @@ const NeedsB_to_D = (props) => {
             </View>
           ))}
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };
