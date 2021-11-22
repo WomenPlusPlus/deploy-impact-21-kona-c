@@ -8,6 +8,12 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+
   container: {
     backgroundColor: "white",
     justifyContent: "space-between",
@@ -32,6 +38,11 @@ export const styles = StyleSheet.create({
   },
   containerRoundMS: {
     flexDirection: "row",
+    paddingLeft: 0.06 * width,
+  },
+  containerRoundXL: {
+    flexDirection: "row",
+    paddingTop: 0.01 * width,
   },
   roundS: {
     width: 0.35 * width,
@@ -52,7 +63,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 10,
     marginLeft: "4%",
-    marginTop: "8%",
+    marginTop: "10%",
     borderWidth: 2,
     borderColor: "white",
   },
@@ -73,7 +84,7 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 18,
     width: 0.5 * width,
-    marginTop: 0.03 * width,
+    marginBottom: 0.1 * width,
   },
   backgroundImage: {
     height: "100%",
