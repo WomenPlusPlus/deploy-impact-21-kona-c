@@ -28,7 +28,7 @@ const OrganisationsLists = (props) => {
       style={styles.backgroundImage}
     >
       <PinchZoomView>
-        <ScrollView>
+        <ScrollView style={styles.mainContainer}>
           {props.SDG_Id ? (
             <Image
               resizeMode="contain"

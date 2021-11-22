@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 let width = null;
+let height = Dimensions.get("window").height ;
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
@@ -19,9 +20,11 @@ export const styles = StyleSheet.create({
   //         elevation: 10,
   //         shadowColor: "lightgray",
   //       },
+
   container: {
     backgroundColor: "white",
     width: 0.93 * width,
+    height: height - width/3,
     alignSelf: "center",
     borderRadius: 5,
     overflow: "hidden",

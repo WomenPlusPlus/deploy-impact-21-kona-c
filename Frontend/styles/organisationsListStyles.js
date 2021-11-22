@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 let width = null;
+let height = Dimensions.get("window").height
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
@@ -7,6 +8,9 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    height: height - width/3,
+  },
   container: {
     backgroundColor: "white",
     width: 0.93 * width,
@@ -75,6 +79,7 @@ export const styles = StyleSheet.create({
     height: "100%",
     width: width,
     alignSelf: "center",
+
   },
   image: {
     width: "100%",
