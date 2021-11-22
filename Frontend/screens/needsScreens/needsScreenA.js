@@ -6,6 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
+import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
 import {
   FontAwesome5,
   FontAwesome,
@@ -71,22 +72,30 @@ const NeedsScreenA = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
-        <View style={styles.container}>
-          {uniqueOptionsArray.map((option, i) => (
-            <View key={option} style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress(option)}
-              >
-                {iconsArray[i]}
-              </Pressable>
-              <Text style={styles.textStyle}>{option}</Text>
-            </View>
-          ))}
-        </View>
-      </ScrollView>
+      <ReactNativeZoomableView
+        maxZoom={1.5}
+        minZoom={0.9}
+        zoomStep={0.5}
+        initialZoom={1}
+        bindToBorders={true}
+      >
+        <ScrollView>
+          <Text style={styles.titleTextStyle}>Need help with...</Text>
+          <View style={styles.container}>
+            {uniqueOptionsArray.map((option, i) => (
+              <View key={option} style={styles.bubbleContainer}>
+                <Pressable
+                  style={styles.circleButton}
+                  onPress={() => handlePress(option)}
+                >
+                  {iconsArray[i]}
+                </Pressable>
+                <Text style={styles.textStyle}>{option}</Text>
+              </View>
+            ))}
+          </View>
+        </ScrollView>
+      </ReactNativeZoomableView>
     </ImageBackground>
   );
 };

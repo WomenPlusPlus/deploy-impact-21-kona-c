@@ -6,6 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
+import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
@@ -40,61 +41,69 @@ const InfoGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>
-          What is the gender of the person seeking help?
-        </Text>
-        <View >
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("F")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <Ionicons name="woman-sharp" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Female</Text>
+      <ReactNativeZoomableView
+        maxZoom={1.5}
+        minZoom={0.9}
+        zoomStep={0.5}
+        initialZoom={1}
+        bindToBorders={true}
+      >
+        <ScrollView>
+          <Text style={styles.titleTextStyle}>
+            What is the gender of the person seeking help?
+          </Text>
+          <View>
+            <View style={styles.container1}>
+              <View style={styles.bubbleContainer}>
+                <Pressable
+                  style={styles.circleButton}
+                  onPress={() => handlePress("F")}
+                >
+                  <View style={styles.severalIconsButton}>
+                    <Ionicons name="woman-sharp" style={styles.userImage} />
+                  </View>
+                </Pressable>
+                <Text style={styles.textStyle}>Female</Text>
+              </View>
+              <View style={styles.bubbleContainer}>
+                <Pressable
+                  style={styles.circleButton}
+                  onPress={() => handlePress("M")}
+                >
+                  <View style={styles.severalIconsButton}>
+                    <Ionicons name="man-sharp" style={styles.userImage} />
+                  </View>
+                </Pressable>
+                <Text style={styles.textStyle}>Male</Text>
+              </View>
             </View>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("M")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <Ionicons name="man-sharp" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Male</Text>
+            <View style={styles.container2}>
+              <View style={styles.bubbleContainer}>
+                <Pressable
+                  style={styles.circleButton}
+                  onPress={() => handlePress("O")}
+                >
+                  <View style={styles.severalIconsButton}>
+                    <FontAwesome name="heart" style={styles.userImage} />
+                  </View>
+                </Pressable>
+                <Text style={styles.textStyle}>Other</Text>
+              </View>
+              <View style={styles.bubbleContainer}>
+                <Pressable
+                  style={styles.circleButton}
+                  onPress={() => handlePress("N")}
+                >
+                  <View style={styles.severalIconsButton}>
+                    <FontAwesome5 name="question" style={styles.userImage} />
+                  </View>
+                </Pressable>
+                <Text style={styles.textStyle}>Prefer not to say</Text>
+              </View>
             </View>
           </View>
-          <View style={styles.container2}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("O")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <FontAwesome name="heart" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Other</Text>
-            </View>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("N")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <FontAwesome5 name="question" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Prefer not to say</Text>
-            </View>
-          </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </ReactNativeZoomableView>
     </ImageBackground>
   );
 };
