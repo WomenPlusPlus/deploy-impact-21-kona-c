@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
-import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
+import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InfoGender = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
@@ -38,13 +38,13 @@ const InfoGender = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         <Text style={styles.titleTextStyle}>
           What is the gender of the person seeking help?
         </Text>
-        <View>
+        <View >
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <Pressable

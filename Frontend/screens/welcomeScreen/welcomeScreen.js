@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
-import { styles } from "../../styles/screensStyles/welcomeScreenStyles";
+import { styles } from "../../styles/welcomeScreenStyles";
 
 const HomeScreen = ({ navigation }) => {
   const languages = [
@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }) => {
             }}
           />
         </View>
-        <View style={styles.containerRoundXL}>
+        <View>
           <Pressable style={styles.roundXL} onPress={handlePress}>
             <Text style={styles.textButton}>
               If you are in a vulnerable situation...

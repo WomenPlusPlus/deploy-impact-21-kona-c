@@ -32,42 +32,43 @@ const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const handlePress = (routeName) => {
-  let questionnaireMessage = 'an option';
+  let questionnaireMessage = "an option";
   switch (routeName) {
-    case 'LocationScreen':
-      questionnaireMessage = 'a Region';
+    case "LocationScreen":
+      questionnaireMessage = "a Region";
       break;
-    case 'InfoGender':
-      questionnaireMessage = 'a Gender';
+    case "InfoGender":
+      questionnaireMessage = "a Gender";
       break;
-    case 'InfoAge':
-      questionnaireMessage = 'a Age Range';
+    case "InfoAge":
+      questionnaireMessage = "an Age Range";
       break;
-    case 'NeedsScreenA':
-      questionnaireMessage = 'an Area of interest';
+    case "NeedsScreenA":
+      questionnaireMessage = "an Area of interest";
       break;
-    case 'NeedsScreenB':
-      questionnaireMessage = 'a Subtopic';
+    case "NeedsScreenB":
+      questionnaireMessage = "a Subtopic";
       break;
-    case 'NeedsScreenC':
-      questionnaireMessage = 'a Subtopic';
+    case "NeedsScreenC":
+      questionnaireMessage = "a Subtopic";
       break;
-  };
-  let alertMessage =  'Please select '+questionnaireMessage+'. This will help show only relevant organisations.';
+  }
+  let alertMessage = `Please select ${questionnaireMessage}. This will help show only relevant organisations.`;
   switch (routeName) {
-    case 'OrganisationsListScreen':
-      alertMessage = "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region, Age and Gender options to search again.";
+    case "OrganisationsListScreen":
+      alertMessage =
+        "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region, Age and Gender options to search again.";
       break;
-    case 'OrganisationDetailsScreen':
-      alertMessage = "Here you can find all the details for the organisation selected.";
+    case "OrganisationDetailsScreen":
+      alertMessage =
+        "Here you can find all the details for the organisation selected.";
       break;
-    case 'CompaniesOrganisationsList':
-      alertMessage = "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region option to search again.";
+    case "CompaniesOrganisationsList":
+      alertMessage =
+        "This is the list of organisations identified based on your search. If you can't find the help you need, you can change the Region option to search again.";
       break;
-    };
-  Alert.alert('Info',
-    alertMessage
-  );
+  }
+  Alert.alert("Info", alertMessage);
 };
 
 const StackNavigation = () => {

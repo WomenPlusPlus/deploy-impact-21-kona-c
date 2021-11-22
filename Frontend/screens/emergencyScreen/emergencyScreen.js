@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ImageBackground, View, ScrollView } from "react-native";
 import { FontAwesome5, FontAwesome, MaterialIcons } from "@expo/vector-icons";
-import { styles } from "../../styles/screensStyles/emergencyScreenStyles";
+import { styles } from "../../styles/emergencyScreenStyles";
 import { makeCall } from "../../utils/makeCall";
 
 const EmergencyScreen = () => {
@@ -9,7 +9,7 @@ const EmergencyScreen = () => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView style={styles.mainContainer}>
         <View style={styles.container1}>

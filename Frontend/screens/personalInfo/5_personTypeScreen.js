@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import { styles } from "../../styles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
   const selectedRegion = route.params["selectedRegion"];
@@ -31,7 +31,7 @@ const PersonType = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         <Text style={styles.titleTextStyle}>

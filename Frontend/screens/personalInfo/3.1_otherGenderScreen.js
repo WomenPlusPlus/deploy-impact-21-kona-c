@@ -7,7 +7,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import { styles } from "../../styles/screensStyles/longerButtonsScreenStyles";
+import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
 const OtherGender = ({ route, navigation }) => {
@@ -29,7 +29,7 @@ const OtherGender = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView keyboardShouldPersistTaps="always">
         <Text style={styles.titleTextStyle}>

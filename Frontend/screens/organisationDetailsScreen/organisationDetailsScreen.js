@@ -8,7 +8,7 @@ import {
   FontAwesome5,
 } from "@expo/vector-icons";
 import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "../../styles/screensStyles/organisationDetailsStyles";
+import { styles } from "../../styles/organisationDetailsStyles";
 import { makeCall } from "../../utils/makeCall";
 
 const OrganisationDetailsScreen = ({ route }) => {
@@ -34,9 +34,9 @@ const OrganisationDetailsScreen = ({ route }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.imageBackground}
+      style={styles.backgroundImage}
     >
-      <ScrollView style={[styles.container, styles.boxShadow]}>
+      <ScrollView style={styles.container}>
         <Text style={styles.textBoxName}>
           {data[organisationId]["Name of Organisation"]}
         </Text>
@@ -93,20 +93,20 @@ const OrganisationDetailsScreen = ({ route }) => {
             </Text>
           </Text>
         )}
-          {data[organisationId]["Email"] === "" ? null : (
-              <Text key={"email" + organisationId} style={styles.flexContainer}>
-                <MaterialCommunityIcons style={styles.iconText} name="email" />
-                <Text style={styles.textBox}>{` `}</Text>
-                <Text
-                  style={styles.textBoxWebsite}
-                  onPress={() =>
-                    Linking.openURL(data[organisationId]["Email"])
-                  }
-                >
-                  {data[organisationId]["Email"]}
-                </Text>
-              </Text>
-            )}
+        {data[organisationId]["Email"] === "" ? null : (
+          <Text key={"email" + organisationId} style={styles.flexContainer}>
+            <MaterialCommunityIcons style={styles.iconText} name="email" />
+            <Text style={styles.textBox}>{` `}</Text>
+            <Text
+              style={styles.textBoxWebsite}
+              onPress={() =>
+                Linking.openURL(`mailto:${data[organisationId]["Email"]}`)
+              }
+            >
+              {data[organisationId]["Email"]}
+            </Text>
+          </Text>
+        )}
         {data[organisationId]["Phone Number"] === ""
           ? null
           : data[organisationId]["Phone Number"]

@@ -13,7 +13,7 @@ import {
   Entypo,
 } from "@expo/vector-icons";
 import options from "../../assets/jsonFiles/options_map.json";
-import { styles } from "../../styles/screensStyles/roundButtonsScreenStyles";
+import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const NeedsScreenA = ({ route, navigation }) => {
   let optionsArray = [];
@@ -69,7 +69,7 @@ const NeedsScreenA = ({ route, navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         <Text style={styles.titleTextStyle}>Need help with...</Text>

@@ -7,7 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import data from "../../assets/jsonFiles/organisations.json";
-import { styles } from "../../styles/screensStyles/locationStyles";
+import { styles } from "../../styles/locationStyles";
 
 const LocationScreen = ({ navigation }) => {
   let regionsArray = [];
@@ -29,7 +29,7 @@ const LocationScreen = ({ navigation }) => {
     <ImageBackground
       source={require("../../assets/background.png")}
       resizeMode="cover"
-      style={styles.image}
+      style={styles.backgroundImage}
     >
       <ScrollView>
         <Text style={styles.titleTextStyle}>Please select a region</Text>
