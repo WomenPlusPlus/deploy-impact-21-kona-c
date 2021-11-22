@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, ImageBackground, View, ScrollView } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import { FontAwesome5, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { styles } from "../../styles/emergencyScreenStyles";
 import { makeCall } from "../../utils/makeCall";
@@ -12,13 +12,7 @@ const EmergencyScreen = () => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.8}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView style={styles.mainContainer}>
           <View style={styles.container1}>
             <Text style={styles.titleTextStyle}>Emergency Numbers</Text>
@@ -77,7 +71,7 @@ const EmergencyScreen = () => {
             </View>
           </View>
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

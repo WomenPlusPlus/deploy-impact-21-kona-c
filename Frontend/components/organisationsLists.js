@@ -8,7 +8,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import {
   FontAwesome,
   Ionicons,
@@ -27,14 +27,8 @@ const OrganisationsLists = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
-        <ScrollView>
+      <PinchZoomView>
+        <ScrollView style={styles.mainContainer}>
           {props.SDG_Id ? (
             <Image
               resizeMode="contain"
@@ -273,7 +267,7 @@ const OrganisationsLists = (props) => {
             </View>
           ))}
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

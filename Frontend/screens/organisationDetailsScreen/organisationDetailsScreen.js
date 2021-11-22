@@ -7,7 +7,7 @@ import {
   Feather,
   FontAwesome5,
 } from "@expo/vector-icons";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/organisationDetailsStyles";
 import { makeCall } from "../../utils/makeCall";
@@ -37,13 +37,7 @@ const OrganisationDetailsScreen = ({ route }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView style={styles.container}>
           <Text style={styles.textBoxName}>
             {data[organisationId]["Name of Organisation"]}
@@ -137,7 +131,7 @@ const OrganisationDetailsScreen = ({ route }) => {
                   );
                 })}
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

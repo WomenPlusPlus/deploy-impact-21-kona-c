@@ -7,7 +7,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
@@ -32,13 +32,7 @@ const OtherGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView keyboardShouldPersistTaps="always">
           <Text style={styles.titleTextStyle}>
             Please specify a gender identity
@@ -90,7 +84,7 @@ const OtherGender = ({ route, navigation }) => {
             </View>
           </View>
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

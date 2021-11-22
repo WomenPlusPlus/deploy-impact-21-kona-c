@@ -7,13 +7,6 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
-  textBoxName: {
-    color: "#A169B1",
-    fontSize: 22,
-    padding: 8,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
   backgroundImage: {
     height: "100%",
     width: width,
@@ -55,6 +48,7 @@ export const styles = StyleSheet.create({
     color: "#A169B1",
     fontSize: 25,
     margin: 25,
+    marginTop: 55,
     textAlign: "center",
   },
 });

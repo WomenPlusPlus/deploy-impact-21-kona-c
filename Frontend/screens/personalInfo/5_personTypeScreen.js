@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
@@ -34,13 +34,7 @@ const PersonType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView>
           <Text style={styles.titleTextStyle}>
             What is the current situation of the person seeking help?
@@ -66,7 +60,7 @@ const PersonType = ({ route, navigation }) => {
             </View>
           </View>
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };

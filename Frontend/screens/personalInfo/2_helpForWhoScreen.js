@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import ReactNativeZoomableView from "@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView";
+import PinchZoomView from "react-native-pinch-zoom-view";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
@@ -29,13 +29,7 @@ const HelpForWho = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ReactNativeZoomableView
-        maxZoom={1.5}
-        minZoom={0.9}
-        zoomStep={0.5}
-        initialZoom={1}
-        bindToBorders={true}
-      >
+      <PinchZoomView>
         <ScrollView>
           <Text style={styles.titleTextStyle}>Seeking help for...</Text>
           <View>
@@ -67,7 +61,7 @@ const HelpForWho = ({ route, navigation }) => {
             </View>
           </View>
         </ScrollView>
-      </ReactNativeZoomableView>
+      </PinchZoomView>
     </ImageBackground>
   );
 };
