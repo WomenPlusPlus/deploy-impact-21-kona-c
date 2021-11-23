@@ -130,7 +130,7 @@ export const styles = StyleSheet.create({
     opacity: 0.9,
   },
   startButton: {
-    backgroundColor: "#A21942",
+    backgroundColor: "#40AE49",
     width: "45%",
     height: 0.16 * width,
     justifyContent: "center",
@@ -150,5 +150,6 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: 20,
+    fontWeight: "bold"
   },
 });

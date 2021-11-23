@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
           <LinearGradient
             // Button Linear Gradient
-            colors={["#202121", "black", "black"]}
+            colors={["#3F444D", "black", "black", "black"]}
             style={styles.roundXL}
           >
             <Pressable onPress={handlePress}>
@@ -99,7 +99,7 @@ const HomeScreen = ({ navigation }) => {
           <View style={styles.containerRoundMS}>
             <LinearGradient
               // Button Linear Gradient
-              colors={["#202121", "black", "black"]}
+              colors={["#3F444D", "black", "black", "black"]}
               style={styles.roundS}
             >
               <Pressable onPress={handlePress}>
@@ -108,7 +108,7 @@ const HomeScreen = ({ navigation }) => {
             </LinearGradient>
             <LinearGradient
               // Button Linear Gradient
-              colors={["#202121", "202121", "black"]}
+              colors={["#3F444D", "black","black", "black"]}
               style={styles.roundM}
             >
               <Pressable onPress={handlePress}>

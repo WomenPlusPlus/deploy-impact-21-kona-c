@@ -77,7 +77,7 @@ const StackNavigation = () => {
       screenOptions={{
         headerStyle: {
           backgroundColor: "#141414",
-          opacity: 0.8
+          opacity: 0.8,
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
@@ -91,8 +91,7 @@ const StackNavigation = () => {
         options={{ title: "Dots." }}
       />
       <Stack.Group
-        screenOptions={({ route, navigation }) => ({
-          title: route.name,
+        screenOptions={({ route }) => ({
           title: "Select an option",
           headerTitleAlign: "center",
           headerRight: () => {
@@ -147,20 +146,14 @@ const StackNavigation = () => {
 function TabNavigatorBottom() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="HomeScreenTab"
-        activeColor="white"
-        //inactiveColor="#A169B1"
-        //color = "#3F51B5"
-        //barStyle={{ backgroundColor: "white" }}
-      >
+      <Tab.Navigator initialRouteName="HomeScreenTab" activeColor="white">
         <Tab.Screen
           name="HomeScreenTab"
           component={StackNavigation}
           options={{
-          tabBarColor: "#141414",
+            tabBarColor: "#141414",
             tabBarLabel: "Home",
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <Feather
                 name="home"
                 activeColor="white"
@@ -171,16 +164,13 @@ function TabNavigatorBottom() {
             ),
           }}
         />
+
         <Tab.Screen
           name="SDG"
           component={SdgScreen}
           options={{
             tabBarLabel: "SDGs",
             tabBarColor: "#00689D",
-            /* tabBarOptions: {
-            //activeTintColor: "#8A449D",
-            //inactiveTintColor: "#ffffff",
-          }, */
             tabBarIcon: () => (
               <Image
                 source={require("../assets/sdg.png")}
@@ -195,7 +185,7 @@ function TabNavigatorBottom() {
           options={{
             tabBarLabel: "Emergency",
             tabBarColor: "#3F7E44",
-            tabBarIcon: ({ color, size }) => (
+            tabBarIcon: () => (
               <Feather name="phone" size={23} color={"white"} />
             ),
           }}
@@ -206,7 +196,7 @@ function TabNavigatorBottom() {
           options={{
             tabBarLabel: "Hotline",
             tabBarColor: "#A21942",
-            tabBarIcon: ({ color, size }) => (
+            tabBarIcon: () => (
               <Feather name="headphones" size={23} color={"white"} />
             ),
           }}

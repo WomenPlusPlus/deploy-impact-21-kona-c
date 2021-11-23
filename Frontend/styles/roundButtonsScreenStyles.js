@@ -15,8 +15,8 @@ export const styles = StyleSheet.create({
     height: "100%",
   },
   bubbleContainer: {
-    margin: "1.5%",
-    width: 0.3 * width,
+    marginBottom: "1.5%",
+    width: 0.32 * width,
     flexDirection: "column",
     alignItems: "center",
   },

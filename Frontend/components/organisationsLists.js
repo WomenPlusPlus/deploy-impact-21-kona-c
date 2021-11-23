@@ -13,6 +13,7 @@ import {
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
 import { styles } from "../styles/organisationsListStyles";
@@ -26,32 +27,78 @@ const OrganisationsLists = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <ScrollView style={styles.mainContainer}>
-
-          {props.newData.length === 0 ? (
-            <Text style={styles.notFoundTextStyle}>
-              No organisations available. Try to change the location or search
-              for another goal.
-            </Text>
-          ) : (
-            <Text style={styles.titleTextStyle}>
-              List of organisations that could provide help
-            </Text>
-          )}
-           {props.SDG_Id ? (
-            <Image
-              resizeMode="contain"
-              source={sdgsLarge[props.SDG_Id[0] - 1].image}
-              style={styles.image}
-            />
-          ) : null}
-          <View>
+      <ScrollView style={styles.mainContainer}>
+        {props.newData.length === 0 ? (
+          <Text style={styles.notFoundTextStyle}>
+            No organisations available. Try to change the location or search for
+            another goal.
+          </Text>
+        ) : (
+          <Text style={styles.titleTextStyle}>
+            List of organisations that could provide help
+          </Text>
+        )}
+        {props.SDG_Id ? (
+          <Image
+            resizeMode="contain"
+            source={sdgsLarge[props.SDG_Id[0] - 1].image}
+            style={styles.image}
+          />
+        ) : null}
+        <View>
+        <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+      
+            >
+          <SelectDropdown
+            buttonTextStyle={styles.textStyle}
+            buttonStyle={styles.button}
+            dropdownStyle={styles.dropdownStyle}
+            rowStyle={styles.dropdownRow}
+            defaultButtonText={props.selectedRegion}
+            renderDropdownIcon={() => {
+              return (
+                <FontAwesome name="chevron-down" style={styles.dropdownicon} />
+              );
+            }}
+            dropdownIconPosition={"right"}
+            data={props.uniqueRegionsArray}
+            onSelect={(selectedItem, index) => {
+              props.setSelectedRegion(selectedItem);
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              return selectedItem;
+            }}
+            rowTextForSelection={(item, index) => {
+              return item;
+            }}
+            renderCustomizedRowChild={(selectedItem, index) => {
+              return (
+                <View style={styles.buttonDown}>
+                  <Text style={styles.textStyle}> {selectedItem}</Text>
+                </View>
+              );
+            }}
+          /></LinearGradient>
+          {props.selectedGender !== undefined ? (
+             <LinearGradient
+             // Button Linear Gradient
+             colors={["#202121", "black", "black", "black"]}
+     
+           >
             <SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
               dropdownStyle={styles.dropdownStyle}
               rowStyle={styles.dropdownRow}
-              defaultButtonText={props.selectedRegion}
+              defaultButtonText={
+                props.selectedGender === "F"
+                  ? "Female"
+                  : props.selectedGender === "M"
+                  ? "Male"
+                  : "Other"
+              }
               renderDropdownIcon={() => {
                 return (
                   <FontAwesome
@@ -61,9 +108,11 @@ const OrganisationsLists = (props) => {
                 );
               }}
               dropdownIconPosition={"right"}
-              data={props.uniqueRegionsArray}
+              data={["Female", "Male", "Other"]}
               onSelect={(selectedItem, index) => {
-                props.setSelectedRegion(selectedItem);
+                props.setSelectedGender(
+                  selectedItem === "Other" ? "O" : selectedItem.charAt(0)
+                );
               }}
               buttonTextAfterSelection={(selectedItem, index) => {
                 return selectedItem;
@@ -78,104 +127,71 @@ const OrganisationsLists = (props) => {
                   </View>
                 );
               }}
-            />
-            {props.selectedGender !== undefined ? (
-              <SelectDropdown
+            /></LinearGradient>
+          ) : null}
+          {props.selectedAge !== undefined ? (
+             <LinearGradient
+             // Button Linear Gradient
+             colors={["#202121", "black", "black", "black"]}
+     
+           ><SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
               dropdownStyle={styles.dropdownStyle}
               rowStyle={styles.dropdownRow}
-                defaultButtonText={
-                  props.selectedGender === "F"
-                    ? "Female"
-                    : props.selectedGender === "M"
-                    ? "Male"
-                    : "Other"
-                }
-                renderDropdownIcon={() => {
-                  return (
-                    <FontAwesome
-                      name="chevron-down"
-                      style={styles.dropdownicon}
-                    />
-                  );
-                }}
-                dropdownIconPosition={"right"}
-                data={["Female", "Male", "Other"]}
-                onSelect={(selectedItem, index) => {
-                  props.setSelectedGender(
-                    selectedItem === "Other" ? "O" : selectedItem.charAt(0)
-                  );
-                }}
-                buttonTextAfterSelection={(selectedItem, index) => {
-                  return selectedItem;
-                }}
-                rowTextForSelection={(item, index) => {
-                  return item;
-                }}
-                renderCustomizedRowChild={(selectedItem, index) => {
-                  return (
-                    <View style={styles.buttonDown}>
-                      <Text style={styles.textStyle}> {selectedItem}</Text>
-                    </View>
-                  );
-                }}
-              />
-            ) : null}
-            {props.selectedAge !== undefined ? (
-              <SelectDropdown
-              buttonTextStyle={styles.textStyle}
-              buttonStyle={styles.button}
-              dropdownStyle={styles.dropdownStyle}
-              rowStyle={styles.dropdownRow}
-                defaultButtonText={
-                  props.selectedAge === "A"
-                    ? "25+"
-                    : props.selectedAge === "E"
-                    ? "18-25"
-                    : props.selectedAge === "Y"
-                    ? "12-18"
-                    : "0-12"
-                }
-                renderDropdownIcon={() => {
-                  return (
-                    <FontAwesome
-                      name="chevron-down"
-                      style={styles.dropdownicon}
-                    />
-                  );
-                }}
-                dropdownIconPosition={"right"}
-                data={["0-12", "12-18", "18-25", "25+"]}
-                onSelect={(selectedItem, index) => {
-                  props.setSelectedAge(
-                    selectedItem === "25+"
-                      ? "A"
-                      : selectedItem === "18-25"
-                      ? "E"
-                      : selectedItem === "12-18"
-                      ? "Y"
-                      : "C"
-                  );
-                }}
-                buttonTextAfterSelection={(selectedItem, index) => {
-                  return selectedItem;
-                }}
-                rowTextForSelection={(item, index) => {
-                  return item;
-                }}
-                renderCustomizedRowChild={(selectedItem, index) => {
-                  return (
-                    <View style={styles.buttonDown}>
-                      <Text style={styles.textStyle}> {selectedItem}</Text>
-                    </View>
-                  );
-                }}
-              />
-            ) : null}
-          </View>
-          {props.newData.map((organisation) => (
-            <View key={"listview" + organisation} style={styles.container}>
+              defaultButtonText={
+                props.selectedAge === "A"
+                  ? "25+"
+                  : props.selectedAge === "E"
+                  ? "18-25"
+                  : props.selectedAge === "Y"
+                  ? "12-18"
+                  : "0-12"
+              }
+              renderDropdownIcon={() => {
+                return (
+                  <FontAwesome
+                    name="chevron-down"
+                    style={styles.dropdownicon}
+                  />
+                );
+              }}
+              dropdownIconPosition={"right"}
+              data={["0-12", "12-18", "18-25", "25+"]}
+              onSelect={(selectedItem, index) => {
+                props.setSelectedAge(
+                  selectedItem === "25+"
+                    ? "A"
+                    : selectedItem === "18-25"
+                    ? "E"
+                    : selectedItem === "12-18"
+                    ? "Y"
+                    : "C"
+                );
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                return item;
+              }}
+              renderCustomizedRowChild={(selectedItem, index) => {
+                return (
+                  <View style={styles.buttonDown}>
+                    <Text style={styles.textStyle}> {selectedItem}</Text>
+                  </View>
+                );
+              }}
+            /></LinearGradient>
+          ) : null}
+        </View>
+        {props.newData.map((organisation) => (
+          <View key={"listview" + organisation}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+              style={styles.container}
+            >
               <Text key={"name" + organisation} style={styles.textBoxName}>
                 {data[organisation]["Name of Organisation"]}
               </Text>
@@ -269,9 +285,10 @@ const OrganisationsLists = (props) => {
                   />
                 </Text>
               </Pressable>
-            </View>
-          ))}
-        </ScrollView>
+            </LinearGradient>
+          </View>
+        ))}
+      </ScrollView>
     </ImageBackground>
   );
 };

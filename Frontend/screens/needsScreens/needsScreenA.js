@@ -4,6 +4,7 @@ import {
   ImageBackground,
   View,
   Pressable,
+  ScrollView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {
@@ -67,32 +68,34 @@ const NeedsScreenA = ({ route, navigation }) => {
 
   return (
     <ImageBackground
-    source={require("../../assets/background.png")}
-    resizeMode="cover"
-    style={styles.backgroundImage}
-  >
-      <View style={styles.container}>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
+      source={require("../../assets/background.png")}
+      resizeMode="cover"
+      style={styles.backgroundImage}
+    >
+      <ScrollView>
         <View style={styles.container}>
-          {uniqueOptionsArray.map((option, i) => (
-            <View key={option} style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black" ]}
-                style={styles.circleButton}
-              >
-                <Pressable
+          <Text style={styles.titleTextStyle}>Need help with...</Text>
+          <View style={styles.container}>
+            {uniqueOptionsArray.map((option, i) => (
+              <View key={option} style={styles.bubbleContainer}>
+                <LinearGradient
+                  // Button Linear Gradient
+                  colors={["#323438", "black", "black"]}
                   style={styles.circleButton}
-                  onPress={() => handlePress(option)}
                 >
-                  {iconsArray[i]}
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>{option}</Text>
-            </View>
-          ))}
+                  <Pressable
+                    style={styles.circleButton}
+                    onPress={() => handlePress(option)}
+                  >
+                    {iconsArray[i]}
+                  </Pressable>
+                </LinearGradient>
+                <Text style={styles.textStyle}>{option}</Text>
+              </View>
+            ))}
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </ImageBackground>
   );
 };
