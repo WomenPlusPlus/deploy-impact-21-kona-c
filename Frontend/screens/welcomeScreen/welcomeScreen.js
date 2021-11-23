@@ -113,7 +113,7 @@ const HomeScreen = ({ navigation }) => {
             >
               <Pressable onPress={handlePress}>
                 <Text style={styles.textButton}>
-                  Dots can find the help you need.
+                  Dots. can find the help you need.
                 </Text>
               </Pressable>
             </LinearGradient>
