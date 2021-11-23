@@ -7,7 +7,6 @@ if (Dimensions.get("window").width > 500) {
   width = Dimensions.get("window").width;
 }
 
-
 export const styles = StyleSheet.create({
   container: {
     flexWrap: "wrap",
@@ -26,7 +25,6 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "flex-start",
-    marginTop: "3%",
   },
   container2: {
     flexDirection: "row",
@@ -41,18 +39,16 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: 18,
-    marginTop: "1.5%",
+    marginTop: "2%",
     fontWeight: "bold",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: 28,
-    marginTop: 15,
-    marginBottom: 15,
+    margin: 25,
     textAlign: "center",
     fontWeight: "bold",
-    padding: 15
   },
   circleButton: {
     width: 0.28 * width,
@@ -65,7 +61,7 @@ export const styles = StyleSheet.create({
     marginLeft: 0.01 * width,
     marginRight: 0.01 * width,
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: "#474747",
   },
   userImage: {
     fontSize: 46,

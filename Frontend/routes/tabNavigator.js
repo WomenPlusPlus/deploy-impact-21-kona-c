@@ -76,7 +76,7 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#0A0208",
+          backgroundColor: "#141414",
           opacity: 0.8
         },
         headerTintColor: "#fff",
@@ -158,7 +158,7 @@ function TabNavigatorBottom() {
           name="HomeScreenTab"
           component={StackNavigation}
           options={{
-          tabBarColor: "#0A0208",
+          tabBarColor: "#141414",
             tabBarLabel: "Home",
             tabBarIcon: ({ color }) => (
               <Feather
@@ -176,7 +176,7 @@ function TabNavigatorBottom() {
           component={SdgScreen}
           options={{
             tabBarLabel: "SDGs",
-            tabBarColor: "#21201F",
+            tabBarColor: "#00689D",
             /* tabBarOptions: {
             //activeTintColor: "#8A449D",
             //inactiveTintColor: "#ffffff",
@@ -194,7 +194,7 @@ function TabNavigatorBottom() {
           component={EmergencyScreen}
           options={{
             tabBarLabel: "Emergency",
-            tabBarColor: "#1C0529",
+            tabBarColor: "#3F7E44",
             tabBarIcon: ({ color, size }) => (
               <Feather name="phone" size={23} color={"white"} />
             ),
@@ -205,7 +205,7 @@ function TabNavigatorBottom() {
           component={HotlineScreen}
           options={{
             tabBarLabel: "Hotline",
-            tabBarColor: "#29031A",
+            tabBarColor: "#A21942",
             tabBarIcon: ({ color, size }) => (
               <Feather name="headphones" size={23} color={"white"} />
             ),

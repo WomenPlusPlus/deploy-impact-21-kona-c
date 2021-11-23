@@ -36,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
       style={styles.backgroundImage}
     >
       <View style={styles.mainContainer}>
-        <View>
+        <View style={styles.topContainer}>
           <View style={styles.dropdownMainContainer}>
             <Image
               resizeMode="contain"
@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
           <LinearGradient
             // Button Linear Gradient
-            colors={["#323438", "black", "black"]}
+            colors={["#202121", "black", "black"]}
             style={styles.roundXL}
           >
             <Pressable onPress={handlePress}>
@@ -99,7 +99,7 @@ const HomeScreen = ({ navigation }) => {
           <View style={styles.containerRoundMS}>
             <LinearGradient
               // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
+              colors={["#202121", "black", "black"]}
               style={styles.roundS}
             >
               <Pressable onPress={handlePress}>
@@ -108,18 +108,20 @@ const HomeScreen = ({ navigation }) => {
             </LinearGradient>
             <LinearGradient
               // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
+              colors={["#202121", "202121", "black"]}
               style={styles.roundM}
             >
               <Pressable onPress={handlePress}>
                 <Text style={styles.textButton}>
-                  If someone else needs help...
+                  Dots can find the help you need.
                 </Text>
               </Pressable>
             </LinearGradient>
           </View>
         </View>
-        <Text style={styles.bottomText}>Dots can find the help you need</Text>
+        <Pressable style={styles.startButton} onPress={handlePress}>
+          <Text style={styles.bottomText}>Start</Text>
+        </Pressable>
       </View>
     </ImageBackground>
   );

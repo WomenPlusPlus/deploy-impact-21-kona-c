@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   textStyle: {
     color: "white",
     fontSize: 19,
-    fontWeight: "bold",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
@@ -32,17 +31,17 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   circleButton: {
-    width: 0.96 * width,
+    width: 0.92 * width,
     height: 0.17 * width,
     borderRadius: 5,
     backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    borderColor: "white",
     borderWidth: 2,
+    borderColor: "#474747",
     margin: 0.02 * width,
-    paddingLeft: 8.5,
-    paddingRight: 8,
+    paddingLeft: 7,
+    paddingRight: 7,
   },
 });

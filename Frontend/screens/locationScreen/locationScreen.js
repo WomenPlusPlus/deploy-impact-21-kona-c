@@ -38,7 +38,7 @@ const LocationScreen = ({ navigation }) => {
           <View key={region} style={styles.container1}>
             <LinearGradient
               // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
+              colors={["#202121", "black", "black", "black"]}
               style={styles.circleButton}
             >
               <Pressable

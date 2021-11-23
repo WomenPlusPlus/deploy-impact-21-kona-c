@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InstitutionType = ({ route, navigation }) => {
@@ -51,7 +51,7 @@ const InstitutionType = ({ route, navigation }) => {
                   onPress={() => handlePressPerson("Person")}
                 >
                   <View style={styles.severalIconsButton}>
-                    <FontAwesome5 name="user" style={styles.userImage} />
+                    <Ionicons name="person" style={styles.userImage} />
                   </View>
                 </Pressable>
               </LinearGradient>
