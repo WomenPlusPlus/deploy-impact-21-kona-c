@@ -28,6 +28,9 @@ export const styles = StyleSheet.create({
   },
   buttonContainer: {
     margin: 8,
+    borderWidth: 1,
+    borderColor: "white",
+    backgroundColor: "black"
   },
   container: {
     flexDirection: "row",
@@ -45,10 +48,12 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: 25,
+    color: "white",
+    fontSize: 28,
     margin: 25,
     marginTop: 55,
+    padding: 6,
     textAlign: "center",
+    fontWeight: "bold"
   },
 });

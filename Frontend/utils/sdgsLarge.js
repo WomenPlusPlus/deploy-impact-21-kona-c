@@ -1,7 +1,7 @@
 const sdgsLarge = [
   {
     id: 1,
-    image: require("../assets/sdgLargeImages/SDG_large_1.jpg"),
+    image: require("../assets/sdgLargeImages/SDG_large_1.png"),
     title: "1. No poverty",
   },
   {

@@ -7,19 +7,19 @@ if (Dimensions.get("window").width > 500) {
   width = Dimensions.get("window").width;
 }
 
+
 export const styles = StyleSheet.create({
   container: {
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 0.01 * height
+    height: "100%",
   },
   bubbleContainer: {
-    margin: 0,
+    margin: "1.5%",
     width: 0.3 * width,
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "2.5%",
   },
   container1: {
     flexDirection: "row",
@@ -39,29 +39,33 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 16,
-    marginTop: "1%",
+    color: "white",
+    fontSize: 18,
+    marginTop: "1.5%",
+    fontWeight: "bold",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 25,
+    color: "white",
+    fontSize: 28,
     marginTop: 15,
+    marginBottom: 15,
     textAlign: "center",
+    fontWeight: "bold",
+    padding: 15
   },
   circleButton: {
     width: 0.28 * width,
     height: 0.28 * width,
     borderRadius: 200,
-    backgroundColor: "#A169B1",
+    backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    borderColor: "white",
-    borderWidth: 2,
     marginLeft: 0.01 * width,
     marginRight: 0.01 * width,
+    borderWidth: 2,
+    borderColor: "white",
   },
   userImage: {
     fontSize: 46,

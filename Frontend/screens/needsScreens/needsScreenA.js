@@ -4,9 +4,8 @@ import {
   ImageBackground,
   View,
   Pressable,
-  ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import {
   FontAwesome5,
   FontAwesome,
@@ -68,28 +67,32 @@ const NeedsScreenA = ({ route, navigation }) => {
 
   return (
     <ImageBackground
-      source={require("../../assets/background.png")}
-      resizeMode="cover"
-      style={styles.backgroundImage}
-    >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>Need help with...</Text>
-          <View style={styles.container}>
-            {uniqueOptionsArray.map((option, i) => (
-              <View key={option} style={styles.bubbleContainer}>
+    source={require("../../assets/background.png")}
+    resizeMode="cover"
+    style={styles.backgroundImage}
+  >
+      <View style={styles.container}>
+        <Text style={styles.titleTextStyle}>Need help with...</Text>
+        <View style={styles.container}>
+          {uniqueOptionsArray.map((option, i) => (
+            <View key={option} style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black" ]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress(option)}
                 >
                   {iconsArray[i]}
                 </Pressable>
-                <Text style={styles.textStyle}>{option}</Text>
-              </View>
-            ))}
-          </View>
-        </ScrollView>
-      </PinchZoomView>
+              </LinearGradient>
+              <Text style={styles.textStyle}>{option}</Text>
+            </View>
+          ))}
+        </View>
+      </View>
     </ImageBackground>
   );
 };

@@ -7,7 +7,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
@@ -32,59 +32,75 @@ const OtherGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView keyboardShouldPersistTaps="always">
-          <Text style={styles.titleTextStyle}>
-            Please specify a gender identity
-          </Text>
-          <View>
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("O")}
-                >
-                  <Text style={styles.textStyle}>Non-binary</Text>
-                </Pressable>
-              </View>
-            </View>
+      <ScrollView keyboardShouldPersistTaps="always">
+        <Text style={styles.titleTextStyle}>
+          Please specify a gender identity
+        </Text>
+        <View>
+          <View style={styles.container1}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#323438", "black", "black"]}
+              style={styles.circleButton}
+            >
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("O")}
+              >
+                <Text style={styles.textStyle}>Non-binary</Text>
+              </Pressable>
+            </LinearGradient>
+          </View>
 
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("O")}
-                >
-                  <Text style={styles.textStyle}>Gender-fluid</Text>
-                </Pressable>
-              </View>
-            </View>
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("O")}
-                >
-                  <Text style={styles.textStyle}>Agender</Text>
-                </Pressable>
-              </View>
-            </View>
-            <View style={styles.containerInput}>
+          <View style={styles.container1}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#323438", "black", "black"]}
+              style={styles.circleButton}
+            >
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("O")}
+              >
+                <Text style={styles.textStyle}>Gender-fluid</Text>
+              </Pressable>
+            </LinearGradient>
+          </View>
+          <View style={styles.container1}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#323438", "black", "black"]}
+              style={styles.circleButton}
+            >
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("O")}
+              >
+                <Text style={styles.textStyle}>Agender</Text>
+              </Pressable>
+            </LinearGradient>
+          </View>
+          <View style={styles.containerInput}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#323438", "black", "black"]}
+              style={styles.circleButton}
+            >
               <View
                 style={styles.circleButtonInput}
                 onPress={() => handlePress("M")}
               >
                 <TextInput
                   placeholder="Another (please specify)"
-                  placeholderTextColor={"#8A449D"}
+                  placeholderTextColor={"white"}
                   style={styles.textStyleInput}
                 ></TextInput>
                 <NextButton handlePress={handlePress} />
               </View>
-            </View>
+            </LinearGradient>
           </View>
-        </ScrollView>
-      </PinchZoomView>
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

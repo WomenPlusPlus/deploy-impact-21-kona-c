@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, ImageBackground, View, ScrollView } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
 import { FontAwesome } from "@expo/vector-icons";
 import { styles } from "../../styles/hotlineScreenStyles";
 import { makeCall } from "../../utils/makeCall";
@@ -12,7 +11,6 @@ const HotlineScreen = () => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
         <ScrollView style={styles.mainContainer}>
           <View style={styles.container1}>
             <Text style={styles.titleTextStyle}>Organisations</Text>
@@ -44,7 +42,6 @@ const HotlineScreen = () => {
             </View>
           </View>
         </ScrollView>
-      </PinchZoomView>
     </ImageBackground>
   );
 };

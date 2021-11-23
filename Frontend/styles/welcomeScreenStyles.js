@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-between",
   },
-
   container: {
     backgroundColor: "white",
     justifyContent: "space-between",
@@ -40,15 +39,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     paddingLeft: 0.06 * width,
   },
-  containerRoundXL: {
-    flexDirection: "row",
-    paddingTop: 0.01 * width,
-  },
+
   roundS: {
     width: 0.35 * width,
     height: 0.35 * width,
     borderRadius: 200,
-    backgroundColor: "#A169B1",
+    backgroundColor: "transparent",
     padding: 10,
     justifyContent: "center",
     marginLeft: "3%",
@@ -59,7 +55,7 @@ export const styles = StyleSheet.create({
     width: 0.44 * width,
     height: 0.44 * width,
     borderRadius: 200,
-    backgroundColor: "#A169B1",
+    backgroundColor: "transparent",
     justifyContent: "center",
     padding: 10,
     marginLeft: "4%",
@@ -71,18 +67,20 @@ export const styles = StyleSheet.create({
     width: 0.58 * width,
     height: 0.58 * width,
     borderRadius: 200,
-    backgroundColor: "#8A449D",
+    backgroundColor: "transparent",
     justifyContent: "center",
-    padding: 10,
+    padding: 8,
     marginLeft: "30%",
     borderWidth: 2,
     borderColor: "white",
+    paddingTop: 0.01 * width,
+
   },
   bottomText: {
-    color: "#921CB1",
+    color: "white",
     textAlign: "center",
     alignSelf: "center",
-    fontSize: 18,
+    fontSize: 22,
     width: 0.5 * width,
     marginBottom: 0.1 * width,
   },
@@ -111,10 +109,12 @@ export const styles = StyleSheet.create({
     marginTop: -49,
     marginLeft: -18,
     padding: 0,
+    backgroundColor: "black"
   },
   textStyle: {
     fontSize: 16,
     margin: 6,
+    color: "white"
   },
   button: {
     width: 75,
@@ -126,10 +126,11 @@ export const styles = StyleSheet.create({
   rowStyle: {
     width: 70,
     height: 30,
-    borderColor: "#921CB1",
+    borderColor: "white",
+    backgroundColor: "black"
   },
   dropdownIcon: {
-    color: "#921CB1",
+    color: "white",
     fontSize: 16,
     margin: 0,
     padding: 0,
@@ -139,5 +140,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     opacity: 0.9,
+    
   },
 });

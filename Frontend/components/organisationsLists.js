@@ -8,7 +8,6 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
 import {
   FontAwesome,
   Ionicons,
@@ -27,15 +26,8 @@ const OrganisationsLists = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
         <ScrollView style={styles.mainContainer}>
-          {props.SDG_Id ? (
-            <Image
-              resizeMode="contain"
-              source={sdgsLarge[props.SDG_Id[0] - 1].image}
-              style={styles.image}
-            />
-          ) : null}
+
           {props.newData.length === 0 ? (
             <Text style={styles.notFoundTextStyle}>
               No organisations available. Try to change the location or search
@@ -46,10 +38,19 @@ const OrganisationsLists = (props) => {
               List of organisations that could provide help
             </Text>
           )}
+           {props.SDG_Id ? (
+            <Image
+              resizeMode="contain"
+              source={sdgsLarge[props.SDG_Id[0] - 1].image}
+              style={styles.image}
+            />
+          ) : null}
           <View>
             <SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
+              dropdownStyle={styles.dropdownStyle}
+              rowStyle={styles.dropdownRow}
               defaultButtonText={props.selectedRegion}
               renderDropdownIcon={() => {
                 return (
@@ -80,8 +81,10 @@ const OrganisationsLists = (props) => {
             />
             {props.selectedGender !== undefined ? (
               <SelectDropdown
-                buttonTextStyle={styles.textStyle}
-                buttonStyle={styles.button}
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              dropdownStyle={styles.dropdownStyle}
+              rowStyle={styles.dropdownRow}
                 defaultButtonText={
                   props.selectedGender === "F"
                     ? "Female"
@@ -121,8 +124,10 @@ const OrganisationsLists = (props) => {
             ) : null}
             {props.selectedAge !== undefined ? (
               <SelectDropdown
-                buttonTextStyle={styles.textStyle}
-                buttonStyle={styles.button}
+              buttonTextStyle={styles.textStyle}
+              buttonStyle={styles.button}
+              dropdownStyle={styles.dropdownStyle}
+              rowStyle={styles.dropdownRow}
                 defaultButtonText={
                   props.selectedAge === "A"
                     ? "25+"
@@ -267,7 +272,6 @@ const OrganisationsLists = (props) => {
             </View>
           ))}
         </ScrollView>
-      </PinchZoomView>
     </ImageBackground>
   );
 };

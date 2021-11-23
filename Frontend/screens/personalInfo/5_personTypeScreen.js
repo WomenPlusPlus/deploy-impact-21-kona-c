@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
@@ -34,33 +34,39 @@ const PersonType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>
-            What is the current situation of the person seeking help?
-          </Text>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("refugee")}
-              >
-                <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
-              </Pressable>
-            </View>
-          </View>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("Another")}
-              >
-                <Text style={styles.textStyle}>Another</Text>
-              </Pressable>
-            </View>
-          </View>
-        </ScrollView>
-      </PinchZoomView>
+      <ScrollView>
+        <Text style={styles.titleTextStyle}>
+          What is the current situation of the person seeking help?
+        </Text>
+        <View style={styles.container1}>
+          <LinearGradient
+            // Button Linear Gradient
+            colors={["#323438", "black", "black"]}
+            style={styles.circleButton}
+          >
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("refugee")}
+            >
+              <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
+            </Pressable>
+          </LinearGradient>
+        </View>
+        <View style={styles.container1}>
+          <LinearGradient
+            // Button Linear Gradient
+            colors={["#323438", "black", "black"]}
+            style={styles.circleButton}
+          >
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Another")}
+            >
+              <Text style={styles.textStyle}>Another</Text>
+            </Pressable>
+          </LinearGradient>
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

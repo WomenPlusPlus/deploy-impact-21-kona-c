@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   nextButton: {
-    color: "#921CB1",
     justifyContent: "center",
     alignItems: "flex-end",
     alignSelf: "flex-end",
@@ -12,7 +11,7 @@ export const styles = StyleSheet.create({
     marginRight: "2%"
   },
   nextButtonText: {
-    color: "#A169B1",
+    color: "white",
     fontSize: 55,
     fontWeight: "bold",
   },

@@ -6,7 +6,7 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
@@ -34,14 +34,18 @@ const InstitutionType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>
-            Whom are you seeking help for?
-          </Text>
-          <View>
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
+      <ScrollView>
+        <Text style={styles.titleTextStyle}>
+          Whom are you seeking help for?
+        </Text>
+        <View>
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePressPerson("Person")}
@@ -50,11 +54,17 @@ const InstitutionType = ({ route, navigation }) => {
                     <FontAwesome5 name="user" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>Individual</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>Individual</Text>
             </View>
-            <View style={styles.container2}>
-              <View style={styles.bubbleContainer}>
+          </View>
+          <View style={styles.container2}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePressCompany("Company")}
@@ -63,12 +73,12 @@ const InstitutionType = ({ route, navigation }) => {
                     <FontAwesome5 name="building" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>Company/Organisation</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>Company/Organisation</Text>
             </View>
           </View>
-        </ScrollView>
-      </PinchZoomView>
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

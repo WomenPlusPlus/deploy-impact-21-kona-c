@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 let width = null;
-let height = Dimensions.get("window").height
+let height = Dimensions.get("window").height;
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
@@ -9,7 +9,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    height: height - width/3,
+    height: height - width / 3,
   },
   container: {
     backgroundColor: "white",
@@ -54,11 +54,12 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
+    color: "white",
     fontSize: 25,
-    marginBottom: 0.03 * width,
+    marginBottom: 0.06 * width,
     marginTop: 0.03 * width,
     textAlign: "center",
+    fontWeight: "bold"
   },
   notFoundTextStyle: {
     fontFamily: "Roboto-Regular",
@@ -79,15 +80,18 @@ export const styles = StyleSheet.create({
     height: "100%",
     width: width,
     alignSelf: "center",
-
   },
   image: {
-    width: "100%",
-    justifyContent: "center",
+    width: "23%",
+    height: 0.23 * width,
     alignSelf: "center",
+    marginBottom: "8%",
+    borderWidth: 2,
+    borderColor: "white"
   },
   nextButton: {
     color: "#A169B1",
+
     flexDirection: "row",
     justifyContent: "flex-end",
   },
@@ -102,24 +106,42 @@ export const styles = StyleSheet.create({
     fontSize: 22,
   },
   textStyle: {
-    color: "#921CB1",
+    color: "white",
     fontSize: 20,
     textAlign: "center",
+    fontWeight: "bold"
   },
   button: {
-    backgroundColor: "white",
+    backgroundColor: "black",
     alignSelf: "center",
     borderRadius: 5,
     width: 0.92 * width,
+    borderWidth: 2,
+    borderColor: "white",
+    marginBottom: "3%",
+  },
+  dropdownRow: {
+    backgroundColor: "black",
+    alignSelf: "center",
+    borderRadius: 5,
+    width: 0.92 * width,
+    borderWidth: 1,
+    borderColor: "white",
+  },
+  dropdownStyle: {
+    marginTop: -49,
+    padding: 0,
+    backgroundColor: "black"
   },
   buttonDown: {
-    color: "#921CB1",
+    backgroundColor: "black",
+    color: "white",
     fontSize: 20,
     flexDirection: "row",
     justifyContent: "center",
     textAlign: "center",
   },
   dropdownicon: {
-    color: "#921CB1",
+    color: "white",
   },
 });

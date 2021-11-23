@@ -76,7 +76,8 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#8A449D",
+          backgroundColor: "#0A0208",
+          opacity: 0.8
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
@@ -148,7 +149,7 @@ function TabNavigatorBottom() {
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="HomeScreenTab"
-        activeColor="#921CB1"
+        activeColor="white"
         //inactiveColor="#A169B1"
         //color = "#3F51B5"
         //barStyle={{ backgroundColor: "white" }}
@@ -157,15 +158,15 @@ function TabNavigatorBottom() {
           name="HomeScreenTab"
           component={StackNavigation}
           options={{
-            tabBarColor: "#ffffff",
+          tabBarColor: "#0A0208",
             tabBarLabel: "Home",
             tabBarIcon: ({ color }) => (
               <Feather
                 name="home"
-                activeColor="#921CB1"
+                activeColor="white"
                 //inactiveColor="#ffffff"
                 size={23}
-                color={"#8A449D"}
+                color={"white"}
               />
             ),
           }}
@@ -175,7 +176,7 @@ function TabNavigatorBottom() {
           component={SdgScreen}
           options={{
             tabBarLabel: "SDGs",
-            tabBarColor: "#b2e1f4",
+            tabBarColor: "#21201F",
             /* tabBarOptions: {
             //activeTintColor: "#8A449D",
             //inactiveTintColor: "#ffffff",
@@ -193,9 +194,9 @@ function TabNavigatorBottom() {
           component={EmergencyScreen}
           options={{
             tabBarLabel: "Emergency",
-            tabBarColor: "#E35E63",
+            tabBarColor: "#1C0529",
             tabBarIcon: ({ color, size }) => (
-              <Feather name="phone" size={23} color={"#8A449D"} />
+              <Feather name="phone" size={23} color={"white"} />
             ),
           }}
         />
@@ -204,9 +205,9 @@ function TabNavigatorBottom() {
           component={HotlineScreen}
           options={{
             tabBarLabel: "Hotline",
-            tabBarColor: "#7FCAC3",
+            tabBarColor: "#29031A",
             tabBarIcon: ({ color, size }) => (
-              <Feather name="headphones" size={23} color={"#8A449D"} />
+              <Feather name="headphones" size={23} color={"white"} />
             ),
           }}
         />
