@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   circleButton: {
     width: 0.96 * width,
     height: 0.17 * width,
-    borderRadius: 200,
+    borderRadius: 5,
     backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
