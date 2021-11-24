@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
     width: 0.28 * width,
     height: 0.28 * width,
     borderRadius: 200,
-    backgroundColor: "transparent",
+    backgroundColor: "black",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",

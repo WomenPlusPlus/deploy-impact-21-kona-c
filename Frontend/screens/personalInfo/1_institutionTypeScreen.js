@@ -34,46 +34,34 @@ const InstitutionType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <View style={styles.mainContainer}>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
-                style={styles.circleButton}
-              >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePressPerson("Person")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <Ionicons name="person" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Individual</Text>
-            </View>
-          </View>
-          <View style={styles.container2}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
-                style={styles.circleButton}
-              >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePressCompany("Company")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <FontAwesome5 name="building" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Company/Organisation</Text>
-            </View>
+      <View style={styles.mainContainer}>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePressPerson("Person")}
+            >
+              <View style={styles.severalIconsButton}>
+                <Ionicons name="person" style={styles.userImage} />
+              </View>
+            </Pressable>
+            <Text style={styles.textStyle}>Individual</Text>
           </View>
         </View>
+        <View style={styles.container2}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePressCompany("Company")}
+            >
+              <View style={styles.severalIconsButton}>
+                <FontAwesome5 name="building" style={styles.userImage} />
+              </View>
+            </Pressable>
+            <Text style={styles.textStyle}>Company/Organisation</Text>
+          </View>
+        </View>
+      </View>
     </ImageBackground>
   );
 };
