@@ -8,6 +8,9 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: "10%",
+  },
   container: {
     flexWrap: "wrap",
     flexDirection: "row",
@@ -38,17 +41,9 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 18,
     marginTop: "2%",
-    fontWeight: "bold",
-  },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "white",
-    fontSize: 28,
-    margin: 25,
-    textAlign: "center",
     fontWeight: "bold",
   },
   circleButton: {
@@ -66,7 +61,7 @@ export const styles = StyleSheet.create({
   },
   userImage: {
     fontSize: 46,
-    color: "white",
+    color: "#DCDCDC",
     paddingBottom: "1%",
   },
   severalIconsButton: {
@@ -76,15 +71,11 @@ export const styles = StyleSheet.create({
   },
   severalIconsText: {
     fontSize: 38,
-    color: "white",
+    color: "#DCDCDC",
   },
   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
-  },
-  text: {
-    color: "black",
-    fontSize: 14,
   },
 });

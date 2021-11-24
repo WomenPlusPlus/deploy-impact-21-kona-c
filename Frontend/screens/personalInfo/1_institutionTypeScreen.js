@@ -34,11 +34,7 @@ const InstitutionType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>
-          Whom are you seeking help for?
-        </Text>
-        <View>
+        <View style={styles.mainContainer}>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <LinearGradient
@@ -78,7 +74,6 @@ const InstitutionType = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ScrollView>
     </ImageBackground>
   );
 };

@@ -29,9 +29,7 @@ const HelpForWho = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Seeking help for...</Text>
-        <View>
+        <View style={styles.mainContainer}>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <LinearGradient
@@ -71,7 +69,6 @@ const HelpForWho = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ScrollView>
     </ImageBackground>
   );
 };

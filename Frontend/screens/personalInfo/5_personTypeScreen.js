@@ -34,10 +34,7 @@ const PersonType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>
-          What is the current situation of the person seeking help?
-        </Text>
+      <View style={styles.mainContainer}>
         <View style={styles.container1}>
           <LinearGradient
             // Button Linear Gradient
@@ -66,7 +63,7 @@ const PersonType = ({ route, navigation }) => {
             </Pressable>
           </LinearGradient>
         </View>
-      </ScrollView>
+      </View>
     </ImageBackground>
   );
 };

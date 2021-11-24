@@ -33,11 +33,7 @@ const InfoAge = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>
-          What is the age of the person seeking help?
-        </Text>
-        <View>
+        <View style={styles.mainContainer}>
           <View style={styles.container1}>
             <View style={styles.bubbleContainer}>
               <LinearGradient
@@ -111,7 +107,6 @@ const InfoAge = ({ route, navigation }) => {
             </View>
           </View>
         </View>
-      </ScrollView>
     </ImageBackground>
   );
 };

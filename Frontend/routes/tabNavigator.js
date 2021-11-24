@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Feather, Entypo } from "@expo/vector-icons";
@@ -35,22 +35,25 @@ const handlePress = (routeName) => {
   let questionnaireMessage = "an option";
   switch (routeName) {
     case "LocationScreen":
-      questionnaireMessage = "a Region";
+      questionnaireMessage = "a region";
       break;
     case "InfoGender":
-      questionnaireMessage = "a Gender";
+      questionnaireMessage = "a gender";
       break;
+      case "OtherGender":
+        questionnaireMessage = "or specify a gender";
+        break;
     case "InfoAge":
-      questionnaireMessage = "an Age Range";
+      questionnaireMessage = "an age range";
       break;
     case "NeedsScreenA":
-      questionnaireMessage = "an Area of interest";
+      questionnaireMessage = "an area of interest";
       break;
     case "NeedsScreenB":
-      questionnaireMessage = "a Subtopic";
+      questionnaireMessage = "a subtopic";
       break;
     case "NeedsScreenC":
-      questionnaireMessage = "a Subtopic";
+      questionnaireMessage = "a subtopic";
       break;
   }
   let alertMessage = `Please select ${questionnaireMessage}. This will help show only relevant organisations.`;
@@ -71,7 +74,8 @@ const handlePress = (routeName) => {
   Alert.alert("Info", alertMessage);
 };
 
-const StackNavigation = () => {
+const StackNavigation = ({ route }) => {
+  let questionnaireTitle = "";
   return (
     <Stack.Navigator
       screenOptions={{
@@ -79,7 +83,7 @@ const StackNavigation = () => {
           backgroundColor: "#141414",
           opacity: 0.8,
         },
-        headerTintColor: "#fff",
+        headerTintColor: "#DCDCDC",
         headerTitleStyle: {
           fontWeight: "bold",
         },
@@ -91,19 +95,66 @@ const StackNavigation = () => {
         options={{ title: "Dots." }}
       />
       <Stack.Group
-        screenOptions={({ route }) => ({
-          title: "Select an option",
-          headerTitleAlign: "center",
-          headerRight: () => {
-            return (
-              <View>
-                <Pressable onPress={() => handlePress(route.name)}>
-                  <Entypo name="help-with-circle" size={24} color="white" />
-                </Pressable>
-              </View>
-            );
-          },
-        })}
+        screenOptions={({ route }) => (
+          route.name === "LocationScreen"
+            ? (questionnaireTitle = "Select a region")
+            : null,
+          route.name === "InstitutionType"
+            ? (questionnaireTitle = "Select a person type")
+            : null,
+          route.name === "HelpForWho"
+            ? (questionnaireTitle = "Select for who")
+            : null,
+          route.name === "InfoGender"
+            ? (questionnaireTitle = "Select a gender")
+            : null,
+          route.name === "OtherGender"
+            ? (questionnaireTitle = "Select or specify")
+            : null,
+          route.name === "InfoAge"
+            ? (questionnaireTitle = "Select an age")
+            : null,
+          route.name === "PersonType"
+            ? (questionnaireTitle = "Select current situation")
+            : null,
+          route.name === "NeedsScreenA"
+            ? (questionnaireTitle = "Select a topic")
+            : null,
+          route.name === "NeedsScreenB"
+            ? (questionnaireTitle = "Need help with...")
+            : null,
+          route.name === "NeedsScreenC"
+            ? (questionnaireTitle = "Need help with...")
+            : null,
+          route.name === "NeedsScreenD"
+            ? (questionnaireTitle = "Need help with...")
+            : null,
+          route.name === "OrganisationsListScreen"
+            ? (questionnaireTitle = "Your results")
+            : null,
+          route.name === "CompaniesOrganisationsList"
+            ? (questionnaireTitle = "Your results")
+            : null,
+          route.name === "SdgOrganisationsList"
+            ? (questionnaireTitle = "The goal results")
+            : null,
+          route.name === "OrganisationDetailsScreen"
+            ? (questionnaireTitle = "Organisation details")
+            : null,
+          {
+            title: questionnaireTitle,
+            headerTitleAlign: "center",
+            headerRight: () => {
+              return (
+                <View>
+                  <Pressable onPress={() => handlePress(route.name)}>
+                    <Entypo name="help-with-circle" size={24} color="#DCDCDC" />
+                  </Pressable>
+                </View>
+              );
+            },
+          }
+        )}
       >
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="InstitutionType" component={InstitutionType} />
@@ -143,7 +194,7 @@ const StackNavigation = () => {
   );
 };
 
-function TabNavigatorBottom() {
+function TabNavigatorBottom({ route }) {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="HomeScreenTab" activeColor="white">
@@ -157,14 +208,12 @@ function TabNavigatorBottom() {
               <Feather
                 name="home"
                 activeColor="white"
-                //inactiveColor="#ffffff"
                 size={23}
                 color={"white"}
               />
             ),
           }}
         />
-
         <Tab.Screen
           name="SDG"
           component={SdgScreen}

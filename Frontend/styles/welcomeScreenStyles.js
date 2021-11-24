@@ -13,17 +13,9 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-between",
   },
-  textTitle: {
-    fontFamily: "Roboto-Regular",
-    fontSize: 23,
-    fontWeight: "bold",
-    textShadowRadius: 10,
-    alignSelf: "center",
-    color: "white",
-  },
   textButton: {
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
@@ -100,7 +92,7 @@ export const styles = StyleSheet.create({
   textStyle: {
     fontSize: 16,
     margin: 6,
-    color: "white",
+    color: "#DCDCDC",
   },
   button: {
     width: 75,
@@ -119,7 +111,7 @@ export const styles = StyleSheet.create({
     borderColor: "#474747",
   },
   dropdownIcon: {
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 16,
     margin: 0,
     padding: 0,
@@ -137,7 +129,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
-    color: "white",
     fontSize: 22,
     width: 0.5 * width,
     padding: "2%",
@@ -149,8 +140,8 @@ export const styles = StyleSheet.create({
   },
   bottomText: {
     fontFamily: "Roboto-Regular",
-    color: "white",
-    fontSize: 20,
+    color: "#DCDCDC",
+    fontSize: 25,
     fontWeight: "bold"
   },
 });

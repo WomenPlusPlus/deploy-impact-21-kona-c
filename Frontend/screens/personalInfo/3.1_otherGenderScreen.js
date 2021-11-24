@@ -32,11 +32,7 @@ const OtherGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView keyboardShouldPersistTaps="always">
-        <Text style={styles.titleTextStyle}>
-          Please specify a gender identity
-        </Text>
-        <View>
+        <View style={styles.mainContainer} keyboardShouldPersistTaps="always">
           <View style={styles.container1}>
             <LinearGradient
               // Button Linear Gradient
@@ -92,7 +88,7 @@ const OtherGender = ({ route, navigation }) => {
               >
                 <TextInput
                   placeholder="Another (please specify)"
-                  placeholderTextColor={"white"}
+                  placeholderTextColor={"#DCDCDC"}
                   style={styles.textStyleInput}
                 ></TextInput>
                 <NextButton handlePress={handlePress} />
@@ -100,7 +96,6 @@ const OtherGender = ({ route, navigation }) => {
             </LinearGradient>
           </View>
         </View>
-      </ScrollView>
     </ImageBackground>
   );
 };

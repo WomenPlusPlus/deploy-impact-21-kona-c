@@ -33,11 +33,7 @@ const OrganisationsLists = (props) => {
             No organisations available. Try to change the location or search for
             another goal.
           </Text>
-        ) : (
-          <Text style={styles.titleTextStyle}>
-            List of organisations that could provide help
-          </Text>
-        )}
+        ) : null}
         {props.SDG_Id ? (
           <Image
             resizeMode="contain"
@@ -257,7 +253,7 @@ const OrganisationsLists = (props) => {
                       return (
                         <Text
                           key={"phone" + num}
-                          style={styles.flexContainerPhone}
+                          style={styles.flexContainer}
                           onPress={() => makeCall(num)}
                         >
                           <FontAwesome style={styles.iconText} name="phone" />

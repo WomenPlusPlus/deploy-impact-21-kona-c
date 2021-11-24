@@ -8,17 +8,12 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
-  textStyle: {
-    color: "white",
-    fontSize: 19,
-    fontWeight: "bold",
+  mainContainer: {
+    marginTop: "10%",
   },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "white",
-    fontSize: 28,
-    margin: 25,
-    textAlign: "center",
+  textStyle: {
+    color: "#DCDCDC",
+    fontSize: 19,
     fontWeight: "bold",
   },
   backgroundImage: {
@@ -41,7 +36,7 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     borderWidth: 2,
     borderColor: "#474747",
-    margin: 0.02 * width,
+    margin: 0.015 * width,
     paddingLeft: 7,
     paddingRight: 7,
   },

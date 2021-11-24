@@ -8,6 +8,7 @@ if (Dimensions.get("window").width > 500) {
 }
 export const styles = StyleSheet.create({
   mainContainer: {
+    marginTop: "10%",
   },
   container1: {
     flexDirection: "row",
@@ -25,31 +26,21 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   textStyleInput: {
-    alignSelf: "center",
-    textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "white",
-    paddingLeft: 70,
+    color: "#DCDCDC",
     fontSize: 19,
     fontWeight: "bold",
+    alignSelf: "center",
+    marginLeft: "19%",
+    flexGrow: 1
   },
   textStyle: {
+    justifyContent: "center",
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 19,
-    fontWeight: "bold",
-  },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "white",
-    fontSize: 28,
-    marginTop: 20,
-    marginBottom: 10,
-    textAlign: "center",
-    fontWeight: "bold",
-    padding: 15,
     fontWeight: "bold",
   },
   circleButton: {
@@ -73,18 +64,18 @@ export const styles = StyleSheet.create({
     backgroundColor: "transparent",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
     borderWidth: 2,
     borderColor: "#474747",
     margin: 0.01 * width,
     paddingLeft: 7,
-    paddingRight: 7,
+    paddingRight: 3,
     marginLeft: 0.01 * width,
     marginRight: 0.01 * width,
   },
   userImage: {
     fontSize: 46,
-    color: "white",
+    color: "#DCDCDC",
   },
   backgroundImage: {
     height: "100%",

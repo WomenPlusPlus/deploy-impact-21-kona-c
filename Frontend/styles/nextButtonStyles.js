@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     marginRight: "2%"
   },
   nextButtonText: {
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 55,
     fontWeight: "bold",
   },
