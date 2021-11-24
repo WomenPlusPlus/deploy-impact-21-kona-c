@@ -93,6 +93,7 @@ export const styles = StyleSheet.create({
     marginBottom: "5%",
     borderWidth: 2,
     borderColor: "#474747",
+    backgroundColor: "#474747",
   },
   nextButton: {
     color: "#A169B1",

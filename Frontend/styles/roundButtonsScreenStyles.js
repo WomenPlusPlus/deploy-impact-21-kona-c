@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
+    width: width,
     height: "100%",
   },
   bubbleContainer: {

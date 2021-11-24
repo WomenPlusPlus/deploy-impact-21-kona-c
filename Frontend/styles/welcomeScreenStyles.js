@@ -71,11 +71,13 @@ export const styles = StyleSheet.create({
     borderColor: "#474747",
     marginTop: 0.02 * width,
   },
-
   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
+    borderWidth: 0,
+    margin: 0,
+    padding: 0
   },
   image: {
     width: 22,

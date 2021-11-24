@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 28,
     margin: "5%",
-    marginTop: "23%",
+    marginTop: "20%",
     padding: 6,
     textAlign: "center",
     fontWeight: "bold"
