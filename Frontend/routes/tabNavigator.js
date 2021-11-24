@@ -41,7 +41,7 @@ const handlePress = (routeName) => {
       questionnaireMessage = "a gender";
       break;
       case "OtherGender":
-        questionnaireMessage = "or specify a gender";
+        questionnaireMessage = "or specify a";
         break;
     case "InfoAge":
       questionnaireMessage = "an age range";

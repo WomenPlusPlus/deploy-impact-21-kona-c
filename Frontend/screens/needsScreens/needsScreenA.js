@@ -76,19 +76,13 @@ const NeedsScreenA = ({ route, navigation }) => {
         <View style={styles.container}>
           {uniqueOptionsArray.map((option, i) => (
             <View key={option} style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
+              <Pressable
                 style={styles.circleButton}
+                onPress={() => handlePress(option)}
               >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress(option)}
-                >
-                  {iconsArray[i]}
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>{option}</Text>
+                {iconsArray[i]}
+                <Text style={styles.textStyle}>{option}</Text>
+              </Pressable>
             </View>
           ))}
         </View>

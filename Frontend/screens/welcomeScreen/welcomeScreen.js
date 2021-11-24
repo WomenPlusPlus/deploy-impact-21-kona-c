@@ -84,39 +84,27 @@ const HomeScreen = ({ navigation }) => {
               }}
             />
           </View>
-          <LinearGradient
-            // Button Linear Gradient
-            colors={["#3F444D", "black", "black", "black"]}
-            style={styles.roundXL}
-          >
+          <View style={styles.roundXL}>
             <Pressable onPress={handlePress}>
               <Text style={styles.textButton}>
                 If you are in a vulnerable situation...
               </Text>
             </Pressable>
-          </LinearGradient>
+          </View>
 
           <View style={styles.containerRoundMS}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#3F444D", "black", "black", "black"]}
-              style={styles.roundS}
-            >
+            <View style={styles.roundS}>
               <Pressable onPress={handlePress}>
                 <Text style={styles.textButton}>If you are at risk...</Text>
               </Pressable>
-            </LinearGradient>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#3F444D", "black","black", "black"]}
-              style={styles.roundM}
-            >
+            </View>
+            <View style={styles.roundM}>
               <Pressable onPress={handlePress}>
                 <Text style={styles.textButton}>
                   Dots. can find the help you need.
                 </Text>
               </Pressable>
-            </LinearGradient>
+            </View>
           </View>
         </View>
         <Pressable style={styles.startButton} onPress={handlePress}>

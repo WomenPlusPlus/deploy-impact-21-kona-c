@@ -8,7 +8,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "10%",
+    marginTop: "13%",
   },
    backgroundImage: {
     height: "100%",

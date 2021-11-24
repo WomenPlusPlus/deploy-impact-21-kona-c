@@ -29,46 +29,34 @@ const HelpForWho = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <View style={styles.mainContainer}>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
+      <View style={styles.mainContainer}>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+              <Pressable
                 style={styles.circleButton}
+                onPress={() => handlePress("Myself")}
               >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("Myself")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <Ionicons name="person" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Myself</Text>
-            </View>
-          </View>
-          <View style={styles.container2}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
-                style={styles.circleButton}
-              >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("Others")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <FontAwesome5 name="users" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Others</Text>
-            </View>
+                <View style={styles.squareButtonContainer}>
+                  <Ionicons name="person" style={styles.userImage} />
+                  <Text style={styles.textStyle}>Myself</Text>
+                </View>
+              </Pressable>
           </View>
         </View>
+        <View style={styles.container2}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Others")}
+            >
+              <View style={styles.squareButtonContainer}>
+                <FontAwesome5 name="users" style={styles.userImage} />
+                <Text style={styles.textStyle}>Others</Text>
+              </View>
+            </Pressable>
+          </View>
+        </View>
+      </View>
     </ImageBackground>
   );
 };

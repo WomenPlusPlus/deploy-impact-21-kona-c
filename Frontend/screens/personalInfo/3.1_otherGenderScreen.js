@@ -32,70 +32,46 @@ const OtherGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <View style={styles.mainContainer} keyboardShouldPersistTaps="always">
-          <View style={styles.container1}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#202121", "black", "black", "black"]}
+      <View style={styles.mainContainer} keyboardShouldPersistTaps="always">
+        <View style={styles.container1}>
+            <Pressable
               style={styles.circleButton}
+              onPress={() => handlePress("O")}
             >
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("O")}
-              >
-                <Text style={styles.textStyle}>Non-binary</Text>
-              </Pressable>
-            </LinearGradient>
-          </View>
+              <Text style={styles.textStyle}>Non-binary</Text>
+            </Pressable>
+        </View>
 
-          <View style={styles.container1}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
+        <View style={styles.container1}>
+            <Pressable
               style={styles.circleButton}
+              onPress={() => handlePress("O")}
             >
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("O")}
-              >
-                <Text style={styles.textStyle}>Gender-fluid</Text>
-              </Pressable>
-            </LinearGradient>
-          </View>
-          <View style={styles.container1}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
+              <Text style={styles.textStyle}>Gender-fluid</Text>
+            </Pressable>
+        </View>
+        <View style={styles.container1}>
+            <Pressable
               style={styles.circleButton}
+              onPress={() => handlePress("O")}
             >
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("O")}
-              >
-                <Text style={styles.textStyle}>Agender</Text>
-              </Pressable>
-            </LinearGradient>
-          </View>
-          <View style={styles.containerInput}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#323438", "black", "black"]}
-              style={styles.circleButton}
-            >
-              <View
-                style={styles.circleButtonInput}
-                onPress={() => handlePress("M")}
-              >
-                <TextInput
-                  placeholder="Another (please specify)"
-                  placeholderTextColor={"#DCDCDC"}
-                  style={styles.textStyleInput}
-                ></TextInput>
-                <NextButton handlePress={handlePress} />
-              </View>
-            </LinearGradient>
+              <Text style={styles.textStyle}>Agender</Text>
+            </Pressable>
+        </View>
+        <View style={styles.containerInput}>
+          <View
+            style={styles.circleButtonInput}
+            onPress={() => handlePress("M")}
+          >
+            <TextInput
+              placeholder="Another (please specify)"
+              placeholderTextColor={"#DCDCDC"}
+              style={styles.textStyleInput}
+            ></TextInput>
+            <NextButton handlePress={handlePress} />
           </View>
         </View>
+      </View>
     </ImageBackground>
   );
 };

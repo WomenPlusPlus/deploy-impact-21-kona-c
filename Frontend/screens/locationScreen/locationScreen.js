@@ -35,10 +35,7 @@ const LocationScreen = ({ navigation }) => {
       <ScrollView style={styles.mainContainer}>
         {uniqueRegionsArray.map((region) => (
           <View key={region} style={styles.container1}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#202121", "black", "black", "black"]}
-              style={styles.circleButton}
+            <View style={styles.circleButton}
             >
               <Pressable
                 style={styles.circleButton}
@@ -46,7 +43,7 @@ const LocationScreen = ({ navigation }) => {
               >
                 <Text style={styles.textStyle}>{region}</Text>
               </Pressable>
-            </LinearGradient>
+            </View>
           </View>
         ))}
       </ScrollView>

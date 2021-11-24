@@ -9,7 +9,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "10%",
+    marginTop: "15%",
   },
   textStyle: {
     color: "#DCDCDC",
@@ -30,12 +30,12 @@ export const styles = StyleSheet.create({
     width: 0.92 * width,
     height: 0.17 * width,
     borderRadius: 5,
-    backgroundColor: "transparent",
+    backgroundColor: "#141414",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
     margin: 0.015 * width,
     paddingLeft: 7,
     paddingRight: 7,

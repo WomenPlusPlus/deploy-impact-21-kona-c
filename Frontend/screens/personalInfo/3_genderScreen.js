@@ -41,80 +41,56 @@ const InfoGender = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <View style={styles.mainContainer}>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
+      <View style={styles.mainContainer}>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+              <Pressable
                 style={styles.circleButton}
+                onPress={() => handlePress("F")}
               >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("F")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <Ionicons name="woman-sharp" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Female</Text>
-            </View>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
-                style={styles.circleButton}
-              >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("M")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <Ionicons name="man-sharp" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Male</Text>
-            </View>
+                <View style={styles.squareButtonContainer}>
+                  <Ionicons name="woman-sharp" style={styles.userImage} />
+                  <Text style={styles.textStyle}>Female</Text>
+                </View>
+              </Pressable>
           </View>
-          <View style={styles.container2}>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
+          <View style={styles.bubbleContainer}>
+              <Pressable
                 style={styles.circleButton}
+                onPress={() => handlePress("M")}
               >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("O")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <FontAwesome name="heart" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Other</Text>
-            </View>
-            <View style={styles.bubbleContainer}>
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#323438", "black", "black"]}
-                style={styles.circleButton}
-              >
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress("N")}
-                >
-                  <View style={styles.severalIconsButton}>
-                    <FontAwesome5 name="question" style={styles.userImage} />
-                  </View>
-                </Pressable>
-              </LinearGradient>
-              <Text style={styles.textStyle}>Prefer not to say</Text>
-            </View>
+                <View style={styles.squareButtonContainer}>
+                  <Ionicons name="man-sharp" style={styles.userImage} />
+                  <Text style={styles.textStyle}>Male</Text>
+                </View>
+              </Pressable>
           </View>
         </View>
+        <View style={styles.container2}>
+          <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("O")}
+              >
+                <View style={styles.squareButtonContainer}>
+                  <FontAwesome name="heart" style={styles.userImage} />
+                  <Text style={styles.textStyle}>Other</Text>
+                </View>
+              </Pressable>
+          </View>
+          <View style={styles.bubbleContainer}>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress("N")}
+              >
+                <View style={styles.squareButtonContainer}>
+                  <FontAwesome5 name="question" style={styles.userImage} />
+                  <Text style={styles.textStyle}>Prefer not to say</Text>
+                </View>
+              </Pressable>
+          </View>
+        </View>
+      </View>
     </ImageBackground>
   );
 };
