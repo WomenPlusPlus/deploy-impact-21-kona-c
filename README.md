@@ -1,5 +1,5 @@
 
-   ![Image of banner]( https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/dots_background.png?raw=true)
+   ![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/headerdots.png?raw=true)
 
 
 # Dots by ConnectingDots
