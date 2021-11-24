@@ -107,7 +107,6 @@ export const styles = StyleSheet.create({
     height: 0.33 * width,
     alignSelf: "center",
     marginBottom: "5%",
-    marginTop: "5%",
     borderWidth: 2,
     borderColor: "#474747",
     backgroundColor: "black",
