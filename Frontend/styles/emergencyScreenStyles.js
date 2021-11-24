@@ -8,7 +8,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "10%",
+    marginTop: "15%",
   },
   container1: {
     flexDirection: "row",
@@ -21,28 +21,27 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 28,
     margin: "1%",
-    marginTop: "12%",
     textAlign: "center",
     fontWeight: "bold",
   },
   textBoldStyle: {
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 18,
     fontWeight: "bold",
   },
   iconText: {
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 18,
     paddingTop: "5%",
     textAlign: "center",
     textAlignVertical: "center"
   },
   mainIconText: {
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 42,
     textAlign: "center",
     textAlignVertical: "center",
@@ -99,7 +98,7 @@ export const styles = StyleSheet.create({
   },
   textMiddleStyle: {
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 18,
     textAlign: "center",
     marginBottom: "6%",

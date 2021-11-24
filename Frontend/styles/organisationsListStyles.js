@@ -8,8 +8,11 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
-  mainContainer: {
+  mainContainerScroll: {
     height: height - width / 3,
+  },
+  mainContainer: {
+    marginTop: "12%",
   },
   container: {
     backgroundColor: "transparent",

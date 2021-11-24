@@ -7,7 +7,10 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
-  backgroundImage: {
+  mainContainer: {
+    marginTop: "10%",
+  },
+   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
@@ -34,7 +37,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginBottom: 50,
+    marginBottom: "10%",
   },
   containerOrganisation: {
     flexGrow: 1,
@@ -49,7 +52,6 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 28,
     margin: "5%",
-    marginTop: "20%",
     padding: 6,
     textAlign: "center",
     fontWeight: "bold"

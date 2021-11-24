@@ -17,7 +17,6 @@ const NeedsB_to_D = (props) => {
       style={styles.backgroundImage}
     >
       <ScrollView style={styles.mainContainer}>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
         {props.arr.map((option) => (
           <View key={option} style={styles.container1}>
                 <LinearGradient
