@@ -17,7 +17,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
 import { styles } from "../styles/organisationsListStyles";
-import sdgsLarge from "../utils/sdgsLarge";
+import sdgs from "../utils/sdgs";
 import { makeCall } from "../utils/makeCall";
 
 const OrganisationsLists = (props) => {
@@ -29,24 +29,20 @@ const OrganisationsLists = (props) => {
     >
       <ScrollView style={styles.mainContainerScroll}>
         <View style={styles.mainContainer}>
-        {props.newData.length === 0 ? (
-          <Text style={styles.notFoundTextStyle}>
-            No organisations available. Try to change the location or search for
-            another goal.
-          </Text>
-        ) : null}
-        {props.SDG_Id ? (
-          <Image
-            resizeMode="contain"
-            source={sdgsLarge[props.SDG_Id[0] - 1].image}
-            style={styles.image}
-          />
-        ) : null}
-        <View>
-          <LinearGradient
-            // Button Linear Gradient
-            colors={["#202121", "black", "black", "black"]}
-          >
+          {props.newData.length === 0 ? (
+            <Text style={styles.notFoundTextStyle}>
+              No organisations available. Try to change the location or search
+              for another goal.
+            </Text>
+          ) : null}
+          {props.SDG_Id ? (
+            <Image
+              resizeMode="contain"
+              source={sdgs[props.SDG_Id[0] - 1].image}
+              style={styles.image}
+            />
+          ) : null}
+          <View>
             <SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
@@ -80,12 +76,7 @@ const OrganisationsLists = (props) => {
                 );
               }}
             />
-          </LinearGradient>
-          {props.selectedGender !== undefined ? (
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#202121", "black", "black", "black"]}
-            >
+            {props.selectedGender !== undefined ? (
               <SelectDropdown
                 buttonTextStyle={styles.textStyle}
                 buttonStyle={styles.button}
@@ -127,13 +118,8 @@ const OrganisationsLists = (props) => {
                   );
                 }}
               />
-            </LinearGradient>
-          ) : null}
-          {props.selectedAge !== undefined ? (
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#202121", "black", "black", "black"]}
-            >
+            ) : null}
+            {props.selectedAge !== undefined ? (
               <SelectDropdown
                 buttonTextStyle={styles.textStyle}
                 buttonStyle={styles.button}
@@ -183,16 +169,10 @@ const OrganisationsLists = (props) => {
                   );
                 }}
               />
-            </LinearGradient>
-          ) : null}
-        </View>
-        {props.newData.map((organisation) => (
-          <View key={"listview" + organisation}>
-            <LinearGradient
-              // Button Linear Gradient
-              colors={["#202121", "black", "black", "black"]}
-              style={styles.container}
-            >
+            ) : null}
+          </View>
+          {props.newData.map((organisation) => (
+            <View key={"listview" + organisation} style={styles.container}>
               <Text key={"name" + organisation} style={styles.textBoxName}>
                 {data[organisation]["Name of Organisation"]}
               </Text>
@@ -268,14 +248,14 @@ const OrganisationsLists = (props) => {
                       );
                     })}
               <Pressable
-                style={styles.nextButton}
+                style={styles.nextButtonLarge}
                 onPress={() => {
                   props.navigation.navigate("OrganisationDetailsScreen", {
                     org: organisation,
                   });
                 }}
               >
-                <Text style={styles.nextButtonText}>
+                  <Text style={styles.textBoxName}>More info</Text>
                   <FontAwesome
                     style={styles.nextButtonText}
                     name="angle-right"
@@ -284,11 +264,9 @@ const OrganisationsLists = (props) => {
                     style={styles.nextButtonText}
                     name="angle-right"
                   />
-                </Text>
               </Pressable>
-            </LinearGradient>
-          </View>
-        ))}
+            </View>
+          ))}
         </View>
       </ScrollView>
     </ImageBackground>

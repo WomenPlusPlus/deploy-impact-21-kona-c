@@ -8,7 +8,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "15%",
+    marginTop: "17%",
   },
   container1: {
     flexDirection: "row",
@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
     width: 0.43 * width,
     height: 0.43 * width,
     borderRadius: 200,
-    backgroundColor: "transparent",
+    backgroundColor: "#141414",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -63,13 +63,13 @@ export const styles = StyleSheet.create({
     marginLeft: "5%",
     marginTop: "-2%",
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
   },
   roundRightM: {
     width: 0.43 * width,
     height: 0.43 * width,
     borderRadius: 200,
-    backgroundColor: "transparent",
+    backgroundColor: "#141414",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -77,13 +77,13 @@ export const styles = StyleSheet.create({
     marginLeft: "5%",
     marginTop: "10%",
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
   },
   roundSingleM: {
     width: 0.43 * width,
     height: 0.43 * width,
     borderRadius: 200,
-    backgroundColor: "transparent",
+    backgroundColor: "#141414",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -91,7 +91,7 @@ export const styles = StyleSheet.create({
     marginLeft: "40%",
     marginTop: "10%",
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
   },
   roundContainer: {
     flexDirection: "row",

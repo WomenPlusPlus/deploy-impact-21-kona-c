@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     marginTop: "12%",
   },
   container: {
-    backgroundColor: "transparent",
+    backgroundColor: "#303030",
     width: 0.93 * width,
     borderRadius: 5,
     overflow: "hidden",
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     marginTop: 0.04 * width,
     marginBottom: 0.02 * width,
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
   },
   textBoxName: {
     color: "#C2C4BE",
@@ -83,20 +83,6 @@ export const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 5,
   },
-  flexContainerPhone: {
-    marginBottom: 0.02 * width,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    borderWidth: 2,
-    paddingTop: 10,
-    paddingBottom: 5,
-    paddingRight: 10,
-    paddingLeft: 10,
-    borderColor: "gray",
-    backgroundColor: "#202121",
-    alignSelf: 'flex-start'
-  },
   backgroundImage: {
     height: "100%",
     width: width,
@@ -108,13 +94,27 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     marginBottom: "5%",
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
     backgroundColor: "black",
   },
   nextButton: {
     color: "#DCDCDC",
     flexDirection: "row",
     justifyContent: "flex-end",
+  },
+  nextButtonLarge: {
+    color: "#DCDCDC",
+    flexDirection: "row",
+    backgroundColor: "#141414",
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+    borderWidth: 2,
+    borderColor: "gray",
+    margin: 0,
+    width: "108%",
+    height: 0.14 * width,
+    marginBottom: "-3.5%"
   },
   nextButtonText: {
     color: "#DCDCDC",
@@ -133,13 +133,13 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
-    backgroundColor: "transparent",
+    backgroundColor: "#141414",
     alignSelf: "center",
     borderRadius: 5,
     width: 0.92 * width,
     height: 0.14 * width,
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
     marginBottom: "3%",
   },
   dropdownRow: {

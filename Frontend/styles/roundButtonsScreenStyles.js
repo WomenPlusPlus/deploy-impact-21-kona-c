@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "Roboto-Regular",
     color: "#DCDCDC",
-    fontSize: 14,
+    fontSize: 15,
     marginTop: 0.02 * width,
     fontWeight: "bold",
   },
