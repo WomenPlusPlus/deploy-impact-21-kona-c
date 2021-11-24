@@ -41,11 +41,11 @@ const InstitutionType = ({ route, navigation }) => {
               style={styles.circleButton}
               onPress={() => handlePressPerson("Person")}
             >
-              <View style={styles.severalIconsButton}>
+              <View style={styles.squareButtonContainer}>
                 <Ionicons name="person" style={styles.userImage} />
+                <Text style={styles.textStyle}>Individual</Text>
               </View>
             </Pressable>
-            <Text style={styles.textStyle}>Individual</Text>
           </View>
         </View>
         <View style={styles.container2}>
@@ -54,11 +54,11 @@ const InstitutionType = ({ route, navigation }) => {
               style={styles.circleButton}
               onPress={() => handlePressCompany("Company")}
             >
-              <View style={styles.severalIconsButton}>
+              <View style={styles.squareButtonContainer}>
                 <FontAwesome5 name="building" style={styles.userImage} />
+                <Text style={styles.textStyle}>Company / Organisation</Text>
               </View>
             </Pressable>
-            <Text style={styles.textStyle}>Company/Organisation</Text>
           </View>
         </View>
       </View>

@@ -36,32 +36,20 @@ const PersonType = ({ route, navigation }) => {
     >
       <View style={styles.mainContainer}>
         <View style={styles.container1}>
-          <LinearGradient
-            // Button Linear Gradient
-            colors={["#202121", "black", "black", "black"]}
+          <Pressable
             style={styles.circleButton}
+            onPress={() => handlePress("refugee")}
           >
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("refugee")}
-            >
-              <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
-            </Pressable>
-          </LinearGradient>
+            <Text style={styles.textStyle}>Refugee/asylum seeker</Text>
+          </Pressable>
         </View>
         <View style={styles.container1}>
-          <LinearGradient
-            // Button Linear Gradient
-            colors={["#323438", "black", "black"]}
+          <Pressable
             style={styles.circleButton}
+            onPress={() => handlePress("Another")}
           >
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("Another")}
-            >
-              <Text style={styles.textStyle}>Another</Text>
-            </Pressable>
-          </LinearGradient>
+            <Text style={styles.textStyle}>Other</Text>
+          </Pressable>
         </View>
       </View>
     </ImageBackground>

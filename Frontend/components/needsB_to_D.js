@@ -19,18 +19,12 @@ const NeedsB_to_D = (props) => {
       <ScrollView style={styles.mainContainer}>
         {props.arr.map((option) => (
           <View key={option} style={styles.container1}>
-                <LinearGradient
-                // Button Linear Gradient
-                colors={["#202121", "black", "black", "black"]}
-                style={styles.circleButton}
-              >
               <Pressable
                 style={styles.circleButton}
                 onPress={() => props.handlePress(option)}
               >
                 <Text style={styles.textStyle}>{option}</Text>
               </Pressable>
-            </LinearGradient>
           </View>
         ))}
       </ScrollView>

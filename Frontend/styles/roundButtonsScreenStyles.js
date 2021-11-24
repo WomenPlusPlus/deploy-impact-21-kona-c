@@ -9,7 +9,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "10%",
+    marginTop: "15%",
   },
   container: {
     flexWrap: "wrap",
@@ -19,8 +19,8 @@ export const styles = StyleSheet.create({
     height: "100%",
   },
   bubbleContainer: {
-    marginBottom: "1.5%",
-    width: 0.32 * width,
+    marginBottom: "5%",
+    width: "33%",
     flexDirection: "column",
     alignItems: "center",
   },
@@ -35,34 +35,38 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "flex-start",
-    marginTop: "3%",
+    marginTop: "2%",
   },
   textStyle: {
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
     color: "#DCDCDC",
-    fontSize: 18,
-    marginTop: "2%",
+    fontSize: 14,
+    marginTop: 0.02 * width,
     fontWeight: "bold",
   },
   circleButton: {
-    width: 0.28 * width,
-    height: 0.28 * width,
-    borderRadius: 200,
-    backgroundColor: "black",
-    justifyContent: "center",
+    width: 0.3 * width,
+    height: 0.3 * width,
+    borderRadius: 5,
+    backgroundColor: "#141414",
+    justifyContent: "flex-start",
+    padding: "3%",
+    paddingTop: "10%",
     alignItems: "center",
     flexDirection: "column",
-    marginLeft: 0.01 * width,
-    marginRight: 0.01 * width,
     borderWidth: 2,
-    borderColor: "#474747",
+    borderColor: "gray",
+  },
+  squareButtonContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   userImage: {
-    fontSize: 46,
+    fontSize: 40,
     color: "#DCDCDC",
-    paddingBottom: "1%",
   },
   severalIconsButton: {
     flexDirection: "row",
@@ -70,7 +74,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   severalIconsText: {
-    fontSize: 38,
+    fontSize: 40,
     color: "#DCDCDC",
   },
   backgroundImage: {
