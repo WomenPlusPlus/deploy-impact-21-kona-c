@@ -28,7 +28,6 @@ export const styles = StyleSheet.create({
   },
   textBoxName: {
     color: "#C2C4BE",
-
     fontSize: 22,
     padding: 0.03 * width,
     textAlign: "center",
@@ -111,7 +110,7 @@ export const styles = StyleSheet.create({
     marginTop: "5%",
     borderWidth: 2,
     borderColor: "#474747",
-    backgroundColor: "#474747",
+    backgroundColor: "black",
   },
   nextButton: {
     color: "#DCDCDC",
