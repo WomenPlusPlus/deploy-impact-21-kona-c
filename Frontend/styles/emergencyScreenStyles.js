@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: "2%",
-    marginLeft: "8%",
+    marginLeft: "5%",
     marginTop: "-2%",
     borderWidth: 2,
     borderColor: "#474747",
