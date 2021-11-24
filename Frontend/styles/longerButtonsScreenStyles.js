@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
     color: "white",
     paddingLeft: 70,
     fontSize: 19,
+    fontWeight: "bold",
   },
   textStyle: {
     alignSelf: "center",
@@ -38,6 +39,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: 19,
+    fontWeight: "bold",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
@@ -47,7 +49,8 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: "center",
     fontWeight: "bold",
-    padding: 15
+    padding: 15,
+    fontWeight: "bold",
   },
   circleButton: {
     width: 0.92 * width,

@@ -26,11 +26,7 @@ export const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 18,
-  },
-  textInfo: {
-    fontSize: 22,
-    fontWeight: "normal",
-    fontStyle: "italic",
+    fontWeight: "bold",
   },
   containerRoundMS: {
     flexDirection: "row",
@@ -65,7 +61,7 @@ export const styles = StyleSheet.create({
     borderRadius: 200,
     backgroundColor: "transparent",
     justifyContent: "center",
-    padding: 8,
+    padding: 7,
     marginLeft: "30%",
     borderWidth: 2,
     borderColor: "#474747",
@@ -112,12 +108,15 @@ export const styles = StyleSheet.create({
     backgroundColor: "transparent",
     margin: 0,
     textAlign: "left",
+    
   },
   rowStyle: {
     width: 70,
     height: 30,
     borderColor: "white",
-    backgroundColor: "black",
+    backgroundColor: "#212121",
+    borderWidth: 2,
+    borderColor: "#474747",
   },
   dropdownIcon: {
     color: "white",

@@ -51,7 +51,6 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "white",
     fontSize: 20,
-    textDecorationLine: "underline",
     fontStyle: "italic",
   },
   titleTextStyle: {
@@ -81,6 +80,20 @@ export const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 5,
   },
+  flexContainerPhone: {
+    marginBottom: 0.02 * width,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderWidth: 2,
+    paddingTop: 10,
+    paddingBottom: 5,
+    paddingRight: 10,
+    paddingLeft: 10,
+    borderColor: "gray",
+    backgroundColor: "#202121",
+    alignSelf: 'flex-start'
+  },
   backgroundImage: {
     height: "100%",
     width: width,
@@ -97,7 +110,6 @@ export const styles = StyleSheet.create({
   },
   nextButton: {
     color: "#A169B1",
-
     flexDirection: "row",
     justifyContent: "flex-end",
   },

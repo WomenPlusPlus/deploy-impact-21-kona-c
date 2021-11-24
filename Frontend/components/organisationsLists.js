@@ -257,7 +257,7 @@ const OrganisationsLists = (props) => {
                       return (
                         <Text
                           key={"phone" + num}
-                          style={styles.flexContainer}
+                          style={styles.flexContainerPhone}
                           onPress={() => makeCall(num)}
                         >
                           <FontAwesome style={styles.iconText} name="phone" />

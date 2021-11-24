@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   textStyle: {
     color: "white",
     fontSize: 19,
+    fontWeight: "bold",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
