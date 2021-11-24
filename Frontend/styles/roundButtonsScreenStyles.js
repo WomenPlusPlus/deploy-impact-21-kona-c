@@ -8,25 +8,27 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: "10%",
+  },
   container: {
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 0.01 * height
+    width: width,
+    height: "100%",
   },
   bubbleContainer: {
-    margin: 0,
-    width: 0.3 * width,
+    marginBottom: "1.5%",
+    width: 0.32 * width,
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "2.5%",
   },
   container1: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "flex-start",
-    marginTop: "3%",
   },
   container2: {
     flexDirection: "row",
@@ -39,33 +41,27 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 16,
-    marginTop: "1%",
-  },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 25,
-    marginTop: 15,
-    textAlign: "center",
+    color: "#DCDCDC",
+    fontSize: 18,
+    marginTop: "2%",
+    fontWeight: "bold",
   },
   circleButton: {
     width: 0.28 * width,
     height: 0.28 * width,
     borderRadius: 200,
-    backgroundColor: "#A169B1",
+    backgroundColor: "transparent",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    borderColor: "white",
-    borderWidth: 2,
     marginLeft: 0.01 * width,
     marginRight: 0.01 * width,
+    borderWidth: 2,
+    borderColor: "#474747",
   },
   userImage: {
     fontSize: 46,
-    color: "white",
+    color: "#DCDCDC",
     paddingBottom: "1%",
   },
   severalIconsButton: {
@@ -75,15 +71,11 @@ export const styles = StyleSheet.create({
   },
   severalIconsText: {
     fontSize: 38,
-    color: "white",
+    color: "#DCDCDC",
   },
   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
-  },
-  text: {
-    color: "black",
-    fontSize: 14,
   },
 });

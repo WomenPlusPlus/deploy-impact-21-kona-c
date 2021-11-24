@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  ImageBackground,
-  Pressable,
-  Image,
-  ScrollView,
-} from "react-native";
+import { View, Text, ImageBackground, Pressable, Image } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
 import { styles } from "../../styles/welcomeScreenStyles";
@@ -42,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
       style={styles.backgroundImage}
     >
       <View style={styles.mainContainer}>
-        <View>
+        <View style={styles.topContainer}>
           <View style={styles.dropdownMainContainer}>
             <Image
               resizeMode="contain"
@@ -53,8 +47,8 @@ const HomeScreen = ({ navigation }) => {
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
               dropdownStyle={styles.dropdownStyle}
-              defaultButtonText={selectedLanguage}
               rowStyle={styles.rowStyle}
+              defaultButtonText={selectedLanguage}
               renderDropdownIcon={() => {
                 return (
                   <FontAwesome
@@ -90,25 +84,44 @@ const HomeScreen = ({ navigation }) => {
               }}
             />
           </View>
-          <View style={styles.containerRoundXL}>
-            <Pressable style={styles.roundXL} onPress={handlePress}>
+          <LinearGradient
+            // Button Linear Gradient
+            colors={["#3F444D", "black", "black", "black"]}
+            style={styles.roundXL}
+          >
+            <Pressable onPress={handlePress}>
               <Text style={styles.textButton}>
                 If you are in a vulnerable situation...
               </Text>
             </Pressable>
-          </View>
+          </LinearGradient>
+
           <View style={styles.containerRoundMS}>
-            <Pressable style={styles.roundS} onPress={handlePress}>
-              <Text style={styles.textButton}>If you are at risk...</Text>
-            </Pressable>
-            <Pressable style={styles.roundM} onPress={handlePress}>
-              <Text style={styles.textButton}>
-                If someone else needs help...
-              </Text>
-            </Pressable>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#3F444D", "black", "black", "black"]}
+              style={styles.roundS}
+            >
+              <Pressable onPress={handlePress}>
+                <Text style={styles.textButton}>If you are at risk...</Text>
+              </Pressable>
+            </LinearGradient>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#3F444D", "black","black", "black"]}
+              style={styles.roundM}
+            >
+              <Pressable onPress={handlePress}>
+                <Text style={styles.textButton}>
+                  Dots. can find the help you need.
+                </Text>
+              </Pressable>
+            </LinearGradient>
           </View>
         </View>
-        <Text style={styles.bottomText}>Dots can find the help you need</Text>
+        <Pressable style={styles.startButton} onPress={handlePress}>
+          <Text style={styles.bottomText}>Start</Text>
+        </Pressable>
       </View>
     </ImageBackground>
   );

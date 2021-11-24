@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "../styles/longerButtonsScreenStyles";
 
 const NeedsB_to_D = (props) => {
@@ -16,21 +16,24 @@ const NeedsB_to_D = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView style={styles.mainContainer}>
-          <Text style={styles.titleTextStyle}>Need help with...</Text>
-          {props.arr.map((option) => (
-            <View key={option} style={styles.container1}>
+      <ScrollView style={styles.mainContainer}>
+        {props.arr.map((option) => (
+          <View key={option} style={styles.container1}>
+                <LinearGradient
+                // Button Linear Gradient
+                colors={["#202121", "black", "black", "black"]}
+                style={styles.circleButton}
+              >
               <Pressable
                 style={styles.circleButton}
                 onPress={() => props.handlePress(option)}
               >
                 <Text style={styles.textStyle}>{option}</Text>
               </Pressable>
-            </View>
-          ))}
-        </ScrollView>
-      </PinchZoomView>
+            </LinearGradient>
+          </View>
+        ))}
+      </ScrollView>
     </ImageBackground>
   );
 };

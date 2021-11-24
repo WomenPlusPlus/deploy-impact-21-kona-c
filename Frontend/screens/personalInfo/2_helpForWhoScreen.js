@@ -6,8 +6,8 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const HelpForWho = ({ route, navigation }) => {
@@ -29,25 +29,33 @@ const HelpForWho = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>Seeking help for...</Text>
-          <View>
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
+        <View style={styles.mainContainer}>
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("Myself")}
                 >
                   <View style={styles.severalIconsButton}>
-                    <FontAwesome5 name="user" style={styles.userImage} />
+                    <Ionicons name="person" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>Myself</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>Myself</Text>
             </View>
-            <View style={styles.container2}>
-              <View style={styles.bubbleContainer}>
+          </View>
+          <View style={styles.container2}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("Others")}
@@ -56,12 +64,11 @@ const HelpForWho = ({ route, navigation }) => {
                     <FontAwesome5 name="users" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>Others</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>Others</Text>
             </View>
           </View>
-        </ScrollView>
-      </PinchZoomView>
+        </View>
     </ImageBackground>
   );
 };

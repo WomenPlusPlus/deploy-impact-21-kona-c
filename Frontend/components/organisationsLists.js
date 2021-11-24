@@ -8,12 +8,12 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
 import {
   FontAwesome,
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
 import { styles } from "../styles/organisationsListStyles";
@@ -27,29 +27,31 @@ const OrganisationsLists = (props) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView style={styles.mainContainer}>
-          {props.SDG_Id ? (
-            <Image
-              resizeMode="contain"
-              source={sdgsLarge[props.SDG_Id[0] - 1].image}
-              style={styles.image}
-            />
-          ) : null}
-          {props.newData.length === 0 ? (
-            <Text style={styles.notFoundTextStyle}>
-              No organisations available. Try to change the location or search
-              for another goal.
-            </Text>
-          ) : (
-            <Text style={styles.titleTextStyle}>
-              List of organisations that could provide help
-            </Text>
-          )}
-          <View>
+      <ScrollView style={styles.mainContainerScroll}>
+        <View style={styles.mainContainer}>
+        {props.newData.length === 0 ? (
+          <Text style={styles.notFoundTextStyle}>
+            No organisations available. Try to change the location or search for
+            another goal.
+          </Text>
+        ) : null}
+        {props.SDG_Id ? (
+          <Image
+            resizeMode="contain"
+            source={sdgsLarge[props.SDG_Id[0] - 1].image}
+            style={styles.image}
+          />
+        ) : null}
+        <View>
+          <LinearGradient
+            // Button Linear Gradient
+            colors={["#202121", "black", "black", "black"]}
+          >
             <SelectDropdown
               buttonTextStyle={styles.textStyle}
               buttonStyle={styles.button}
+              dropdownStyle={styles.dropdownStyle}
+              rowStyle={styles.dropdownRow}
               defaultButtonText={props.selectedRegion}
               renderDropdownIcon={() => {
                 return (
@@ -78,10 +80,17 @@ const OrganisationsLists = (props) => {
                 );
               }}
             />
-            {props.selectedGender !== undefined ? (
+          </LinearGradient>
+          {props.selectedGender !== undefined ? (
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+            >
               <SelectDropdown
                 buttonTextStyle={styles.textStyle}
                 buttonStyle={styles.button}
+                dropdownStyle={styles.dropdownStyle}
+                rowStyle={styles.dropdownRow}
                 defaultButtonText={
                   props.selectedGender === "F"
                     ? "Female"
@@ -118,11 +127,18 @@ const OrganisationsLists = (props) => {
                   );
                 }}
               />
-            ) : null}
-            {props.selectedAge !== undefined ? (
+            </LinearGradient>
+          ) : null}
+          {props.selectedAge !== undefined ? (
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+            >
               <SelectDropdown
                 buttonTextStyle={styles.textStyle}
                 buttonStyle={styles.button}
+                dropdownStyle={styles.dropdownStyle}
+                rowStyle={styles.dropdownRow}
                 defaultButtonText={
                   props.selectedAge === "A"
                     ? "25+"
@@ -167,10 +183,16 @@ const OrganisationsLists = (props) => {
                   );
                 }}
               />
-            ) : null}
-          </View>
-          {props.newData.map((organisation) => (
-            <View key={"listview" + organisation} style={styles.container}>
+            </LinearGradient>
+          ) : null}
+        </View>
+        {props.newData.map((organisation) => (
+          <View key={"listview" + organisation}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+              style={styles.container}
+            >
               <Text key={"name" + organisation} style={styles.textBoxName}>
                 {data[organisation]["Name of Organisation"]}
               </Text>
@@ -264,10 +286,11 @@ const OrganisationsLists = (props) => {
                   />
                 </Text>
               </Pressable>
-            </View>
-          ))}
-        </ScrollView>
-      </PinchZoomView>
+            </LinearGradient>
+          </View>
+        ))}
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

@@ -6,7 +6,7 @@ import {
   ImageBackground,
   Pressable,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/locationStyles";
 
@@ -32,23 +32,24 @@ const LocationScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>Please select a region</Text>
-          {uniqueRegionsArray.map((region) => (
-            <View key={region} style={styles.container1}>
-              <View style={styles.bubbleContainer}>
-                <Pressable
-                  style={styles.circleButton}
-                  onPress={() => handlePress(region)}
-                >
-                  <Text style={styles.textStyle}>{region}</Text>
-                </Pressable>
-              </View>
-            </View>
-          ))}
-        </ScrollView>
-      </PinchZoomView>
+      <ScrollView style={styles.mainContainer}>
+        {uniqueRegionsArray.map((region) => (
+          <View key={region} style={styles.container1}>
+            <LinearGradient
+              // Button Linear Gradient
+              colors={["#202121", "black", "black", "black"]}
+              style={styles.circleButton}
+            >
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => handlePress(region)}
+              >
+                <Text style={styles.textStyle}>{region}</Text>
+              </Pressable>
+            </LinearGradient>
+          </View>
+        ))}
+      </ScrollView>
     </ImageBackground>
   );
 };

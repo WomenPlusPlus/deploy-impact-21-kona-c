@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 let width = null;
-let height = Dimensions.get("window").height
+let height = Dimensions.get("window").height;
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
@@ -8,11 +8,14 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainerScroll: {
+    height: height - width / 3,
+  },
   mainContainer: {
-    height: height - width/3,
+    marginTop: "12%",
   },
   container: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     width: 0.93 * width,
     borderRadius: 5,
     overflow: "hidden",
@@ -20,9 +23,11 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 0.04 * width,
     marginBottom: 0.02 * width,
+    borderWidth: 2,
+    borderColor: "#474747",
   },
   textBoxName: {
-    color: "#A169B1",
+    color: "#C2C4BE",
     fontSize: 22,
     padding: 0.03 * width,
     textAlign: "center",
@@ -30,96 +35,136 @@ export const styles = StyleSheet.create({
   },
   textBox: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
+    color: "#DCDCDC",
     fontSize: 20,
   },
   textBoxTitle: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
     fontSize: 16,
+    color: "#DCDCDC",
   },
   textBoxWebsite: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
+    color: "#5FAFE8",
     fontSize: 20,
     textDecorationLine: "underline",
     fontStyle: "italic",
   },
   textBoxPhone: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
+    color: "#5FAFE8",
     fontSize: 20,
-    textDecorationLine: "underline",
     fontStyle: "italic",
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 25,
-    marginBottom: 0.03 * width,
-    marginTop: 0.03 * width,
+    color: "#DCDCDC",
+    fontSize: 28,
+    margin: 25,
     textAlign: "center",
+    fontWeight: "bold",
   },
   notFoundTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: 25,
+    color: "#DCDCDC",
+    fontSize: 28,
+    margin: 25,
     textAlign: "center",
-    textAlignVertical: "center",
-    marginTop: 0.03 * width,
-    marginBottom: 0.03 * width,
+    fontWeight: "bold",
   },
   flexContainer: {
     marginBottom: 0.02 * width,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    borderColor: "transparent",
+    borderBottomColor: "#202121",
+    borderWidth: 2,
+    paddingTop: 10,
+    paddingBottom: 5,
+  },
+  flexContainerPhone: {
+    marginBottom: 0.02 * width,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderWidth: 2,
+    paddingTop: 10,
+    paddingBottom: 5,
+    paddingRight: 10,
+    paddingLeft: 10,
+    borderColor: "gray",
+    backgroundColor: "#202121",
+    alignSelf: 'flex-start'
   },
   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
-
   },
   image: {
-    width: "100%",
-    justifyContent: "center",
+    width: "92%",
+    height: 0.33 * width,
     alignSelf: "center",
+    marginBottom: "5%",
+    borderWidth: 2,
+    borderColor: "#474747",
+    backgroundColor: "black",
   },
   nextButton: {
-    color: "#A169B1",
+    color: "#DCDCDC",
     flexDirection: "row",
     justifyContent: "flex-end",
   },
   nextButtonText: {
-    color: "#A169B1",
+    color: "#DCDCDC",
     fontSize: 38,
     fontWeight: "bold",
     justifyContent: "center",
   },
   iconText: {
-    color: "#A169B1",
-    fontSize: 22,
+    color: "#DCDCDC",
+    fontSize: 28,
   },
   textStyle: {
-    color: "#921CB1",
+    color: "#DCDCDC",
     fontSize: 20,
     textAlign: "center",
+    fontWeight: "bold",
   },
   button: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     alignSelf: "center",
     borderRadius: 5,
     width: 0.92 * width,
+    height: 0.14 * width,
+    borderWidth: 2,
+    borderColor: "#474747",
+    marginBottom: "3%",
+  },
+  dropdownRow: {
+    backgroundColor: "#141414",
+    alignSelf: "center",
+    borderRadius: 5,
+    width: 0.92 * width,
+    height: 0.14 * width,
+    borderWidth: 2,
+    borderColor: "#474747",
+  },
+  dropdownStyle: {
+    marginTop: -49,
+    padding: 0,
+    backgroundColor: "transparent",
   },
   buttonDown: {
-    color: "#921CB1",
+    backgroundColor: "#141414",
+    color: "#DCDCDC",
     fontSize: 20,
     flexDirection: "row",
     justifyContent: "center",
     textAlign: "center",
   },
   dropdownicon: {
-    color: "#921CB1",
+    color: "#DCDCDC",
   },
 });

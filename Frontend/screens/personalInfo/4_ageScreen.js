@@ -6,7 +6,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
+import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
@@ -33,14 +33,14 @@ const InfoAge = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
-          <Text style={styles.titleTextStyle}>
-            What is the age of the person seeking help?
-          </Text>
-          <View>
-            <View style={styles.container1}>
-              <View style={styles.bubbleContainer}>
+        <View style={styles.mainContainer}>
+          <View style={styles.container1}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("C")}
@@ -49,9 +49,15 @@ const InfoAge = ({ route, navigation }) => {
                     <FontAwesome5 name="baby" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>0-12</Text>
-              </View>
-              <View style={styles.bubbleContainer}>
+              </LinearGradient>
+              <Text style={styles.textStyle}>0-12</Text>
+            </View>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("Y")}
@@ -60,11 +66,17 @@ const InfoAge = ({ route, navigation }) => {
                     <FontAwesome5 name="child" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>12-18</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>12-18</Text>
             </View>
-            <View style={styles.container2}>
-              <View style={styles.bubbleContainer}>
+          </View>
+          <View style={styles.container2}>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("E")}
@@ -73,9 +85,15 @@ const InfoAge = ({ route, navigation }) => {
                     <Ionicons name="man" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>18-25</Text>
-              </View>
-              <View style={styles.bubbleContainer}>
+              </LinearGradient>
+              <Text style={styles.textStyle}>18-25</Text>
+            </View>
+            <View style={styles.bubbleContainer}>
+              <LinearGradient
+                // Button Linear Gradient
+                colors={["#323438", "black", "black"]}
+                style={styles.circleButton}
+              >
                 <Pressable
                   style={styles.circleButton}
                   onPress={() => handlePress("A")}
@@ -84,12 +102,11 @@ const InfoAge = ({ route, navigation }) => {
                     <Ionicons name="man-sharp" style={styles.userImage} />
                   </View>
                 </Pressable>
-                <Text style={styles.textStyle}>25+</Text>
-              </View>
+              </LinearGradient>
+              <Text style={styles.textStyle}>25+</Text>
             </View>
           </View>
-        </ScrollView>
-      </PinchZoomView>
+        </View>
     </ImageBackground>
   );
 };

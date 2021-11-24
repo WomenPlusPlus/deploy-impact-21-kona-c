@@ -7,7 +7,6 @@ import {
   View,
   TouchableHighlight,
 } from "react-native";
-import PinchZoomView from "react-native-pinch-zoom-view";
 import sdgs from "../../utils/sdgs";
 import { styles } from "../../styles/sdgScreenStyles";
 
@@ -24,8 +23,7 @@ const SdgScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <PinchZoomView>
-        <ScrollView>
+        <ScrollView style={styles.mainContainer}>
           <Text style={styles.titleTextStyle}>
             Choose one of the 17 goal and see organisations that can help!
           </Text>
@@ -48,7 +46,6 @@ const SdgScreen = ({ navigation }) => {
             ))}
           </View>
         </ScrollView>
-      </PinchZoomView>
     </ImageBackground>
   );
 };
