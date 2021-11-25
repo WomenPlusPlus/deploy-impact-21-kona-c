@@ -47,8 +47,8 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   circleButton: {
-    width: 0.3 * width,
-    height: 0.3 * width,
+    width: 0.29 * width,
+    height: 0.29 * width,
     borderRadius: 5,
     backgroundColor: "#141414",
     justifyContent: "flex-start",
@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
     paddingTop: "10%",
     alignItems: "center",
     flexDirection: "column",
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "gray",
   },
   squareButtonContainer: {

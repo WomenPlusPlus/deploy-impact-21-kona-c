@@ -40,9 +40,9 @@ const handlePress = (routeName) => {
     case "InfoGender":
       questionnaireMessage = "a gender";
       break;
-      case "OtherGender":
-        questionnaireMessage = "or specify a";
-        break;
+    case "OtherGender":
+      questionnaireMessage = "or specify a";
+      break;
     case "InfoAge":
       questionnaireMessage = "an age range";
       break;
@@ -74,14 +74,13 @@ const handlePress = (routeName) => {
   Alert.alert("Info", alertMessage);
 };
 
-const StackNavigation = ({ route }) => {
+const StackNavigation = () => {
   let questionnaireTitle = "";
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#141414",
-          opacity: 0.8,
+          backgroundColor: "#171717",
         },
         headerTintColor: "#DCDCDC",
         headerTitleStyle: {
@@ -197,7 +196,12 @@ const StackNavigation = ({ route }) => {
 function TabNavigatorBottom({ route }) {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="HomeScreenTab" activeColor="white">
+      <Tab.Navigator
+        shifting={false}
+        initialRouteName="HomeScreenTab"
+        activeColor="white"
+        barStyle={{ backgroundColor: "#171717" }}
+      >
         <Tab.Screen
           name="HomeScreenTab"
           component={StackNavigation}
@@ -223,7 +227,7 @@ function TabNavigatorBottom({ route }) {
             tabBarIcon: () => (
               <Image
                 source={require("../assets/sdg.png")}
-                style={{ width: 25, height: 25, margin: -3 }}
+                style={{ width: 24, height: 24 }}
               />
             ),
           }}
@@ -242,6 +246,7 @@ function TabNavigatorBottom({ route }) {
         <Tab.Screen
           name="Hotline"
           component={HotlineScreen}
+          color={"white"}
           options={{
             tabBarLabel: "Hotline",
             tabBarColor: "#A21942",

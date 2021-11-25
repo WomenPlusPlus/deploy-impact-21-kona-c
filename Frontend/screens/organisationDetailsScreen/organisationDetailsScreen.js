@@ -1,18 +1,31 @@
 import React from "react";
-import { Text, ScrollView, Linking, ImageBackground } from "react-native";
+import {
+  Text,
+  ScrollView,
+  Linking,
+  ImageBackground,
+  View,
+  Image,
+} from "react-native";
 import {
   FontAwesome,
   MaterialIcons,
   MaterialCommunityIcons,
   Feather,
   FontAwesome5,
+  Ionicons,
 } from "@expo/vector-icons";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/organisationDetailsStyles";
 import { makeCall } from "../../utils/makeCall";
+import sdgs from "../../utils/sdgs";
 
 const OrganisationDetailsScreen = ({ route }) => {
-  const organisationId = parseInt(Object.values(route.params));
+  const organisationId = parseInt(route.params.org);
+  const organisationSdgs = data[organisationId]["SDGs"]
+    .replace(/[^0-9]/g, " ")
+    .split(" ")
+    .filter((n) => n);
   let focus = [];
   focus.push(
     data[organisationId]["Focus 1"],
@@ -36,7 +49,19 @@ const OrganisationDetailsScreen = ({ route }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <ScrollView style={styles.container}>
+      <ScrollView>
+        <View style={[styles.sdgsImageContainer, styles.container]}>
+          {organisationSdgs.map((sdg) => (
+          <Image
+          key={"sdgImage" + sdg}
+            resizeMode="contain"
+            source={sdgs[sdg - 1].image}
+            style={styles.image}
+          />
+       ))}
+
+        </View>
+        <View style={styles.container}>
           <Text style={styles.textBoxName}>
             {data[organisationId]["Name of Organisation"]}
           </Text>
@@ -46,7 +71,7 @@ const OrganisationDetailsScreen = ({ route }) => {
                 style={styles.iconText}
                 name="center-focus-strong"
               />
-              <Text style={styles.textBoxTitle}> Focus Areas:</Text>
+              <Text style={styles.textBoxTitle}>{` Focus Areas\n`}</Text>
               {focus.map((foc) => {
                 return (
                   <Text key={foc} style={styles.textBox}>{`\n- ${foc}`}</Text>
@@ -60,7 +85,7 @@ const OrganisationDetailsScreen = ({ route }) => {
               style={styles.flexContainer}
             >
               <FontAwesome style={styles.iconText} name="group" />
-              <Text style={styles.textBoxTitle}> Target Groups: </Text>
+              <Text style={styles.textBoxTitle}>{` Target Groups\n`}</Text>
               <Text style={styles.textBox}>
                 {`\n${data[organisationId]["Target Group"]}`}
               </Text>
@@ -69,7 +94,7 @@ const OrganisationDetailsScreen = ({ route }) => {
           <Text key={"objective" + organisationId} style={styles.flexContainer}>
             <Feather style={styles.iconText} name="target" />
 
-            <Text style={styles.textBoxTitle}> Objective: </Text>
+            <Text style={styles.textBoxTitle}>{` Objective\n`}</Text>
             <Text style={styles.textBox}>
               {" "}
               {`\n${data[organisationId]["Objective"]}`}
@@ -77,11 +102,19 @@ const OrganisationDetailsScreen = ({ route }) => {
           </Text>
           <Text key={"services" + organisationId} style={styles.flexContainer}>
             <FontAwesome5 style={styles.iconText} name="hands-helping" />
-            <Text style={styles.textBoxTitle}> Services: </Text>
+            <Text style={styles.textBoxTitle}>{` Services\n`}</Text>
             <Text
               style={styles.textBox}
             >{`\n${data[organisationId]["Services"]}`}</Text>
           </Text>
+          {data[organisationId]["Address"] === "" ? null : (
+            <Text key={"address" + organisationId} style={styles.flexContainer}>
+              <Ionicons style={styles.iconText} name="home" />
+              <Text
+                style={styles.textBox}
+              >{` ${data[organisationId]["Address"]}`}</Text>
+            </Text>
+          )}
           {data[organisationId]["Web Address"] === "" ? null : (
             <Text key={"website" + organisationId} style={styles.flexContainer}>
               <MaterialCommunityIcons style={styles.iconText} name="web" />
@@ -128,7 +161,8 @@ const OrganisationDetailsScreen = ({ route }) => {
                     </Text>
                   );
                 })}
-        </ScrollView>
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

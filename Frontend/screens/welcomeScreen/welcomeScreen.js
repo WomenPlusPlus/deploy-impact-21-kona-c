@@ -101,7 +101,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.roundM}>
               <Pressable onPress={handlePress}>
                 <Text style={styles.textButton}>
-                  Dots. can find the help you need.
+                  Dots. can find the help you need
                 </Text>
               </Pressable>
             </View>

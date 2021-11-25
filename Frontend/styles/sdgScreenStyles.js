@@ -52,7 +52,10 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 28,
     margin: "5%",
-    padding: 6,
+    paddingTop: "2%",
+    paddingBottom: "3%",
+    paddingLeft: "1%",
+    paddingRight: "1%",
     textAlign: "center",
     fontWeight: "bold"
   },
