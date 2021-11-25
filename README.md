@@ -11,7 +11,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 ## Idea / Our Proposal
 
-- Offline application - no internet connection required for the users to access it. Can be accessed anytime, anywhere.
+- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
 
 ## Technical Solution
@@ -20,9 +20,9 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - No backend, all data required by the application is stored in json format under `./Frontend/assets/jsonFiles` for both content and configuration.
 - Minimal running cost of the application considering no additional cost is required for storage or backend infrastructure.
 
-## How it works
+## How does it work
 
-1. User needs to provide personal identification information (age, gender, etc...).
+1. User needs to provide personal identification information (age, gender, etc.).
 2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
    <p align="center">
      <img src="./docs/SDG_identification.jpg" alt="Size Limit CLI" width="600">
@@ -41,7 +41,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 # Installation
 
-## Prerequisite
+## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
@@ -50,8 +50,8 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 For developers/testers that want to be able to run the code locally and develop or test:
 
-- [Android simulator](https://developer.android.com/studio) - phone emulator. Installation steps for both Windows and Mac can be found [here](https://developer.android.com/studio/install)
-- [iOS simulator](https://developer.apple.com/xcode/) - apple simulator.
+- [Android simulator](https://developer.android.com/studio) - Androit's phone emulator. Installation steps for both Windows and Mac can be found [here](https://developer.android.com/studio/install)
+- [iOS simulator](https://developer.apple.com/xcode/) - Apple's simulator.
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
 ## Getting started
@@ -82,7 +82,7 @@ All .json files used by the application were generated based on a original .csv 
   <img src="./docs/data.jpg" alt="Size Limit CLI" width="300">
 </p>
 
-Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future this can be enhance by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
+Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future, this can be enhanced by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
 
 ## Update of Organisations data
 
@@ -91,7 +91,7 @@ In order to update some of the organisation details, the organisations.json file
 - Update the organisation.csv file. The structure of the file should be the same as the old version, just an update of the data content.
 - Generate a new json file based on the updated .csv file. This can be easily done by using the steps defined under [Conversion to json file](#conversion-to-json-file) section.
 
-There is always the option to manually update the underlying organisation.json file, but we would recommend to update the organisation.csv file first and generate the json file from it. This is so that the golden source of the data remains in a redable format on the .csv file.
+There is always the option to manually update the underlying organisation.json file, but we would recommend updating the organisation.csv file first and generating the json file from it. This is so that the golden source of the data remains in a redeable format on the .csv file.
 
 After this, the application will use the new data for the organisations. Remember to test the changes before you go ahead with the update.
 
@@ -113,7 +113,7 @@ After this, the application will use the new configuration data to generate the 
 
 Required to update: organisations, options_map and companies_options_map data files.
 
-In order to generate a json file from a csv file
+To generate a json file from a csv file:
 
 1. Update any of the csv files in `./Fontend/assets/csvFiles`
 2. Make sure the structure of the file is the same as the previous file
