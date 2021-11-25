@@ -66,9 +66,10 @@ export const styles = StyleSheet.create({
   },
   notFoundTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#DCDCDC",
+    color: "white",
     fontSize: 28,
-    margin: 25,
+    margin: 15,
+    marginTop: -15,
     textAlign: "center",
     fontWeight: "bold",
   },
