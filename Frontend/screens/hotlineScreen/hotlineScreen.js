@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import {
   FontAwesome,
-  Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import { styles } from "../../styles/organisationsListStyles";

@@ -6,7 +6,6 @@ import {
   ImageBackground,
   Pressable,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import data from "../../assets/jsonFiles/organisations.json";
 import { styles } from "../../styles/locationStyles";
 

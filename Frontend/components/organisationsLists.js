@@ -13,7 +13,6 @@ import {
   Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
 import SelectDropdown from "react-native-select-dropdown";
 import data from "../assets/jsonFiles/organisations.json";
 import { styles } from "../styles/organisationsListStyles";

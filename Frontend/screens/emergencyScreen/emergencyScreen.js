@@ -6,7 +6,6 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome5, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { styles } from "../../styles/emergencyScreenStyles";
 import { makeCall } from "../../utils/makeCall";
