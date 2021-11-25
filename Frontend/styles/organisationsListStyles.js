@@ -144,9 +144,9 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     borderRadius: 15,
     width: 0.92 * width,
-    height: 0.14 * width,
+    height: 0.13 * width,
     borderWidth: 1,
-    borderColor: "#474747",
+    borderColor: "gray",
   },
   dropdownStyle: {
     marginTop: -49,
