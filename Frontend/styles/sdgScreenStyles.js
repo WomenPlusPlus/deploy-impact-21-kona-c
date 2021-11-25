@@ -8,7 +8,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "13%",
+    marginTop: "11%",
   },
    backgroundImage: {
     height: "100%",
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "white",
+    color: "#DCDCDC",
     fontSize: 28,
     margin: "5%",
     paddingTop: "2%",

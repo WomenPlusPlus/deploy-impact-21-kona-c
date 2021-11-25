@@ -255,15 +255,9 @@ const OrganisationsLists = (props) => {
                   });
                 }}
               >
-                  <Text style={styles.textBoxName}>More info</Text>
-                  <FontAwesome
-                    style={styles.nextButtonText}
-                    name="angle-right"
-                  />
-                  <FontAwesome
-                    style={styles.nextButtonText}
-                    name="angle-right"
-                  />
+                <Text style={styles.textBoxName}>More info</Text>
+                <FontAwesome style={styles.nextButtonText} name="angle-right" />
+                <FontAwesome style={styles.nextButtonText} name="angle-right" />
               </Pressable>
             </View>
           ))}

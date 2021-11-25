@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Text, ImageBackground, Pressable, Image } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome } from "@expo/vector-icons";
 import SelectDropdown from "react-native-select-dropdown";
 import { styles } from "../../styles/welcomeScreenStyles";
@@ -85,25 +84,25 @@ const HomeScreen = ({ navigation }) => {
             />
           </View>
           <View style={styles.roundXL}>
-            <Pressable onPress={handlePress}>
+            <View>
               <Text style={styles.textButton}>
                 If you are in a vulnerable situation...
               </Text>
-            </Pressable>
+            </View>
           </View>
 
           <View style={styles.containerRoundMS}>
             <View style={styles.roundS}>
-              <Pressable onPress={handlePress}>
+              <View>
                 <Text style={styles.textButton}>If you are at risk...</Text>
-              </Pressable>
+              </View>
             </View>
             <View style={styles.roundM}>
-              <Pressable onPress={handlePress}>
+              <View>
                 <Text style={styles.textButton}>
                   Dots. can find the help you need
                 </Text>
-              </Pressable>
+              </View>
             </View>
           </View>
         </View>

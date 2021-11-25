@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Feather, Entypo } from "@expo/vector-icons";
@@ -120,13 +120,13 @@ const StackNavigation = () => {
             ? (questionnaireTitle = "Select a topic")
             : null,
           route.name === "NeedsScreenB"
-            ? (questionnaireTitle = "Need help with...")
+            ? (questionnaireTitle = "Select a topic")
             : null,
           route.name === "NeedsScreenC"
-            ? (questionnaireTitle = "Need help with...")
+            ? (questionnaireTitle = "Select a topic")
             : null,
           route.name === "NeedsScreenD"
-            ? (questionnaireTitle = "Need help with...")
+            ? (questionnaireTitle = "Select a topic")
             : null,
           route.name === "OrganisationsListScreen"
             ? (questionnaireTitle = "Your results")
@@ -212,7 +212,7 @@ function TabNavigatorBottom({ route }) {
               <Feather
                 name="home"
                 activeColor="white"
-                size={23}
+                size={26}
                 color={"white"}
               />
             ),
@@ -239,7 +239,7 @@ function TabNavigatorBottom({ route }) {
             tabBarLabel: "Emergency",
             tabBarColor: "#3F7E44",
             tabBarIcon: () => (
-              <Feather name="phone" size={23} color={"white"} />
+              <Feather name="phone" size={26} color={"white"} />
             ),
           }}
         />
@@ -251,7 +251,7 @@ function TabNavigatorBottom({ route }) {
             tabBarLabel: "Hotline",
             tabBarColor: "#A21942",
             tabBarIcon: () => (
-              <Feather name="headphones" size={23} color={"white"} />
+              <Feather name="headphones" size={26} color={"white"} />
             ),
           }}
         />

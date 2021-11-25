@@ -9,7 +9,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "15%",
+    marginTop: "12%",
   },
   container: {
     flexWrap: "wrap",
@@ -47,13 +47,13 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   circleButton: {
-    width: 0.29 * width,
-    height: 0.29 * width,
-    borderRadius: 5,
+    width: 0.28 * width,
+    height: 0.28 * width,
+    borderRadius: 15,
     backgroundColor: "#141414",
     justifyContent: "flex-start",
     padding: "3%",
-    paddingTop: "10%",
+    paddingTop: "12%",
     alignItems: "center",
     flexDirection: "column",
     borderWidth: 1,
