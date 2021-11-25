@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     padding: "2%",
     marginLeft: "5%",
     marginTop: "-2%",
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "gray",
   },
   roundRightM: {
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
     padding: "2%",
     marginLeft: "5%",
     marginTop: "10%",
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "gray",
   },
   roundSingleM: {
@@ -90,7 +90,7 @@ export const styles = StyleSheet.create({
     padding: "2%",
     marginLeft: "40%",
     marginTop: "10%",
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "gray",
   },
   roundContainer: {
