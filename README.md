@@ -1,5 +1,5 @@
 
-   ![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/headerdots.png?raw=true)
+   ![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/Header_dots-removebg-preview.png?raw=true)
 
 
 # Dots by ConnectingDots
@@ -25,8 +25,6 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 1. User needs to provide personal identification information (age, gender, etc...).
 2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
    <p align="center">
-     <img src="./docs/SDG_identification-removebg-preview.png" alt="Size Limit CLI" width="600">
-   
      <img src="./docs/SDG_identification.jpg" alt="Size Limit CLI" width="600">
    </p>
    Configuration of the needs hierarchy options and the mapping to SDG Group ID is stored inside the application in .json format. This data is used in the application to dynamically generate the Needs Questionnaire with the different options and derive the underlying SDG Group ID that would be used to filter the Organisation data:
