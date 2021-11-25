@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
     width: 0.5 * width,
     height: 0.5 * width,
     borderRadius: 200,
-    backgroundColor: "#00689D",
+    backgroundColor: "#0068C2",
     justifyContent: "center",
     padding: 7,
     marginLeft: "30%",
@@ -136,7 +136,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "gray",
     fontWeight: "bold",
-    borderRadius: 5,
+    borderRadius: 15,
   },
   bottomText: {
     fontFamily: "Roboto-Regular",

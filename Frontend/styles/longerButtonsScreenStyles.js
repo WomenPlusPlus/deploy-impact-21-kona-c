@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   circleButton: {
     width: 0.92 * width,
     height: 0.17 * width,
-    borderRadius: 5,
+    borderRadius: 15,
     backgroundColor: "#141414",
     justifyContent: "center",
     alignItems: "center",
@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
   circleButtonInput: {
     width: 0.92 * width,
     height: 0.17 * width,
-    borderRadius: 5,
+    borderRadius: 15,
     backgroundColor: "#141414",
     flexDirection: "row",
     justifyContent: "space-between",

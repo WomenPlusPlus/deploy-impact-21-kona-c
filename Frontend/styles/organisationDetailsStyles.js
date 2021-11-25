@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#303030",
     width: 0.93 * width,
-    borderRadius: 5,
+    borderRadius: 15,
     padding: "3%",
     justifyContent: "center",
     alignSelf: "center",
@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   iconText: {
-    color: "#3F7E44",
+    color: "#DCDCDC",
     fontSize: 24,
     fontWeight: "bold",
   },

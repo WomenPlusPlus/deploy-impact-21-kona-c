@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#303030",
     width: 0.93 * width,
-    borderRadius: 5,
+    borderRadius: 15,
     overflow: "hidden",
     padding: "3%",
     alignSelf: "center",
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     borderColor: "gray",
   },
   textBoxName: {
-    color: "#C2C4BE",
+    color: "#DCDCDC",
     fontSize: 22,
     padding: 0.03 * width,
     textAlign: "center",
@@ -96,7 +96,6 @@ export const styles = StyleSheet.create({
     backgroundColor: "black",
   },
   nextButton: {
-    color: "#DCDCDC",
     flexDirection: "row",
     justifyContent: "flex-end",
   },
@@ -121,7 +120,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   iconText: {
-    color: "#3F7E44",
+    color: "#DCDCDC",
     fontSize: 28,
   },
   textStyle: {
@@ -133,7 +132,7 @@ export const styles = StyleSheet.create({
   button: {
     backgroundColor: "#141414",
     alignSelf: "center",
-    borderRadius: 5,
+    borderRadius: 15,
     width: 0.92 * width,
     height: 0.13 * width,
     borderWidth: 1,
@@ -143,7 +142,7 @@ export const styles = StyleSheet.create({
   dropdownRow: {
     backgroundColor: "#141414",
     alignSelf: "center",
-    borderRadius: 5,
+    borderRadius: 15,
     width: 0.92 * width,
     height: 0.14 * width,
     borderWidth: 1,

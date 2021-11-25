@@ -9,7 +9,7 @@ if (Dimensions.get("window").width > 500) {
 
 export const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: "15%",
+    marginTop: "10.5%",
   },
   textStyle: {
     color: "#DCDCDC",
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
   circleButton: {
     width: 0.92 * width,
     height: 0.17 * width,
-    borderRadius: 5,
+    borderRadius: 15,
     backgroundColor: "#141414",
     justifyContent: "center",
     alignItems: "center",
