@@ -7,10 +7,8 @@ A tool to connect people in need to the organisations best equipped to help them
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
-## <p align="center">
-  <img src="./docs/data.jpg" alt="Size Limit CLI" width="300">
-</p>
-Idea / Our Proposal
+<img src="./docs/data.jpg" alt="Size Limit CLI" width="300">
+## Idea / Our Proposal
 
 - Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
@@ -183,7 +181,7 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 - [@veloqueen](https://github.com/veloqueen) - Frontend
 - [@natayra](https://github.com/natayra) - Frontend lead
 - [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master 
-- [@Karen]https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
+- [@Karen](https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
 
 ---
 
