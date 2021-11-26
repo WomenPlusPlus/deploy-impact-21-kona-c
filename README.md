@@ -115,7 +115,7 @@ There is always the option to manually update the underlying organisation.json f
 
 After this, the application will use the new data for the organisations. Remember to test the changes before you go ahead with the update.
 
-## <img src="./docs/maintenace.png" alt="Size Limit CLI" width="30" height="30"> Needs Options and Mapping to SDG - maintenance
+## <img src="./docs/maintenance.png" alt="Size Limit CLI" width="30" height="30"> Needs Options and Mapping to SDG - maintenance
 
 The application generates dynamically the options for the needs questionnaire as well as the mapping of the different options to the SGD Group based on configuration data in the application. This mapping is stored in the application under `./assets/jsonFiles`.
 
