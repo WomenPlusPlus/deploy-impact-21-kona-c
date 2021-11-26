@@ -150,7 +150,7 @@ export const styles = StyleSheet.create({
     borderColor: "gray",
   },
   dropdownStyle: {
-    marginTop: -20,
+    marginTop: -49,
     padding: 0,
     backgroundColor: "transparent",
   },
