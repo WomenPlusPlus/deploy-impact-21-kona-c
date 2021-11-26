@@ -12,13 +12,13 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
 
-## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30">Technical Solution
+## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30"> Technical Solution
 
 - React Native Frontend application using Expo Framework, available for Android and IOS.
 - No backend, all data required by the application is stored in json format under `./Frontend/assets/jsonFiles` for both content and configuration.
 - Minimal running cost of the application considering no additional cost is required for storage or backend infrastructure.
 
-## How does it work
+## <img src="./docs/questions.png" alt="Size Limit CLI" width="30" height="30"> How does it work
 
 1. User needs to provide personal identification information (age, gender, etc.).
 2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
@@ -39,7 +39,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 # Installation
 
-## Prerequisites
+## <img src="./docs/download.png" alt="Size Limit CLI" width="30" height="30"> Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
