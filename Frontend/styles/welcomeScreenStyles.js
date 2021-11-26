@@ -105,10 +105,8 @@ export const styles = StyleSheet.create({
   rowStyle: {
     width: 70,
     height: 30,
-    borderColor: "white",
-    backgroundColor: "#212121",
-    borderWidth: 2,
-    borderColor: "#474747",
+    backgroundColor: "#141414",
+    alignSelf: "center",
   },
   dropdownIcon: {
     color: "#DCDCDC",

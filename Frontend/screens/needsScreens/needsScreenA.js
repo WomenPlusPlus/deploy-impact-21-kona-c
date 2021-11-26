@@ -6,7 +6,6 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import {
   FontAwesome5,
   FontAwesome,

@@ -6,7 +6,6 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 

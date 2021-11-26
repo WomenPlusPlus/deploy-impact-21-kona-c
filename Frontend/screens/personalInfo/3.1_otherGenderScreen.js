@@ -7,7 +7,6 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
