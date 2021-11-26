@@ -9,14 +9,9 @@ const NeedsScreenC = ({ route, navigation }) => {
       if (selectedOptionScreenC === optionsFilteredB[i]["Third_layer"]) {
         navigation.navigate("OrganisationsListScreen", {
           selectedRegion: route.params["selectedRegion"],
-          selectedInstitutionType: route.params["selectedInstitutionType"],
-          selectedForWho: route.params["selectedForWho"],
           selectedGender: route.params["selectedGender"],
           selectedAge: route.params["selectedAge"],
           selectedPersonType: route.params["selectedPersonType"],
-          selectedOptionScreenA: route.params["selectedOptionScreenA"],
-          selectedOptionScreenB: route.params["selectedOptionScreenB"],
-          selectedOptionScreenC: selectedOptionScreenC,
           uniqueRegionsArray: route.params["uniqueRegionsArray"],
           SDG_Id: optionsFilteredB[i]["SDG_Id"],
         });
@@ -24,7 +19,7 @@ const NeedsScreenC = ({ route, navigation }) => {
     }
   };
   const arr = optionsFilteredB.map((option) => option.Third_layer);
-  
+
   return <NeedsB_to_D arr={arr} handlePress={handlePress} />;
 };
 

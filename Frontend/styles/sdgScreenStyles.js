@@ -7,12 +7,8 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
-  textBoxName: {
-    color: "#A169B1",
-    fontSize: 22,
-    padding: 8,
-    textAlign: "center",
-    fontWeight: "bold",
+  mainContainer: {
+    marginTop: "11%",
   },
   backgroundImage: {
     height: "100%",
@@ -35,12 +31,13 @@ export const styles = StyleSheet.create({
   },
   buttonContainer: {
     margin: 8,
+    backgroundColor: "transparent",
   },
   container: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginBottom: 50,
+    marginBottom: "10%",
   },
   containerOrganisation: {
     flexGrow: 1,
@@ -52,9 +49,14 @@ export const styles = StyleSheet.create({
   },
   titleTextStyle: {
     fontFamily: "Roboto-Regular",
-    color: "#A169B1",
-    fontSize: 25,
-    margin: 25,
+    color: "#DCDCDC",
+    fontSize: 28,
+    margin: "5%",
+    paddingTop: "2%",
+    paddingBottom: "3%",
+    paddingLeft: "1%",
+    paddingRight: "1%",
     textAlign: "center",
+    fontWeight: "bold",
   },
 });

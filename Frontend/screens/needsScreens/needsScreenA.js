@@ -21,8 +21,6 @@ const NeedsScreenA = ({ route, navigation }) => {
   const handlePress = (optionScreenA) => {
     navigation.navigate("NeedsScreenB", {
       selectedRegion: route.params["selectedRegion"],
-      selectedInstitutionType: route.params["selectedInstitutionType"],
-      selectedForWho: route.params["selectedForWho"],
       selectedGender: route.params["selectedGender"],
       selectedAge: route.params["selectedAge"],
       selectedPersonType: route.params["selectedPersonType"],
@@ -71,8 +69,7 @@ const NeedsScreenA = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
+      <ScrollView style={styles.mainContainer}>
         <View style={styles.container}>
           {uniqueOptionsArray.map((option, i) => (
             <View key={option} style={styles.bubbleContainer}>
@@ -81,8 +78,8 @@ const NeedsScreenA = ({ route, navigation }) => {
                 onPress={() => handlePress(option)}
               >
                 {iconsArray[i]}
+                <Text style={styles.textStyle}>{option}</Text>
               </Pressable>
-              <Text style={styles.textStyle}>{option}</Text>
             </View>
           ))}
         </View>

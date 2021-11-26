@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from "react-native";
-let height = Dimensions.get("window").height;
 let width = null;
 if (Dimensions.get("window").width > 500) {
   width = 500;
@@ -8,65 +7,65 @@ if (Dimensions.get("window").width > 500) {
 }
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: "12%",
+  },
   container: {
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 0.01 * height
+    width: width,
+    height: "100%",
   },
   bubbleContainer: {
-    margin: 0,
-    width: 0.3 * width,
+    marginBottom: "5%",
+    width: "33%",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "2.5%",
   },
   container1: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: "3%",
+    alignItems: "flex-start",
   },
   container2: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    alignItems: "center",
-    marginTop: "3%",
+    alignItems: "flex-start",
+    marginTop: "2%",
   },
   textStyle: {
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 16,
-    marginTop: "1%",
-  },
-  titleTextStyle: {
-    fontFamily: "Roboto-Regular",
-    color: "#921CB1",
-    fontSize: 25,
-    marginTop: 15,
-    textAlign: "center",
+    color: "#DCDCDC",
+    fontSize: 15,
+    marginTop: 0.02 * width,
+    fontWeight: "bold",
   },
   circleButton: {
     width: 0.28 * width,
     height: 0.28 * width,
-    borderRadius: 200,
-    backgroundColor: "#A169B1",
-    justifyContent: "center",
+    borderRadius: 15,
+    backgroundColor: "#141414",
+    justifyContent: "flex-start",
+    padding: "3%",
+    paddingTop: "12%",
     alignItems: "center",
     flexDirection: "column",
-    borderColor: "white",
-    borderWidth: 2,
-    marginLeft: 0.01 * width,
-    marginRight: 0.01 * width,
+    borderWidth: 1,
+    borderColor: "gray",
+  },
+  squareButtonContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   userImage: {
-    fontSize: 46,
-    color: "white",
-    paddingBottom: "1%",
+    fontSize: 40,
+    color: "#DCDCDC",
   },
   severalIconsButton: {
     flexDirection: "row",
@@ -74,16 +73,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   severalIconsText: {
-    fontSize: 38,
-    color: "white",
+    fontSize: 40,
+    color: "#DCDCDC",
   },
   backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
-  },
-  text: {
-    color: "black",
-    fontSize: 14,
   },
 });

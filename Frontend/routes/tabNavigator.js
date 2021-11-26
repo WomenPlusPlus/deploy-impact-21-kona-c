@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Feather, Entypo } from "@expo/vector-icons";
@@ -35,22 +35,25 @@ const handlePress = (routeName) => {
   let questionnaireMessage = "an option";
   switch (routeName) {
     case "LocationScreen":
-      questionnaireMessage = "a Region";
+      questionnaireMessage = "a region";
       break;
     case "InfoGender":
-      questionnaireMessage = "a Gender";
+      questionnaireMessage = "a gender";
+      break;
+    case "OtherGender":
+      questionnaireMessage = "or specify a";
       break;
     case "InfoAge":
-      questionnaireMessage = "an Age Range";
+      questionnaireMessage = "an age range";
       break;
     case "NeedsScreenA":
-      questionnaireMessage = "an Area of interest";
+      questionnaireMessage = "an area of interest";
       break;
     case "NeedsScreenB":
-      questionnaireMessage = "a Subtopic";
+      questionnaireMessage = "a subtopic";
       break;
     case "NeedsScreenC":
-      questionnaireMessage = "a Subtopic";
+      questionnaireMessage = "a subtopic";
       break;
   }
   let alertMessage = `Please select ${questionnaireMessage}. This will help show only relevant organisations.`;
@@ -72,13 +75,14 @@ const handlePress = (routeName) => {
 };
 
 const StackNavigation = () => {
+  let questionnaireTitle = "";
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#8A449D",
+          backgroundColor: "#171717",
         },
-        headerTintColor: "#fff",
+        headerTintColor: "#DCDCDC",
         headerTitleStyle: {
           fontWeight: "bold",
         },
@@ -90,20 +94,66 @@ const StackNavigation = () => {
         options={{ title: "Dots." }}
       />
       <Stack.Group
-        screenOptions={({ route, navigation }) => ({
-          title: route.name,
-          title: "Select an option",
-          headerTitleAlign: "center",
-          headerRight: () => {
-            return (
-              <View>
-                <Pressable onPress={() => handlePress(route.name)}>
-                  <Entypo name="help-with-circle" size={24} color="white" />
-                </Pressable>
-              </View>
-            );
-          },
-        })}
+        screenOptions={({ route }) => (
+          route.name === "LocationScreen"
+            ? (questionnaireTitle = "Select a region")
+            : null,
+          route.name === "InstitutionType"
+            ? (questionnaireTitle = "Select a person type")
+            : null,
+          route.name === "HelpForWho"
+            ? (questionnaireTitle = "Select for who")
+            : null,
+          route.name === "InfoGender"
+            ? (questionnaireTitle = "Select a gender")
+            : null,
+          route.name === "OtherGender"
+            ? (questionnaireTitle = "Select or specify")
+            : null,
+          route.name === "InfoAge"
+            ? (questionnaireTitle = "Select an age")
+            : null,
+          route.name === "PersonType"
+            ? (questionnaireTitle = "Select current situation")
+            : null,
+          route.name === "NeedsScreenA"
+            ? (questionnaireTitle = "Select a topic")
+            : null,
+          route.name === "NeedsScreenB"
+            ? (questionnaireTitle = "Select a topic")
+            : null,
+          route.name === "NeedsScreenC"
+            ? (questionnaireTitle = "Select a topic")
+            : null,
+          route.name === "NeedsScreenD"
+            ? (questionnaireTitle = "Select a topic")
+            : null,
+          route.name === "OrganisationsListScreen"
+            ? (questionnaireTitle = "Your results")
+            : null,
+          route.name === "CompaniesOrganisationsList"
+            ? (questionnaireTitle = "Your results")
+            : null,
+          route.name === "SdgOrganisationsList"
+            ? (questionnaireTitle = "The goal results")
+            : null,
+          route.name === "OrganisationDetailsScreen"
+            ? (questionnaireTitle = "Organisation details")
+            : null,
+          {
+            title: questionnaireTitle,
+            headerTitleAlign: "center",
+            headerRight: () => {
+              return (
+                <View>
+                  <Pressable onPress={() => handlePress(route.name)}>
+                    <Entypo name="help-with-circle" size={24} color="#DCDCDC" />
+                  </Pressable>
+                </View>
+              );
+            },
+          }
+        )}
       >
         <Stack.Screen name="LocationScreen" component={LocationScreen} />
         <Stack.Screen name="InstitutionType" component={InstitutionType} />
@@ -143,29 +193,27 @@ const StackNavigation = () => {
   );
 };
 
-function TabNavigatorBottom() {
+const TabNavigatorBottom = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        shifting={false}
         initialRouteName="HomeScreenTab"
-        activeColor="#921CB1"
-        //inactiveColor="#A169B1"
-        //color = "#3F51B5"
-        //barStyle={{ backgroundColor: "white" }}
+        activeColor="white"
+        barStyle={{ backgroundColor: "#171717" }}
       >
         <Tab.Screen
           name="HomeScreenTab"
           component={StackNavigation}
           options={{
-            tabBarColor: "#ffffff",
+            tabBarColor: "#141414",
             tabBarLabel: "Home",
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <Feather
                 name="home"
-                activeColor="#921CB1"
-                //inactiveColor="#ffffff"
-                size={23}
-                color={"#8A449D"}
+                activeColor="white"
+                size={26}
+                color={"white"}
               />
             ),
           }}
@@ -175,15 +223,11 @@ function TabNavigatorBottom() {
           component={SdgScreen}
           options={{
             tabBarLabel: "SDGs",
-            tabBarColor: "#b2e1f4",
-            /* tabBarOptions: {
-            //activeTintColor: "#8A449D",
-            //inactiveTintColor: "#ffffff",
-          }, */
+            tabBarColor: "#00689D",
             tabBarIcon: () => (
               <Image
                 source={require("../assets/sdg.png")}
-                style={{ width: 25, height: 25, margin: -3 }}
+                style={{ width: 24, height: 24 }}
               />
             ),
           }}
@@ -193,25 +237,26 @@ function TabNavigatorBottom() {
           component={EmergencyScreen}
           options={{
             tabBarLabel: "Emergency",
-            tabBarColor: "#E35E63",
-            tabBarIcon: ({ color, size }) => (
-              <Feather name="phone" size={23} color={"#8A449D"} />
+            tabBarColor: "#3F7E44",
+            tabBarIcon: () => (
+              <Feather name="phone" size={26} color={"white"} />
             ),
           }}
         />
         <Tab.Screen
           name="Hotline"
           component={HotlineScreen}
+          color={"white"}
           options={{
             tabBarLabel: "Hotline",
-            tabBarColor: "#7FCAC3",
-            tabBarIcon: ({ color, size }) => (
-              <Feather name="headphones" size={23} color={"#8A449D"} />
+            tabBarColor: "#A21942",
+            tabBarIcon: () => (
+              <Feather name="headphones" size={26} color={"white"} />
             ),
           }}
         />
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
+};
 export default TabNavigatorBottom;

@@ -23,9 +23,9 @@ const SdgScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
+      <ScrollView style={styles.mainContainer}>
         <Text style={styles.titleTextStyle}>
-          Choose one of the 17 goal and see organisations that can help!
+          Choose one of the 17 goals and see organisations that can help!
         </Text>
         <View style={styles.container}>
           {sdgs.map((sdg) => (

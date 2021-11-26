@@ -31,11 +31,10 @@ const LocationScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>Please select a region</Text>
+      <ScrollView style={styles.mainContainer}>
         {uniqueRegionsArray.map((region) => (
           <View key={region} style={styles.container1}>
-            <View style={styles.bubbleContainer}>
+            <View style={styles.circleButton}>
               <Pressable
                 style={styles.circleButton}
                 onPress={() => handlePress(region)}

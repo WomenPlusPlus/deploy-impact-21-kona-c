@@ -16,15 +16,14 @@ const NeedsB_to_D = (props) => {
       style={styles.backgroundImage}
     >
       <ScrollView style={styles.mainContainer}>
-        <Text style={styles.titleTextStyle}>Need help with...</Text>
         {props.arr.map((option) => (
           <View key={option} style={styles.container1}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => props.handlePress(option)}
-            >
-              <Text style={styles.textStyle}>{option}</Text>
-            </Pressable>
+              <Pressable
+                style={styles.circleButton}
+                onPress={() => props.handlePress(option)}
+              >
+                <Text style={styles.textStyle}>{option}</Text>
+              </Pressable>
           </View>
         ))}
       </ScrollView>

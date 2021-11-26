@@ -4,9 +4,8 @@ import {
   View,
   Pressable,
   ImageBackground,
-  ScrollView,
 } from "react-native";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InstitutionType = ({ route, navigation }) => {
@@ -16,7 +15,6 @@ const InstitutionType = ({ route, navigation }) => {
     navigation.navigate("HelpForWho", {
       selectedRegion: selectedRegion,
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
-      selectedInstitutionType: selectedInstitutionType,
     });
   };
   const handlePressCompany = (selectedInstitutionType) => {
@@ -33,39 +31,34 @@ const InstitutionType = ({ route, navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-      <ScrollView>
-        <Text style={styles.titleTextStyle}>
-          Whom are you seeking help for?
-        </Text>
-        <View>
-          <View style={styles.container1}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePressPerson("Person")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <FontAwesome5 name="user" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Individual</Text>
-            </View>
-          </View>
-          <View style={styles.container2}>
-            <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePressCompany("Company")}
-              >
-                <View style={styles.severalIconsButton}>
-                  <FontAwesome5 name="building" style={styles.userImage} />
-                </View>
-              </Pressable>
-              <Text style={styles.textStyle}>Company/Organisation</Text>
-            </View>
+      <View style={styles.mainContainer}>
+        <View style={styles.container1}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePressPerson("Person")}
+            >
+              <View style={styles.squareButtonContainer}>
+                <Ionicons name="person" style={styles.userImage} />
+                <Text style={styles.textStyle}>Individual</Text>
+              </View>
+            </Pressable>
           </View>
         </View>
-      </ScrollView>
+        <View style={styles.container2}>
+          <View style={styles.bubbleContainer}>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePressCompany("Company")}
+            >
+              <View style={styles.squareButtonContainer}>
+                <FontAwesome5 name="building" style={styles.userImage} />
+                <Text style={styles.textStyle}>Company / Organisation</Text>
+              </View>
+            </Pressable>
+          </View>
+        </View>
+      </View>
     </ImageBackground>
   );
 };

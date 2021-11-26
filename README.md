@@ -1,24 +1,26 @@
+![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/Header_dots-removebg-preview.png?raw=true)
+
 # Dots by ConnectingDots
 
-Dots: the alternative legal aid tech. 
+Dots: the alternative legal aid tech.
 A tool to connect people in need to the organisations best equipped to help them.
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
-## Idea / Our Proposal
+## <img src="./docs/idea.png" alt="Size Limit CLI" width="30" height="30"> Idea / Our Proposal 
 
-- Offline application - no internet connection required for the users to access it. Can be accessed anytime, anywhere.
+- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
 
-## Technical Solution
+## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30">Technical Solution
 
 - React Native Frontend application using Expo Framework, available for Android and IOS.
 - No backend, all data required by the application is stored in json format under `./Frontend/assets/jsonFiles` for both content and configuration.
 - Minimal running cost of the application considering no additional cost is required for storage or backend infrastructure.
 
-## How it works
+## How does it work
 
-1. User needs to provide personal identification information (age, gender, etc...).
+1. User needs to provide personal identification information (age, gender, etc.).
 2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
    <p align="center">
      <img src="./docs/SDG_identification.jpg" alt="Size Limit CLI" width="600">
@@ -37,7 +39,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 # Installation
 
-## Prerequisite
+## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
@@ -46,8 +48,8 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 For developers/testers that want to be able to run the code locally and develop or test:
 
-- [Android simulator](https://developer.android.com/studio) - phone emulator. Installation steps for both Windows and Mac can be found [here](https://developer.android.com/studio/install)
-- [iOS simulator](https://developer.apple.com/xcode/) - apple simulator.
+- [Android simulator](https://developer.android.com/studio) - Androit's phone emulator. Installation steps for both Windows and Mac can be found [here](https://developer.android.com/studio/install)
+- [iOS simulator](https://developer.apple.com/xcode/) - Apple's simulator.
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
 ## Getting started
@@ -68,6 +70,28 @@ npm start
 
 ---
 
+# Testing
+
+## Unit Tests
+
+Unit tests are available under ./Frontend/test folder. They can be run via the following command.
+
+```bash
+npm run test
+```
+
+Results will look like this
+
+<p align="center">
+     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="600">
+   </p>
+
+## Manual Tests
+
+Manual tests cases that were created and executed are available [here](./docs/TestCases.xlsx). It contain an initial set of test cases that can be further expanded.
+
+---
+
 # Data
 
 All data required by the application is currently stored inside the application in the `./Frontend/assets/jsonFiles` folder. This includes organisations data as well as data used for the hierarchy mapping of the needs, questionnaire options and mapping to SDG Group. The application uses this hierarchy mapping to dynamically generate the different options for the users depending on their selection.
@@ -78,7 +102,7 @@ All .json files used by the application were generated based on a original .csv 
   <img src="./docs/data.jpg" alt="Size Limit CLI" width="300">
 </p>
 
-Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future this can be enhance by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
+Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future, this can be enhanced by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
 
 ## Update of Organisations data
 
@@ -87,7 +111,7 @@ In order to update some of the organisation details, the organisations.json file
 - Update the organisation.csv file. The structure of the file should be the same as the old version, just an update of the data content.
 - Generate a new json file based on the updated .csv file. This can be easily done by using the steps defined under [Conversion to json file](#conversion-to-json-file) section.
 
-There is always the option to manually update the underlying organisation.json file, but we would recommend to update the organisation.csv file first and generate the json file from it. This is so that the golden source of the data remains in a redable format on the .csv file.
+There is always the option to manually update the underlying organisation.json file, but we would recommend updating the organisation.csv file first and generating the json file from it. This is so that the golden source of the data remains in a redeable format on the .csv file.
 
 After this, the application will use the new data for the organisations. Remember to test the changes before you go ahead with the update.
 
@@ -109,7 +133,7 @@ After this, the application will use the new configuration data to generate the 
 
 Required to update: organisations, options_map and companies_options_map data files.
 
-In order to generate a json file from a csv file
+To generate a json file from a csv file:
 
 1. Update any of the csv files in `./Fontend/assets/csvFiles`
 2. Make sure the structure of the file is the same as the previous file
@@ -151,6 +175,12 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 ---
 
 ## Team Members
+
+- [@bebolor](https://github.com/Bebolor) - Frontend, UI/UX design
+- [@veloqueen](https://github.com/veloqueen) - Frontend
+- [@natayra](https://github.com/natayra) - Frontend lead
+- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master 
+- [@Karen](https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
 
 ---
 
