@@ -7,27 +7,20 @@ import {
   Pressable,
   Linking,
 } from "react-native";
-import {
-  FontAwesome,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import { styles } from "../../styles/organisationsListStyles";
 import { makeCall } from "../../utils/makeCall";
 import data from "../../assets/jsonFiles/organisations.json";
 
 const HotlineScreen = ({ navigation }) => {
-  let newData = [];
-  let newDataIndex = [];
-  for (let i = 0; i < data.length; i++) {
-    if (
-      data[i]["Name of Organisation"] === "Samu Social Sénégal" ||
-      data[i]["Name of Organisation"] ===
-        "Association des Jeunes pour le Developpement (AJD/PASTEEF)"
-    ) {
-      newData.push(data[i]);
-      newDataIndex.push(i);
+  let newData = data.filter((org) => {
+    if (data.indexOf(org) === 8 || data.indexOf(org) === 63) {
+      return true;
+    } else {
+      return false;
     }
-  }
+  });
+
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
@@ -35,7 +28,7 @@ const HotlineScreen = ({ navigation }) => {
       style={styles.backgroundImage}
     >
       <ScrollView style={styles.mainContainer}>
-      <View>
+        <View>
           <Text style={styles.titleTextStyle}>Hotlines</Text>
         </View>
         {newData.map((organisation) => (

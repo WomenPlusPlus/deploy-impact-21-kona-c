@@ -58,7 +58,7 @@ const OrganisationsListScreen = ({ route, navigation }) => {
   const [selectedAge, setSelectedAge] = useState(route.params["selectedAge"]);
   const selectedPersonType = route.params["selectedPersonType"];
   const SDG_Id = route.params["SDG_Id"].split(",");
-
+console.log(route.params)
   const newData = dataFunc(
     data,
     selectedRegion,
