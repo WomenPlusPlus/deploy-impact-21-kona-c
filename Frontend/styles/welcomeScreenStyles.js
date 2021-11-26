@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     borderWidth: 0,
     margin: 0,
-    padding: 0
+    padding: 0,
   },
   image: {
     width: 22,
@@ -100,7 +100,6 @@ export const styles = StyleSheet.create({
     backgroundColor: "transparent",
     margin: 0,
     textAlign: "left",
-    
   },
   rowStyle: {
     width: 70,
@@ -140,6 +139,6 @@ export const styles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     color: "#DCDCDC",
     fontSize: 25,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 });

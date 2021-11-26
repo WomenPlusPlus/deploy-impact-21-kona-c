@@ -33,29 +33,29 @@ const OtherGender = ({ route, navigation }) => {
     >
       <View style={styles.mainContainer} keyboardShouldPersistTaps="always">
         <View style={styles.container1}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("O")}
-            >
-              <Text style={styles.textStyle}>Non-binary</Text>
-            </Pressable>
+          <Pressable
+            style={styles.circleButton}
+            onPress={() => handlePress("O")}
+          >
+            <Text style={styles.textStyle}>Non-binary</Text>
+          </Pressable>
         </View>
 
         <View style={styles.container1}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("O")}
-            >
-              <Text style={styles.textStyle}>Gender-fluid</Text>
-            </Pressable>
+          <Pressable
+            style={styles.circleButton}
+            onPress={() => handlePress("O")}
+          >
+            <Text style={styles.textStyle}>Gender-fluid</Text>
+          </Pressable>
         </View>
         <View style={styles.container1}>
-            <Pressable
-              style={styles.circleButton}
-              onPress={() => handlePress("O")}
-            >
-              <Text style={styles.textStyle}>Agender</Text>
-            </Pressable>
+          <Pressable
+            style={styles.circleButton}
+            onPress={() => handlePress("O")}
+          >
+            <Text style={styles.textStyle}>Agender</Text>
+          </Pressable>
         </View>
         <View style={styles.containerInput}>
           <View

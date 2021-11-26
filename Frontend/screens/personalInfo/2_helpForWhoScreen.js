@@ -31,15 +31,15 @@ const HelpForWho = ({ route, navigation }) => {
       <View style={styles.mainContainer}>
         <View style={styles.container1}>
           <View style={styles.bubbleContainer}>
-              <Pressable
-                style={styles.circleButton}
-                onPress={() => handlePress("Myself")}
-              >
-                <View style={styles.squareButtonContainer}>
-                  <Ionicons name="person" style={styles.userImage} />
-                  <Text style={styles.textStyle}>Myself</Text>
-                </View>
-              </Pressable>
+            <Pressable
+              style={styles.circleButton}
+              onPress={() => handlePress("Myself")}
+            >
+              <View style={styles.squareButtonContainer}>
+                <Ionicons name="person" style={styles.userImage} />
+                <Text style={styles.textStyle}>Myself</Text>
+              </View>
+            </Pressable>
           </View>
         </View>
         <View style={styles.container2}>

@@ -24,7 +24,7 @@ const NeedsScreenC = ({ route, navigation }) => {
     }
   };
   const arr = optionsFilteredB.map((option) => option.Third_layer);
-  
+
   return <NeedsB_to_D arr={arr} handlePress={handlePress} />;
 };
 

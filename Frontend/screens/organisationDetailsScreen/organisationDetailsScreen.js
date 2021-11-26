@@ -52,14 +52,13 @@ const OrganisationDetailsScreen = ({ route }) => {
       <ScrollView>
         <View style={[styles.sdgsImageContainer, styles.container]}>
           {organisationSdgs.map((sdg) => (
-          <Image
-          key={"sdgImage" + sdg}
-            resizeMode="contain"
-            source={sdgs[sdg - 1].image}
-            style={styles.image}
-          />
-       ))}
-
+            <Image
+              key={"sdgImage" + sdg}
+              resizeMode="contain"
+              source={sdgs[sdg - 1].image}
+              style={styles.image}
+            />
+          ))}
         </View>
         <View style={styles.container}>
           <Text style={styles.textBoxName}>

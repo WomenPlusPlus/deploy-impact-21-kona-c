@@ -34,8 +34,7 @@ const LocationScreen = ({ navigation }) => {
       <ScrollView style={styles.mainContainer}>
         {uniqueRegionsArray.map((region) => (
           <View key={region} style={styles.container1}>
-            <View style={styles.circleButton}
-            >
+            <View style={styles.circleButton}>
               <Pressable
                 style={styles.circleButton}
                 onPress={() => handlePress(region)}

@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     paddingTop: "5%",
     textAlign: "center",
-    textAlignVertical: "center"
+    textAlignVertical: "center",
   },
   mainIconText: {
     color: "#DCDCDC",
@@ -102,6 +102,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
     marginBottom: "6%",
-    marginTop: "2%"
-  }
+    marginTop: "2%",
+  },
 });
