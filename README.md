@@ -1,10 +1,8 @@
-
-   ![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/Header_dots-removebg-preview.png?raw=true)
-
+![Image of banner](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c/blob/development/docs/Header_dots-removebg-preview.png?raw=true)
 
 # Dots by ConnectingDots
 
-Dots: the alternative legal aid tech. 
+Dots: the alternative legal aid tech.
 A tool to connect people in need to the organisations best equipped to help them.
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
@@ -69,6 +67,28 @@ npm start
 4. You can now run your application in 2 ways
    1. On a local computer using a phone emulator launching the virtual device configured (Android or IOS)
    2. Open the Expo app on the phone and scan the QR code from the Metro Bundler page
+
+---
+
+# Testing
+
+## Unit Tests
+
+Unit tests are available under ./Frontend/test folder. They can be run via the following command.
+
+```bash
+npm run test
+```
+
+Results will look like this
+
+<p align="center">
+     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="600">
+   </p>
+
+## Manual Tests
+
+Manual tests cases that were created and executed are available [here](./docs/TestCases.xlsx). It contain an initial set of test cases that can be further expanded.
 
 ---
 
