@@ -115,7 +115,7 @@ There is always the option to manually update the underlying organisation.json f
 
 After this, the application will use the new data for the organisations. Remember to test the changes before you go ahead with the update.
 
-## Needs Options and Mapping to SDG - maintenance
+##<img src="./docs/maintenace.png" alt="Size Limit CLI" width="30" height="30"> Needs Options and Mapping to SDG - maintenance
 
 The application generates dynamically the options for the needs questionnaire as well as the mapping of the different options to the SGD Group based on configuration data in the application. This mapping is stored in the application under `./assets/jsonFiles`.
 
@@ -129,7 +129,7 @@ This data can be updated in the same way as the organisation data by updating th
 
 After this, the application will use the new configuration data to generate the needs questionnaire. Remember to test the changes before you go ahead with the update.
 
-## Conversion to json file
+##<img src="./docs/json.png" alt="Size Limit CLI" width="30" height="30">  Conversion to json file
 
 Required to update: organisations, options_map and companies_options_map data files.
 
@@ -152,7 +152,7 @@ npm run convert-csv
 
 ---
 
-# FAQ and Troubleshooting
+# <img src="./docs/questions.png" alt="Size Limit CLI" width="30" height="30"> FAQ and Troubleshooting
 
 > 1. Why do I have a folder named ".expo" in my project?
 
@@ -174,7 +174,7 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 ---
 
-## Team Members
+## <img src="./docs/team.png" alt="Size Limit CLI" width="30" height="30"> Team Members
 
 - [@bebolor](https://github.com/Bebolor) - Frontend, UI/UX design
 - [@veloqueen](https://github.com/veloqueen) - Frontend
@@ -184,7 +184,7 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 ---
 
-## License: GPL-3.0 License
+## <img src="./docs/license.png" alt="Size Limit CLI" width="30" height="30"> License: GPL-3.0 License
 
 ---
 
