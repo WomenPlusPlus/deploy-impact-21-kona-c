@@ -44,7 +44,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-## Developers / Testers
+## <img src="./docs/tester.png" alt="Size Limit CLI" width="30" height="30"> Developers / Testers
 
 For developers/testers that want to be able to run the code locally and develop or test:
 
