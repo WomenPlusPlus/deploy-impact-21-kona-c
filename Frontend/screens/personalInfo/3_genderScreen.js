@@ -4,30 +4,21 @@ import {
   ImageBackground,
   View,
   Pressable,
-  ScrollView,
 } from "react-native";
 import { FontAwesome5, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InfoGender = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-
   const handlePress = (selectedGender) => {
     if (selectedGender === "O") {
       navigation.navigate("OtherGender", {
-        selectedRegion: selectedRegion,
-        selectedInstitutionType: selectedInstitutionType,
-        selectedForWho: selectedForWho,
+        selectedRegion: route.params["selectedRegion"],
         uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });
     } else {
       navigation.navigate("InfoAge", {
-        selectedRegion: selectedRegion,
-        selectedInstitutionType: selectedInstitutionType,
-        selectedForWho: selectedForWho,
+        selectedRegion: route.params["selectedRegion"],
         uniqueRegionsArray: route.params["uniqueRegionsArray"],
         selectedGender: selectedGender,
       });

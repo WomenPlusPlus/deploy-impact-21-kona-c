@@ -193,7 +193,7 @@ const StackNavigation = () => {
   );
 };
 
-function TabNavigatorBottom({ route }) {
+const TabNavigatorBottom = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -258,5 +258,5 @@ function TabNavigatorBottom({ route }) {
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
+};
 export default TabNavigatorBottom;

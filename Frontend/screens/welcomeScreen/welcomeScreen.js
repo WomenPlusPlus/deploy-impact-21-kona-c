@@ -90,7 +90,6 @@ const HomeScreen = ({ navigation }) => {
               </Text>
             </View>
           </View>
-
           <View style={styles.containerRoundMS}>
             <View style={styles.roundS}>
               <View>

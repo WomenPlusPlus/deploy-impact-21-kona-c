@@ -1,26 +1,13 @@
 import React from "react";
-import {
-  Text,
-  ImageBackground,
-  View,
-  Pressable,
-  ScrollView,
-} from "react-native";
+import { Text, ImageBackground, View, Pressable } from "react-native";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const InfoAge = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-  const selectedGender = route.params["selectedGender"];
-
   const handlePress = (selectedAge) => {
     navigation.navigate("PersonType", {
-      selectedRegion: selectedRegion,
-      selectedInstitutionType: selectedInstitutionType,
-      selectedForWho: selectedForWho,
-      selectedGender: selectedGender,
+      selectedRegion: route.params["selectedRegion"],
+      selectedGender: route.params["selectedGender"],
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedAge: selectedAge,
     });

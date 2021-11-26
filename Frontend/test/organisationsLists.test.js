@@ -2,7 +2,9 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { dataFunc } from "../screens/organisationsLists/organisationsListScreen";
 import data from "../assets/jsonFiles/organisations.json";
-import LocationScreen from "../screens/locationScreen/locationScreen"
+import LocationScreen from "../screens/locationScreen/locationScreen";
+import OtherGender from "../screens/personalInfo/3.1_otherGenderScreen";
+
 // Unit Test
 describe("<OrganisationsListScreen />", () => {
   it("has 2 children", () => {
@@ -30,10 +32,4 @@ describe("<OrganisationsListScreen />", () => {
     const results = dataFunc(organisationsArray, "Saint-Louis", "M", "A", "9");
     expect(results).toEqual([]);
   });
-});
-
-// Snapshot Test
-test("renders correctly", () => {
-  const tree = renderer.create(<LocationScreen />).toJSON();
-  expect(tree).toMatchSnapshot();
 });

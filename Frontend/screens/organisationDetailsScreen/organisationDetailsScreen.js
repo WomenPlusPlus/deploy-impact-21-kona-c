@@ -26,8 +26,7 @@ const OrganisationDetailsScreen = ({ route }) => {
     .replace(/[^0-9]/g, " ")
     .split(" ")
     .filter((n) => n);
-  let focus = [];
-  focus.push(
+  let focus = [
     data[organisationId]["Focus 1"],
     data[organisationId]["Focus 2"],
     data[organisationId]["Focus 3"],
@@ -37,9 +36,8 @@ const OrganisationDetailsScreen = ({ route }) => {
     data[organisationId]["Focus 7"],
     data[organisationId]["Focus 8"],
     data[organisationId]["Focus 9"],
-    data[organisationId]["Focus 10"]
-  );
-  focus = focus.filter((focusElement) => {
+    data[organisationId]["Focus 10"],
+  ].filter((focusElement) => {
     return focusElement;
   });
 

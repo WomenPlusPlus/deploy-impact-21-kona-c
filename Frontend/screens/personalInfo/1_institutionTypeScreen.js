@@ -4,7 +4,6 @@ import {
   View,
   Pressable,
   ImageBackground,
-  ScrollView,
 } from "react-native";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
@@ -16,7 +15,6 @@ const InstitutionType = ({ route, navigation }) => {
     navigation.navigate("HelpForWho", {
       selectedRegion: selectedRegion,
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
-      selectedInstitutionType: selectedInstitutionType,
     });
   };
   const handlePressCompany = (selectedInstitutionType) => {

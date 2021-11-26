@@ -4,19 +4,14 @@ import {
   ImageBackground,
   View,
   Pressable,
-  ScrollView,
 } from "react-native";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { styles } from "../../styles/roundButtonsScreenStyles";
 
 const HelpForWho = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-
   const handlePress = (selectedForWho) => {
     navigation.navigate("InfoGender", {
-      selectedRegion: selectedRegion,
-      selectedInstitutionType: selectedInstitutionType,
+      selectedRegion: route.params["selectedRegion"],
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedForWho: selectedForWho,
     });

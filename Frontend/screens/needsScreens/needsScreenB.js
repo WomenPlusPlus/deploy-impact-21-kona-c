@@ -15,26 +15,18 @@ const NeedsScreenB = ({ route, navigation }) => {
     if (optionsFilteredB.length === 1) {
       navigation.navigate("OrganisationsListScreen", {
         selectedRegion: route.params["selectedRegion"],
-        selectedInstitutionType: route.params["selectedInstitutionType"],
-        selectedForWho: route.params["selectedForWho"],
         selectedGender: route.params["selectedGender"],
         selectedAge: route.params["selectedAge"],
         selectedPersonType: route.params["selectedPersonType"],
-        selectedOptionScreenB: selectedOptionScreenB,
         uniqueRegionsArray: route.params["uniqueRegionsArray"],
         SDG_Id: optionsFilteredB[0]["SDG_Id"],
       });
     } else {
       navigation.navigate("NeedsScreenC", {
         selectedRegion: route.params["selectedRegion"],
-        selectedInstitutionType: route.params["selectedInstitutionType"],
-        selectedForWho: route.params["selectedForWho"],
         selectedGender: route.params["selectedGender"],
         selectedAge: route.params["selectedAge"],
         selectedPersonType: route.params["selectedPersonType"],
-        selectedOptionScreenA: selectedOptionScreenA,
-        selectedOptionScreenB: selectedOptionScreenB,
-        arrayFilteredA: optionsFilteredA,
         optionsFilteredB: optionsFilteredB,
         uniqueRegionsArray: route.params["uniqueRegionsArray"],
       });
