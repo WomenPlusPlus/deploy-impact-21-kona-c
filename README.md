@@ -12,7 +12,7 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 - Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
 
-## Technical Solution
+## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30">Technical Solution
 
 - React Native Frontend application using Expo Framework, available for Android and IOS.
 - No backend, all data required by the application is stored in json format under `./Frontend/assets/jsonFiles` for both content and configuration.
