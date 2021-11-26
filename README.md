@@ -52,7 +52,7 @@ For developers/testers that want to be able to run the code locally and develop 
 - [iOS simulator](https://developer.apple.com/xcode/) - Apple's simulator.
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
-## Getting started
+## <img src="./docs/start.png" alt="Size Limit CLI" width="30" height="30"> Getting started
 
 1. Clone [deploy-impact-21-kona-c repo](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c) locally
 2. Go to Frontend folder and run:
@@ -72,7 +72,7 @@ npm start
 
 # Testing
 
-## Unit Tests
+## <img src="./docs/unittest.png" alt="Size Limit CLI" width="30" height="30"> Unit Tests
 
 Unit tests are available under ./Frontend/test folder. They can be run via the following command.
 
