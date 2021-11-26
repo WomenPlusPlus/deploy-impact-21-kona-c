@@ -179,7 +179,7 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 ## Team Members
 
-- [@bebolor]https://github.com/Bebolor) - Fullstack
+- [@bebolor](https://github.com/Bebolor) - Fullstack
 - 
 
 ---
