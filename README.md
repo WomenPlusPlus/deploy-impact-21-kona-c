@@ -7,7 +7,6 @@ A tool to connect people in need to the organisations best equipped to help them
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
-<img src="./docs/data.jpg" alt="Size Limit CLI" width="300">
 ## Idea / Our Proposal
 
 - Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
