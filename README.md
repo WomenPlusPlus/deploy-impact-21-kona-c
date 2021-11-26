@@ -179,8 +179,11 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 ## Team Members
 
-- [@bebolor](https://github.com/Bebolor) - Fullstack
-- 
+- [@bebolor](https://github.com/Bebolor) - Frontend, UI/UX design
+- [@veloqueen](https://github.com/veloqueen) - Frontend
+- [@natayra](https://github.com/natayra) - Frontend lead
+- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master 
+- [@Karen]https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
 
 ---
 
