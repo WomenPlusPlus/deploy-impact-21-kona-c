@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from "react-native";
-let height = Dimensions.get("window").height;
 let width = null;
 if (Dimensions.get("window").width > 500) {
   width = 500;

@@ -112,7 +112,7 @@ export const styles = StyleSheet.create({
     margin: 0,
     width: "108%",
     height: 0.13 * width,
-    marginBottom: "-3.5%"
+    marginBottom: "-3.5%",
   },
   nextButtonText: {
     color: "#DCDCDC",

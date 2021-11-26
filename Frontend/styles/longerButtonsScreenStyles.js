@@ -1,11 +1,11 @@
 import { StyleSheet, Dimensions } from "react-native";
-let height = Dimensions.get("window").height;
 let width = null;
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
   width = Dimensions.get("window").width;
 }
+
 export const styles = StyleSheet.create({
   mainContainer: {
     marginTop: "10%",

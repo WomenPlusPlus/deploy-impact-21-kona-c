@@ -21,8 +21,7 @@ const EmergencyScreen = () => {
         <View style={styles.container1}>
           <Text style={styles.titleTextStyle}>Emergency Numbers</Text>
         </View>
-        <View style={styles.roundSingleM}
-        >
+        <View style={styles.roundSingleM}>
           <Pressable onPress={() => makeCall("22117")}>
             <MaterialIcons name="local-police" style={styles.mainIconText} />
             <Text style={styles.textMiddleStyle}>Police</Text>
@@ -33,8 +32,7 @@ const EmergencyScreen = () => {
           </Pressable>
         </View>
         <View style={styles.roundContainer}>
-          <View style={styles.roundLeftM}
-          >
+          <View style={styles.roundLeftM}>
             <Pressable onPress={() => makeCall("22118")}>
               <FontAwesome5 name="fire" style={styles.mainIconText} />
               <Text style={styles.textMiddleStyle}>Fire</Text>
@@ -44,8 +42,7 @@ const EmergencyScreen = () => {
               </View>
             </Pressable>
           </View>
-          <View style={styles.roundRightM}
-          >
+          <View style={styles.roundRightM}>
             <Pressable onPress={() => makeCall("(221)338891515")}>
               <FontAwesome5
                 name="hospital-symbol"

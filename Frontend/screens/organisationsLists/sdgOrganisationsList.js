@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import data from "../../assets/jsonFiles/organisations.json";
 import OrganisationsLists from "../../components/organisationsLists";
 
 const SdgOrganisationsList = ({ route, navigation }) => {
   let regionsArray = [];
   const sdgId = route.params["sdgId"];
-  const [selectedRegion, setSelectedRegion] = useState("Worldwide")
+  const [selectedRegion, setSelectedRegion] = useState("Worldwide");
 
   for (let i = 0; i < data.length; i++) {
     regionsArray.push(data[i]["Code_region"]);

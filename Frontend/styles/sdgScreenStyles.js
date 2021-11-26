@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   mainContainer: {
     marginTop: "11%",
   },
-   backgroundImage: {
+  backgroundImage: {
     height: "100%",
     width: width,
     alignSelf: "center",
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   },
   buttonContainer: {
     margin: 8,
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   container: {
     flexDirection: "row",
@@ -57,6 +57,6 @@ export const styles = StyleSheet.create({
     paddingLeft: "1%",
     paddingRight: "1%",
     textAlign: "center",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 });

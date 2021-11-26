@@ -1,6 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
 let width = null;
-let height = Dimensions.get("window").height ;
 if (Dimensions.get("window").width > 500) {
   width = 500;
 } else {
@@ -81,8 +80,8 @@ export const styles = StyleSheet.create({
     borderColor: "gray",
     backgroundColor: "black",
   },
-  sdgsImageContainer : {
+  sdgsImageContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-  }
+  },
 });

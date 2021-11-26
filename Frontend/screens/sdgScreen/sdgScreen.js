@@ -23,29 +23,29 @@ const SdgScreen = ({ navigation }) => {
       resizeMode="cover"
       style={styles.backgroundImage}
     >
-        <ScrollView style={styles.mainContainer}>
-          <Text style={styles.titleTextStyle}>
-            Choose one of the 17 goals and see organisations that can help!
-          </Text>
-          <View style={styles.container}>
-            {sdgs.map((sdg) => (
-              <View key={sdg.id} style={styles.buttonContainer}>
-                <TouchableHighlight
-                  style={styles.button}
-                  onPress={() => {
-                    handlePress(sdg.id);
-                  }}
-                >
-                  <Image
-                    resizeMode="contain"
-                    source={sdg.image}
-                    style={styles.image}
-                  />
-                </TouchableHighlight>
-              </View>
-            ))}
-          </View>
-        </ScrollView>
+      <ScrollView style={styles.mainContainer}>
+        <Text style={styles.titleTextStyle}>
+          Choose one of the 17 goals and see organisations that can help!
+        </Text>
+        <View style={styles.container}>
+          {sdgs.map((sdg) => (
+            <View key={sdg.id} style={styles.buttonContainer}>
+              <TouchableHighlight
+                style={styles.button}
+                onPress={() => {
+                  handlePress(sdg.id);
+                }}
+              >
+                <Image
+                  resizeMode="contain"
+                  source={sdg.image}
+                  style={styles.image}
+                />
+              </TouchableHighlight>
+            </View>
+          ))}
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };
