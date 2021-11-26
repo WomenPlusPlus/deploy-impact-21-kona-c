@@ -84,9 +84,9 @@ Results will look like this
 
 <p align="center">
      <img src="./docs/TestResults.png" alt="Size Limit CLI" width="600">
-   </p>
+</p>
 
-## Manual Tests
+## <img src="./docs/unittest.png" alt="Size Limit CLI" width="30" height="30"> Manual Tests
 
 Manual tests cases that were created and executed are available [here](./docs/TestCases.xlsx). It contain an initial set of test cases that can be further expanded.
 
@@ -104,7 +104,7 @@ All .json files used by the application were generated based on a original .csv 
 
 Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future, this can be enhanced by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
 
-## Update of Organisations data
+## <img src="./docs/update.png" alt="Size Limit CLI" width="30" height="30"> Update of Organisations data
 
 In order to update some of the organisation details, the organisations.json file needs to be modified with the new information. This can be done by:
 
