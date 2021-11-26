@@ -9,19 +9,11 @@ import {
 import { styles } from "../../styles/longerButtonsScreenStyles";
 
 const PersonType = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-  const selectedGender = route.params["selectedGender"];
-  const selectedAge = route.params["selectedAge"];
-
   const handlePress = (selectedPersonType) => {
     navigation.navigate("NeedsScreenA", {
-      selectedRegion: selectedRegion,
-      selectedInstitutionType: selectedInstitutionType,
-      selectedForWho: selectedForWho,
-      selectedGender: selectedGender,
-      selectedAge: selectedAge,
+      selectedRegion: route.params["selectedRegion"],
+      selectedGender: route.params["selectedGender"],
+      selectedAge: route.params["selectedAge"],
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
       selectedPersonType: selectedPersonType,
     });

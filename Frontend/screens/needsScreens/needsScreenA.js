@@ -21,8 +21,6 @@ const NeedsScreenA = ({ route, navigation }) => {
   const handlePress = (optionScreenA) => {
     navigation.navigate("NeedsScreenB", {
       selectedRegion: route.params["selectedRegion"],
-      selectedInstitutionType: route.params["selectedInstitutionType"],
-      selectedForWho: route.params["selectedForWho"],
       selectedGender: route.params["selectedGender"],
       selectedAge: route.params["selectedAge"],
       selectedPersonType: route.params["selectedPersonType"],

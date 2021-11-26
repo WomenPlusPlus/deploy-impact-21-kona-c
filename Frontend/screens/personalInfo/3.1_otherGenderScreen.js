@@ -5,23 +5,16 @@ import {
   View,
   Pressable,
   TextInput,
-  ScrollView,
 } from "react-native";
 import { styles } from "../../styles/longerButtonsScreenStyles";
 import NextButton from "../../components/nextButton";
 
 const OtherGender = ({ route, navigation }) => {
-  const selectedRegion = route.params["selectedRegion"];
-  const selectedInstitutionType = route.params["selectedInstitutionType"];
-  const selectedForWho = route.params["selectedForWho"];
-
-  const handlePress = (selectedender) => {
+  const handlePress = (selectedGender) => {
     navigation.navigate("InfoAge", {
-      selectedRegion: selectedRegion,
-      selectedInstitutionType: selectedInstitutionType,
-      selectedForWho: selectedForWho,
+      selectedRegion: route.params["selectedRegion"],
       uniqueRegionsArray: route.params["uniqueRegionsArray"],
-      selectedGender: "O",
+      selectedGender: selectedGender,
     });
   };
 
@@ -60,7 +53,7 @@ const OtherGender = ({ route, navigation }) => {
         <View style={styles.containerInput}>
           <View
             style={styles.circleButtonInput}
-            onPress={() => handlePress("M")}
+            onPress={() => handlePress("O")}
           >
             <TextInput
               placeholder="Another (please specify)"
