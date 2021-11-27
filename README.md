@@ -7,10 +7,11 @@ A tool to connect people in need to the organisations best equipped to help them
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
-## <img src="./docs/idea.png" alt="Size Limit CLI" width="30" height="30"> Idea / Our Proposal 
+## <img src="./docs/idea.png" alt="Size Limit CLI" width="30" height="30"> Idea / Our Proposal
 
-- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
+- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed by everyone everywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
+- Easy to maintain by reading data
 
 ## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30"> Technical Solution
 
@@ -64,11 +65,10 @@ npm start
 ```
 
 3. Metro Bundler should open on localhost
-4. You can now run your application in 2 ways
+4. You can now run your application in 3 ways
    1. On a local computer using a phone emulator launching the virtual device configured (Android or IOS)
-   2. Open the Expo app on the phone and scan the QR code from the Metro Bundler page
-
----
+   2. In web browser - just open from the Metro Bundler page
+   3. Open the Expo app on the phone and scan the QR code from the Metro Bundler page
 
 # Testing
 
@@ -83,14 +83,12 @@ npm run test
 Results will look like this
 
 <p align="center">
-     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="600">
+     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="400" height="200">
 </p>
 
 ## <img src="./docs/unittest.png" alt="Size Limit CLI" width="30" height="30"> Manual Tests
 
 Manual tests cases that were created and executed are available [here](./docs/TestCases.xlsx). It contain an initial set of test cases that can be further expanded.
-
----
 
 # Data
 
@@ -129,7 +127,7 @@ This data can be updated in the same way as the organisation data by updating th
 
 After this, the application will use the new configuration data to generate the needs questionnaire. Remember to test the changes before you go ahead with the update.
 
-## <img src="./docs/json.png" alt="Size Limit CLI" width="30" height="30">  Conversion to json file
+## <img src="./docs/json.png" alt="Size Limit CLI" width="30" height="30"> Conversion to json file
 
 Required to update: organisations, options_map and companies_options_map data files.
 
@@ -146,11 +144,21 @@ npm run convert-csv
 
 4. `./Fontend/assets/jsonFiles` should be already updated.
 
----
-
 # Future Developments
 
----
+## Short Term
+
+- Expand the language support capabilities on the app to allow support for new languages. Data structure can easily be expanded to include an additional language column for both organisation and the needs mapping configuration. This will allow the application to dynamically switch the language and read the content from the data
+- Enable Data Collection by sending data from the app to a central storage where the data can be aggregated and centralised for user behaviour analysis
+- Create an Administration Panel where specific users can maintain the Organisation and needs mapping to configuration, to allow for quick update for the application. This can also be achieve by having the data in some google docs file where it can be updated and the application updates the local version at specific intervals based on the google docs files
+
+## Long Term
+
+- Include some AI capability to enhance the current deterministic approach. For example we could allow for text search on top of the existing needs questionnaire. In this way we could support more use cases and better serve the users
+- Allow organisations to register themselves and go through an approval process until they appear officially in the app. In this way the app can be self managed but still keep an oversight of the organisations that are included
+- Integration with other social apps which will allow the users depending on their needs to also be aware of other apps that could help them. There could be some integration with Sofia for domestic violence
+- Add FAQ section on the app where users can find answers to some common questions. For example things like: Do I need to pay to use an organisation service, Would there be repercussions if using a particular organisation
+- Online chat with social volunteers
 
 # <img src="./docs/questions.png" alt="Size Limit CLI" width="30" height="30"> FAQ and Troubleshooting
 
@@ -172,21 +180,17 @@ No, you should not share the ".expo" folder. It does not contain any information
 
 Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
 
----
-
-## <img src="./docs/team.png" alt="Size Limit CLI" width="30" height="30"> Team Members
+# <img src="./docs/team.png" alt="Size Limit CLI" width="30" height="30"> Team Members
 
 - [@bebolor](https://github.com/Bebolor) - Frontend, UI/UX design
 - [@veloqueen](https://github.com/veloqueen) - Frontend
 - [@natayra](https://github.com/natayra) - Frontend lead
-- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master 
+- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master
 - [@Karen](https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
 
----
+# <img src="./docs/license.png" alt="Size Limit CLI" width="30" height="30"> License: GPL-3.0 License
 
-## <img src="./docs/license.png" alt="Size Limit CLI" width="30" height="30"> License: GPL-3.0 License
-
----
+This repository is licensed under the GPL - 3 license. You can find more information in the [LICENSE](./Frontend/LICENSE) file.
 
 Project developed during [Women ++](https://www.womenplusplus.ch/) 's deploy(impact)'s program between 16th October - 27th November 2021
 [deploy impact](https://www.womenplusplus.ch/deploy-impact) is a hands-on software development program for social good.
