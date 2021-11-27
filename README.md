@@ -190,7 +190,7 @@ Upon project creation, the ".expo" folder is already added to your ".gitignore" 
 
 # <img src="./docs/license.png" alt="Size Limit CLI" width="30" height="30"> License: GPL-3.0 License
 
-This repository is licensed under the GPL - 3 license. You can find more information in the [LICENSE]() file.
+This repository is licensed under the GPL - 3 license. You can find more information in the [LICENSE](./Frontend/LICENSE) file.
 
 Project developed during [Women ++](https://www.womenplusplus.ch/) 's deploy(impact)'s program between 16th October - 27th November 2021
 [deploy impact](https://www.womenplusplus.ch/deploy-impact) is a hands-on software development program for social good.
