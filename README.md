@@ -7,18 +7,19 @@ A tool to connect people in need to the organisations best equipped to help them
 
 The project was developed for [Kona Connect](https://kona-connect.org/). Detailed information available under https://kona-connect.org/dots-legal-aid-tech/
 
-## <img src="./docs/idea.png" alt="Size Limit CLI" width="30" height="30"> Idea / Our Proposal 
+## <img src="./docs/idea.png" alt="Size Limit CLI" width="30" height="30"> Idea / Our Proposal
 
-- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed anytime, anywhere.
+- Offline application - once downloaded, no internet connection is required for the users to use it. Can be accessed by everyone everywhere.
 - The users are guided through a set of personal identification and needs questions that enable the app to find the right organisation for them.
+- Easy to maintain by reading data
 
-## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30">Technical Solution
+## <img src="./docs/technical.png" alt="Size Limit CLI" width="30" height="30"> Technical Solution
 
 - React Native Frontend application using Expo Framework, available for Android and IOS.
 - No backend, all data required by the application is stored in json format under `./Frontend/assets/jsonFiles` for both content and configuration.
 - Minimal running cost of the application considering no additional cost is required for storage or backend infrastructure.
 
-## How does it work
+## <img src="./docs/questions.png" alt="Size Limit CLI" width="30" height="30"> How does it work
 
 1. User needs to provide personal identification information (age, gender, etc.).
 2. Identifying their needs, based on a hierarchy of questions derived from the SDG definition (Dots diagram) by grouping different subsections into similar areas.
@@ -39,12 +40,12 @@ The project was developed for [Kona Connect](https://kona-connect.org/). Detaile
 
 # Installation
 
-## Prerequisites
+## <img src="./docs/download.png" alt="Size Limit CLI" width="30" height="30"> Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-## Developers / Testers
+## <img src="./docs/tester.png" alt="Size Limit CLI" width="30" height="30"> Developers / Testers
 
 For developers/testers that want to be able to run the code locally and develop or test:
 
@@ -52,7 +53,7 @@ For developers/testers that want to be able to run the code locally and develop 
 - [iOS simulator](https://developer.apple.com/xcode/) - Apple's simulator.
 - [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) - developer tool to be able to run/test the app on mobile
 
-## Getting started
+## <img src="./docs/start.png" alt="Size Limit CLI" width="30" height="30"> Getting started
 
 1. Clone [deploy-impact-21-kona-c repo](https://github.com/WomenPlusPlus/deploy-impact-21-kona-c) locally
 2. Go to Frontend folder and run:
@@ -64,15 +65,14 @@ npm start
 ```
 
 3. Metro Bundler should open on localhost
-4. You can now run your application in 2 ways
+4. You can now run your application in 3 ways
    1. On a local computer using a phone emulator launching the virtual device configured (Android or IOS)
-   2. Open the Expo app on the phone and scan the QR code from the Metro Bundler page
-
----
+   2. In web browser - just open from the Metro Bundler page
+   3. Open the Expo app on the phone and scan the QR code from the Metro Bundler page
 
 # Testing
 
-## Unit Tests
+## <img src="./docs/unittest.png" alt="Size Limit CLI" width="30" height="30"> Unit Tests
 
 Unit tests are available under ./Frontend/test folder. They can be run via the following command.
 
@@ -83,14 +83,12 @@ npm run test
 Results will look like this
 
 <p align="center">
-     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="600">
-   </p>
+     <img src="./docs/TestResults.png" alt="Size Limit CLI" width="400" height="200">
+</p>
 
-## Manual Tests
+## <img src="./docs/unittest.png" alt="Size Limit CLI" width="30" height="30"> Manual Tests
 
 Manual tests cases that were created and executed are available [here](./docs/TestCases.xlsx). It contain an initial set of test cases that can be further expanded.
-
----
 
 # Data
 
@@ -104,7 +102,7 @@ All .json files used by the application were generated based on a original .csv 
 
 Based on the current implementation an update of the organisation or configuration data would require an update of the application as the data is self contained in the app. In the future, this can be enhanced by having the data in a central location and the application will update the data content at specific intervals when connected to the internet.
 
-## Update of Organisations data
+## <img src="./docs/update.png" alt="Size Limit CLI" width="30" height="30"> Update of Organisations data
 
 In order to update some of the organisation details, the organisations.json file needs to be modified with the new information. This can be done by:
 
@@ -115,7 +113,7 @@ There is always the option to manually update the underlying organisation.json f
 
 After this, the application will use the new data for the organisations. Remember to test the changes before you go ahead with the update.
 
-## Needs Options and Mapping to SDG - maintenance
+## <img src="./docs/maintenance.png" alt="Size Limit CLI" width="30" height="30"> Needs Options and Mapping to SDG - maintenance
 
 The application generates dynamically the options for the needs questionnaire as well as the mapping of the different options to the SGD Group based on configuration data in the application. This mapping is stored in the application under `./assets/jsonFiles`.
 
@@ -129,7 +127,7 @@ This data can be updated in the same way as the organisation data by updating th
 
 After this, the application will use the new configuration data to generate the needs questionnaire. Remember to test the changes before you go ahead with the update.
 
-## Conversion to json file
+## <img src="./docs/json.png" alt="Size Limit CLI" width="30" height="30"> Conversion to json file
 
 Required to update: organisations, options_map and companies_options_map data files.
 
@@ -146,13 +144,23 @@ npm run convert-csv
 
 4. `./Fontend/assets/jsonFiles` should be already updated.
 
----
-
 # Future Developments
 
----
+## Short Term
 
-# FAQ and Troubleshooting
+- Expand the language support capabilities on the app to allow support for new languages. Data structure can easily be expanded to include an additional language column for both organisation and the needs mapping configuration. This will allow the application to dynamically switch the language and read the content from the data
+- Enable Data Collection by sending data from the app to a central storage where the data can be aggregated and centralised for user behaviour analysis
+- Create an Administration Panel where specific users can maintain the Organisation and needs mapping to configuration, to allow for quick update for the application. This can also be achieve by having the data in some google docs file where it can be updated and the application updates the local version at specific intervals based on the google docs files
+
+## Long Term
+
+- Include some AI capability to enhance the current deterministic approach. For example we could allow for text search on top of the existing needs questionnaire. In this way we could support more use cases and better serve the users
+- Allow organisations to register themselves and go through an approval process until they appear officially in the app. In this way the app can be self managed but still keep an oversight of the organisations that are included
+- Integration with other social apps which will allow the users depending on their needs to also be aware of other apps that could help them. There could be some integration with Sofia for domestic violence
+- Add FAQ section on the app where users can find answers to some common questions. For example things like: Do I need to pay to use an organisation service, Would there be repercussions if using a particular organisation
+- Online chat with social volunteers
+
+# <img src="./docs/questions.png" alt="Size Limit CLI" width="30" height="30"> FAQ and Troubleshooting
 
 > 1. Why do I have a folder named ".expo" in my project?
 
@@ -172,21 +180,17 @@ No, you should not share the ".expo" folder. It does not contain any information
 
 Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
 
----
-
-## Team Members
+# <img src="./docs/team.png" alt="Size Limit CLI" width="30" height="30"> Team Members
 
 - [@bebolor](https://github.com/Bebolor) - Frontend, UI/UX design
 - [@veloqueen](https://github.com/veloqueen) - Frontend
 - [@natayra](https://github.com/natayra) - Frontend lead
-- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master 
+- [@ClaudiaNicolae](https://github.com/ClaudiaNicolae) - Project manager, Scrum master
 - [@Karen](https://www.linkedin.com/in/karen-bhavnani-b889a89/) - Project manager
 
----
+# <img src="./docs/license.png" alt="Size Limit CLI" width="30" height="30"> License: GPL-3.0 License
 
-## License: GPL-3.0 License
-
----
+This repository is licensed under the GPL - 3 license. You can find more information in the [LICENSE](./Frontend/LICENSE) file.
 
 Project developed during [Women ++](https://www.womenplusplus.ch/) 's deploy(impact)'s program between 16th October - 27th November 2021
 [deploy impact](https://www.womenplusplus.ch/deploy-impact) is a hands-on software development program for social good.
